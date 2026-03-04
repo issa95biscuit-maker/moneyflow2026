@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Créer et vendre des produits numériques en 2026 — ebooks, templates Notion, presets Lightroom, cours en ligne. Vente infinie et scalable.">
+<title>Produits Numériques — MONEYFLOW</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@300;400;600;700&family=Syne+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#060608;--accent:#ffe500;--white:#f0ecff;--card:#0e0e16;--border:#16162a}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{background:var(--bg);color:var(--white);font-family:'Outfit',sans-serif;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.5}
+.orb{position:fixed;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0}
+.orb1{width:350px;height:350px;background:rgba(255,229,0,0.06);top:-100px;right:-100px;animation:fo 10s ease-in-out infinite}
+@keyframes fo{0%,100%{transform:translate(0,0)}50%{transform:translate(20px,20px)}}
+.wrapper{max-width:480px;margin:0 auto;padding:0 20px 80px;position:relative;z-index:1}
+nav{display:flex;align-items:center;justify-content:space-between;padding:24px 0}
+.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;letter-spacing:-1px;text-decoration:none;color:var(--white)}
+.logo span{color:var(--accent)}
+.back{font-family:'Syne Mono',monospace;font-size:11px;letter-spacing:2px;color:#444;text-decoration:none}
+.hero{padding:32px 0 40px;text-align:center}
+.cat-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,229,0,0.08);border:1px solid rgba(255,229,0,0.2);border-radius:100px;padding:7px 18px;font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--accent);margin-bottom:20px}
+h1{font-family:'Syne',sans-serif;font-weight:800;font-size:38px;letter-spacing:-2px;line-height:1;margin-bottom:14px}
+h1 span{color:var(--accent)}
+.hero-sub{font-size:15px;color:#666;line-height:1.7;margin-bottom:28px}
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:32px}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px 10px;text-align:center}
+.stat-num{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;color:var(--accent)}
+.stat-label{font-family:'Syne Mono',monospace;font-size:9px;letter-spacing:2px;color:#444;margin-top:4px}
+.section-label{font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--accent);margin:32px 0 14px}
+p{font-size:14px;color:#777;line-height:1.8;margin-bottom:16px}
+strong{color:var(--white)}
+.product-cards{display:flex;flex-direction:column;gap:10px;margin:16px 0}
+.product-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px}
+.product-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.product-name{font-family:'Syne',sans-serif;font-weight:700;font-size:16px}
+.product-price{font-family:'Syne Mono',monospace;font-size:11px;color:var(--accent)}
+.product-desc{font-size:13px;color:#666;line-height:1.6;margin-bottom:8px}
+.product-platform{font-family:'Syne Mono',monospace;font-size:10px;color:#444;letter-spacing:1px}
+.step-list{display:flex;flex-direction:column;gap:10px;margin:16px 0}
+.step{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;display:flex;gap:14px}
+.step-n{font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:rgba(255,229,0,0.15);line-height:1;flex-shrink:0;width:32px}
+.step-title{font-family:'Syne',sans-serif;font-weight:700;font-size:15px;margin-bottom:6px}
+.step-desc{font-size:13px;color:#666;line-height:1.6}
+.info{background:rgba(255,229,0,0.04);border:1px solid rgba(255,229,0,0.15);border-radius:14px;padding:18px;margin:20px 0}
+.info-label{font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--accent);margin-bottom:8px}
+.info p{color:#777;font-size:13px;margin:0}
+.platform-list{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0}
+.platform{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px}
+.platform-name{font-weight:700;font-size:14px;margin-bottom:4px}
+.platform-desc{font-size:12px;color:#555;line-height:1.5}
+.platform-fee{font-family:'Syne Mono',monospace;font-size:10px;color:var(--accent);margin-top:6px}
+.cta-box{background:linear-gradient(135deg,rgba(255,229,0,0.07),rgba(0,255,135,0.04));border:1px solid rgba(255,229,0,0.2);border-radius:20px;padding:28px;text-align:center;margin-top:40px}
+.cta-title{font-family:'Syne',sans-serif;font-weight:800;font-size:22px;letter-spacing:-1px;margin-bottom:10px}
+.cta-title span{color:var(--accent)}
+.cta-sub{font-size:13px;color:#666;margin-bottom:20px;line-height:1.6}
+.btn-main{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:#000;font-family:'Syne',sans-serif;font-weight:800;font-size:15px;padding:16px;border-radius:14px;text-decoration:none;transition:all 0.2s}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity 0.5s,transform 0.5s}
+.reveal.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+<div class="orb orb1"></div>
+<div class="wrapper">
+  <nav>
+    <a href="index.html" class="logo">MONEY<span>FLOW</span></a>
+    <a href="index.html" class="back">← ACCUEIL</a>
+  </nav>
+  <div class="hero reveal">
+    <div class="cat-badge">📦 PRODUITS NUMÉRIQUES</div>
+    <h1>Crée une fois,<br>vends à <span>l'infini</span></h1>
+    <p class="hero-sub">Un ebook, un template Notion ou un cours en ligne se crée une fois et se vend des milliers de fois. C'est la méthode la plus scalable qui existe.</p>
+    <div class="stats-row">
+      <div class="stat"><div class="stat-num">50€</div><div class="stat-label">POUR DÉMARRER</div></div>
+      <div class="stat"><div class="stat-num">∞</div><div class="stat-label">VENTES POSSIBLES</div></div>
+      <div class="stat"><div class="stat-num">100%</div><div class="stat-label">MARGE NETTE</div></div>
+    </div>
+  </div>
+
+  <div class="section-label reveal">// LES PRODUITS LES PLUS RENTABLES</div>
+  <div class="product-cards reveal">
+    <div class="product-card">
+      <div class="product-header"><div class="product-name">📝 Ebook / Guide PDF</div><div class="product-price">9€ – 49€</div></div>
+      <div class="product-desc">Guide pratique sur un sujet que tu maîtrises. Ex : "Comment gagner 500€/mois avec le parrainage", "Routine matinale productive". 20–50 pages suffisent.</div>
+      <div class="product-platform">PLATEFORME → Gumroad, Etsy, Payhip</div>
+    </div>
+    <div class="product-card">
+      <div class="product-header"><div class="product-name">🗂️ Templates Notion</div><div class="product-price">15€ – 79€</div></div>
+      <div class="product-desc">Dashboards de productivité, trackers de dépenses, planificateurs de contenu. Les templates Notion se vendent très bien sur Gumroad et Etsy.</div>
+      <div class="product-platform">PLATEFORME → Gumroad, Etsy, site perso</div>
+    </div>
+    <div class="product-card">
+      <div class="product-header"><div class="product-name">🎨 Presets Lightroom</div><div class="product-price">19€ – 59€</div></div>
+      <div class="product-desc">Filtres photo pour Instagram et TikTok. Si t'as un style visuel reconnaissable, tes abonnés voudront reproduire ton esthétique.</div>
+      <div class="product-platform">PLATEFORME → Gumroad, ton site, Etsy</div>
+    </div>
+    <div class="product-card">
+      <div class="product-header"><div class="product-name">🎓 Cours en ligne</div><div class="product-price">49€ – 497€</div></div>
+      <div class="product-desc">Formation vidéo sur une compétence. Le prix le plus élevé mais aussi le plus de valeur perçue. Commence par un mini-cours à 49€ pour valider la demande.</div>
+      <div class="product-platform">PLATEFORME → Gumroad, Teachable, Podia</div>
+    </div>
+    <div class="product-card">
+      <div class="product-header"><div class="product-name">🖼️ Ressources design</div><div class="product-price">5€ – 39€</div></div>
+      <div class="product-desc">Mockups, polices, icônes, templates Canva, fonds d'écran premium. Marché énorme sur Creative Market et Etsy.</div>
+      <div class="product-platform">PLATEFORME → Creative Market, Etsy, Gumroad</div>
+    </div>
+  </div>
+
+  <div class="section-label reveal">// COMMENT LANCER EN 7 JOURS</div>
+  <div class="step-list reveal">
+    <div class="step"><div class="step-n">01</div><div><div class="step-title">Identifie ce que tu sais faire</div><div class="step-desc">Qu'est-ce que les gens te demandent souvent ? Quelle compétence as-tu que d'autres voudraient ? C'est là que se trouve ton produit.</div></div></div>
+    <div class="step"><div class="step-n">02</div><div><div class="step-title">Valide la demande AVANT de créer</div><div class="step-desc">Cherche sur Etsy et Gumroad si des produits similaires se vendent. Si oui = marché validé. Lis les avis pour savoir quoi améliorer.</div></div></div>
+    <div class="step"><div class="step-n">03</div><div><div class="step-title">Crée ton produit en 3 jours</div><div class="step-desc">Ebook → Notion + export PDF. Template → Notion. Presets → Lightroom. Pas besoin de perfection — le v1 suffit pour lancer.</div></div></div>
+    <div class="step"><div class="step-n">04</div><div><div class="step-title">Mets en vente sur Gumroad</div><div class="step-desc">Gumroad est gratuit, prend 10% de commission. Idéal pour démarrer. Crée une belle page avec photos du produit et description claire.</div></div></div>
+    <div class="step"><div class="step-n">05</div><div><div class="step-title">Promeuts sur TikTok et Insta</div><div class="step-desc">Montre le produit en action. "J'ai créé un template Notion qui m'a fait gagner 2h par jour" → lien en bio. Contenu éducatif = meilleure pub.</div></div></div>
+  </div>
+
+  <div class="info reveal">
+    <div class="info-label">// POURQUOI C'EST LA MEILLEURE MÉTHODE</div>
+    <p>Coût de reproduction : <strong>0€</strong>. Coût de livraison : <strong>0€</strong>. Marge nette : <strong>proche de 100%</strong>. Tu crées une fois et ça génère des revenus pendant des années. C'est ça le vrai revenu passif.</p>
+  </div>
+
+  <div class="section-label reveal">// PLATEFORMES DE VENTE</div>
+  <div class="platform-list reveal">
+    <div class="platform"><div class="platform-name">Gumroad</div><div class="platform-desc">Le plus simple pour démarrer</div><div class="platform-fee">10% de commission</div></div>
+    <div class="platform"><div class="platform-name">Etsy</div><div class="platform-desc">Trafic organique gratuit</div><div class="platform-fee">6,5% + 0,20€/listing</div></div>
+    <div class="platform"><div class="platform-name">Payhip</div><div class="platform-desc">Alternative à Gumroad</div><div class="platform-fee">5% de commission</div></div>
+    <div class="platform"><div class="platform-name">Lemon Squeezy</div><div class="platform-desc">Idéal pour SaaS et logiciels</div><div class="platform-fee">8% de commission</div></div>
+  </div>
+
+  <div class="cta-box reveal">
+    <div class="cta-title">Rejoins la<br><span>communauté</span></div>
+    <p class="cta-sub">Les membres partagent leurs produits numériques, leurs pages Gumroad et leurs stratégies de vente. Rejoins-nous.</p>
+    <a href="https://discord.gg/p5t4xSYQ" class="btn-main">Rejoindre le Discord 🔥</a>
+  </div>
+</div>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')}),{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

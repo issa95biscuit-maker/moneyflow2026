@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Travailler sans diplôme en 2026 — Uber Eats, Deliveroo, VTC, chauffeur poids lourds, électricien. Guide complet pour se lancer rapidement.">
+<title>Travailler vite — MONEYFLOW</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@300;400;600;700&family=Syne+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#060608;--accent:#00ff87;--pink:#ff2d78;--blue:#2dfff0;--yellow:#ffe500;--white:#f0ecff;--card:#0e0e16;--border:#16162a}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{background:var(--bg);color:var(--white);font-family:'Outfit',sans-serif;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.5}
+.orb{position:fixed;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0}
+.orb1{width:350px;height:350px;background:rgba(0,255,135,0.07);top:-100px;right:-100px;animation:fo 10s ease-in-out infinite}
+.orb2{width:200px;height:200px;background:rgba(255,45,120,0.04);bottom:20%;left:-60px;animation:fo 13s ease-in-out infinite reverse}
+@keyframes fo{0%,100%{transform:translate(0,0)}50%{transform:translate(20px,20px)}}
+.wrapper{max-width:480px;margin:0 auto;padding:0 20px 80px;position:relative;z-index:1}
+
+nav{display:flex;align-items:center;justify-content:space-between;padding:24px 0}
+.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;letter-spacing:-1px;text-decoration:none;color:var(--white)}
+.logo span{color:var(--accent)}
+.back{font-family:'Syne Mono',monospace;font-size:11px;letter-spacing:2px;color:#444;text-decoration:none}
+
+.hero{padding:32px 0 36px;text-align:center}
+.cat-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,255,135,0.08);border:1px solid rgba(0,255,135,0.2);border-radius:100px;padding:7px 18px;font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--accent);margin-bottom:20px}
+h1{font-family:'Syne',sans-serif;font-weight:800;font-size:38px;letter-spacing:-2px;line-height:1.05;margin-bottom:14px}
+h1 span{color:var(--accent)}
+.hero-sub{font-size:15px;color:#777;line-height:1.7;margin-bottom:0}
+
+/* SECTION LABELS */
+.section-label{font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:3px;margin:36px 0 14px;display:flex;align-items:center;gap:10px}
+.section-label::after{content:'';flex:1;height:1px;background:var(--border)}
+
+p{font-size:14px;color:#777;line-height:1.8;margin-bottom:14px}
+strong{color:var(--white)}
+
+/* PLATFORM CARDS — AUTO ENTREPRENEUR */
+.platform-list{display:flex;flex-direction:column;gap:10px;margin:4px 0}
+.platform-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:0;overflow:hidden;transition:border-color 0.2s}
+.platform-card:active{transform:scale(0.99)}
+.pc-header{display:flex;align-items:center;gap:14px;padding:18px;cursor:pointer}
+.pc-logo{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
+.pc-info{flex:1}
+.pc-name{font-family:'Syne',sans-serif;font-weight:700;font-size:16px;margin-bottom:3px}
+.pc-earn{font-family:'Syne Mono',monospace;font-size:11px}
+.pc-arrow{color:#333;font-size:16px;transition:transform 0.3s}
+.pc-arrow.open{transform:rotate(90deg)}
+.pc-body{display:none;padding:0 18px 18px}
+.pc-body.show{display:block}
+.pc-desc{font-size:13px;color:#666;line-height:1.7;margin-bottom:14px}
+.pc-steps{display:flex;flex-direction:column;gap:8px}
+.pc-step{display:flex;gap:10px;align-items:flex-start}
+.ps-n{font-family:'Syne Mono',monospace;font-size:11px;color:var(--accent);flex-shrink:0;width:20px;padding-top:1px}
+.ps-text{font-size:13px;color:#777;line-height:1.6}
+.ps-text strong{color:var(--white)}
+.pc-tag{display:inline-block;font-family:'Syne Mono',monospace;font-size:9px;letter-spacing:2px;padding:4px 10px;border-radius:100px;margin-top:12px}
+.tag-green{background:rgba(0,255,135,0.1);color:var(--accent);border:1px solid rgba(0,255,135,0.2)}
+.tag-pink{background:rgba(255,45,120,0.1);color:var(--pink);border:1px solid rgba(255,45,120,0.2)}
+.tag-blue{background:rgba(45,255,240,0.1);color:var(--blue);border:1px solid rgba(45,255,240,0.2)}
+.tag-yellow{background:rgba(255,229,0,0.1);color:var(--yellow);border:1px solid rgba(255,229,0,0.2)}
+.tag-grey{background:rgba(255,255,255,0.05);color:#555;border:1px solid var(--border)}
+
+/* MÉTIERS SANS DIPLÔME */
+.metier-list{display:flex;flex-direction:column;gap:10px;margin:4px 0}
+.metier{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.metier-header{display:flex;align-items:center;gap:14px;padding:18px;cursor:pointer}
+.metier-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.metier-info{flex:1}
+.metier-name{font-family:'Syne',sans-serif;font-weight:700;font-size:15px;margin-bottom:3px}
+.metier-salary{font-family:'Syne Mono',monospace;font-size:11px}
+.metier-arrow{color:#333;font-size:16px;transition:transform 0.3s}
+.metier-arrow.open{transform:rotate(90deg)}
+.metier-body{display:none;padding:0 18px 18px}
+.metier-body.show{display:block}
+.metier-desc{font-size:13px;color:#666;line-height:1.7;margin-bottom:12px}
+.metier-steps{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.ms-row{display:flex;gap:10px;align-items:flex-start}
+.ms-n{font-family:'Syne Mono',monospace;font-size:11px;color:#444;flex-shrink:0;width:20px;padding-top:1px}
+.ms-text{font-size:13px;color:#777;line-height:1.6}
+.ms-text strong{color:var(--white)}
+.metier-info-box{background:#0a0a12;border-radius:10px;padding:12px;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.mib-item{}
+.mib-label{font-family:'Syne Mono',monospace;font-size:9px;letter-spacing:2px;color:#333;margin-bottom:3px}
+.mib-val{font-size:13px;font-weight:600;color:var(--white)}
+
+/* CTA */
+.cta-box{background:linear-gradient(135deg,rgba(0,255,135,0.07),rgba(45,255,240,0.04));border:1px solid rgba(0,255,135,0.2);border-radius:20px;padding:28px;text-align:center;margin-top:40px}
+.cta-title{font-family:'Syne',sans-serif;font-weight:800;font-size:22px;letter-spacing:-1px;margin-bottom:10px}
+.cta-title span{color:var(--accent)}
+.cta-sub{font-size:13px;color:#666;margin-bottom:20px;line-height:1.6}
+.btn-main{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:#000;font-family:'Syne',sans-serif;font-weight:800;font-size:15px;padding:16px;border-radius:14px;text-decoration:none;transition:all 0.2s}
+
+.reveal{opacity:0;transform:translateY(14px);transition:opacity 0.5s,transform 0.5s}
+.reveal.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+<div class="orb orb1"></div><div class="orb orb2"></div>
+<div class="wrapper">
+
+  <nav>
+    <a href="index.html" class="logo">MONEY<span>FLOW</span></a>
+    <a href="index.html" class="back">← ACCUEIL</a>
+  </nav>
+
+  <div class="hero reveal">
+    <div class="cat-badge">⚡ REVENUS RAPIDES</div>
+    <h1>Gagne ta vie<br>sans <span>diplôme</span></h1>
+    <p class="hero-sub">Plateformes auto-entrepreneur, métiers accessibles rapidement — voici tout ce que tu peux faire <strong>dès cette semaine</strong> pour générer un revenu réel.</p>
+  </div>
+
+  <!-- SECTION 1 : PLATEFORMES AUTO-ENTREPRENEUR -->
+  <div class="section-label reveal" style="color:var(--accent)">⚡ PLATEFORMES — COMMENCE CETTE SEMAINE</div>
+
+  <div class="platform-list reveal">
+
+    <!-- Uber Eats -->
+    <div class="platform-card" style="border-color:rgba(0,255,135,0.15)">
+      <div class="pc-header" onclick="toggle(this)">
+        <div class="pc-logo" style="background:rgba(0,255,135,0.1)">🍔</div>
+        <div class="pc-info">
+          <div class="pc-name">Uber Eats</div>
+          <div class="pc-earn" style="color:var(--accent)">8 – 15€/heure · Paiement hebdo</div>
+        </div>
+        <div class="pc-arrow">›</div>
+      </div>
+      <div class="pc-body">
+        <div class="pc-desc">Livre des repas à vélo, scooter ou voiture. Totalement flexible — tu travailles quand tu veux, autant que tu veux. Les pics de revenus sont aux heures de repas (12h–14h et 19h–22h).</div>
+        <div class="pc-steps">
+          <div class="pc-step"><div class="ps-n">01</div><div class="ps-text">Télécharge l'app <strong>Uber Eats Partenaire</strong> (côté livreur)</div></div>
+          <div class="pc-step"><div class="ps-n">02</div><div class="ps-text">Crée ton compte et uploade <strong>pièce d'identité + permis/attestation vélo</strong></div></div>
+          <div class="pc-step"><div class="ps-n">03</div><div class="ps-text">Crée une <strong>micro-entreprise</strong> sur autoentrepreneur.urssaf.fr (gratuit, 10 minutes)</div></div>
+          <div class="pc-step"><div class="ps-n">04</div><div class="ps-text">Validation du compte sous <strong>2–5 jours</strong>, puis tu livres dès que tu veux</div></div>
+          <div class="pc-step"><div class="ps-n">05</div><div class="ps-text">Travaille aux <strong>heures de pointe</strong> et dans les zones denses pour maximiser les gains</div></div>
+        </div>
+        <div><span class="pc-tag tag-green">VÉLO OK</span> <span class="pc-tag tag-green">SCOOTER OK</span> <span class="pc-tag tag-grey">VOITURE OK</span></div>
+      </div>
+    </div>
+
+    <!-- Deliveroo -->
+    <div class="platform-card" style="border-color:rgba(45,255,240,0.15)">
+      <div class="pc-header" onclick="toggle(this)">
+        <div class="pc-logo" style="background:rgba(45,255,240,0.1)">🛵</div>
+        <div class="pc-info">
+          <div class="pc-name">Deliveroo</div>
+          <div class="pc-earn" style="color:var(--blue)">7 – 14€/heure · Zones ciblées</div>
+        </div>
+        <div class="pc-arrow">›</div>
+      </div>
+      <div class="pc-body">
+        <div class="pc-desc">Concurrent d'Uber Eats. Fonctionne dans les grandes villes françaises. Certains livreurs cumulent les deux apps pour maximiser leurs commandes et ne jamais être sans course.</div>
+        <div class="pc-steps">
+          <div class="pc-step"><div class="ps-n">01</div><div class="ps-text">Inscris-toi sur <strong>deliveroo.fr/apply</strong> en tant que livreur</div></div>
+          <div class="pc-step"><div class="ps-n">02</div><div class="ps-text">Fournis <strong>pièce d'identité + IBAN + justificatif de micro-entreprise</strong></div></div>
+          <div class="pc-step"><div class="ps-n">03</div><div class="ps-text">Assiste à une <strong>session d'onboarding</strong> (souvent en ligne) pour valider ton compte</div></div>
+          <div class="pc-step"><div class="ps-n">04</div><div class="ps-text"><strong>Astuce :</strong> cumule Uber Eats + Deliveroo ouvertes en même temps pour doubler les commandes</div></div>
+        </div>
+        <div><span class="pc-tag tag-blue">VÉLO OK</span> <span class="pc-tag tag-blue">SCOOTER OK</span></div>
+      </div>
+    </div>
+
+    <!-- Stuart -->
+    <div class="platform-card" style="border-color:rgba(255,229,0,0.15)">
+      <div class="pc-header" onclick="toggle(this)">
+        <div class="pc-logo" style="background:rgba(255,229,0,0.1)">📦</div>
+        <div class="pc-info">
+          <div class="pc-name">Stuart / Gophr</div>
+          <div class="pc-earn" style="color:var(--yellow)">10 – 18€/heure · Colis et courses</div>
+        </div>
+        <div class="pc-arrow">›</div>
+      </div>
+      <div class="pc-body">
+        <div class="pc-desc">Livraison de colis pour professionnels et e-commerce. Les courses sont souvent plus longues que la restauration = mieux payées. Idéal avec un vélo cargo ou une voiture.</div>
+        <div class="pc-steps">
+          <div class="pc-step"><div class="ps-n">01</div><div class="ps-text">Inscription sur <strong>stuart.com</strong> section "Devenir livreur"</div></div>
+          <div class="pc-step"><div class="ps-n">02</div><div class="ps-text">Documents : <strong>micro-entreprise + permis + assurance véhicule</strong></div></div>
+          <div class="pc-step"><div class="ps-n">03</div><div class="ps-text">Validation 3–7 jours. Tu choisis tes créneaux à l'avance dans l'app</div></div>
+        </div>
+        <div><span class="pc-tag tag-yellow">VÉLO CARGO</span> <span class="pc-tag tag-yellow">VOITURE</span> <span class="pc-tag tag-yellow">SCOOTER</span></div>
+      </div>
+    </div>
+
+    <!-- Uber VTC -->
+    <div class="platform-card" style="border-color:rgba(255,45,120,0.15)">
+      <div class="pc-header" onclick="toggle(this)">
+        <div class="pc-logo" style="background:rgba(255,45,120,0.1)">🚗</div>
+        <div class="pc-info">
+          <div class="pc-name">Uber / Bolt VTC</div>
+          <div class="pc-earn" style="color:var(--pink)">15 – 30€/heure · Licence requise</div>
+        </div>
+        <div class="pc-arrow">›</div>
+      </div>
+      <div class="pc-body">
+        <div class="pc-desc">Le VTC est le plus rentable de toutes les plateformes — mais il faut passer la <strong>carte professionnelle VTC</strong> (formation ~350€ + examen). Investissement qui se rentabilise en 2 semaines.</div>
+        <div class="pc-steps">
+          <div class="pc-step"><div class="ps-n">01</div><div class="ps-text">Passe la <strong>formation VTC agréée</strong> (~350€, 1–2 jours selon expérience)</div></div>
+          <div class="pc-step"><div class="ps-n">02</div><div class="ps-text">Inscris-toi à l'<strong>examen VTC</strong> via ITM ou autre organisme agréé</div></div>
+          <div class="pc-step"><div class="ps-n">03</div><div class="ps-text">Obtiens ta <strong>carte professionnelle VTC</strong> auprès de la préfecture</div></div>
+          <div class="pc-step"><div class="ps-n">04</div><div class="ps-text">Crée ta <strong>micro-entreprise</strong> et inscris-toi sur Uber/Bolt Driver</div></div>
+          <div class="pc-step"><div class="ps-n">05</div><div class="ps-text">Travaille aux <strong>heures de soirée et weekend</strong> pour maximiser les tarifs</div></div>
+        </div>
+        <div><span class="pc-tag tag-pink">VOITURE OBLIGATOIRE</span> <span class="pc-tag tag-pink">LICENCE REQUISE</span></div>
+      </div>
+    </div>
+
+    <!-- TaskRabbit / Frizbiz -->
+    <div class="platform-card" style="border-color:rgba(0,255,135,0.12)">
+      <div class="pc-header" onclick="toggle(this)">
+        <div class="pc-logo" style="background:rgba(0,255,135,0.08)">🔧</div>
+        <div class="pc-info">
+          <div class="pc-name">Frizbiz / Yoojo</div>
+          <div class="pc-earn" style="color:var(--accent)">15 – 40€/heure · Services à domicile</div>
+        </div>
+        <div class="pc-arrow">›</div>
+      </div>
+      <div class="pc-body">
+        <div class="pc-desc">Plateformes de services à la personne — montage meuble, jardinage, déménagement, ménage, baby-sitting. Tu fixes ton tarif et acceptes les missions qui t'intéressent.</div>
+        <div class="pc-steps">
+          <div class="pc-step"><div class="ps-n">01</div><div class="ps-text">Inscription gratuite sur <strong>frizbiz.com</strong> ou <strong>yoojo.com</strong></div></div>
+          <div class="pc-step"><div class="ps-n">02</div><div class="ps-text">Crée ton profil avec tes compétences et fixe ton <strong>tarif horaire</strong></div></div>
+          <div class="pc-step"><div class="ps-n">03</div><div class="ps-text">La plateforme prend 15–20%. Tu encaisses le reste directement</div></div>
+          <div class="pc-step"><div class="ps-n">04</div><div class="ps-text"><strong>Avis clients</strong> = la clé. Soigne les premières missions pour accumuler des 5 étoiles</div></div>
+        </div>
+        <div><span class="pc-tag tag-green">SANS DIPLÔME</span> <span class="pc-tag tag-green">DÉBUTANT OK</span></div>
+      </div>
+    </div>
+
+    <!-- Amazon Flex -->
+    <div class="platform-card" style="border-color:rgba(255,229,0,0.12)">
+      <div class="pc-header" onclick="toggle(this)">
+        <div class="pc-logo" style="background:rgba(255,229,0,0.08)">📬</div>
+        <div class="pc-info">
+          <div class="pc-name">Amazon Flex</div>
+          <div class="pc-earn" style="color:var(--yellow)">13 – 17€/heure · Blocs de 3–6h</div>
+        </div>
+        <div class="pc-arrow">›</div>
+      </div>
+      <div class="pc-body">
+        <div class="pc-desc">Livre des colis Amazon en voiture personnelle par blocs de 3 à 6 heures. Rémunération fixe par bloc (pas au colis). Prévisible et régulier si tu obtiens des blocs.</div>
+        <div class="pc-steps">
+          <div class="pc-step"><div class="ps-n">01</div><div class="ps-text">Télécharge l'app <strong>Amazon Flex</strong> et crée ton compte livreur</div></div>
+          <div class="pc-step"><div class="ps-n">02</div><div class="ps-text">Fournis <strong>permis de conduire + assurance auto + micro-entreprise</strong></div></div>
+          <div class="pc-step"><div class="ps-n">03</div><div class="ps-text">Réserve des <strong>blocs de livraison</strong> à l'avance dans l'application</div></div>
+          <div class="pc-step"><div class="ps-n">04</div><div class="ps-text">⚠️ Les blocs partent vite — <strong>active les notifications</strong> et sois rapide</div></div>
+        </div>
+        <div><span class="pc-tag tag-yellow">VOITURE OBLIGATOIRE</span> <span class="pc-tag tag-yellow">PERMIS B</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SECTION 2 : MÉTIERS SANS DIPLÔME -->
+  <div class="section-label reveal" style="color:var(--pink)">💼 MÉTIERS SANS DIPLÔME — FORMATIONS COURTES</div>
+  <p class="reveal" style="margin-bottom:20px">Ces métiers sont accessibles avec peu ou pas de diplôme. Une formation courte suffit — et certains offrent des <strong>salaires bien supérieurs à la moyenne</strong>.</p>
+
+  <div class="metier-list reveal">
+
+    <!-- Chauffeur PL -->
+    <div class="metier" style="border-color:rgba(255,229,0,0.15)">
+      <div class="metier-header" onclick="toggleMetier(this)">
+        <div class="metier-icon" style="background:rgba(255,229,0,0.1)">🚛</div>
+        <div class="metier-info">
+          <div class="metier-name">Chauffeur Poids Lourds</div>
+          <div class="metier-salary" style="color:var(--yellow)">2 000 – 3 500€ net/mois</div>
+        </div>
+        <div class="metier-arrow">›</div>
+      </div>
+      <div class="metier-body">
+        <div class="metier-desc">Métier très en tension — les employeurs cherchent des chauffeurs partout en France. La formation est longue mais l'emploi est quasi garanti à la sortie.</div>
+        <div class="metier-steps">
+          <div class="ms-row"><div class="ms-n">→</div><div class="ms-text">Passe le <strong>permis C (Poids Lourds)</strong> via une auto-école spécialisée</div></div>
+          <div class="ms-row"><div class="ms-n">→</div><div class="ms-text">Obtiens la <strong>FIMO (Formation Initiale Minimale Obligatoire)</strong> — 140h de formation</div></div>
+          <div class="ms-row"><div class="ms-n">→</div><div class="ms-text">La formation complète coûte <strong>2 000–4 000€</strong> mais Pôle Emploi / CPF peut financer</div></div>
+          <div class="ms-row"><div class="ms-n">→</div><div class="ms-text">Durée totale : <strong>3–6 mois</strong> selon ton rythme de formation</div></div>
+        </div>
+        <div class="metier-info-box">
+          <div class="mib-item"><div class="mib-label">DIPLÔME</div><div class="mib-val">Aucun requis</div></div>
+          <div class="mib-item"><div class="mib-label">FORMATION</div><div class="mib-val">3–6 mois</div></div>
+          <div class="mib-item"><div class="mib-label">FINANCEMENT</div><div class="mib-val">CPF / Pôle Emploi</div></div>
+          <div class="mib-item"><div class="mib-label">EMPLOI</div><div class="mib-val">Quasi garanti</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Électricien -->
+    <div class="metier" style="border-color:rgba(255,229,0,0.12)">
+      <div class="metier-header" onclick="toggleMetier(this)">
+        <div class="metier-icon" style="background:rgba(255,229,0,0.08)">⚡</div>
+        <div class="metier-info">
+          <div class="metier-name">Électricien</div>
+          <div class="metier-salary" style="color:var(--yellow)">1 800 – 4 000€ net/mois</div>
+        </div>
+        <div class="metier-arrow">›</div>
+      </div>
+      <div class="metier-body">
+        <div class="metier-desc">Secteur en forte demande avec la transition énergétique. Possibilité de monter rapidement en responsabilité et de créer sa propre entreprise.</div>
+        <div class="metier-steps">
+          <div class="ms-row"><div class="ms-n">→</div><div class="ms-text">CAP Électricien en <strong>2 ans</strong> (apprentissage = payé pendant la formation)</div></div>
+          <div class="ms-row"><div class="ms-n">→</div><div class="ms-text">Ou formation accélérée via <strong>AFPA ou centres agréés</strong> (6–12 mois)</div></div>
+          <div class="ms-row"><div class="ms-n">→</div><div class="ms-text">Avec expérience : <strong>création micro-entreprise</strong> pour facturer 400–800€/jour</div></div>
+        </div>
+        <div class="metier-info-box">
+          <div class="mib-item"><div class="mib-label">DIPLÔME</div><div class="mib-val">CAP (ou expérience)</div></div>
+          <div class="mib-item"><div class="mib-label">FORMATION</div><div class="mib-val">6 mois – 2 ans</div></div>
+          <div class="mib-item"><div class="mib-label">FINANCEMENT</div><div class="mib-val">Apprentissage / CPF</div></div>
+          <div class="mib-item"><div class="mib-label">INDÉPENDANT</div><div class="mib-val">Très possible</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plombier -->
+    <div class="metier" style="border-color:rgba(0,255,135,0.12)">
+      <div class="metier-header" onclick="toggleMetier(this)">
+        <div class="metier-icon" style="background:rgba(0,255,135,0.08)">🔧</div>
+        <div class="metier-info">
+          <div class="metier-name">Plombier / Chauffagiste</div>
+          <div class="metier-salary" style="color:var(--accent)">1 900 – 4 500€ net/mois</div>
+        </div>
+        <div class="metier-arrow">›</div>
+      </div>
+      <div class="metier-body">
+        <div class="metier-desc">Pénurie massive de plombiers en France. Les délais d'intervention peuvent être de plusieurs semaines. Les indépendants expérimentés facturent 80–150€/heure.</div>
+        <div class="metier-steps">
+          <div class="ms-row"><div class="ms-n">→</div><div class="ms-text">CAP Installation Sanitaire ou <strong>CAP Plomberie</strong> en apprentissage</div></div>
+          <div class="ms-row"><div class="ms-n">→</div><div class="ms-text">Formation AFPA accélérée possible : <strong>6–12 mois</strong></div></div>
+          <div class="ms-row"><div class="ms-n">→</div><div class="ms-text">Après 3–5 ans d'expérience : monte ta propre boîte, embauche des apprentis</div></div>
+        </div>
+        <div class="metier-info-box">
+          <div class="mib-item"><div class="mib-label">DIPLÔME</div><div class="mib-val">CAP recommandé</div></div>
+          <div class="mib-item"><div class="mib-label">FORMATION</div><div class="mib-val">6 mois – 2 ans</div></div>
+          <div class="mib-item"><div class="mib-label">FINANCEMENT</div><div class="mib-val">CPF / Apprentissage</div></div>
+          <div class="mib-item"><div class="mib-label">INDÉPENDANT</div><div class="mib-val">Très lucratif</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Soudeur -->
+    <div class="metier" style="border-color:rgba(45,255,240,0.12)">
+      <div class="metier-header" onclick="toggleMetier(this)">
+        <div class="metier-icon" style="background:rgba(45,255,240,0.08)">🔥</div>
+        <div class="metier-info">
+          <div class="metier-name">Soudeur / Chaudronnier</div>
+          <div class="metier-salary" style="color:var(--blue)">2 000 – 5 000€ net/mois</div>
+        </div>
+        <div class="metier-arrow">›</div>
+      </div>
+      <div class="metier-body">
+        <div class="metier-desc">Métier très technique mais très bien payé. Forte demande dans l'industrie, l'aérospatiale et l'énergie. Possibilité de travailler à l'étranger avec des salaires encore plus élevés.</div>
+        <div class="metier-steps">
+          <div class="ms-row"><div class="ms-n">→</div><div class="ms-text">CAP Soudage ou <strong>Bac Pro Technicien Chaudronnerie</strong></div></div>
+          <div class="ms-row"><div class="ms-n">→</div><div class="ms-text">Formation AFPA en <strong>6–12 mois</strong> pour adultes en reconversion</div></div>
+          <div class="ms-row"><div class="ms-n">→</div><div class="ms-text">Certifications internationales (AWS, EN 287) = <strong>salaire x1.5 à x2</strong></div></div>
+        </div>
+        <div class="metier-info-box">
+          <div class="mib-item"><div class="mib-label">DIPLÔME</div><div class="mib-val">CAP recommandé</div></div>
+          <div class="mib-item"><div class="mib-label">FORMATION</div><div class="mib-val">6 mois – 2 ans</div></div>
+          <div class="mib-item"><div class="mib-label">FINANCEMENT</div><div class="mib-val">CPF / Pôle Emploi</div></div>
+          <div class="mib-item"><div class="mib-label">À L'ÉTRANGER</div><div class="mib-val">Très demandé</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Agent de sécurité -->
+    <div class="metier" style="border-color:rgba(255,45,120,0.12)">
+      <div class="metier-header" onclick="toggleMetier(this)">
+        <div class="metier-icon" style="background:rgba(255,45,120,0.08)">🛡️</div>
+        <div class="metier-info">
+          <div class="metier-name">Agent de Sécurité</div>
+          <div class="metier-salary" style="color:var(--pink)">1 800 – 3 000€ net/mois</div>
+        </div>
+        <div class="metier-arrow">›</div>
+      </div>
+      <div class="metier-body">
+        <div class="metier-desc">Sécurité d'événements, centres commerciaux, aéroports. Formation courte, emploi rapide, nombreuses heures supplémentaires possibles. Forte demande avec les grands événements.</div>
+        <div class="metier-steps">
+          <div class="ms-row"><div class="ms-n">→</div><div class="ms-text">Obtenir la <strong>carte professionnelle CNAPS</strong> — formation de 140h obligatoire</div></div>
+          <div class="ms-row"><div class="ms-n">→</div><div class="ms-text">Casier judiciaire vierge obligatoire + enquête administrative</div></div>
+          <div class="ms-row"><div class="ms-n">→</div><div class="ms-text">Formation coûte <strong>800–1500€</strong> — finançable via CPF</div></div>
+          <div class="ms-row"><div class="ms-n">→</div><div class="ms-text">Durée totale : <strong>2–4 mois</strong> pour être opérationnel</div></div>
+        </div>
+        <div class="metier-info-box">
+          <div class="mib-item"><div class="mib-label">DIPLÔME</div><div class="mib-val">Aucun requis</div></div>
+          <div class="mib-item"><div class="mib-label">FORMATION</div><div class="mib-val">2–4 mois</div></div>
+          <div class="mib-item"><div class="mib-label">FINANCEMENT</div><div class="mib-val">CPF</div></div>
+          <div class="mib-item"><div class="mib-label">EMPLOI</div><div class="mib-val">Rapide</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Aide-soignant -->
+    <div class="metier" style="border-color:rgba(176,96,255,0.15)">
+      <div class="metier-header" onclick="toggleMetier(this)">
+        <div class="metier-icon" style="background:rgba(176,96,255,0.1)">🏥</div>
+        <div class="metier-info">
+          <div class="metier-name">Aide-soignant / AES</div>
+          <div class="metier-salary" style="color:#b060ff">1 700 – 2 500€ net/mois</div>
+        </div>
+        <div class="metier-arrow">›</div>
+      </div>
+      <div class="metier-body">
+        <div class="metier-desc">Secteur en tension permanente — hôpitaux, EHPAD et services à domicile recrutent sans cesse. Formation courte, emploi garanti, nombreuses heures sup disponibles.</div>
+        <div class="metier-steps">
+          <div class="ms-row"><div class="ms-n">→</div><div class="ms-text">Diplôme d'État d'<strong>Aide-Soignant (DEAS)</strong> — 1 an de formation</div></div>
+          <div class="ms-row"><div class="ms-n">→</div><div class="ms-text">Ou <strong>AES (Accompagnant Éducatif et Social)</strong> — même durée</div></div>
+          <div class="ms-row"><div class="ms-n">→</div><div class="ms-text">Formation <strong>entièrement financée</strong> par les régions dans la majorité des cas</div></div>
+          <div class="ms-row"><div class="ms-n">→</div><div class="ms-text">Alternance possible = <strong>payé pendant la formation</strong></div></div>
+        </div>
+        <div class="metier-info-box">
+          <div class="mib-item"><div class="mib-label">DIPLÔME</div><div class="mib-val">Brevet minimum</div></div>
+          <div class="mib-item"><div class="mib-label">FORMATION</div><div class="mib-val">1 an</div></div>
+          <div class="mib-item"><div class="mib-label">FINANCEMENT</div><div class="mib-val">Région / Alternance</div></div>
+          <div class="mib-item"><div class="mib-label">EMPLOI</div><div class="mib-val">Garanti</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Couvreur / BTP -->
+    <div class="metier" style="border-color:rgba(0,255,135,0.1)">
+      <div class="metier-header" onclick="toggleMetier(this)">
+        <div class="metier-icon" style="background:rgba(0,255,135,0.07)">🏗️</div>
+        <div class="metier-info">
+          <div class="metier-name">BTP — Couvreur / Maçon</div>
+          <div class="metier-salary" style="color:var(--accent)">1 900 – 4 000€ net/mois</div>
+        </div>
+        <div class="metier-arrow">›</div>
+      </div>
+      <div class="metier-body">
+        <div class="metier-desc">Le BTP manque de bras partout en France. Couvreur, maçon, carreleur, peintre en bâtiment — tous ces métiers sont accessibles rapidement et permettent de créer sa propre entreprise.</div>
+        <div class="metier-steps">
+          <div class="ms-row"><div class="ms-n">→</div><div class="ms-text">CAP du bâtiment en <strong>apprentissage (2 ans, payé)</strong> ou formation accélérée AFPA</div></div>
+          <div class="ms-row"><div class="ms-n">→</div><div class="ms-text">Pour certains postes : <strong>entrée directe possible</strong> avec formation en entreprise</div></div>
+          <div class="ms-row"><div class="ms-n">→</div><div class="ms-text">Avec expérience : micro-entreprise et facturation à <strong>300–600€/jour</strong></div></div>
+        </div>
+        <div class="metier-info-box">
+          <div class="mib-item"><div class="mib-label">DIPLÔME</div><div class="mib-val">Aucun parfois</div></div>
+          <div class="mib-item"><div class="mib-label">FORMATION</div><div class="mib-val">0 – 2 ans</div></div>
+          <div class="mib-item"><div class="mib-label">FINANCEMENT</div><div class="mib-val">Apprentissage / CPF</div></div>
+          <div class="mib-item"><div class="mib-label">INDÉPENDANT</div><div class="mib-val">Très lucratif</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- INFO CPF -->
+  <div style="background:rgba(0,255,135,0.04);border:1px solid rgba(0,255,135,0.15);border-radius:14px;padding:18px;margin:28px 0" class="reveal">
+    <div style="font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--accent);margin-bottom:10px">💡 LE CPF — TON ALLIÉ</div>
+    <p style="font-size:13px;color:#777;margin:0;line-height:1.7">Chaque salarié cumule des droits CPF (Compte Personnel de Formation). Tu peux avoir <strong>jusqu'à 5 000€</strong> disponibles pour financer une formation. Vérifie ton solde sur <strong>moncompteformation.gouv.fr</strong> — c'est gratuit et tu peux l'utiliser pour presque toutes les formations listées ici.</p>
+  </div>
+
+  <div class="cta-box reveal">
+    <div class="cta-title">Des questions ?<br><span>Pose-les ici</span></div>
+    <p class="cta-sub">Les membres de la communauté partagent leurs expériences — livreurs, VTC, reconversions. Rejoins-nous et trouve les réponses.</p>
+    <a href="https://discord.gg/p5t4xSYQ" class="btn-main">Rejoindre le Discord 🔥</a>
+  </div>
+
+</div>
+
+<script>
+function toggle(header){
+  const body = header.nextElementSibling;
+  const arrow = header.querySelector('.pc-arrow');
+  const isOpen = body.classList.contains('show');
+  document.querySelectorAll('.pc-body.show').forEach(b=>{
+    b.classList.remove('show');
+    b.previousElementSibling.querySelector('.pc-arrow').classList.remove('open');
+  });
+  if(!isOpen){ body.classList.add('show'); arrow.classList.add('open'); }
+}
+function toggleMetier(header){
+  const body = header.nextElementSibling;
+  const arrow = header.querySelector('.metier-arrow');
+  const isOpen = body.classList.contains('show');
+  document.querySelectorAll('.metier-body.show').forEach(b=>{
+    b.classList.remove('show');
+    b.previousElementSibling.querySelector('.metier-arrow').classList.remove('open');
+  });
+  if(!isOpen){ body.classList.add('show'); arrow.classList.add('open'); }
+}
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')}),{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Investir dans les startups via crowdfunding equity et l'immobilier fractionné en 2026 — Sowefund, Anaxago, parking, box. Réservé aux +18 ans.">
+<title>Investissement Alternatif — MONEYFLOW</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@300;400;600;700&family=Syne+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#060608;--accent:#b060ff;--white:#f0ecff;--card:#0e0e16;--border:#16162a}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{background:var(--bg);color:var(--white);font-family:'Outfit',sans-serif;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.5}
+.orb{position:fixed;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0}
+.orb1{width:350px;height:350px;background:rgba(176,96,255,0.07);top:-100px;right:-100px;animation:fo 10s ease-in-out infinite}
+@keyframes fo{0%,100%{transform:translate(0,0)}50%{transform:translate(20px,20px)}}
+.wrapper{max-width:480px;margin:0 auto;padding:0 20px 80px;position:relative;z-index:1}
+nav{display:flex;align-items:center;justify-content:space-between;padding:24px 0}
+.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;letter-spacing:-1px;text-decoration:none;color:var(--white)}
+.logo span{color:var(--accent)}
+.back{font-family:'Syne Mono',monospace;font-size:11px;letter-spacing:2px;color:#444;text-decoration:none}
+
+/* LEGAL GATE */
+.legal-gate{background:var(--card);border:1px solid rgba(176,96,255,0.3);border-radius:20px;padding:28px;text-align:center;margin:20px 0}
+.gate-icon{font-size:48px;margin-bottom:16px}
+.gate-title{font-family:'Syne',sans-serif;font-weight:800;font-size:24px;letter-spacing:-1px;margin-bottom:12px;color:var(--accent)}
+.gate-text{font-size:14px;color:#777;line-height:1.7;margin-bottom:20px}
+.gate-warning{background:rgba(255,45,120,0.06);border:1px solid rgba(255,45,120,0.2);border-radius:12px;padding:14px;font-size:13px;color:#888;margin-bottom:20px;line-height:1.6}
+.gate-warning strong{color:#ff2d78}
+.gate-check{display:flex;align-items:flex-start;gap:12px;text-align:left;margin-bottom:20px;cursor:pointer}
+.gate-check input{width:18px;height:18px;flex-shrink:0;margin-top:2px;accent-color:var(--accent)}
+.gate-check label{font-size:13px;color:#777;line-height:1.5;cursor:pointer}
+.gate-btn{width:100%;background:#222;color:#555;font-family:'Syne',sans-serif;font-weight:800;font-size:15px;padding:16px;border-radius:14px;border:1px solid var(--border);cursor:not-allowed;transition:all 0.3s}
+.gate-btn.active{background:var(--accent);color:#fff;cursor:pointer;box-shadow:0 0 30px rgba(176,96,255,0.3)}
+
+/* CONTENT (hidden until gate passed) */
+.content{display:none}
+.content.show{display:block}
+
+.hero{padding:32px 0 40px;text-align:center}
+.cat-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(176,96,255,0.08);border:1px solid rgba(176,96,255,0.2);border-radius:100px;padding:7px 18px;font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--accent);margin-bottom:20px}
+h1{font-family:'Syne',sans-serif;font-weight:800;font-size:36px;letter-spacing:-2px;line-height:1.05;margin-bottom:14px}
+h1 span{color:var(--accent)}
+.hero-sub{font-size:15px;color:#666;line-height:1.7;margin-bottom:28px}
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:32px}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px 10px;text-align:center}
+.stat-num{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;color:var(--accent)}
+.stat-label{font-family:'Syne Mono',monospace;font-size:9px;letter-spacing:2px;color:#444;margin-top:4px}
+.section-label{font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--accent);margin:32px 0 14px}
+p{font-size:14px;color:#777;line-height:1.8;margin-bottom:16px}
+strong{color:var(--white)}
+.invest-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;margin:12px 0}
+.ic-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}
+.ic-name{font-family:'Syne',sans-serif;font-weight:800;font-size:17px}
+.ic-risk{font-family:'Syne Mono',monospace;font-size:9px;letter-spacing:2px;padding:4px 10px;border-radius:100px}
+.risk-high{background:rgba(255,45,120,0.1);color:#ff2d78;border:1px solid rgba(255,45,120,0.2)}
+.risk-med{background:rgba(255,229,0,0.1);color:#ffe500;border:1px solid rgba(255,229,0,0.2)}
+.ic-desc{font-size:13px;color:#666;line-height:1.6;margin-bottom:12px}
+.ic-detail{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ic-det-item{background:#0a0a12;border-radius:8px;padding:10px 12px}
+.ic-det-label{font-family:'Syne Mono',monospace;font-size:9px;letter-spacing:2px;color:#444;margin-bottom:4px}
+.ic-det-val{font-weight:700;font-size:14px;color:var(--accent)}
+.platform-list{display:flex;flex-direction:column;gap:8px;margin:16px 0}
+.platform{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.plat-name{font-weight:700;font-size:14px}
+.plat-type{font-family:'Syne Mono',monospace;font-size:10px;color:#444}
+.plat-min{font-family:'Syne Mono',monospace;font-size:11px;color:var(--accent)}
+.warning-final{background:rgba(255,45,120,0.05);border:1px solid rgba(255,45,120,0.2);border-radius:14px;padding:18px;margin:28px 0;text-align:center}
+.wf-title{font-family:'Syne',sans-serif;font-weight:800;font-size:16px;color:#ff2d78;margin-bottom:8px}
+.wf-text{font-size:13px;color:#777;line-height:1.6}
+.cta-box{background:linear-gradient(135deg,rgba(176,96,255,0.07),rgba(45,255,240,0.04));border:1px solid rgba(176,96,255,0.2);border-radius:20px;padding:28px;text-align:center;margin-top:40px}
+.cta-title{font-family:'Syne',sans-serif;font-weight:800;font-size:22px;letter-spacing:-1px;margin-bottom:10px}
+.cta-title span{color:var(--accent)}
+.cta-sub{font-size:13px;color:#666;margin-bottom:20px;line-height:1.6}
+.btn-main{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:#fff;font-family:'Syne',sans-serif;font-weight:800;font-size:15px;padding:16px;border-radius:14px;text-decoration:none;transition:all 0.2s}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity 0.5s,transform 0.5s}
+.reveal.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+<div class="orb orb1"></div>
+<div class="wrapper">
+  <nav>
+    <a href="index.html" class="logo">MONEY<span>FLOW</span></a>
+    <a href="index.html" class="back">← ACCUEIL</a>
+  </nav>
+
+  <!-- LEGAL GATE -->
+  <div class="legal-gate" id="gate">
+    <div class="gate-icon">🔒</div>
+    <div class="gate-title">Accès +18 ans</div>
+    <p class="gate-text">Cette section concerne des investissements en capital. Elle est réservée aux personnes majeures.</p>
+    <div class="gate-warning">
+      <strong>⚠️ Risque de perte en capital</strong><br>
+      Investir dans des startups ou l'immobilier comporte un risque réel de perte totale de ton investissement. Ces informations sont éducatives uniquement.
+    </div>
+    <div class="gate-check">
+      <input type="checkbox" id="ageCheck" onchange="checkGate()">
+      <label for="ageCheck">Je confirme avoir 18 ans ou plus et comprends que ces investissements comportent un risque réel de perte en capital, pouvant être total.</label>
+    </div>
+    <button class="gate-btn" id="gateBtn" onclick="unlockContent()" disabled>Accéder au contenu (+18 ans)</button>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content" id="mainContent">
+    <div class="hero reveal">
+      <div class="cat-badge">📈 INVESTISSEMENT ALTERNATIF</div>
+      <h1>Startups,<br>Immobilier &<br><span>Capital</span></h1>
+      <p class="hero-sub">Au-delà de la bourse traditionnelle : crowdfunding equity dans des startups, immobilier fractionné, parking et box. Des alternatives pour diversifier son patrimoine.</p>
+      <div class="stats-row">
+        <div class="stat"><div class="stat-num">100€</div><div class="stat-label">TICKET MIN.</div></div>
+        <div class="stat"><div class="stat-num">x10</div><div class="stat-label">POTENTIEL MAX</div></div>
+        <div class="stat"><div class="stat-num">⚠️</div><div class="stat-label">RISQUE ÉLEVÉ</div></div>
+      </div>
+    </div>
+
+    <div class="section-label reveal">// LES DIFFÉRENTES OPTIONS</div>
+
+    <div class="invest-card reveal">
+      <div class="ic-header">
+        <div class="ic-name">🚀 Crowdfunding Startups</div>
+        <div class="ic-risk risk-high">TRÈS RISQUÉ</div>
+      </div>
+      <div class="ic-desc">Tu investis dans de jeunes entreprises non cotées en échange de parts. Si la startup réussit, tu peux multiplier ta mise par 5 à 20. Mais <strong>90% des startups meurent</strong> — tu perds tout.</div>
+      <div class="ic-detail">
+        <div class="ic-det-item"><div class="ic-det-label">TICKET MIN.</div><div class="ic-det-val">100€</div></div>
+        <div class="ic-det-item"><div class="ic-det-label">HORIZON</div><div class="ic-det-val">5–10 ans</div></div>
+        <div class="ic-det-item"><div class="ic-det-label">LIQUIDITÉ</div><div class="ic-det-val">Très faible</div></div>
+        <div class="ic-det-item"><div class="ic-det-label">POTENTIEL</div><div class="ic-det-val">x5 à x20</div></div>
+      </div>
+    </div>
+
+    <div class="invest-card reveal">
+      <div class="ic-header">
+        <div class="ic-name">🏗️ Parking / Box de stockage</div>
+        <div class="ic-risk risk-med">MODÉRÉ</div>
+      </div>
+      <div class="ic-desc">Achète une place de parking ou un box en ville et loue-le. Moins de risque que l'appartement, moins de gestion, rendement net de <strong>4–8% par an</strong>. Idéal pour commencer l'immobilier.</div>
+      <div class="ic-detail">
+        <div class="ic-det-item"><div class="ic-det-label">BUDGET MIN.</div><div class="ic-det-val">5 000€</div></div>
+        <div class="ic-det-label" style="display:none"></div>
+        <div class="ic-det-item"><div class="ic-det-label">RENDEMENT</div><div class="ic-det-val">4–8%/an</div></div>
+        <div class="ic-det-item"><div class="ic-det-label">LIQUIDITÉ</div><div class="ic-det-val">Moyenne</div></div>
+        <div class="ic-det-item"><div class="ic-det-label">RISQUE</div><div class="ic-det-val">Faible à modéré</div></div>
+      </div>
+    </div>
+
+    <div class="invest-card reveal">
+      <div class="ic-header">
+        <div class="ic-name">🏢 Immobilier fractionné</div>
+        <div class="ic-risk risk-med">MODÉRÉ</div>
+      </div>
+      <div class="ic-desc">Des plateformes comme Bricks.co ou Louve Invest te permettent d'investir dans l'immobilier locatif dès 10€. Tu reçois des loyers proportionnels à ta part. Pas besoin de gérer quoi que ce soit.</div>
+      <div class="ic-detail">
+        <div class="ic-det-item"><div class="ic-det-label">TICKET MIN.</div><div class="ic-det-val">10€</div></div>
+        <div class="ic-det-item"><div class="ic-det-label">RENDEMENT</div><div class="ic-det-val">5–7%/an</div></div>
+        <div class="ic-det-item"><div class="ic-det-label">LIQUIDITÉ</div><div class="ic-det-val">Moyenne</div></div>
+        <div class="ic-det-item"><div class="ic-det-label">GESTION</div><div class="ic-det-val">Zéro</div></div>
+      </div>
+    </div>
+
+    <div class="section-label reveal">// PLATEFORMES RECOMMANDÉES</div>
+    <div class="platform-list reveal">
+      <div class="platform"><div><div class="plat-name">Sowefund</div><div class="plat-type">Crowdfunding startups</div></div><div class="plat-min">Dès 100€</div></div>
+      <div class="platform"><div><div class="plat-name">Anaxago</div><div class="plat-type">Startups + Immo</div></div><div class="plat-min">Dès 1 000€</div></div>
+      <div class="platform"><div><div class="plat-name">Bricks.co</div><div class="plat-type">Immo fractionné</div></div><div class="plat-min">Dès 10€</div></div>
+      <div class="platform"><div><div class="plat-name">Louve Invest</div><div class="plat-type">SCPI en ligne</div></div><div class="plat-min">Dès 187€</div></div>
+      <div class="platform"><div><div class="plat-name">WiSEED</div><div class="plat-type">Startups + PME</div></div><div class="plat-min">Dès 100€</div></div>
+    </div>
+
+    <div class="warning-final reveal">
+      <div class="wf-title">⚠️ Rappel important</div>
+      <p class="wf-text">N'investis jamais ce que tu ne peux pas te permettre de perdre totalement. Diversifie toujours. Ces informations sont éducatives et ne constituent pas un conseil financier. Consulte un conseiller agréé avant tout investissement significatif.</p>
+    </div>
+
+    <div class="cta-box reveal">
+      <div class="cta-title">Rejoins la<br><span>communauté</span></div>
+      <p class="cta-sub">Les membres partagent leurs expériences d'investissement, leurs erreurs et leurs succès. Apprends avant d'investir.</p>
+      <a href="https://discord.gg/p5t4xSYQ" class="btn-main">Rejoindre le Discord 🔥</a>
+    </div>
+  </div>
+</div>
+
+<script>
+function checkGate(){
+  const checked = document.getElementById('ageCheck').checked;
+  const btn = document.getElementById('gateBtn');
+  btn.disabled = !checked;
+  btn.classList.toggle('active', checked);
+}
+function unlockContent(){
+  if(!document.getElementById('ageCheck').checked) return;
+  document.getElementById('gate').style.display = 'none';
+  document.getElementById('mainContent').classList.add('show');
+  const io = new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')}),{threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+}
+</script>
+</body>
+</html>

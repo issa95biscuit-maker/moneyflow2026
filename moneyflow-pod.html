@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Guide Print on Demand 2026 — vendre t-shirts et mugs personnalisés via Printful, Printify, Etsy et Shopify. Revenus quasi passifs.">
+<title>Print on Demand (POD) — MONEYFLOW</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@300;400;600;700&family=Syne+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#060608;--accent:#ff2d78;--white:#f0ecff;--card:#0e0e16;--border:#16162a}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{background:var(--bg);color:var(--white);font-family:'Outfit',sans-serif;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.5}
+.orb{position:fixed;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0}
+.orb1{width:350px;height:350px;background:rgba(255,45,120,0.07);top:-100px;right:-100px;animation:fo 10s ease-in-out infinite}
+@keyframes fo{0%,100%{transform:translate(0,0)}50%{transform:translate(20px,20px)}}
+.wrapper{max-width:480px;margin:0 auto;padding:0 20px 80px;position:relative;z-index:1}
+nav{display:flex;align-items:center;justify-content:space-between;padding:24px 0}
+.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;letter-spacing:-1px;text-decoration:none;color:var(--white)}
+.logo span{color:var(--accent)}
+.back{font-family:'Syne Mono',monospace;font-size:11px;letter-spacing:2px;color:#444;text-decoration:none}
+.hero{padding:32px 0 40px;text-align:center}
+.cat-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,45,120,0.08);border:1px solid rgba(255,45,120,0.2);border-radius:100px;padding:7px 18px;font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--accent);margin-bottom:20px}
+h1{font-family:'Syne',sans-serif;font-weight:800;font-size:40px;letter-spacing:-2px;line-height:1;margin-bottom:14px}
+h1 span{color:var(--accent)}
+.hero-sub{font-size:15px;color:#666;line-height:1.7;margin-bottom:28px}
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:32px}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px 10px;text-align:center}
+.stat-num{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;color:var(--accent)}
+.stat-label{font-family:'Syne Mono',monospace;font-size:9px;letter-spacing:2px;color:#444;margin-top:4px}
+.section-label{font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--accent);margin:32px 0 14px}
+h2{font-family:'Syne',sans-serif;font-weight:800;font-size:22px;letter-spacing:-1px;margin-bottom:16px}
+p{font-size:14px;color:#777;line-height:1.8;margin-bottom:16px}
+strong{color:var(--white)}
+.step-list{display:flex;flex-direction:column;gap:10px;margin:16px 0}
+.step{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;display:flex;gap:14px}
+.step-n{font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:rgba(255,45,120,0.15);line-height:1;flex-shrink:0;width:32px}
+.step-title{font-family:'Syne',sans-serif;font-weight:700;font-size:15px;margin-bottom:6px}
+.step-desc{font-size:13px;color:#666;line-height:1.6}
+.niche-list{display:flex;flex-direction:column;gap:8px;margin:16px 0}
+.niche{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.niche-name{font-weight:700;font-size:14px}
+.niche-pot{font-family:'Syne Mono',monospace;font-size:11px;color:var(--accent)}
+.tool-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0}
+.tool{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px}
+.tool-name{font-weight:700;font-size:14px;margin-bottom:4px}
+.tool-desc{font-size:12px;color:#555;line-height:1.5}
+.tool-price{font-family:'Syne Mono',monospace;font-size:10px;color:var(--accent);margin-top:6px}
+.info{background:rgba(255,45,120,0.04);border:1px solid rgba(255,45,120,0.15);border-radius:14px;padding:18px;margin:20px 0}
+.info-label{font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--accent);margin-bottom:8px}
+.info p{color:#777;font-size:13px;margin:0}
+.cta-box{background:linear-gradient(135deg,rgba(255,45,120,0.07),rgba(176,96,255,0.04));border:1px solid rgba(255,45,120,0.2);border-radius:20px;padding:28px;text-align:center;margin-top:40px}
+.cta-title{font-family:'Syne',sans-serif;font-weight:800;font-size:22px;letter-spacing:-1px;margin-bottom:10px}
+.cta-title span{color:var(--accent)}
+.cta-sub{font-size:13px;color:#666;margin-bottom:20px;line-height:1.6}
+.btn-main{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:#fff;font-family:'Syne',sans-serif;font-weight:800;font-size:15px;padding:16px;border-radius:14px;text-decoration:none;transition:all 0.2s}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity 0.5s,transform 0.5s}
+.reveal.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+<div class="orb orb1"></div>
+<div class="wrapper">
+  <nav>
+    <a href="index.html" class="logo">MONEY<span>FLOW</span></a>
+    <a href="index.html" class="back">← ACCUEIL</a>
+  </nav>
+  <div class="hero reveal">
+    <div class="cat-badge">👕 PRINT ON DEMAND</div>
+    <h1>POD — Vends sans<br><span>stock</span></h1>
+    <p class="hero-sub">T-shirts, mugs, posters personnalisés. Printful imprime et envoie à ta place. Toi tu crées les designs et tu encaisses. Quasi passif une fois lancé.</p>
+    <div class="stats-row">
+      <div class="stat"><div class="stat-num">100€</div><div class="stat-label">POUR DÉMARRER</div></div>
+      <div class="stat"><div class="stat-num">2K€</div><div class="stat-label">POTENTIEL/MOIS</div></div>
+      <div class="stat"><div class="stat-num">PASSIF</div><div class="stat-label">UNE FOIS LANCÉ</div></div>
+    </div>
+  </div>
+
+  <div class="section-label reveal">// COMMENT ÇA MARCHE</div>
+  <p class="reveal">Tu crées un design sur Canva ou Illustrator. Tu l'uploades sur Printful. Tu le connectes à ta boutique Etsy ou Shopify. Quand quelqu'un commande, <strong>Printful imprime et envoie directement</strong>. Tu touches la différence entre le prix de vente et le coût de production.</p>
+
+  <div class="info reveal">
+    <div class="info-label">// EXEMPLE DE MARGE</div>
+    <p>T-shirt Printful : <strong>12€</strong> · Prix de vente Etsy : <strong>28€</strong> · Frais Etsy (6,5%) : <strong>1,82€</strong> · Profit net : <strong>~14€ par vente</strong>. 50 ventes/mois = <strong>700€ passif</strong>.</p>
+  </div>
+
+  <div class="section-label reveal">// LES NICHES QUI MARCHENT</div>
+  <div class="niche-list reveal">
+    <div class="niche"><div class="niche-name">🐾 Animaux de compagnie</div><div class="niche-pot">Fort potentiel</div></div>
+    <div class="niche"><div class="niche-name">🎮 Gaming & Geek culture</div><div class="niche-pot">Très demandé</div></div>
+    <div class="niche"><div class="niche-name">💪 Fitness & Sport</div><div class="niche-pot">Acheteurs actifs</div></div>
+    <div class="niche"><div class="niche-name">👩‍💼 Métiers & Humour</div><div class="niche-pot">Cadeau parfait</div></div>
+    <div class="niche"><div class="niche-name">🌍 Cultures & Origines</div><div class="niche-pot">Très fidèles</div></div>
+    <div class="niche"><div class="niche-name">🎄 Occasions spéciales</div><div class="niche-pot">Pics saisonniers</div></div>
+  </div>
+
+  <div class="section-label reveal">// LES ÉTAPES POUR LANCER</div>
+  <div class="step-list reveal">
+    <div class="step"><div class="step-n">01</div><div><div class="step-title">Choisir ta niche</div><div class="step-desc">Ne fais pas des designs pour tout le monde — cible un groupe précis. Les passionnés de golden retrievers achètent TOUT ce qui concerne leur chien.</div></div></div>
+    <div class="step"><div class="step-n">02</div><div><div class="step-title">Créer tes designs sur Canva</div><div class="step-desc">Pas besoin d'être graphiste. Canva Pro suffit. Crée 10–20 designs variés. Teste des phrases, des illustrations, des styles différents.</div></div></div>
+    <div class="step"><div class="step-n">03</div><div><div class="step-title">Ouvrir ta boutique Etsy</div><div class="step-desc">Etsy = trafic organique gratuit déjà là. 0,20€ par mise en vente. Optimise les titres et tags avec les mots-clés recherchés (Everbee pour la recherche).</div></div></div>
+    <div class="step"><div class="step-n">04</div><div><div class="step-title">Connecter Printful à Etsy</div><div class="step-desc">Connexion en 5 minutes. Chaque commande Etsy est automatiquement envoyée à Printful qui produit et expédie. Tu ne fais rien de plus.</div></div></div>
+    <div class="step"><div class="step-n">05</div><div><div class="step-title">Scaler avec TikTok ou Pinterest</div><div class="step-desc">Montre tes produits en vrai. Le "unboxing" de tes propres t-shirts sur TikTok peut exploser tes ventes du jour au lendemain.</div></div></div>
+  </div>
+
+  <div class="section-label reveal">// OUTILS</div>
+  <div class="tool-grid reveal">
+    <div class="tool"><div class="tool-name">Printful</div><div class="tool-desc">Impression et envoi automatique</div><div class="tool-price">GRATUIT (coût par produit)</div></div>
+    <div class="tool"><div class="tool-name">Printify</div><div class="tool-desc">Alternative moins chère que Printful</div><div class="tool-price">GRATUIT → 24€/mois</div></div>
+    <div class="tool"><div class="tool-name">Etsy</div><div class="tool-desc">Marketplace avec trafic organique</div><div class="tool-price">0,20€/mise en vente</div></div>
+    <div class="tool"><div class="tool-name">Canva Pro</div><div class="tool-desc">Créer des designs professionnels</div><div class="tool-price">13€/mois</div></div>
+    <div class="tool"><div class="tool-name">Everbee</div><div class="tool-desc">Recherche de mots-clés Etsy</div><div class="tool-price">GRATUIT → 30€/mois</div></div>
+    <div class="tool"><div class="tool-name">Kittl</div><div class="tool-desc">Designs POD prêts à l'emploi</div><div class="tool-price">10€/mois</div></div>
+  </div>
+
+  <div class="cta-box reveal">
+    <div class="cta-title">Rejoins la<br><span>communauté</span></div>
+    <p class="cta-sub">Les membres partagent leurs designs gagnants et leurs boutiques Etsy. Apprends ce qui marche vraiment.</p>
+    <a href="https://discord.gg/p5t4xSYQ" class="btn-main">Rejoindre le Discord 🔥</a>
+  </div>
+</div>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')}),{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

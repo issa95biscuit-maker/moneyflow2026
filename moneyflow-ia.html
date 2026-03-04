@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Lancer une micro-entreprise IA en 2026 — automatisation Notion, consulting ChatGPT, gestion LinkedIn, prompt engineering. 50-150€/h possible.">
+<title>Micro-entreprise IA — MONEYFLOW</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@300;400;600;700&family=Syne+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#060608;--accent:#2dfff0;--white:#f0ecff;--card:#0e0e16;--border:#16162a}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{background:var(--bg);color:var(--white);font-family:'Outfit',sans-serif;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.5}
+.orb{position:fixed;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0}
+.orb1{width:350px;height:350px;background:rgba(45,255,240,0.07);top:-100px;right:-100px;animation:fo 10s ease-in-out infinite}
+@keyframes fo{0%,100%{transform:translate(0,0)}50%{transform:translate(20px,20px)}}
+.wrapper{max-width:480px;margin:0 auto;padding:0 20px 80px;position:relative;z-index:1}
+nav{display:flex;align-items:center;justify-content:space-between;padding:24px 0}
+.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;letter-spacing:-1px;text-decoration:none;color:var(--white)}
+.logo span{color:var(--accent)}
+.back{font-family:'Syne Mono',monospace;font-size:11px;letter-spacing:2px;color:#444;text-decoration:none}
+.hero{padding:32px 0 40px;text-align:center}
+.cat-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(45,255,240,0.08);border:1px solid rgba(45,255,240,0.2);border-radius:100px;padding:7px 18px;font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--accent);margin-bottom:20px}
+.hot-tag{background:rgba(255,45,120,0.15);color:#ff2d78;border:1px solid rgba(255,45,120,0.3);border-radius:100px;padding:4px 12px;font-family:'Syne Mono',monospace;font-size:9px;letter-spacing:2px;margin-left:8px}
+h1{font-family:'Syne',sans-serif;font-weight:800;font-size:38px;letter-spacing:-2px;line-height:1;margin-bottom:14px}
+h1 span{color:var(--accent)}
+.hero-sub{font-size:15px;color:#666;line-height:1.7;margin-bottom:28px}
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:32px}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px 10px;text-align:center}
+.stat-num{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;color:var(--accent)}
+.stat-label{font-family:'Syne Mono',monospace;font-size:9px;letter-spacing:2px;color:#444;margin-top:4px}
+.section-label{font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--accent);margin:32px 0 14px}
+p{font-size:14px;color:#777;line-height:1.8;margin-bottom:16px}
+strong{color:var(--white)}
+.service-list{display:flex;flex-direction:column;gap:10px;margin:16px 0}
+.service{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px}
+.service-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.service-name{font-family:'Syne',sans-serif;font-weight:700;font-size:15px}
+.service-rate{font-family:'Syne Mono',monospace;font-size:11px;color:var(--accent)}
+.service-desc{font-size:13px;color:#666;line-height:1.6;margin-bottom:6px}
+.service-learn{font-family:'Syne Mono',monospace;font-size:10px;color:#444}
+.step-list{display:flex;flex-direction:column;gap:10px;margin:16px 0}
+.step{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;display:flex;gap:14px}
+.step-n{font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:rgba(45,255,240,0.15);line-height:1;flex-shrink:0;width:32px}
+.step-title{font-family:'Syne',sans-serif;font-weight:700;font-size:15px;margin-bottom:6px}
+.step-desc{font-size:13px;color:#666;line-height:1.6}
+.tool-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0}
+.tool{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px}
+.tool-name{font-weight:700;font-size:14px;margin-bottom:4px}
+.tool-desc{font-size:12px;color:#555;line-height:1.5}
+.tool-price{font-family:'Syne Mono',monospace;font-size:10px;color:var(--accent);margin-top:6px}
+.info{background:rgba(45,255,240,0.04);border:1px solid rgba(45,255,240,0.15);border-radius:14px;padding:18px;margin:20px 0}
+.info-label{font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--accent);margin-bottom:8px}
+.info p{color:#777;font-size:13px;margin:0}
+.cta-box{background:linear-gradient(135deg,rgba(45,255,240,0.07),rgba(176,96,255,0.04));border:1px solid rgba(45,255,240,0.2);border-radius:20px;padding:28px;text-align:center;margin-top:40px}
+.cta-title{font-family:'Syne',sans-serif;font-weight:800;font-size:22px;letter-spacing:-1px;margin-bottom:10px}
+.cta-title span{color:var(--accent)}
+.cta-sub{font-size:13px;color:#666;margin-bottom:20px;line-height:1.6}
+.btn-main{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:#000;font-family:'Syne',sans-serif;font-weight:800;font-size:15px;padding:16px;border-radius:14px;text-decoration:none;transition:all 0.2s}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity 0.5s,transform 0.5s}
+.reveal.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+<div class="orb orb1"></div>
+<div class="wrapper">
+  <nav>
+    <a href="index.html" class="logo">MONEY<span>FLOW</span></a>
+    <a href="index.html" class="back">← ACCUEIL</a>
+  </nav>
+  <div class="hero reveal">
+    <div class="cat-badge">🤖 MICRO-ENTREPRISE IA <span class="hot-tag">HOT 🔥</span></div>
+    <h1>Vends l'IA aux<br><span>entreprises</span><br>qui ne savent pas</h1>
+    <p class="hero-sub">Les entreprises veulent utiliser l'IA mais ne savent pas comment. Toi tu apprends en 30 jours, tu factures 50–150€/h pour leur faire gagner du temps. La compétence la plus demandée de 2026.</p>
+    <div class="stats-row">
+      <div class="stat"><div class="stat-num">500€</div><div class="stat-label">POUR DÉMARRER</div></div>
+      <div class="stat"><div class="stat-num">3K€</div><div class="stat-label">POTENTIEL/MOIS</div></div>
+      <div class="stat"><div class="stat-num">30J</div><div class="stat-label">POUR APPRENDRE</div></div>
+    </div>
+  </div>
+
+  <div class="section-label reveal">// LES SERVICES IA LES PLUS DEMANDÉS</div>
+  <div class="service-list reveal">
+    <div class="service">
+      <div class="service-header"><div class="service-name">🤖 Automatisation de processus</div><div class="service-rate">60–150€/h</div></div>
+      <div class="service-desc">Automatise les tâches répétitives des entreprises avec Make.com, Zapier, n8n. Exemple : automatiser la réponse aux emails, la création de rapports, les sauvegardes de données.</div>
+      <div class="service-learn">APPRENDRE → Cours Make.com gratuits sur YouTube</div>
+    </div>
+    <div class="service">
+      <div class="service-header"><div class="service-name">✍️ Création de contenu IA</div><div class="service-rate">30–80€/h</div></div>
+      <div class="service-desc">Crée du contenu pour les entreprises avec ChatGPT, Claude, Midjourney. Articles de blog, posts LinkedIn, newsletters, descriptions produits — en masse et vite.</div>
+      <div class="service-learn">APPRENDRE → Pratique directe + YouTube</div>
+    </div>
+    <div class="service">
+      <div class="service-header"><div class="service-name">💼 Consulting ChatGPT</div><div class="service-rate">50–120€/h</div></div>
+      <div class="service-desc">Forme les équipes d'entreprises à utiliser l'IA. Crée des prompts personnalisés pour leur métier. Les PME paient pour ne pas perdre de temps à apprendre.</div>
+      <div class="service-learn">APPRENDRE → Guide prompting + expérimentation</div>
+    </div>
+    <div class="service">
+      <div class="service-header"><div class="service-name">🗂️ Systèmes Notion/ClickUp IA</div><div class="service-rate">40–100€/h</div></div>
+      <div class="service-desc">Crée des espaces de travail Notion intégrés avec l'IA pour les équipes. CRM, bases de données, workflows automatisés. Forte demande des startups et PME.</div>
+      <div class="service-learn">APPRENDRE → Templates Notion + YouTube</div>
+    </div>
+    <div class="service">
+      <div class="service-header"><div class="service-name">📊 LinkedIn IA ghostwriting</div><div class="service-rate">500–2000€/mois</div></div>
+      <div class="service-desc">Gère le compte LinkedIn d'un dirigeant — crée son contenu avec l'IA, publie, répond aux commentaires. Très rentable car peu de concurrents le font bien.</div>
+      <div class="service-learn">APPRENDRE → Étude des profils LinkedIn qui performent</div>
+    </div>
+  </div>
+
+  <div class="section-label reveal">// PLAN D'ACTION 30 JOURS</div>
+  <div class="step-list reveal">
+    <div class="step"><div class="step-n">01</div><div><div class="step-title">Semaine 1 : Maîtrise les outils</div><div class="step-desc">ChatGPT, Claude, Make.com, Notion IA. Passe 2h/jour à les tester. Apprends le prompting avancé — c'est la base de tout.</div></div></div>
+    <div class="step"><div class="step-n">02</div><div><div class="step-title">Semaine 2 : Choisis ta spécialité</div><div class="step-desc">Automatisation, contenu IA ou consulting ? Choisis une niche précise. Le généraliste gagne moins que le spécialiste.</div></div></div>
+    <div class="step"><div class="step-n">03</div><div><div class="step-title">Semaine 3 : Crée ton portfolio</div><div class="step-desc">Crée 2–3 exemples concrets de ce que tu peux faire. Un workflow Make.com, un système Notion, 10 posts LinkedIn rédigés. Montre, ne parle pas.</div></div></div>
+    <div class="step"><div class="step-n">04</div><div><div class="step-title">Semaine 4 : Prospecte sur LinkedIn</div><div class="step-desc">Envoie 20 messages/jour à des dirigeants de PME. Message court : problème identifié + solution spécifique + résultat attendu. Taux de réponse 5–10% = suffisant.</div></div></div>
+  </div>
+
+  <div class="info reveal">
+    <div class="info-label">// POURQUOI MAINTENANT C'EST LE MOMENT</div>
+    <p>Les entreprises ont 12–18 mois de retard sur l'IA. Dans 2 ans, tout le monde saura l'utiliser. <strong>Aujourd'hui, les pionniers facturent 3–5x plus cher</strong> pour la même prestation. La fenêtre se ferme — agis maintenant.</p>
+  </div>
+
+  <div class="section-label reveal">// OUTILS ESSENTIELS</div>
+  <div class="tool-grid reveal">
+    <div class="tool"><div class="tool-name">ChatGPT Plus</div><div class="tool-desc">IA de base, indispensable</div><div class="tool-price">20€/mois</div></div>
+    <div class="tool"><div class="tool-name">Make.com</div><div class="tool-desc">Automatisation no-code</div><div class="tool-price">GRATUIT → 9€/mois</div></div>
+    <div class="tool"><div class="tool-name">Notion IA</div><div class="tool-desc">Workspace intelligent</div><div class="tool-price">8€/mois</div></div>
+    <div class="tool"><div class="tool-name">Midjourney</div><div class="tool-desc">Génération d'images IA</div><div class="tool-price">10€/mois</div></div>
+  </div>
+
+  <div class="cta-box reveal">
+    <div class="cta-title">Rejoins la<br><span>communauté</span></div>
+    <p class="cta-sub">Les membres partagent leurs prompts, leurs automatisations et leurs clients gagnés. La ressource #1 pour se lancer dans l'IA.</p>
+    <a href="https://discord.gg/p5t4xSYQ" class="btn-main">Rejoindre le Discord 🔥</a>
+  </div>
+</div>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')}),{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

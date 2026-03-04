@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Guide complet parrainage d'apps 2026 — Revolut, Lydia, BlaBlaCar, iGraal, Uber Eats. Gagner 100€ cette semaine grâce aux codes de parrainage.">
+<title>Parrainage d'Apps — MONEYFLOW</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@300;400;600;700&family=Syne+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#060608;--accent:#00ff87;--white:#f0ecff;--card:#0e0e16;--border:#16162a}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{background:var(--bg);color:var(--white);font-family:'Outfit',sans-serif;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.5}
+.orb{position:fixed;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0}
+.orb1{width:350px;height:350px;background:rgba(0,255,135,0.07);top:-100px;right:-100px;animation:fo 10s ease-in-out infinite}
+@keyframes fo{0%,100%{transform:translate(0,0)}50%{transform:translate(20px,20px)}}
+.wrapper{max-width:480px;margin:0 auto;padding:0 20px 80px;position:relative;z-index:1}
+nav{display:flex;align-items:center;justify-content:space-between;padding:24px 0}
+.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;letter-spacing:-1px;text-decoration:none;color:var(--white)}
+.logo span{color:var(--accent)}
+.back{font-family:'Syne Mono',monospace;font-size:11px;letter-spacing:2px;color:#444;text-decoration:none}
+.hero{padding:32px 0 36px;text-align:center}
+.cat-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,255,135,0.08);border:1px solid rgba(0,255,135,0.2);border-radius:100px;padding:7px 18px;font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--accent);margin-bottom:20px}
+h1{font-family:'Syne',sans-serif;font-weight:800;font-size:40px;letter-spacing:-2px;line-height:1;margin-bottom:14px}
+h1 span{color:var(--accent)}
+.hero-sub{font-size:15px;color:#777;line-height:1.7}
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:24px 0}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px 10px;text-align:center}
+.stat-num{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;color:var(--accent)}
+.stat-label{font-family:'Syne Mono',monospace;font-size:9px;letter-spacing:2px;color:#444;margin-top:4px}
+.section-label{font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--accent);margin:32px 0 14px;display:flex;align-items:center;gap:10px}
+.section-label::after{content:'';flex:1;height:1px;background:var(--border)}
+p{font-size:14px;color:#777;line-height:1.8;margin-bottom:14px}
+strong{color:var(--white)}
+.app-list{display:flex;flex-direction:column;gap:10px}
+.app-card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.app-header{display:flex;align-items:center;gap:14px;padding:18px;cursor:pointer}
+.app-icon{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
+.app-info{flex:1}
+.app-name{font-family:'Syne',sans-serif;font-weight:700;font-size:16px;margin-bottom:3px}
+.app-earn{font-family:'Syne Mono',monospace;font-size:11px;color:var(--accent)}
+.app-badge{font-family:'Syne Mono',monospace;font-size:9px;letter-spacing:2px;padding:4px 10px;border-radius:100px;margin-left:auto;flex-shrink:0}
+.badge-easy{background:rgba(0,255,135,0.1);color:var(--accent);border:1px solid rgba(0,255,135,0.2)}
+.badge-med{background:rgba(255,229,0,0.1);color:#ffe500;border:1px solid rgba(255,229,0,0.2)}
+.app-arrow{color:#333;font-size:16px;margin-left:10px;transition:transform 0.3s;flex-shrink:0}
+.app-arrow.open{transform:rotate(90deg)}
+.app-body{display:none;padding:0 18px 18px;border-top:1px solid var(--border)}
+.app-body.show{display:block}
+.app-desc{font-size:13px;color:#666;line-height:1.7;margin:14px 0 12px}
+.app-detail{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+.ad-item{background:#0a0a12;border-radius:10px;padding:10px 12px}
+.ad-label{font-family:'Syne Mono',monospace;font-size:9px;letter-spacing:2px;color:#333;margin-bottom:4px}
+.ad-val{font-size:13px;font-weight:600;color:var(--white)}
+.app-steps{display:flex;flex-direction:column;gap:6px}
+.as-row{display:flex;gap:10px;align-items:flex-start}
+.as-n{font-family:'Syne Mono',monospace;font-size:11px;color:var(--accent);flex-shrink:0;width:20px;padding-top:1px}
+.as-text{font-size:13px;color:#777;line-height:1.6}
+.as-text strong{color:var(--white)}
+.strat-list{display:flex;flex-direction:column;gap:10px;margin:14px 0}
+.strat{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;display:flex;gap:14px}
+.strat-n{font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:rgba(0,255,135,0.12);line-height:1;flex-shrink:0;width:32px}
+.strat-title{font-family:'Syne',sans-serif;font-weight:700;font-size:15px;margin-bottom:6px}
+.strat-desc{font-size:13px;color:#666;line-height:1.6}
+.template-box{background:#0a0a12;border:1px solid var(--border);border-radius:14px;padding:16px;margin:20px 0;position:relative}
+.template-label{font-family:'Syne Mono',monospace;font-size:9px;letter-spacing:3px;color:var(--accent);margin-bottom:10px}
+.template-text{font-size:13px;color:#888;line-height:1.8;font-style:italic}
+.copy-btn{position:absolute;top:14px;right:14px;background:rgba(0,255,135,0.1);border:1px solid rgba(0,255,135,0.2);color:var(--accent);font-family:'Syne Mono',monospace;font-size:9px;letter-spacing:2px;padding:6px 12px;border-radius:8px;cursor:pointer}
+.plan-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0}
+.plan-day{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px}
+.plan-day-label{font-family:'Syne Mono',monospace;font-size:9px;letter-spacing:2px;color:var(--accent);margin-bottom:8px}
+.plan-day-title{font-weight:700;font-size:14px;margin-bottom:4px}
+.plan-day-desc{font-size:12px;color:#555;line-height:1.5}
+.info{background:rgba(0,255,135,0.04);border:1px solid rgba(0,255,135,0.15);border-radius:14px;padding:18px;margin:20px 0}
+.info-label{font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--accent);margin-bottom:8px}
+.info p{color:#777;font-size:13px;margin:0}
+.cta-box{background:linear-gradient(135deg,rgba(0,255,135,0.07),rgba(45,255,240,0.04));border:1px solid rgba(0,255,135,0.2);border-radius:20px;padding:28px;text-align:center;margin-top:40px}
+.cta-title{font-family:'Syne',sans-serif;font-weight:800;font-size:22px;letter-spacing:-1px;margin-bottom:10px}
+.cta-title span{color:var(--accent)}
+.cta-sub{font-size:13px;color:#666;margin-bottom:20px;line-height:1.6}
+.btn-main{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:#000;font-family:'Syne',sans-serif;font-weight:800;font-size:15px;padding:16px;border-radius:14px;text-decoration:none}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity 0.5s,transform 0.5s}
+.reveal.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+<div class="orb orb1"></div>
+<div class="wrapper">
+  <nav><a href="index.html" class="logo">MONEY<span>FLOW</span></a><a href="index.html" class="back">← ACCUEIL</a></nav>
+  <div class="hero reveal">
+    <div class="cat-badge">🤝 PARRAINAGE</div>
+    <h1>100€ cette<br>semaine avec<br>le <span>parrainage</span></h1>
+    <p class="hero-sub">Tu partages un lien, quelqu'un s'inscrit, vous êtes tous les deux récompensés. La méthode la plus simple pour gagner ses premiers euros — zéro compétence requise.</p>
+    <div class="stats-row">
+      <div class="stat"><div class="stat-num">0€</div><div class="stat-label">POUR DÉMARRER</div></div>
+      <div class="stat"><div class="stat-num">100€</div><div class="stat-label">EN 1 SEMAINE</div></div>
+      <div class="stat"><div class="stat-num">30</div><div class="stat-label">MIN. PAR JOUR</div></div>
+    </div>
+  </div>
+
+  <div class="section-label reveal">// LES MEILLEURES APPS À PARRAINER</div>
+  <div class="app-list reveal">
+    <div class="app-card" style="border-color:rgba(0,255,135,0.2)">
+      <div class="app-header" onclick="toggleApp(this)">
+        <div class="app-icon" style="background:rgba(0,255,135,0.1)">💳</div>
+        <div class="app-info"><div class="app-name">Revolut</div><div class="app-earn">40 – 60€ par parrainage</div></div>
+        <div class="app-badge badge-easy">TOP</div><div class="app-arrow">›</div>
+      </div>
+      <div class="app-body">
+        <div class="app-desc">La banque en ligne la plus populaire chez les jeunes. Prime élevée, inscription rapide. Condition : la personne parrainée doit effectuer une dépense dans les 30 jours.</div>
+        <div class="app-detail">
+          <div class="ad-item"><div class="ad-label">PRIME PARRAIN</div><div class="ad-val">40–60€</div></div>
+          <div class="ad-item"><div class="ad-label">PRIME FILLEUL</div><div class="ad-val">Carte gratuite</div></div>
+          <div class="ad-item"><div class="ad-label">CONDITION</div><div class="ad-val">1 dépense 30j</div></div>
+          <div class="ad-item"><div class="ad-label">DÉLAI PAIEMENT</div><div class="ad-val">7–14 jours</div></div>
+        </div>
+        <div class="app-steps">
+          <div class="as-row"><div class="as-n">→</div><div class="as-text">Ouvre Revolut → <strong>Menu → Inviter des amis</strong></div></div>
+          <div class="as-row"><div class="as-n">→</div><div class="as-text">Copie ton lien unique et envoie à des contacts sans compte en ligne</div></div>
+          <div class="as-row"><div class="as-n">→</div><div class="as-text">Ils s'inscrivent + font une petite dépense → tu reçois ta prime</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-card" style="border-color:rgba(45,255,240,0.15)">
+      <div class="app-header" onclick="toggleApp(this)">
+        <div class="app-icon" style="background:rgba(45,255,240,0.1)">🏦</div>
+        <div class="app-info"><div class="app-name">Lydia / Sumeria</div><div class="app-earn">10 – 30€ par parrainage</div></div>
+        <div class="app-badge badge-easy">FACILE</div><div class="app-arrow">›</div>
+      </div>
+      <div class="app-body">
+        <div class="app-desc">App de paiement entre amis très populaire en France. Prime plus faible mais inscription ultra-simple — ton filleul valide en 5 minutes.</div>
+        <div class="app-detail">
+          <div class="ad-item"><div class="ad-label">PRIME PARRAIN</div><div class="ad-val">10–30€</div></div>
+          <div class="ad-item"><div class="ad-label">PRIME FILLEUL</div><div class="ad-val">10–15€</div></div>
+          <div class="ad-item"><div class="ad-label">CONDITION</div><div class="ad-val">1 transaction</div></div>
+          <div class="ad-item"><div class="ad-label">DÉLAI</div><div class="ad-val">3–7 jours</div></div>
+        </div>
+        <div class="app-steps">
+          <div class="as-row"><div class="as-n">→</div><div class="as-text">Lydia → <strong>Profil → Parrainer un ami</strong></div></div>
+          <div class="as-row"><div class="as-n">→</div><div class="as-text">Ton ami installe l'app, entre ton code et envoie 1€ à quelqu'un</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-card" style="border-color:rgba(255,229,0,0.15)">
+      <div class="app-header" onclick="toggleApp(this)">
+        <div class="app-icon" style="background:rgba(255,229,0,0.1)">🚗</div>
+        <div class="app-info"><div class="app-name">BlaBlaCar</div><div class="app-earn">5 – 20€ par parrainage</div></div>
+        <div class="app-badge badge-easy">VOLUME</div><div class="app-arrow">›</div>
+      </div>
+      <div class="app-body">
+        <div class="app-desc">Covoiturage le plus utilisé en France. Cible les étudiants et jeunes actifs qui voyagent souvent. Ton filleul réserve un trajet = tu touches ta prime.</div>
+        <div class="app-detail">
+          <div class="ad-item"><div class="ad-label">PRIME PARRAIN</div><div class="ad-val">5–20€</div></div>
+          <div class="ad-item"><div class="ad-label">PRIME FILLEUL</div><div class="ad-val">Réduction trajet</div></div>
+          <div class="ad-item"><div class="ad-label">CONDITION</div><div class="ad-val">1 trajet réservé</div></div>
+          <div class="ad-item"><div class="ad-label">CIBLE</div><div class="ad-val">Étudiants</div></div>
+        </div>
+        <div class="app-steps">
+          <div class="as-row"><div class="as-n">→</div><div class="as-text">BlaBlaCar → <strong>Menu → Parrainer des amis</strong></div></div>
+          <div class="as-row"><div class="as-n">→</div><div class="as-text">Partage le lien — prime dans les 24h après réservation</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-card" style="border-color:rgba(255,45,120,0.15)">
+      <div class="app-header" onclick="toggleApp(this)">
+        <div class="app-icon" style="background:rgba(255,45,120,0.1)">🍕</div>
+        <div class="app-info"><div class="app-name">Uber Eats / Deliveroo</div><div class="app-earn">5 – 15€ par parrainage</div></div>
+        <div class="app-badge badge-easy">VIRAL</div><div class="app-arrow">›</div>
+      </div>
+      <div class="app-body">
+        <div class="app-desc">Tout le monde commande à manger. Le filleul a -50% sur sa première commande = conversion facile. Cible groupes étudiants et résidences universitaires.</div>
+        <div class="app-detail">
+          <div class="ad-item"><div class="ad-label">PRIME PARRAIN</div><div class="ad-val">5–15€ crédit</div></div>
+          <div class="ad-item"><div class="ad-label">PRIME FILLEUL</div><div class="ad-val">-50% 1ère cde</div></div>
+          <div class="ad-item"><div class="ad-label">CONDITION</div><div class="ad-val">1ère commande</div></div>
+          <div class="ad-item"><div class="ad-label">STRATÉGIE</div><div class="ad-val">Groupes étudiants</div></div>
+        </div>
+        <div class="app-steps">
+          <div class="as-row"><div class="as-n">→</div><div class="as-text">Uber Eats → <strong>Compte → Partager le code</strong></div></div>
+          <div class="as-row"><div class="as-n">→</div><div class="as-text">Poste dans groupes Discord gaming et résidences universitaires</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-card" style="border-color:rgba(0,255,135,0.1)">
+      <div class="app-header" onclick="toggleApp(this)">
+        <div class="app-icon" style="background:rgba(0,255,135,0.07)">🛍️</div>
+        <div class="app-info"><div class="app-name">iGraal / Widilo</div><div class="app-earn">3 – 10€ par parrainage</div></div>
+        <div class="app-badge badge-easy">FACILE</div><div class="app-arrow">›</div>
+      </div>
+      <div class="app-body">
+        <div class="app-desc">Cashback sur achats en ligne. Prime faible mais très facile à convertir — tout le monde achète en ligne. Idéal en volume via groupes bons plans Facebook.</div>
+        <div class="app-detail">
+          <div class="ad-item"><div class="ad-label">PRIME PARRAIN</div><div class="ad-val">3–10€</div></div>
+          <div class="ad-item"><div class="ad-label">PRIME FILLEUL</div><div class="ad-val">3–5€</div></div>
+          <div class="ad-item"><div class="ad-label">CONDITION</div><div class="ad-val">1 achat validé</div></div>
+          <div class="ad-item"><div class="ad-label">STRATÉGIE</div><div class="ad-val">Volume</div></div>
+        </div>
+        <div class="app-steps">
+          <div class="as-row"><div class="as-n">→</div><div class="as-text">iGraal → <strong>Mon compte → Parrainer</strong></div></div>
+          <div class="as-row"><div class="as-n">→</div><div class="as-text">Poste dans groupes "bons plans" Facebook — conversion facile</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-card" style="border-color:rgba(176,96,255,0.15)">
+      <div class="app-header" onclick="toggleApp(this)">
+        <div class="app-icon" style="background:rgba(176,96,255,0.1)">📈</div>
+        <div class="app-info"><div class="app-name">Trade Republic / Scalable</div><div class="app-earn">20 – 100€ par parrainage</div></div>
+        <div class="app-badge badge-med">+18 ANS</div><div class="app-arrow">›</div>
+      </div>
+      <div class="app-body">
+        <div class="app-desc">Apps d'investissement. Prime très élevée mais réservée aux +18 ans. Le filleul doit déposer et investir une somme minimum. Cible jeunes actifs qui veulent investir.</div>
+        <div class="app-detail">
+          <div class="ad-item"><div class="ad-label">PRIME PARRAIN</div><div class="ad-val">20–100€</div></div>
+          <div class="ad-item"><div class="ad-label">CONDITION</div><div class="ad-val">Dépôt + invest.</div></div>
+          <div class="ad-item"><div class="ad-label">ÂGE MIN.</div><div class="ad-val">18 ans</div></div>
+          <div class="ad-item"><div class="ad-label">DÉLAI</div><div class="ad-val">30–60 jours</div></div>
+        </div>
+        <div class="app-steps">
+          <div class="as-row"><div class="as-n">→</div><div class="as-text">Trade Republic → <strong>Profil → Inviter des amis</strong></div></div>
+          <div class="as-row"><div class="as-n">→</div><div class="as-text">Filleul dépose min. 10€ et les investit → tu reçois une action ou du cash</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label reveal">// STRATÉGIES POUR MAXIMISER</div>
+  <div class="strat-list reveal">
+    <div class="strat"><div class="strat-n">01</div><div><div class="strat-title">Ton cercle chaud d'abord</div><div class="strat-desc">Commence par famille et amis proches. Message direct et personnalisé = taux de conversion bien meilleur qu'un post générique. Explique l'avantage pour eux, pas pour toi.</div></div></div>
+    <div class="strat"><div class="strat-n">02</div><div><div class="strat-title">Groupes Facebook & WhatsApp</div><div class="strat-desc">Groupes "bons plans", "étudiants [ta ville]", "colocations". Post simple : "Code promo [app] = [avantage filleul]. Lien en commentaire."</div></div></div>
+    <div class="strat"><div class="strat-n">03</div><div><div class="strat-title">TikTok et Reels</div><div class="strat-desc">"Comment j'ai gagné 60€ en 2 jours avec Revolut" — ce type de vidéo explose. Montre ta prime reçue, explique comment faire. Lien de parrainage en bio.</div></div></div>
+    <div class="strat"><div class="strat-n">04</div><div><div class="strat-title">Cumule plusieurs apps</div><div class="strat-desc">Ne fais pas qu'une app à la fois. 5 Revolut + 10 Lydia + 15 iGraal = 400€+ potentiel sur le même mois avec le même effort.</div></div></div>
+  </div>
+
+  <div class="section-label reveal">// MODÈLE DE MESSAGE</div>
+  <div class="template-box reveal">
+    <div class="template-label">// POUR REVOLUT — COPIE CE MESSAGE</div>
+    <div class="template-text" id="tpl">"Salut ! Tu utilises Revolut ? Sinon si tu t'inscris avec mon lien tu auras ta carte gratuite ET moi je touche 50€. Ça prend 5 minutes. Je t'envoie le lien ?"</div>
+    <button class="copy-btn" onclick="copyTpl()">COPIER</button>
+  </div>
+
+  <div class="section-label reveal">// PLAN 4 JOURS — 100€</div>
+  <div class="plan-grid reveal">
+    <div class="plan-day"><div class="plan-day-label">JOUR 1</div><div class="plan-day-title">Setup</div><div class="plan-day-desc">Récupère tes liens sur Revolut, Lydia et BlaBlaCar</div></div>
+    <div class="plan-day"><div class="plan-day-label">JOUR 2</div><div class="plan-day-title">Cercle chaud</div><div class="plan-day-desc">Message à 20 contacts proches — vise 5 inscriptions</div></div>
+    <div class="plan-day"><div class="plan-day-label">JOUR 3</div><div class="plan-day-title">Groupes</div><div class="plan-day-desc">Poste dans 5 groupes Facebook et WhatsApp ciblés</div></div>
+    <div class="plan-day"><div class="plan-day-label">JOUR 4</div><div class="plan-day-title">TikTok</div><div class="plan-day-desc">Vidéo "j'ai essayé le parrainage" — lien en bio</div></div>
+  </div>
+
+  <div class="info reveal">
+    <div class="info-label">// EST-CE LÉGAL ?</div>
+    <p>Oui totalement. Les primes sont des <strong>revenus imposables</strong> — déclare-les si tu dépasses 305€/an (seuil micro BNC). En dessous, pas d'obligation déclarative.</p>
+  </div>
+
+  <div class="cta-box reveal">
+    <div class="cta-title">Rejoins la<br><span>communauté</span></div>
+    <p class="cta-sub">Les membres s'entraident pour valider les conditions de parrainage entre eux. Rejoins-nous.</p>
+    <a href="https://discord.gg/p5t4xSYQ" class="btn-main">Rejoindre le Discord 🔥</a>
+  </div>
+</div>
+<script>
+function toggleApp(h){const b=h.nextElementSibling,a=h.querySelector('.app-arrow'),o=b.classList.contains('show');document.querySelectorAll('.app-body.show').forEach(x=>{x.classList.remove('show');x.previousElementSibling.querySelector('.app-arrow').classList.remove('open')});if(!o){b.classList.add('show');a.classList.add('open')}}
+function copyTpl(){navigator.clipboard.writeText(document.getElementById('tpl').innerText).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='COPIÉ ✓';setTimeout(()=>b.textContent='COPIER',2000)})}
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')}),{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#060608">
+<title>MONEYFLOW — Quel type d'earner es-tu ?</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@300;400;600;700&family=Syne+Mono&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #060608;
+  --green: #00ff87;
+  --pink: #ff2d78;
+  --blue: #2dfff0;
+  --yellow: #ffe500;
+  --purple: #b060ff;
+  --white: #f0ecff;
+  --card: #0e0e16;
+  --border: #16162a;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: 'Outfit', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* NOISE */
+body::after {
+  content:'';
+  position:fixed; inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events:none; z-index:9999; opacity:0.5;
+}
+
+/* ORBS */
+.orb {
+  position:fixed; border-radius:50%;
+  filter:blur(80px); pointer-events:none; z-index:0;
+  transition: background 1s ease;
+}
+.orb1 { width:280px;height:280px; background:rgba(0,255,135,0.08); top:-60px;right:-60px; animation:floatOrb 8s ease-in-out infinite; }
+.orb2 { width:220px;height:220px; background:rgba(255,45,120,0.06); bottom:15%;left:-60px; animation:floatOrb 11s ease-in-out infinite reverse; }
+@keyframes floatOrb { 0%,100%{transform:translate(0,0)} 50%{transform:translate(15px,15px)} }
+
+/* WRAPPER */
+.wrapper {
+  position:relative; z-index:1;
+  max-width:480px; margin:0 auto;
+  padding:0 20px 80px;
+  min-height:100vh;
+}
+
+/* NAV */
+.topbar {
+  display:flex; align-items:center; justify-content:space-between;
+  padding:20px 0 0;
+}
+.logo {
+  font-family:'Syne',sans-serif; font-weight:800;
+  font-size:20px; letter-spacing:-1px;
+}
+.logo span { color:var(--green); }
+.back-btn {
+  font-family:'Syne Mono',monospace; font-size:11px;
+  letter-spacing:2px; color:#444;
+  text-decoration:none;
+  display:flex; align-items:center; gap:6px;
+  transition:color 0.2s;
+}
+.back-btn:hover { color:var(--white); }
+
+/* PROGRESS */
+.progress-wrap {
+  margin:28px 0 0;
+}
+.progress-top {
+  display:flex; justify-content:space-between; align-items:center;
+  margin-bottom:10px;
+}
+.progress-label {
+  font-family:'Syne Mono',monospace; font-size:10px;
+  letter-spacing:3px; color:#444;
+}
+.progress-count {
+  font-family:'Syne',sans-serif; font-weight:700;
+  font-size:14px; color:var(--white);
+}
+.progress-count span { color:var(--green); }
+.progress-bar-bg {
+  height:3px; background:#111; border-radius:10px; overflow:hidden;
+}
+.progress-bar-fill {
+  height:100%; border-radius:10px;
+  background:linear-gradient(90deg, var(--green), var(--blue));
+  transition:width 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* QUIZ SCREEN */
+.screen {
+  display:none;
+  animation:fadeUp 0.4s ease both;
+}
+.screen.active { display:block; }
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(20px); }
+  to { opacity:1; transform:translateY(0); }
+}
+
+/* INTRO */
+.intro-emoji { font-size:60px; text-align:center; margin:40px 0 24px; display:block; }
+.intro-title {
+  font-family:'Syne',sans-serif; font-weight:800;
+  font-size:36px; letter-spacing:-1.5px; line-height:1.05;
+  text-align:center; margin-bottom:16px;
+}
+.intro-title span { color:var(--green); }
+.intro-sub {
+  text-align:center; font-size:15px; color:#666;
+  line-height:1.7; margin-bottom:36px;
+}
+.intro-meta {
+  display:flex; justify-content:center; gap:24px;
+  margin-bottom:40px;
+}
+.meta-pill {
+  display:flex; align-items:center; gap:6px;
+  font-family:'Syne Mono',monospace; font-size:11px;
+  letter-spacing:2px; color:#555;
+}
+.meta-dot { width:6px;height:6px;border-radius:50%; }
+.btn-start {
+  display:flex; align-items:center; justify-content:center; gap:10px;
+  width:100%;
+  background:var(--green); color:#000;
+  font-family:'Syne',sans-serif; font-weight:800;
+  font-size:17px; padding:18px;
+  border-radius:16px; border:none; cursor:pointer;
+  transition:all 0.2s;
+  box-shadow:0 0 40px rgba(0,255,135,0.25);
+}
+.btn-start:active { transform:scale(0.97); }
+
+/* QUESTION */
+.q-number {
+  font-family:'Syne Mono',monospace; font-size:11px;
+  letter-spacing:3px; color:var(--green);
+  margin-bottom:16px; margin-top:32px;
+}
+.q-text {
+  font-family:'Syne',sans-serif; font-weight:800;
+  font-size:26px; letter-spacing:-1px; line-height:1.15;
+  margin-bottom:32px;
+}
+
+/* OPTIONS */
+.options { display:flex; flex-direction:column; gap:10px; }
+.option {
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:18px 20px;
+  display:flex; align-items:center; gap:14px;
+  cursor:pointer;
+  transition:all 0.2s;
+  user-select:none;
+}
+.option:active { transform:scale(0.98); }
+.option.selected {
+  border-color:var(--green);
+  background:rgba(0,255,135,0.06);
+}
+.option.selected .opt-check { background:var(--green); border-color:var(--green); }
+.option.selected .opt-check::after { opacity:1; }
+.opt-emoji { font-size:26px; flex-shrink:0; }
+.opt-text-wrap { flex:1; }
+.opt-title { font-weight:600; font-size:15px; margin-bottom:3px; }
+.opt-sub { font-size:12px; color:#555; line-height:1.4; }
+.opt-check {
+  width:22px; height:22px;
+  border:2px solid #222; border-radius:50%;
+  flex-shrink:0; position:relative;
+  transition:all 0.2s;
+}
+.opt-check::after {
+  content:'';
+  position:absolute; top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:8px;height:8px;
+  background:#000; border-radius:50%;
+  opacity:0; transition:opacity 0.2s;
+}
+
+/* NEXT BTN */
+.btn-next {
+  width:100%; margin-top:24px;
+  background:var(--green); color:#000;
+  font-family:'Syne',sans-serif; font-weight:800;
+  font-size:16px; padding:17px;
+  border-radius:14px; border:none; cursor:pointer;
+  transition:all 0.2s; opacity:0.3; pointer-events:none;
+  display:flex; align-items:center; justify-content:center; gap:8px;
+}
+.btn-next.enabled { opacity:1; pointer-events:all; box-shadow:0 0 30px rgba(0,255,135,0.2); }
+.btn-next:active { transform:scale(0.97); }
+
+/* RESULT SCREEN */
+.result-header { text-align:center; padding:36px 0 28px; }
+.result-badge {
+  display:inline-block;
+  font-family:'Syne Mono',monospace; font-size:11px;
+  letter-spacing:3px; padding:8px 20px;
+  border-radius:100px; margin-bottom:24px;
+}
+.result-emoji-big { font-size:72px; display:block; margin-bottom:20px; }
+.result-profile-name {
+  font-family:'Syne',sans-serif; font-weight:800;
+  font-size:36px; letter-spacing:-1.5px;
+  margin-bottom:12px; line-height:1;
+}
+.result-tagline { font-size:16px; color:#666; line-height:1.6; margin-bottom:0; }
+
+.result-card {
+  border-radius:20px; padding:28px 24px;
+  margin:24px 0;
+}
+.result-card-label {
+  font-family:'Syne Mono',monospace; font-size:10px;
+  letter-spacing:3px; margin-bottom:20px;
+}
+.result-method-name {
+  font-family:'Syne',sans-serif; font-weight:800;
+  font-size:28px; letter-spacing:-1px; margin-bottom:10px;
+}
+.result-method-desc {
+  font-size:14px; color:#777; line-height:1.7; margin-bottom:24px;
+}
+
+.result-steps { display:flex; flex-direction:column; gap:14px; }
+.result-step { display:flex; gap:14px; align-items:flex-start; }
+.rs-num {
+  width:28px;height:28px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Syne',sans-serif;font-weight:800;font-size:13px;
+  flex-shrink:0; color:#000;
+}
+.rs-text { font-size:13px; color:#888; line-height:1.6; padding-top:4px; }
+.rs-text strong { color:var(--white); }
+
+.result-also {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:16px; padding:20px;
+  margin:16px 0 24px;
+}
+.result-also-label {
+  font-family:'Syne Mono',monospace; font-size:10px;
+  letter-spacing:3px; color:#444; margin-bottom:14px;
+}
+.also-list { display:flex; flex-direction:column; gap:8px; }
+.also-item {
+  display:flex; align-items:center; gap:10px;
+  font-size:13px; color:#666;
+}
+.also-item span:first-child { font-size:18px; }
+
+.btn-cta-result {
+  display:flex; align-items:center; justify-content:center; gap:10px;
+  width:100%; background:var(--green); color:#000;
+  font-family:'Syne',sans-serif; font-weight:800;
+  font-size:16px; padding:18px; border-radius:14px;
+  text-decoration:none; margin-bottom:12px;
+  transition:all 0.2s;
+  box-shadow:0 0 40px rgba(0,255,135,0.2);
+}
+.btn-cta-result:active { transform:scale(0.97); }
+.btn-retry {
+  display:flex; align-items:center; justify-content:center; gap:8px;
+  width:100%; background:transparent; color:#555;
+  font-family:'Syne Mono',monospace; font-size:12px;
+  letter-spacing:2px; padding:14px; border-radius:14px;
+  border:1px solid var(--border); cursor:pointer;
+  transition:all 0.2s;
+}
+.btn-retry:hover { color:var(--white); border-color:#333; }
+
+/* SCORE BARS */
+.score-bars { display:flex; flex-direction:column; gap:10px; margin:20px 0; }
+.score-row { display:flex; flex-direction:column; gap:6px; }
+.score-top { display:flex; justify-content:space-between; font-size:12px; }
+.score-method { color:#666; }
+.score-pct { font-family:'Syne Mono',monospace; font-size:11px; }
+.score-bg { height:4px; background:#111; border-radius:10px; overflow:hidden; }
+.score-fill { height:100%; border-radius:10px; transition:width 1s cubic-bezier(0.4,0,0.2,1); }
+
+/* SHARE */
+.share-row {
+  display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:12px;
+}
+.share-btn {
+  display:flex; align-items:center; justify-content:center; gap:8px;
+  padding:14px; border-radius:14px; border:1px solid var(--border);
+  background:var(--card); color:#666;
+  font-family:'Outfit',sans-serif; font-weight:600; font-size:13px;
+  cursor:pointer; transition:all 0.2s; text-decoration:none;
+}
+.share-btn:active { transform:scale(0.97); }
+</style>
+</head>
+<body>
+
+<div class="orb orb1" id="orb1"></div>
+<div class="orb orb2" id="orb2"></div>
+
+<div class="wrapper">
+  <div class="topbar">
+    <div class="logo">MONEY<span>FLOW</span></div>
+    <a href="index.html" class="back-btn">← RETOUR</a>
+  </div>
+
+  <!-- PROGRESS -->
+  <div class="progress-wrap" id="progressWrap" style="display:none;">
+    <div class="progress-top">
+      <div class="progress-label">PROGRESSION</div>
+      <div class="progress-count"><span id="currentQ">1</span> / 5</div>
+    </div>
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill" id="progressFill" style="width:0%"></div>
+    </div>
+  </div>
+
+  <!-- SCREEN 0 : INTRO -->
+  <div class="screen active" id="screen-intro">
+    <span class="intro-emoji">🧠</span>
+    <div class="intro-title">Quel type<br>d'<span>earner</span><br>es-tu ?</div>
+    <p class="intro-sub">5 questions rapides pour trouver la méthode parfaite pour TOI. Pas de mauvaise réponse.</p>
+    <div class="intro-meta">
+      <div class="meta-pill"><div class="meta-dot" style="background:var(--green)"></div>5 QUESTIONS</div>
+      <div class="meta-pill"><div class="meta-dot" style="background:var(--blue)"></div>1 MIN</div>
+      <div class="meta-pill"><div class="meta-dot" style="background:var(--yellow)"></div>100% GRATUIT</div>
+    </div>
+    <button class="btn-start" onclick="startQuiz()">Commencer le quiz →</button>
+  </div>
+
+  <!-- SCREEN 1 -->
+  <div class="screen" id="screen-1">
+    <div class="q-number">QUESTION 01 / 05</div>
+    <div class="q-text">C'est quoi ton vrai truc en ce moment ?</div>
+    <div class="options">
+      <div class="option" onclick="selectOption(this, 1, 'social')">
+        <div class="opt-emoji">📱</div>
+        <div class="opt-text-wrap">
+          <div class="opt-title">Réseaux sociaux & contenu</div>
+          <div class="opt-sub">TikTok, Instagram, YouTube — je suis là tout le temps</div>
+        </div>
+        <div class="opt-check"></div>
+      </div>
+      <div class="option" onclick="selectOption(this, 1, 'creative')">
+        <div class="opt-emoji">🎨</div>
+        <div class="opt-text-wrap">
+          <div class="opt-title">Créer des trucs</div>
+          <div class="opt-sub">Design, musique, vidéo, code — j'aime créer</div>
+        </div>
+        <div class="opt-check"></div>
+      </div>
+      <div class="option" onclick="selectOption(this, 1, 'hustle')">
+        <div class="opt-emoji">🛒</div>
+        <div class="opt-text-wrap">
+          <div class="opt-title">Acheter / Revendre</div>
+          <div class="opt-sub">Sneakers, cartes, vêtements — j'aime les bonnes affaires</div>
+        </div>
+        <div class="opt-check"></div>
+      </div>
+      <div class="option" onclick="selectOption(this, 1, 'finance')">
+        <div class="opt-emoji">📊</div>
+        <div class="opt-text-wrap">
+          <div class="opt-title">Chiffres & finances</div>
+          <div class="opt-sub">Bourse, crypto, économies — les marchés m'intéressent</div>
+        </div>
+        <div class="opt-check"></div>
+      </div>
+    </div>
+    <button class="btn-next" id="next-1" onclick="goTo(2)">Suivant →</button>
+  </div>
+
+  <!-- SCREEN 2 -->
+  <div class="screen" id="screen-2">
+    <div class="q-number">QUESTION 02 / 05</div>
+    <div class="q-text">T'as combien à investir pour commencer ?</div>
+    <div class="options">
+      <div class="option" onclick="selectOption(this, 2, 'zero')">
+        <div class="opt-emoji">😅</div>
+        <div class="opt-text-wrap">
+          <div class="opt-title">0€ — je suis à sec</div>
+          <div class="opt-sub">Je veux commencer sans rien dépenser</div>
+        </div>
+        <div class="opt-check"></div>
+      </div>
+      <div class="option" onclick="selectOption(this, 2, 'low')">
+        <div class="opt-emoji">💶</div>
+        <div class="opt-text-wrap">
+          <div class="opt-title">Moins de 100€</div>
+          <div class="opt-sub">J'ai un peu de côté, je prends pas de grands risques</div>
+        </div>
+        <div class="opt-check"></div>
+      </div>
+      <div class="option" onclick="selectOption(this, 2, 'mid')">
+        <div class="opt-emoji">💰</div>
+        <div class="opt-text-wrap">
+          <div class="opt-title">100€ – 500€</div>
+          <div class="opt-sub">J'ai un budget correct pour démarrer</div>
+        </div>
+        <div class="opt-check"></div>
+      </div>
+      <div class="option" onclick="selectOption(this, 2, 'high')">
+        <div class="opt-emoji">🏦</div>
+        <div class="opt-text-wrap">
+          <div class="opt-title">500€ et plus</div>
+          <div class="opt-sub">Je suis prêt à investir sérieusement</div>
+        </div>
+        <div class="opt-check"></div>
+      </div>
+    </div>
+    <button class="btn-next" id="next-2" onclick="goTo(3)">Suivant →</button>
+  </div>
+
+  <!-- SCREEN 3 -->
+  <div class="screen" id="screen-3">
+    <div class="q-number">QUESTION 03 / 05</div>
+    <div class="q-text">Tu préfères gagner comment ?</div>
+    <div class="options">
+      <div class="option" onclick="selectOption(this, 3, 'fast')">
+        <div class="opt-emoji">⚡</div>
+        <div class="opt-text-wrap">
+          <div class="opt-title">Vite — ce soir si possible</div>
+          <div class="opt-sub">Je veux voir des résultats rapidement</div>
+        </div>
+        <div class="opt-check"></div>
+      </div>
+      <div class="option" onclick="selectOption(this, 3, 'steady')">
+        <div class="opt-emoji">📈</div>
+        <div class="opt-text-wrap">
+          <div class="opt-title">Progressivement — semaine après semaine</div>
+          <div class="opt-sub">Je construis quelque chose sur la durée</div>
+        </div>
+        <div class="opt-check"></div>
+      </div>
+      <div class="option" onclick="selectOption(this, 3, 'passive')">
+        <div class="opt-emoji">😴</div>
+        <div class="opt-text-wrap">
+          <div class="opt-title">Passivement — pendant que je dors</div>
+          <div class="opt-sub">Je veux de l'argent sans effort constant</div>
+        </div>
+        <div class="opt-check"></div>
+      </div>
+      <div class="option" onclick="selectOption(this, 3, 'big')">
+        <div class="opt-emoji">🚀</div>
+        <div class="opt-text-wrap">
+          <div class="opt-title">Gros — je vise large</div>
+          <div class="opt-sub">Je veux scaler et viser 4–5 chiffres par mois</div>
+        </div>
+        <div class="opt-check"></div>
+      </div>
+    </div>
+    <button class="btn-next" id="next-3" onclick="goTo(4)">Suivant →</button>
+  </div>
+
+  <!-- SCREEN 4 -->
+  <div class="screen" id="screen-4">
+    <div class="q-number">QUESTION 04 / 05</div>
+    <div class="q-text">T'as combien de temps libre par jour ?</div>
+    <div class="options">
+      <div class="option" onclick="selectOption(this, 4, 'minimal')">
+        <div class="opt-emoji">⏱️</div>
+        <div class="opt-text-wrap">
+          <div class="opt-title">Moins de 30 min</div>
+          <div class="opt-sub">Lycée, boulot, sport — j'ai peu de dispo</div>
+        </div>
+        <div class="opt-check"></div>
+      </div>
+      <div class="option" onclick="selectOption(this, 4, 'moderate')">
+        <div class="opt-emoji">🕐</div>
+        <div class="opt-text-wrap">
+          <div class="opt-title">1 à 2 heures</div>
+          <div class="opt-sub">J'ai de la place en soirée ou le week-end</div>
+        </div>
+        <div class="opt-check"></div>
+      </div>
+      <div class="option" onclick="selectOption(this, 4, 'plenty')">
+        <div class="opt-emoji">🕓</div>
+        <div class="opt-text-wrap">
+          <div class="opt-title">3 à 5 heures</div>
+          <div class="opt-sub">Je peux vraiment m'y consacrer sérieusement</div>
+        </div>
+        <div class="opt-check"></div>
+      </div>
+      <div class="option" onclick="selectOption(this, 4, 'all')">
+        <div class="opt-emoji">🔥</div>
+        <div class="opt-text-wrap">
+          <div class="opt-title">Full time</div>
+          <div class="opt-sub">Je suis dispo, je veux en faire mon activité principale</div>
+        </div>
+        <div class="opt-check"></div>
+      </div>
+    </div>
+    <button class="btn-next" id="next-4" onclick="goTo(5)">Suivant →</button>
+  </div>
+
+  <!-- SCREEN 5 -->
+  <div class="screen" id="screen-5">
+    <div class="q-number">QUESTION 05 / 05</div>
+    <div class="q-text">Ta plus grande force naturelle ?</div>
+    <div class="options">
+      <div class="option" onclick="selectOption(this, 5, 'talk')">
+        <div class="opt-emoji">🗣️</div>
+        <div class="opt-text-wrap">
+          <div class="opt-title">Persuader & convaincre</div>
+          <div class="opt-sub">Les gens m'écoutent facilement, j'ai du charisme</div>
+        </div>
+        <div class="opt-check"></div>
+      </div>
+      <div class="option" onclick="selectOption(this, 5, 'eye')">
+        <div class="opt-emoji">👁️</div>
+        <div class="opt-text-wrap">
+          <div class="opt-title">Sens du visuel & de l'esthétique</div>
+          <div class="opt-sub">Je vois ce qui est beau, je crée des trucs qui claquent</div>
+        </div>
+        <div class="opt-check"></div>
+      </div>
+      <div class="option" onclick="selectOption(this, 5, 'smart')">
+        <div class="opt-emoji">🧠</div>
+        <div class="opt-text-wrap">
+          <div class="opt-title">Analyser & anticiper</div>
+          <div class="opt-sub">Je comprends les patterns, les marchés, les tendances</div>
+        </div>
+        <div class="opt-check"></div>
+      </div>
+      <div class="option" onclick="selectOption(this, 5, 'network')">
+        <div class="opt-emoji">🤝</div>
+        <div class="opt-text-wrap">
+          <div class="opt-title">Mon réseau & mes contacts</div>
+          <div class="opt-sub">J'ai beaucoup d'amis, je suis connecté partout</div>
+        </div>
+        <div class="opt-check"></div>
+      </div>
+    </div>
+    <button class="btn-next" id="next-5" onclick="showResult()">Voir mon résultat 🎯</button>
+  </div>
+
+  <!-- SCREEN RESULT -->
+  <div class="screen" id="screen-result">
+    <!-- Injected by JS -->
+  </div>
+
+</div>
+
+<script>
+// State
+const answers = {};
+let currentScreen = 'intro';
+
+const profiles = {
+  creator: {
+    emoji: '📱',
+    name: 'Le Créateur',
+    tagline: 'Tu es fait pour générer de l\'audience et la monétiser. TikTok est ta mine d\'or.',
+    color: 'var(--pink)',
+    colorRgb: '255,45,120',
+    method: 'Création de contenu + Partenariats',
+    desc: 'Avec ton sens du contenu et ta présence naturelle en ligne, ta meilleure voie c\'est de construire une audience sur TikTok ou YouTube et de la monétiser via des partenariats, du merchandising ou tes propres produits.',
+    steps: [
+      { num: '1', text: '<strong>Choisir ta niche</strong> : finance, mode, gaming, humour — sois spécifique.' },
+      { num: '2', text: '<strong>Poster 3x/semaine minimum</strong> pendant 60 jours sans exception.' },
+      { num: '3', text: '<strong>Contacter des marques</strong> dès 1 000 abonnés — les nano-influenceurs sont recherchés.' },
+      { num: '4', text: '<strong>Créer ton propre produit</strong> : guide PDF, merch, formation — quand t\'as l\'audience.' },
+    ],
+    also: ['🤝 Parrainage d\'apps (pendant la montée en audience)', '📸 UGC payant pour des marques', '💬 Community manager freelance'],
+    scores: { creator: 92, referral: 65, resell: 40, freelance: 58, trading: 20 },
+  },
+  referrer: {
+    emoji: '🤝',
+    name: 'Le Connector',
+    tagline: 'Ton réseau est ta richesse. Tu transformes chaque contact en revenu.',
+    color: 'var(--green)',
+    colorRgb: '0,255,135',
+    method: 'Parrainage & Affiliation',
+    desc: 'Avec ton réseau et ta capacité à convaincre, le parrainage est ta méthode idéale. Pas d\'investissement, des résultats dès cette semaine. Tu peux commencer ce soir.',
+    steps: [
+      { num: '1', text: '<strong>Inscris-toi sur 3–5 apps</strong> : Revolut, Lydia, Pumpkin, BlaBlaCar.' },
+      { num: '2', text: '<strong>Crée une histoire courte</strong> expliquant pourquoi tu recommandes chaque app.' },
+      { num: '3', text: '<strong>Partage sur WhatsApp, Discord, TikTok</strong> — cible des gens qui ont besoin de l\'app.' },
+      { num: '4', text: '<strong>Réinvestis tes gains</strong> dans une méthode plus scalable (contenu, freelance).' },
+    ],
+    also: ['📱 Créer du contenu TikTok autour de tes parrainages', '🛒 Affiliation Amazon / sites e-commerce', '💳 Cashback via iGraal ou Widilo'],
+    scores: { referral: 95, creator: 55, resell: 60, freelance: 45, trading: 25 },
+  },
+  reseller: {
+    emoji: '👟',
+    name: 'Le Trader de Rue',
+    tagline: 'T\'as le sens du deal. Tu achètes au bon prix, tu vends au bon moment.',
+    color: 'var(--yellow)',
+    colorRgb: '255,229,0',
+    method: 'Revente & Resell',
+    desc: 'Ton instinct pour les bonnes affaires et les tendances fait de toi un revendeur naturel. Sneakers, cartes Pokémon, streetwear, gaming — le marché secondaire explose.',
+    steps: [
+      { num: '1', text: '<strong>Choisir ta niche</strong> : sneakers, cards, hype items, électronique d\'occasion.' },
+      { num: '2', text: '<strong>Surveiller les drops</strong> : Nike SNKRS, Vinted, Leboncoin, StockX.' },
+      { num: '3', text: '<strong>Commencer petit</strong> : 1 paire, 1 objet, valide le process avant de scaler.' },
+      { num: '4', text: '<strong>Utiliser les bots & alerts</strong> pour être le premier sur les bonnes affaires.' },
+    ],
+    also: ['🤝 Parrainage (sans investissement requis)', '🛒 Dropshipping (vendre sans stock)', '📱 Documenter tes flips sur TikTok'],
+    scores: { resell: 94, referral: 60, creator: 50, freelance: 35, trading: 55 },
+  },
+  freelancer: {
+    emoji: '🎨',
+    name: 'Le Créatif Pro',
+    tagline: 'Tes compétences valent de l\'argent. Quelqu\'un cherche exactement ce que tu sais faire.',
+    color: 'var(--blue)',
+    colorRgb: '45,255,240',
+    method: 'Freelance & Prestations',
+    desc: 'Avec tes compétences créatives ou techniques, le freelance est ta voie la plus rapide vers un revenu stable et croissant. Ton premier client peut venir dans la semaine.',
+    steps: [
+      { num: '1', text: '<strong>Définis ton service principal</strong> : montage vidéo, design, dev, copywriting.' },
+      { num: '2', text: '<strong>Crée un profil Fiverr ou Malt</strong> avec 3 exemples de ton travail.' },
+      { num: '3', text: '<strong>Propose-toi à ton réseau</strong> : associations, petits commerces, créateurs locaux.' },
+      { num: '4', text: '<strong>Augmente tes tarifs</strong> à chaque nouveau client — ne sous-estime jamais ton temps.' },
+    ],
+    also: ['📸 UGC / Contenu pour marques', '📱 TikTok pour montrer ton travail', '🤖 Automatisation IA pour être plus productif'],
+    scores: { freelance: 96, creator: 62, referral: 45, resell: 30, trading: 35 },
+  },
+  investor: {
+    emoji: '📊',
+    name: 'L\'Investisseur',
+    tagline: 'Tu penses long terme. Tu veux faire travailler ton argent, pas l\'inverse.',
+    color: 'var(--purple)',
+    colorRgb: '176,96,255',
+    method: 'ETF & Investissement long terme (+18 ans)',
+    desc: 'Avec ton sens de l\'analyse et ton intérêt pour les marchés, l\'investissement est ta voie. Mais attention : commence par les ETF diversifiés avant tout — et uniquement si tu es majeur.',
+    steps: [
+      { num: '1', text: '<strong>Ouvrir un PEA ou CTO</strong> sur Trade Republic ou Boursorama (18+ obligatoire).' },
+      { num: '2', text: '<strong>Commencer par les ETF</strong> : MSCI World ou S&P 500 — diversifiés, faible risque.' },
+      { num: '3', text: '<strong>Investir régulièrement</strong> : 20–50€/mois, peu importe le marché (DCA).' },
+      { num: '4', text: '<strong>Ne jamais investir</strong> ce que tu ne peux pas te permettre de perdre.' },
+    ],
+    also: ['⚠️ Réservé aux +18 ans uniquement', '🤝 Parrainage (pour commencer sans risque)', '📚 Formation avant tout investissement en crypto'],
+    scores: { trading: 90, resell: 55, referral: 50, freelance: 40, creator: 35 },
+  },
+};
+
+function getProfile() {
+  const a = answers;
+  // Simple scoring logic
+  let scores = { creator: 0, referrer: 0, reseller: 0, freelancer: 0, investor: 0 };
+
+  // Q1
+  if (a[1] === 'social') scores.creator += 3;
+  if (a[1] === 'creative') { scores.freelancer += 3; scores.creator += 1; }
+  if (a[1] === 'hustle') scores.reseller += 3;
+  if (a[1] === 'finance') scores.investor += 3;
+
+  // Q2
+  if (a[2] === 'zero') scores.referrer += 3;
+  if (a[2] === 'low') { scores.referrer += 1; scores.creator += 1; scores.reseller += 1; }
+  if (a[2] === 'mid') { scores.reseller += 2; scores.freelancer += 1; }
+  if (a[2] === 'high') { scores.investor += 2; scores.reseller += 2; }
+
+  // Q3
+  if (a[3] === 'fast') { scores.referrer += 2; scores.reseller += 2; }
+  if (a[3] === 'steady') { scores.freelancer += 2; scores.creator += 1; }
+  if (a[3] === 'passive') { scores.investor += 3; scores.referrer += 1; }
+  if (a[3] === 'big') { scores.creator += 2; scores.reseller += 1; }
+
+  // Q4
+  if (a[4] === 'minimal') scores.referrer += 2;
+  if (a[4] === 'moderate') { scores.freelancer += 2; scores.reseller += 1; }
+  if (a[4] === 'plenty') { scores.creator += 2; scores.freelancer += 1; }
+  if (a[4] === 'all') { scores.creator += 3; scores.freelancer += 2; }
+
+  // Q5
+  if (a[5] === 'talk') { scores.creator += 2; scores.referrer += 2; }
+  if (a[5] === 'eye') { scores.freelancer += 2; scores.creator += 2; }
+  if (a[5] === 'smart') { scores.investor += 3; scores.reseller += 1; }
+  if (a[5] === 'network') { scores.referrer += 3; scores.creator += 1; }
+
+  return Object.entries(scores).sort((a,b) => b[1]-a[1])[0][0];
+}
+
+function startQuiz() {
+  document.getElementById('progressWrap').style.display = 'block';
+  goTo(1);
+}
+
+function goTo(n) {
+  // hide all
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  const screen = document.getElementById(`screen-${n}`);
+  screen.classList.add('active');
+  screen.style.animation = 'none';
+  requestAnimationFrame(() => { screen.style.animation = ''; });
+
+  // progress
+  document.getElementById('currentQ').textContent = n;
+  document.getElementById('progressFill').style.width = ((n-1)/5 * 100) + '%';
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function selectOption(el, q, val) {
+  // deselect others in same question
+  el.closest('.options').querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+  el.classList.add('selected');
+  answers[q] = val;
+
+  // enable next
+  const btn = document.getElementById(`next-${q}`);
+  btn.classList.add('enabled');
+}
+
+function showResult() {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById('progressFill').style.width = '100%';
+  document.getElementById('currentQ').textContent = 5;
+
+  const profileKey = getProfile();
+  const p = profiles[profileKey];
+
+  const methodLabels = { creator: 'Création de contenu', referral: 'Parrainage', resell: 'Revente', freelance: 'Freelance', trading: 'Investissement' };
+
+  // build score bars
+  const scoreKeys = Object.entries(p.scores).sort((a,b) => b[1]-a[1]);
+  let scoreBarsHTML = scoreKeys.map(([k,v]) => `
+    <div class="score-row">
+      <div class="score-top">
+        <div class="score-method">${methodLabels[k]}</div>
+        <div class="score-pct" style="color:${v > 80 ? 'var(--green)' : '#555'}">${v}%</div>
+      </div>
+      <div class="score-bg">
+        <div class="score-fill" style="width:0%;background:${v > 80 ? 'var(--green)' : v > 60 ? 'var(--blue)' : '#222'}" data-width="${v}%"></div>
+      </div>
+    </div>
+  `).join('');
+
+  const stepsHTML = p.steps.map(s => `
+    <div class="result-step">
+      <div class="rs-num" style="background:${p.color}">${s.num}</div>
+      <div class="rs-text">${s.text}</div>
+    </div>
+  `).join('');
+
+  const alsoHTML = p.also.map(a => `
+    <div class="also-item">
+      <span>${a.split(' ')[0]}</span>
+      <span>${a.split(' ').slice(1).join(' ')}</span>
+    </div>
+  `).join('');
+
+  const resultEl = document.getElementById('screen-result');
+  resultEl.innerHTML = `
+    <div class="result-header">
+      <div class="result-badge" style="background:rgba(${p.colorRgb},0.1);color:${p.color};border:1px solid rgba(${p.colorRgb},0.25)">
+        TON PROFIL MONEYFLOW
+      </div>
+      <span class="result-emoji-big">${p.emoji}</span>
+      <div class="result-profile-name" style="color:${p.color}">${p.name}</div>
+      <p class="result-tagline">${p.tagline}</p>
+    </div>
+
+    <div class="result-card" style="background:rgba(${p.colorRgb},0.05);border:1px solid rgba(${p.colorRgb},0.2);">
+      <div class="result-card-label" style="color:${p.color}">// TA MÉTHODE PRINCIPALE</div>
+      <div class="result-method-name">${p.method}</div>
+      <div class="result-method-desc">${p.desc}</div>
+      <div class="result-steps">${stepsHTML}</div>
+    </div>
+
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:24px;margin-bottom:16px;">
+      <div class="result-card-label" style="color:#444;margin-bottom:16px;">// COMPATIBILITÉ AVEC CHAQUE MÉTHODE</div>
+      <div class="score-bars">${scoreBarsHTML}</div>
+    </div>
+
+    <div class="result-also">
+      <div class="result-also-label">// MÉTHODES COMPLÉMENTAIRES POUR TOI</div>
+      <div class="also-list">${alsoHTML}</div>
+    </div>
+
+    <a href="https://discord.gg/p5t4xSYQ" class="btn-cta-result" style="background:${p.color}">
+      🔥 Rejoindre la communauté
+    </a>
+    <div class="share-row">
+      <button class="share-btn" onclick="shareResult('${p.name}')">📤 Partager</button>
+      <button class="share-btn btn-retry" onclick="retryQuiz()">🔄 Refaire le quiz</button>
+    </div>
+  `;
+
+  resultEl.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+
+  // animate bars after render
+  setTimeout(() => {
+    document.querySelectorAll('.score-fill[data-width]').forEach(bar => {
+      bar.style.width = bar.dataset.width;
+    });
+  }, 300);
+}
+
+function retryQuiz() {
+  Object.keys(answers).forEach(k => delete answers[k]);
+  document.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+  document.querySelectorAll('.btn-next').forEach(b => b.classList.remove('enabled'));
+  document.getElementById('progressFill').style.width = '0%';
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById('screen-intro').classList.add('active');
+  document.getElementById('progressWrap').style.display = 'none';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function shareResult(name) {
+  if (navigator.share) {
+    navigator.share({
+      title: 'Mon profil MONEYFLOW',
+      text: `Je suis "${name}" sur MONEYFLOW 💸 Découvre ton profil !`,
+      url: window.location.href
+    });
+  } else {
+    navigator.clipboard.writeText(window.location.href);
+    alert('Lien copié !');
+  }
+}
+</script>
+</body>
+</html>

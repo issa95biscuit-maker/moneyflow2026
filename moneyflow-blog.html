@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MONEYFLOW Blog — Les meilleurs guides pour gagner de l'argent quand on est jeune. Parrainage, freelance, revente, trading. Conseils concrets et gratuits.">
+<meta name="keywords" content="gagner argent jeune, comment gagner argent 16 ans, parrainage application, freelance débutant, revente sneakers, investissement débutant">
+<meta property="og:title" content="MONEYFLOW Blog — Gagner de l'argent quand on est jeune">
+<meta property="og:description" content="Guides concrets, méthodes testées, zéro bullshit. Pour les 14–30 ans qui veulent générer leurs premiers revenus.">
+<title>MONEYFLOW — Blog & Guides</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@300;400;600;700&family=Syne+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#060608;--green:#00ff87;--pink:#ff2d78;--blue:#2dfff0;--yellow:#ffe500;--purple:#b060ff;--white:#f0ecff;--card:#0e0e16;--border:#16162a}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:'Outfit',sans-serif;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.5}
+.orb{position:fixed;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0}
+.orb1{width:400px;height:400px;background:rgba(0,255,135,0.06);top:-150px;right:-150px;animation:fo 10s ease-in-out infinite}
+.orb2{width:300px;height:300px;background:rgba(255,45,120,0.04);bottom:20%;left:-100px;animation:fo 13s ease-in-out infinite reverse}
+@keyframes fo{0%,100%{transform:translate(0,0)}50%{transform:translate(25px,25px)}}
+
+/* DESKTOP WRAPPER */
+.wrapper{max-width:1100px;margin:0 auto;padding:0 40px 100px;position:relative;z-index:1}
+
+/* NAV */
+nav{display:flex;align-items:center;justify-content:space-between;padding:24px 0;border-bottom:1px solid var(--border);margin-bottom:0}
+.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:22px;letter-spacing:-1px;text-decoration:none;color:var(--white)}
+.logo span{color:var(--green)}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{font-family:'Syne Mono',monospace;font-size:11px;letter-spacing:2px;color:#555;text-decoration:none;transition:color 0.2s}
+.nav-links a:hover{color:var(--white)}
+.nav-links a.active{color:var(--green)}
+.nav-cta{background:var(--green);color:#000;font-family:'Syne',sans-serif;font-weight:700;font-size:13px;padding:10px 22px;border-radius:100px;text-decoration:none;transition:all 0.2s}
+.nav-cta:hover{box-shadow:0 0 20px rgba(0,255,135,0.3)}
+
+/* HERO */
+.blog-hero{padding:72px 0 60px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-label{font-family:'Syne Mono',monospace;font-size:11px;letter-spacing:4px;color:var(--green);margin-bottom:16px}
+.hero-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(40px,5vw,72px);letter-spacing:-3px;line-height:0.95;margin-bottom:20px}
+.hero-title span{color:var(--green)}
+.hero-sub{font-size:16px;color:#666;line-height:1.7;margin-bottom:32px}
+.hero-search{display:flex;gap:0;background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:border-color 0.2s}
+.hero-search:focus-within{border-color:rgba(0,255,135,0.3)}
+.hero-search input{flex:1;background:none;border:none;padding:16px 20px;color:var(--white);font-family:'Outfit',sans-serif;font-size:14px;outline:none}
+.hero-search input::placeholder{color:#333}
+.search-btn{background:var(--green);color:#000;font-family:'Syne',sans-serif;font-weight:700;font-size:13px;padding:0 24px;border:none;cursor:pointer;transition:all 0.2s}
+.search-btn:hover{background:#00e87a}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.htag{font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:2px;padding:5px 12px;border-radius:100px;border:1px solid var(--border);color:#555;cursor:pointer;transition:all 0.2s;background:none}
+.htag:hover,.htag.active{border-color:rgba(0,255,135,0.3);color:var(--green);background:rgba(0,255,135,0.06)}
+
+/* HERO RIGHT — FEATURED */
+.featured-article{background:var(--card);border:1px solid var(--border);border-radius:20px;overflow:hidden;text-decoration:none;color:var(--white);display:block;transition:all 0.3s}
+.featured-article:hover{border-color:#2a2a3e;transform:translateY(-4px)}
+.featured-img{height:200px;background:linear-gradient(135deg,rgba(0,255,135,0.15),rgba(45,255,240,0.08));display:flex;align-items:center;justify-content:center;font-size:72px;position:relative;overflow:hidden}
+.featured-img::before{content:'FEATURED';position:absolute;font-family:'Syne',sans-serif;font-weight:800;font-size:80px;color:rgba(255,255,255,0.03);letter-spacing:-3px}
+.featured-badge{position:absolute;top:16px;left:16px;background:var(--green);color:#000;font-family:'Syne Mono',monospace;font-size:9px;letter-spacing:3px;padding:5px 12px;border-radius:100px}
+.featured-body{padding:24px}
+.feat-cat{font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--green);margin-bottom:10px}
+.feat-title{font-family:'Syne',sans-serif;font-weight:800;font-size:22px;letter-spacing:-0.5px;margin-bottom:10px;line-height:1.1}
+.feat-excerpt{font-size:13px;color:#666;line-height:1.6;margin-bottom:16px}
+.feat-meta{display:flex;justify-content:space-between;align-items:center}
+.feat-read{font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:2px;color:#444}
+.feat-time{font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:2px;color:#333}
+
+/* FILTERS */
+.filters-bar{display:flex;gap:10px;margin:48px 0 32px;flex-wrap:wrap;align-items:center}
+.filter-label{font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:3px;color:#444;margin-right:8px}
+.filter-btn{font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:2px;padding:8px 18px;border-radius:100px;border:1px solid var(--border);color:#555;cursor:pointer;background:none;transition:all 0.2s}
+.filter-btn:hover{color:var(--white);border-color:#333}
+.filter-btn.active{background:rgba(0,255,135,0.1);border-color:rgba(0,255,135,0.3);color:var(--green)}
+
+/* ARTICLES GRID */
+.articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.article-card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;text-decoration:none;color:var(--white);display:flex;flex-direction:column;transition:all 0.3s;cursor:pointer}
+.article-card:hover{border-color:#2a2a3e;transform:translateY(-3px)}
+.article-card[data-cat="parrainage"]:hover{border-color:rgba(0,255,135,0.3)}
+.article-card[data-cat="revente"]:hover{border-color:rgba(255,229,0,0.3)}
+.article-card[data-cat="freelance"]:hover{border-color:rgba(45,255,240,0.3)}
+.article-card[data-cat="contenu"]:hover{border-color:rgba(255,45,120,0.3)}
+.article-card[data-cat="mindset"]:hover{border-color:rgba(176,96,255,0.3)}
+.article-card[data-cat="trading"]:hover{border-color:rgba(176,96,255,0.3)}
+.article-card.hidden{display:none}
+
+.art-thumb{height:140px;display:flex;align-items:center;justify-content:center;font-size:52px;position:relative}
+.art-cat-badge{position:absolute;top:12px;left:12px;font-family:'Syne Mono',monospace;font-size:9px;letter-spacing:2px;padding:4px 10px;border-radius:100px}
+.cat-green{background:rgba(0,255,135,0.15);color:var(--green);border:1px solid rgba(0,255,135,0.25)}
+.cat-yellow{background:rgba(255,229,0,0.15);color:var(--yellow);border:1px solid rgba(255,229,0,0.25)}
+.cat-blue{background:rgba(45,255,240,0.15);color:var(--blue);border:1px solid rgba(45,255,240,0.25)}
+.cat-pink{background:rgba(255,45,120,0.15);color:var(--pink);border:1px solid rgba(255,45,120,0.25)}
+.cat-purple{background:rgba(176,96,255,0.15);color:var(--purple);border:1px solid rgba(176,96,255,0.25)}
+.art-new{position:absolute;top:12px;right:12px;background:var(--pink);color:#fff;font-family:'Syne Mono',monospace;font-size:9px;letter-spacing:2px;padding:4px 8px;border-radius:100px}
+
+.art-body{padding:20px;flex:1;display:flex;flex-direction:column}
+.art-title{font-family:'Syne',sans-serif;font-weight:800;font-size:16px;letter-spacing:-0.3px;margin-bottom:8px;line-height:1.2;flex:1}
+.art-excerpt{font-size:12px;color:#555;line-height:1.5;margin-bottom:16px}
+.art-footer{display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px solid var(--border)}
+.art-read{font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:2px;color:#444}
+.art-arrow{color:#333;font-size:14px;transition:transform 0.2s}
+.article-card:hover .art-arrow{transform:translateX(4px);color:var(--green)}
+
+/* NEWSLETTER */
+.newsletter{background:linear-gradient(135deg,rgba(0,255,135,0.06),rgba(45,255,240,0.03));border:1px solid rgba(0,255,135,0.15);border-radius:24px;padding:52px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:72px}
+.nl-left{}
+.nl-label{font-family:'Syne Mono',monospace;font-size:11px;letter-spacing:3px;color:var(--green);margin-bottom:14px}
+.nl-title{font-family:'Syne',sans-serif;font-weight:800;font-size:36px;letter-spacing:-1.5px;line-height:1;margin-bottom:12px}
+.nl-title span{color:var(--green)}
+.nl-sub{font-size:15px;color:#666;line-height:1.6}
+.nl-form{display:flex;flex-direction:column;gap:12px}
+.nl-input{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:12px;padding:16px 20px;color:var(--white);font-family:'Outfit',sans-serif;font-size:14px;outline:none;transition:border-color 0.2s}
+.nl-input:focus{border-color:rgba(0,255,135,0.3)}
+.nl-input::placeholder{color:#333}
+.nl-btn{background:var(--green);color:#000;font-family:'Syne',sans-serif;font-weight:800;font-size:15px;padding:16px;border-radius:12px;border:none;cursor:pointer;transition:all 0.2s;box-shadow:0 0 30px rgba(0,255,135,0.2)}
+.nl-btn:hover{transform:scale(1.02)}
+.nl-note{font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:2px;color:#333;text-align:center}
+
+/* SEO FOOTER */
+.seo-section{margin-top:72px;padding-top:48px;border-top:1px solid var(--border)}
+.seo-label{font-family:'Syne Mono',monospace;font-size:11px;letter-spacing:3px;color:#333;margin-bottom:32px}
+.seo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.seo-col-title{font-family:'Syne',sans-serif;font-weight:700;font-size:14px;margin-bottom:16px;color:#555}
+.seo-links{list-style:none;display:flex;flex-direction:column;gap:8px}
+.seo-links a{font-size:13px;color:#333;text-decoration:none;transition:color 0.2s;line-height:1.5}
+.seo-links a:hover{color:var(--green)}
+
+/* FOOTER */
+footer{display:flex;justify-content:space-between;align-items:center;padding:32px 0;border-top:1px solid var(--border);margin-top:48px}
+.footer-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:18px}
+.footer-logo span{color:var(--green)}
+.footer-disc{font-size:11px;color:#2a2a2a;max-width:500px;line-height:1.6;text-align:center}
+.footer-links{display:flex;gap:20px}
+.footer-links a{font-size:11px;color:#333;text-decoration:none;font-family:'Syne Mono',monospace;letter-spacing:1px}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity 0.5s ease,transform 0.5s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:900px){
+  .wrapper{padding:0 20px 80px}
+  .blog-hero{grid-template-columns:1fr;gap:32px}
+  .articles-grid{grid-template-columns:1fr}
+  .newsletter{grid-template-columns:1fr;padding:28px}
+  .seo-grid{grid-template-columns:1fr 1fr}
+  nav .nav-links{display:none}
+  footer{flex-direction:column;gap:16px;text-align:center}
+}
+</style>
+</head>
+<body>
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+
+<div class="wrapper">
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="logo">MONEY<span>FLOW</span></a>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="moneyflow-quiz.html">Quiz</a>
+      <a href="moneyflow-blog.html" class="active">Blog</a>
+      <a href="moneyflow-parrainage.html">Méthodes</a>
+    </div>
+    <a href="https://discord.gg/p5t4xSYQ" class="nav-cta">Rejoindre →</a>
+  </nav>
+
+  <!-- HERO -->
+  <div class="blog-hero">
+    <div>
+      <div class="hero-label">// LE BLOG MONEYFLOW</div>
+      <h1 class="hero-title">Guides.<br>Méthodes.<br><span>Résultats.</span></h1>
+      <p class="hero-sub">Des articles concrets écrits pour ceux qui passent à l'action. Pas de théorie, pas de bullshit — que du pratique.</p>
+      <div class="hero-search">
+        <input type="text" id="searchInput" placeholder="Chercher un article... (ex: parrainage, freelance)" oninput="filterSearch(this.value)">
+        <button class="search-btn">Chercher</button>
+      </div>
+      <div class="hero-tags">
+        <button class="htag active" onclick="filterCat('all',this)">Tout</button>
+        <button class="htag" onclick="filterCat('parrainage',this)">🤝 Parrainage</button>
+        <button class="htag" onclick="filterCat('revente',this)">👟 Revente</button>
+        <button class="htag" onclick="filterCat('freelance',this)">🎨 Freelance</button>
+        <button class="htag" onclick="filterCat('contenu',this)">📱 Contenu</button>
+        <button class="htag" onclick="filterCat('mindset',this)">🧠 Mindset</button>
+      </div>
+    </div>
+    <a href="moneyflow-article-parrainage.html" class="featured-article">
+      <div class="featured-img">
+        💸
+        <div class="featured-badge">À LA UNE</div>
+      </div>
+      <div class="featured-body">
+        <div class="feat-cat">🤝 PARRAINAGE</div>
+        <div class="feat-title">Comment gagner tes 100 premiers euros cette semaine</div>
+        <div class="feat-excerpt">Le guide complet pour démarrer le parrainage d'apps dès ce soir, sans investissement et avec des résultats en 48h.</div>
+        <div class="feat-meta">
+          <div class="feat-read">7 MIN DE LECTURE</div>
+          <div class="feat-time">MAR 2026</div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- FILTERS -->
+  <div class="filters-bar reveal">
+    <div class="filter-label">TRIER PAR :</div>
+    <button class="filter-btn active" onclick="sortArticles('recent',this)">Récents</button>
+    <button class="filter-btn" onclick="sortArticles('popular',this)">Populaires</button>
+    <button class="filter-btn" onclick="sortArticles('quick',this)">Lecture rapide</button>
+  </div>
+
+  <!-- ARTICLES -->
+  <div class="articles-grid" id="articlesGrid">
+
+    <a href="moneyflow-article-parrainage.html" class="article-card reveal" data-cat="parrainage" data-pop="95" data-time="7">
+      <div class="art-thumb" style="background:linear-gradient(135deg,rgba(0,255,135,0.1),rgba(0,255,135,0.04))">
+        🤝
+        <div class="art-cat-badge cat-green">PARRAINAGE</div>
+        <div class="art-new">NOUVEAU</div>
+      </div>
+      <div class="art-body">
+        <div class="art-title">100€ cette semaine grâce au parrainage d'apps</div>
+        <div class="art-excerpt">Le plan d'action complet pour tes premiers euros. Apps, scripts, plateformes — tout est dedans.</div>
+        <div class="art-footer">
+          <div class="art-read">7 MIN</div>
+          <div class="art-arrow">→</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="moneyflow-article-2.html" class="article-card reveal" data-cat="revente" data-pop="88" data-time="9">
+      <div class="art-thumb" style="background:linear-gradient(135deg,rgba(255,229,0,0.1),rgba(255,229,0,0.04))">
+        👟
+        <div class="art-cat-badge cat-yellow">REVENTE</div>
+      </div>
+      <div class="art-body">
+        <div class="art-title">J'ai fait +500€ en revendant des sneakers — voilà comment</div>
+        <div class="art-excerpt">Retour d'expérience complet : quelles paires acheter, où les revendre, les erreurs à éviter.</div>
+        <div class="art-footer">
+          <div class="art-read">9 MIN</div>
+          <div class="art-arrow">→</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="moneyflow-article-3.html" class="article-card reveal" data-cat="freelance" data-pop="82" data-time="6">
+      <div class="art-thumb" style="background:linear-gradient(135deg,rgba(45,255,240,0.1),rgba(45,255,240,0.04))">
+        🎨
+        <div class="art-cat-badge cat-blue">FREELANCE</div>
+      </div>
+      <div class="art-body">
+        <div class="art-title">Ton premier client freelance en 7 jours (même sans portfolio)</div>
+        <div class="art-excerpt">La méthode exacte pour trouver ton 1er client même si tu débutes complètement de zéro.</div>
+        <div class="art-footer">
+          <div class="art-read">6 MIN</div>
+          <div class="art-arrow">→</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="moneyflow-article-contenu.html" class="article-card reveal" data-cat="contenu" data-pop="91" data-time="8">
+      <div class="art-thumb" style="background:linear-gradient(135deg,rgba(255,45,120,0.1),rgba(255,45,120,0.04))">
+        📱
+        <div class="art-cat-badge cat-pink">CONTENU</div>
+        <div class="art-new">VIRAL</div>
+      </div>
+      <div class="art-body">
+        <div class="art-title">TikTok : les 10 hooks qui font exploser les vues en 2026</div>
+        <div class="art-excerpt">Les formules exactes des 3 premières secondes qui font la différence entre 200 et 2 millions de vues.</div>
+        <div class="art-footer">
+          <div class="art-read">8 MIN</div>
+          <div class="art-arrow">→</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="moneyflow-article-crypto.html" class="article-card reveal" data-cat="trading" data-pop="94" data-time="8">
+      <div class="art-thumb" style="background:linear-gradient(135deg,rgba(176,96,255,0.12),rgba(255,45,120,0.06))">
+        ₿
+        <div class="art-cat-badge cat-purple">CRYPTO</div>
+        <div class="art-new">NEW 🔥</div>
+      </div>
+      <div class="art-body">
+        <div class="art-title">Investir en crypto selon ton budget — memecoins, altcoins, BTC</div>
+        <div class="art-excerpt">10€ ou 10 000€ — la stratégie n'est pas la même. Guide complet par niveau de budget avec outils et règles d'or.</div>
+        <div class="art-footer">
+          <div class="art-read">8 MIN</div>
+          <div class="art-arrow">→</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="moneyflow-article-5.html" class="article-card reveal" data-cat="mindset" data-pop="79" data-time="5">
+      <div class="art-thumb" style="background:linear-gradient(135deg,rgba(176,96,255,0.1),rgba(176,96,255,0.04))">
+        🧠
+        <div class="art-cat-badge cat-purple">MINDSET</div>
+      </div>
+      <div class="art-body">
+        <div class="art-title">Pourquoi 95% des gens abandonnent avant de gagner de l'argent</div>
+        <div class="art-excerpt">La vraie raison pour laquelle tu n'as pas encore réussi — et comment changer ça concrètement.</div>
+        <div class="art-footer">
+          <div class="art-read">5 MIN</div>
+          <div class="art-arrow">→</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="moneyflow-article-6.html" class="article-card reveal" data-cat="freelance" data-pop="74" data-time="10">
+      <div class="art-thumb" style="background:linear-gradient(135deg,rgba(45,255,240,0.1),rgba(45,255,240,0.04))">
+        🤖
+        <div class="art-cat-badge cat-blue">FREELANCE</div>
+      </div>
+      <div class="art-body">
+        <div class="art-title">Gagner 500€/mois avec l'IA et le no-code en 2026</div>
+        <div class="art-excerpt">Les compétences IA les plus demandées et comment les apprendre en 30 jours pour les vendre.</div>
+        <div class="art-footer">
+          <div class="art-read">10 MIN</div>
+          <div class="art-arrow">→</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="moneyflow-article-7.html" class="article-card reveal" data-cat="parrainage" data-pop="86" data-time="4">
+      <div class="art-thumb" style="background:linear-gradient(135deg,rgba(0,255,135,0.1),rgba(0,255,135,0.04))">
+        💳
+        <div class="art-cat-badge cat-green">PARRAINAGE</div>
+      </div>
+      <div class="art-body">
+        <div class="art-title">Top 10 des apps de parrainage les mieux payées en 2026</div>
+        <div class="art-excerpt">Le classement mis à jour avec les bonus réels, les conditions et les tips pour maximiser.</div>
+        <div class="art-footer">
+          <div class="art-read">4 MIN</div>
+          <div class="art-arrow">→</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="moneyflow-article-8.html" class="article-card reveal" data-cat="revente" data-pop="70" data-time="7">
+      <div class="art-thumb" style="background:linear-gradient(135deg,rgba(255,229,0,0.1),rgba(255,229,0,0.04))">
+        🃏
+        <div class="art-cat-badge cat-yellow">REVENTE</div>
+      </div>
+      <div class="art-body">
+        <div class="art-title">Revendre des cartes Pokémon : le guide complet débutant</div>
+        <div class="art-excerpt">Quelle niche, quelles cartes, où les acheter, où les revendre — tout pour démarrer avec 30€.</div>
+        <div class="art-footer">
+          <div class="art-read">7 MIN</div>
+          <div class="art-arrow">→</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="moneyflow-article-9.html" class="article-card reveal" data-cat="contenu" data-pop="83" data-time="6">
+      <div class="art-thumb" style="background:linear-gradient(135deg,rgba(255,45,120,0.1),rgba(255,45,120,0.04))">
+        💰
+        <div class="art-cat-badge cat-pink">CONTENU</div>
+      </div>
+      <div class="art-body">
+        <div class="art-title">UGC : comment gagner 300€ par vidéo sans audience</div>
+        <div class="art-excerpt">La méthode pour vendre du contenu aux marques sans avoir besoin d'abonnés. Dès le 1er mois.</div>
+        <div class="art-footer">
+          <div class="art-read">6 MIN</div>
+          <div class="art-arrow">→</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="moneyflow-article-10.html" class="article-card reveal" data-cat="mindset" data-pop="77" data-time="5">
+      <div class="art-thumb" style="background:linear-gradient(135deg,rgba(176,96,255,0.1),rgba(176,96,255,0.04))">
+        ⏰
+        <div class="art-cat-badge cat-purple">MINDSET</div>
+      </div>
+      <div class="art-body">
+        <div class="art-title">Gérer son temps entre lycée/études et ses projets money</div>
+        <div class="art-excerpt">Comment dégager 1h par jour pour construire tes revenus sans sacrifier tes études ou ta vie.</div>
+        <div class="art-footer">
+          <div class="art-read">5 MIN</div>
+          <div class="art-arrow">→</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="moneyflow-article-11.html" class="article-card reveal" data-cat="freelance" data-pop="68" data-time="8">
+      <div class="art-thumb" style="background:linear-gradient(135deg,rgba(45,255,240,0.1),rgba(45,255,240,0.04))">
+        📸
+        <div class="art-cat-badge cat-blue">FREELANCE</div>
+      </div>
+      <div class="art-body">
+        <div class="art-title">Montage vidéo freelance : de 0 à 1000€/mois en 90 jours</div>
+        <div class="art-excerpt">Le parcours complet pour devenir monteur freelance : formation, portfolio, clients, tarifs.</div>
+        <div class="art-footer">
+          <div class="art-read">8 MIN</div>
+          <div class="art-arrow">→</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="moneyflow-article-12.html" class="article-card reveal" data-cat="revente" data-pop="72" data-time="6">
+      <div class="art-thumb" style="background:linear-gradient(135deg,rgba(255,229,0,0.1),rgba(255,229,0,0.04))">
+        🛒
+        <div class="art-cat-badge cat-yellow">REVENTE</div>
+      </div>
+      <div class="art-body">
+        <div class="art-title">Vinted Pro : vendre des vêtements pour gagner 200€/mois</div>
+        <div class="art-excerpt">Stratégie sourcing, photos, prix, livraison — la méthode pour faire de Vinted une vraie source de revenus.</div>
+        <div class="art-footer">
+          <div class="art-read">6 MIN</div>
+          <div class="art-arrow">→</div>
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- NEWSLETTER -->
+  <div class="newsletter reveal">
+    <div class="nl-left">
+      <div class="nl-label">// NEWSLETTER MONEYFLOW</div>
+      <div class="nl-title">1 tip par semaine<br>pour <span>gagner plus</span></div>
+      <p class="nl-sub">Chaque lundi : une méthode concrète, une opportunité de parrainage, un bon plan. Gratuit. Pas de spam.</p>
+    </div>
+    <div class="nl-form">
+      <input class="nl-input" type="text" placeholder="Ton prénom">
+      <input class="nl-input" type="email" placeholder="Ton email">
+      <button class="nl-btn" onclick="subscribeNewsletter()">Rejoindre — C'est gratuit 🚀</button>
+      <div class="nl-note">DÉJÀ 2 847 ABONNÉS · DÉSABONNEMENT EN 1 CLIC</div>
+    </div>
+  </div>
+
+  <!-- SEO SECTION -->
+  <div class="seo-section reveal">
+    <div class="seo-label">// EXPLORER PAR THÈME</div>
+    <div class="seo-grid">
+      <div>
+        <div class="seo-col-title">💸 Gagner de l'argent</div>
+        <ul class="seo-links">
+          <li><a href="https://discord.gg/p5t4xSYQ">Gagner de l'argent à 16 ans</a></li>
+          <li><a href="https://discord.gg/p5t4xSYQ">Gagner de l'argent en ligne</a></li>
+          <li><a href="https://discord.gg/p5t4xSYQ">Premiers revenus sans emploi</a></li>
+          <li><a href="https://discord.gg/p5t4xSYQ">Argent de poche supplémentaire</a></li>
+          <li><a href="https://discord.gg/p5t4xSYQ">Revenus passifs pour jeunes</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="seo-col-title">🤝 Parrainage</div>
+        <ul class="seo-links">
+          <li><a href="https://discord.gg/p5t4xSYQ">Meilleures apps de parrainage</a></li>
+          <li><a href="https://discord.gg/p5t4xSYQ">Parrainage Revolut 2026</a></li>
+          <li><a href="https://discord.gg/p5t4xSYQ">Code parrainage Trade Republic</a></li>
+          <li><a href="https://discord.gg/p5t4xSYQ">Comment parrainer sans réseau</a></li>
+          <li><a href="https://discord.gg/p5t4xSYQ">Parrainage TikTok stratégie</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="seo-col-title">🎨 Freelance & Créa</div>
+        <ul class="seo-links">
+          <li><a href="https://discord.gg/p5t4xSYQ">Débuter le freelance à 17 ans</a></li>
+          <li><a href="https://discord.gg/p5t4xSYQ">Montage vidéo freelance débutant</a></li>
+          <li><a href="https://discord.gg/p5t4xSYQ">Fiverr premier client</a></li>
+          <li><a href="https://discord.gg/p5t4xSYQ">UGC contenu marques</a></li>
+          <li><a href="https://discord.gg/p5t4xSYQ">Community manager indépendant</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="seo-col-title">👟 Revente</div>
+        <ul class="seo-links">
+          <li><a href="https://discord.gg/p5t4xSYQ">Revendre des sneakers débutant</a></li>
+          <li><a href="https://discord.gg/p5t4xSYQ">Cartes Pokémon revente 2026</a></li>
+          <li><a href="https://discord.gg/p5t4xSYQ">Vinted stratégie vente</a></li>
+          <li><a href="https://discord.gg/p5t4xSYQ">StockX comment ça marche</a></li>
+          <li><a href="https://discord.gg/p5t4xSYQ">Dropshipping sans stock</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">MONEY<span>FLOW</span></div>
+    <div class="footer-disc">Contenu éducatif uniquement. Le trading et l'investissement sont réservés aux +18 ans et comportent un risque de perte en capital.</div>
+    <div class="footer-links">
+      <a href="https://discord.gg/p5t4xSYQ">Mentions légales</a>
+      <a href="https://discord.gg/p5t4xSYQ">Contact</a>
+      <a href="index.html">Accueil</a>
+    </div>
+  </footer>
+</div>
+
+<script>
+// FILTER BY CATEGORY
+function filterCat(cat, btn) {
+  document.querySelectorAll('.htag').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.article-card').forEach(card => {
+    if (cat === 'all' || card.dataset.cat === cat) {
+      card.classList.remove('hidden');
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+}
+
+// FILTER BY SEARCH
+function filterSearch(val) {
+  const q = val.toLowerCase();
+  document.querySelectorAll('.article-card').forEach(card => {
+    const text = card.textContent.toLowerCase();
+    card.classList.toggle('hidden', q.length > 1 && !text.includes(q));
+  });
+}
+
+// SORT
+function sortArticles(type, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const grid = document.getElementById('articlesGrid');
+  const cards = [...grid.querySelectorAll('.article-card')];
+  cards.sort((a, b) => {
+    if (type === 'popular') return parseInt(b.dataset.pop) - parseInt(a.dataset.pop);
+    if (type === 'quick') return parseInt(a.dataset.time) - parseInt(b.dataset.time);
+    return 0; // recent = default order
+  });
+  cards.forEach(c => grid.appendChild(c));
+}
+
+// NEWSLETTER
+function subscribeNewsletter() {
+  const btn = document.querySelector('.nl-btn');
+  btn.textContent = '✅ Inscrit ! Vérifie ta boîte mail';
+  btn.style.background = '#00ff87';
+}
+
+// REVEAL
+const io = new IntersectionObserver(e => e.forEach(x => { if (x.isIntersecting) x.target.classList.add('visible') }), { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
