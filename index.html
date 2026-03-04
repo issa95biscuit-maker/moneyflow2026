@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#050508">
+<meta property="og:title" content="MONEYFLOW — Gagne ta vie, à ta façon">
+<meta property="og:description" content="Les vraies méthodes pour générer tes premiers revenus. Rejoins la communauté.">
+<title>MONEYFLOW — Gagne ta vie, à ta façon</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@300;400;600;700&family=Syne+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#060608;--green:#00ff87;--pink:#ff2d78;--blue:#2dfff0;--yellow:#ffe500;--purple:#b060ff;--white:#f0ecff;--card:#0e0e16;--border:#16162a}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:'Outfit',sans-serif;min-height:100vh;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.5}
+.orb{position:fixed;border-radius:50%;filter:blur(90px);pointer-events:none;z-index:0}
+.orb1{width:320px;height:320px;background:rgba(0,255,135,0.08);top:-100px;right:-80px;animation:floatOrb 9s ease-in-out infinite}
+.orb2{width:260px;height:260px;background:rgba(255,45,120,0.06);bottom:30%;left:-90px;animation:floatOrb 12s ease-in-out infinite reverse}
+.orb3{width:180px;height:180px;background:rgba(45,255,240,0.05);bottom:10%;right:-60px;animation:floatOrb 7s ease-in-out infinite 2s}
+@keyframes floatOrb{0%,100%{transform:translate(0,0)}50%{transform:translate(15px,15px)}}
+.wrapper{position:relative;z-index:1;max-width:480px;margin:0 auto;padding:0 18px 120px}
+
+/* NAV */
+.topnav{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(6,6,8,0.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);z-index:50;margin:0 -18px;width:calc(100% + 36px)}
+.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;letter-spacing:-1px;text-decoration:none;color:var(--white);display:flex;align-items:center;gap:8px}
+.nav-logo-icon{width:30px;height:30px;background:var(--green);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
+.nav-logo span{color:var(--green)}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-link{font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:1.5px;color:#444;text-decoration:none;padding:7px 10px;border-radius:8px;transition:all 0.2s}
+.nav-link:hover{color:var(--white);background:var(--card)}
+.nav-cta{background:var(--green);color:#000;font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:1.5px;font-weight:700;padding:7px 14px;border-radius:8px;text-decoration:none}
+
+/* HERO */
+.hero{padding:40px 0 32px;text-align:center}
+.live-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,255,135,0.08);border:1px solid rgba(0,255,135,0.2);border-radius:100px;padding:7px 18px;font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--green);margin-bottom:24px;animation:fadeUp 0.5s ease both}
+.live-dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.3;transform:scale(1.5)}}
+
+/* LOGO BLOC */
+.hero-brand{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:20px;animation:fadeUp 0.5s 0.08s ease both}
+.hero-brand-icon{width:64px;height:64px;background:linear-gradient(135deg,#00ff87,#00cc6a);border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 0 50px rgba(0,255,135,0.35);flex-shrink:0}
+.hero-brand-text{}
+.hero-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:48px;letter-spacing:-3px;line-height:1;text-align:left}
+.hero-logo span{color:var(--green)}
+.hero-logo-sub{font-family:'Syne Mono',monospace;font-size:9px;letter-spacing:3px;color:#333;text-align:left;margin-top:5px}
+
+.hero-tagline{font-size:16px;color:#666;line-height:1.65;margin-bottom:26px;animation:fadeUp 0.5s 0.15s ease both}
+.hero-tagline strong{color:var(--white)}
+
+/* COUNT */
+.community-count{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:22px;animation:fadeUp 0.5s 0.2s ease both}
+.avatars{display:flex}
+.avatar{width:30px;height:30px;border-radius:50%;border:2px solid var(--bg);margin-left:-8px;font-size:14px;display:flex;align-items:center;justify-content:center;background:var(--card)}
+.avatar:first-child{margin-left:0}
+.count-text{font-size:13px;color:#666}
+.count-text strong{color:var(--white)}
+
+/* BUTTONS */
+.hero-ctas{display:flex;flex-direction:column;gap:10px;animation:fadeUp 0.5s 0.25s ease both}
+.btn-discord-main{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--green);color:#000;font-family:'Syne',sans-serif;font-weight:800;font-size:16px;padding:17px 20px;border-radius:16px;text-decoration:none;box-shadow:0 0 40px rgba(0,255,135,0.25),0 4px 20px rgba(0,0,0,0.4);position:relative;overflow:hidden}
+.btn-discord-main::before{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:rgba(255,255,255,0.15);transform:skewX(-20deg);animation:shimmer 3s infinite}
+@keyframes shimmer{0%{left:-100%}100%{left:200%}}
+.btn-telegram-main{display:flex;align-items:center;justify-content:center;gap:10px;background:rgba(45,255,240,0.08);border:1px solid rgba(45,255,240,0.3);color:var(--blue);font-family:'Syne',sans-serif;font-weight:800;font-size:16px;padding:17px 20px;border-radius:16px;text-decoration:none}
+.btn-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.btn-secondary{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--card);border:1px solid var(--border);color:var(--white);font-family:'Syne',sans-serif;font-weight:700;font-size:14px;padding:14px;border-radius:14px;text-decoration:none}
+
+/* STATS */
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px;animation:fadeUp 0.5s 0.3s ease both}
+.stat-pill{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px 10px;text-align:center}
+.stat-pill-num{font-family:'Syne',sans-serif;font-weight:800;font-size:22px;letter-spacing:-1px}
+.stat-pill-num .accent{color:var(--green)}
+.stat-pill-label{font-family:'Syne Mono',monospace;font-size:9px;letter-spacing:2px;color:#444;margin-top:4px}
+
+/* SECTION DIVIDER */
+.section-divider{display:flex;align-items:center;gap:12px;margin:34px 0 18px}
+.divider-line{flex:1;height:1px;background:var(--border)}
+.divider-text{font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:3px;color:#333;white-space:nowrap}
+
+/* ARTICLES SCROLL */
+.articles-row{display:flex;gap:10px;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.articles-row::-webkit-scrollbar{display:none}
+.article-mini{flex-shrink:0;width:185px;scroll-snap-align:start;background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;text-decoration:none;color:var(--white);display:block}
+.am-thumb{height:88px;display:flex;align-items:center;justify-content:center;font-size:34px;position:relative}
+.am-cat{position:absolute;top:8px;left:8px;font-family:'Syne Mono',monospace;font-size:8px;letter-spacing:2px;padding:3px 8px;border-radius:100px}
+.am-body{padding:11px 12px}
+.am-title{font-family:'Syne',sans-serif;font-weight:700;font-size:13px;line-height:1.3;margin-bottom:6px}
+.am-read{font-family:'Syne Mono',monospace;font-size:9px;letter-spacing:2px;color:#444}
+.see-all-btn{display:flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--border);color:#444;font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:2px;padding:12px;border-radius:12px;text-decoration:none;margin-top:10px;transition:all 0.2s}
+.see-all-btn:hover{border-color:rgba(0,255,135,0.2);color:var(--green)}
+
+/* METHODS */
+.cat-label{font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:3px;padding:14px 0 8px}
+.method-list{display:flex;flex-direction:column;gap:8px}
+.method-item{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px 18px;display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--white);transition:all 0.18s;position:relative;overflow:hidden}
+.method-item:active{transform:scale(0.985)}
+.method-emoji-wrap{width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.bg-green{background:rgba(0,255,135,0.1)}.bg-pink{background:rgba(255,45,120,0.1)}.bg-blue{background:rgba(45,255,240,0.1)}.bg-yellow{background:rgba(255,229,0,0.1)}.bg-purple{background:rgba(176,96,255,0.1)}.bg-grey{background:rgba(255,255,255,0.05)}
+.method-info{flex:1;min-width:0}
+.method-name{font-family:'Syne',sans-serif;font-weight:700;font-size:15px;margin-bottom:2px}
+.method-desc{font-size:12px;color:#555;line-height:1.4;margin-bottom:4px}
+.method-earn{font-family:'Syne Mono',monospace;font-size:10px}
+.earn-green{color:var(--green)}.earn-pink{color:var(--pink)}.earn-blue{color:var(--blue)}.earn-yellow{color:var(--yellow)}.earn-purple{color:var(--purple)}.earn-grey{color:#555}
+.method-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px;flex-shrink:0}
+.method-badge{font-family:'Syne Mono',monospace;font-size:8px;letter-spacing:2px;padding:4px 9px;border-radius:100px}
+.badge-green{background:rgba(0,255,135,0.1);color:var(--green);border:1px solid rgba(0,255,135,0.2)}
+.badge-pink{background:rgba(255,45,120,0.1);color:var(--pink);border:1px solid rgba(255,45,120,0.2)}
+.badge-grey{background:rgba(255,255,255,0.04);color:#555;border:1px solid #1a1a2e}
+.badge-purple{background:rgba(176,96,255,0.1);color:var(--purple);border:1px solid rgba(176,96,255,0.2)}
+.method-arrow{color:#2a2a3e;font-size:18px}
+.method-featured{border-color:rgba(0,255,135,0.25);box-shadow:inset 0 0 40px rgba(0,255,135,0.04)}
+
+/* COMMUNITY */
+.community-section{background:linear-gradient(135deg,rgba(0,255,135,0.07),rgba(45,255,240,0.03));border:1px solid rgba(0,255,135,0.15);border-radius:22px;padding:28px 22px;text-align:center}
+.community-emoji{font-size:44px;margin-bottom:14px;display:block}
+.community-title{font-family:'Syne',sans-serif;font-weight:800;font-size:26px;letter-spacing:-1.5px;margin-bottom:10px;line-height:1.1}
+.community-title span{color:var(--green)}
+.community-desc{font-size:14px;color:#666;line-height:1.7;margin-bottom:20px}
+.perks{display:flex;flex-direction:column;gap:9px;text-align:left;margin-bottom:22px}
+.perk{display:flex;align-items:center;gap:12px;font-size:14px;color:#888}
+.perk-icon{width:30px;height:30px;background:rgba(0,255,135,0.08);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.btn-discord-big{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;background:var(--green);color:#000;font-family:'Syne',sans-serif;font-weight:800;font-size:16px;padding:17px;border-radius:14px;text-decoration:none;margin-bottom:10px;box-shadow:0 0 30px rgba(0,255,135,0.2)}
+.btn-telegram-big{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;background:rgba(45,255,240,0.08);border:1px solid rgba(45,255,240,0.25);color:var(--blue);font-family:'Syne',sans-serif;font-weight:800;font-size:16px;padding:17px;border-radius:14px;text-decoration:none}
+
+/* SOCIALS */
+.socials{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.social-btn{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:13px;text-decoration:none;color:#666;font-family:'Outfit',sans-serif;font-size:14px;font-weight:600}
+.social-btn.tiktok{border-color:rgba(255,45,120,0.2);color:var(--white)}
+.social-btn.instagram{border-color:rgba(255,165,0,0.2);color:var(--white)}
+
+/* ANTISCAM */
+.antiscam{background:rgba(255,229,0,0.04);border:1px solid rgba(255,229,0,0.15);border-radius:16px;padding:18px;display:flex;gap:14px}
+.antiscam-icon{font-size:22px;flex-shrink:0}
+.antiscam-title{font-family:'Syne',sans-serif;font-weight:700;font-size:14px;color:var(--yellow);margin-bottom:5px}
+.antiscam-text{font-size:12px;color:#666;line-height:1.6}
+.antiscam-text strong{color:#888}
+
+/* FOOTER */
+.footer-mini{text-align:center;padding-top:28px;font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:2px;color:#222;line-height:2.2}
+.footer-mini a{color:#333;text-decoration:none}
+
+/* STICKY */
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;padding:12px 18px 18px;background:linear-gradient(to top,rgba(6,6,8,0.98) 60%,transparent);z-index:100;display:none}
+.sticky-cta.show{display:block}
+.sticky-inner{max-width:480px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.btn-sticky-discord{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--green);color:#000;font-family:'Syne',sans-serif;font-weight:800;font-size:14px;padding:15px;border-radius:13px;text-decoration:none;box-shadow:0 0 30px rgba(0,255,135,0.3)}
+.btn-sticky-telegram{display:flex;align-items:center;justify-content:center;gap:8px;background:rgba(45,255,240,0.1);border:1px solid rgba(45,255,240,0.3);color:var(--blue);font-family:'Syne',sans-serif;font-weight:800;font-size:14px;padding:15px;border-radius:13px;text-decoration:none}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity 0.5s ease,transform 0.5s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+<div class="wrapper">
+
+  <!-- NAV -->
+  <nav class="topnav">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">💸</div>
+      MONEY<span>FLOW</span>
+    </a>
+    <div class="nav-links">
+      <a href="moneyflow-blog.html" class="nav-link">BLOG</a>
+      <a href="moneyflow-quiz.html" class="nav-link">QUIZ</a>
+      <a href="https://discord.gg/p5t4xSYQ" class="nav-cta">DISCORD</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="live-badge"><div class="live-dot"></div>COMMUNAUTÉ ACTIVE</div>
+
+    <div class="hero-brand">
+      <div class="hero-brand-icon">💸</div>
+      <div class="hero-brand-text">
+        <div class="hero-logo">MONEY<span>FLOW</span></div>
+        <div class="hero-logo-sub">GAGNE TA VIE, À TA FAÇON</div>
+      </div>
+    </div>
+
+    <p class="hero-tagline"><strong>Arrête de scroller, commence à gagner.</strong><br>Les vraies méthodes. Pas de bullshit.</p>
+
+    <div class="community-count">
+      <div class="avatars">
+        <div class="avatar">🧑</div><div class="avatar">👩</div><div class="avatar">🧑‍🦱</div><div class="avatar">👦</div>
+        <div class="avatar" style="background:rgba(0,255,135,0.1);color:var(--green);font-family:'Syne',sans-serif;font-weight:800;font-size:11px">+</div>
+      </div>
+      <div class="count-text"><strong>2 847 membres</strong> ont déjà rejoint</div>
+    </div>
+
+    <div class="hero-ctas">
+      <a href="https://discord.gg/p5t4xSYQ" class="btn-discord-main" id="mainCta">
+        <span style="font-size:20px">💬</span> Rejoindre le Discord <span style="margin-left:auto">→</span>
+      </a>
+      <a href="https://t.me/+zNb_zWH1geI2NDlk" class="btn-telegram-main">
+        <span style="font-size:20px">✈️</span> Rejoindre le Telegram <span style="margin-left:auto">→</span>
+      </a>
+      <div class="btn-row">
+        <a href="moneyflow-quiz.html" class="btn-secondary">🧠 Mon quiz</a>
+        <a href="moneyflow-blog.html" class="btn-secondary">📝 Le blog</a>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-pill"><div class="stat-pill-num">0<span class="accent">€</span></div><div class="stat-pill-label">POUR DÉBUTER</div></div>
+      <div class="stat-pill"><div class="stat-pill-num">14<span class="accent">+</span></div><div class="stat-pill-label">MÉTHODES</div></div>
+      <div class="stat-pill"><div class="stat-pill-num">100<span class="accent">%</span></div><div class="stat-pill-label">GRATUIT</div></div>
+    </div>
+  </div>
+
+  <!-- ARTICLES -->
+  <div class="reveal">
+    <div class="section-divider"><div class="divider-line"></div><div class="divider-text">DERNIERS ARTICLES</div><div class="divider-line"></div></div>
+    <div class="articles-row">
+      <a href="moneyflow-article-parrainage.html" class="article-mini">
+        <div class="am-thumb" style="background:linear-gradient(135deg,rgba(0,255,135,0.12),rgba(0,255,135,0.04))">🤝<div class="am-cat" style="background:rgba(0,255,135,0.15);color:#00ff87;border:1px solid rgba(0,255,135,0.3)">PARRAINAGE</div></div>
+        <div class="am-body"><div class="am-title">500€/mois avec le parrainage</div><div class="am-read">5 MIN · DÉBUTANT</div></div>
+      </a>
+      <a href="moneyflow-article-crypto.html" class="article-mini">
+        <div class="am-thumb" style="background:linear-gradient(135deg,rgba(176,96,255,0.12),rgba(255,45,120,0.06))">₿<div class="am-cat" style="background:rgba(176,96,255,0.15);color:#b060ff;border:1px solid rgba(176,96,255,0.3)">CRYPTO</div></div>
+        <div class="am-body"><div class="am-title">Investir en crypto selon ton budget</div><div class="am-read">8 MIN · +18 ANS</div></div>
+      </a>
+      <a href="moneyflow-article-contenu.html" class="article-mini">
+        <div class="am-thumb" style="background:linear-gradient(135deg,rgba(255,45,120,0.12),rgba(255,45,120,0.04))">📱<div class="am-cat" style="background:rgba(255,45,120,0.15);color:#ff2d78;border:1px solid rgba(255,45,120,0.3)">CONTENU</div></div>
+        <div class="am-body"><div class="am-title">0 à 1000€/mois créateur de contenu</div><div class="am-read">7 MIN · INTERMÉDIAIRE</div></div>
+      </a>
+      <a href="moneyflow-article-2.html" class="article-mini">
+        <div class="am-thumb" style="background:linear-gradient(135deg,rgba(255,229,0,0.12),rgba(255,229,0,0.04))">👟<div class="am-cat" style="background:rgba(255,229,0,0.15);color:#ffe500;border:1px solid rgba(255,229,0,0.3)">REVENTE</div></div>
+        <div class="am-body"><div class="am-title">+500€ en revendant des sneakers</div><div class="am-read">9 MIN · DÉBUTANT</div></div>
+      </a>
+      <a href="moneyflow-article-9.html" class="article-mini">
+        <div class="am-thumb" style="background:linear-gradient(135deg,rgba(45,255,240,0.12),rgba(45,255,240,0.04))">💰<div class="am-cat" style="background:rgba(45,255,240,0.15);color:#2dfff0;border:1px solid rgba(45,255,240,0.3)">UGC</div></div>
+        <div class="am-body"><div class="am-title">300€ par vidéo sans audience</div><div class="am-read">6 MIN · INTERMÉDIAIRE</div></div>
+      </a>
+      <a href="moneyflow-article-5.html" class="article-mini">
+        <div class="am-thumb" style="background:linear-gradient(135deg,rgba(176,96,255,0.12),rgba(176,96,255,0.04))">🧠<div class="am-cat" style="background:rgba(176,96,255,0.15);color:#b060ff;border:1px solid rgba(176,96,255,0.3)">MINDSET</div></div>
+        <div class="am-body"><div class="am-title">Pourquoi 95% abandonnent trop tôt</div><div class="am-read">5 MIN · DÉBUTANT</div></div>
+      </a>
+    </div>
+    <a href="moneyflow-blog.html" class="see-all-btn">VOIR TOUS LES ARTICLES →</a>
+  </div>
+
+  <!-- MÉTHODES -->
+  <div class="reveal">
+    <div class="section-divider"><div class="divider-line"></div><div class="divider-text">LES MÉTHODES</div><div class="divider-line"></div></div>
+    <div class="method-list">
+      <a href="moneyflow-jobs.html" class="method-item method-featured">
+        <div class="method-emoji-wrap bg-green">⚡</div>
+        <div class="method-info"><div class="method-name">Travail rapide & Métiers</div><div class="method-desc">Uber Eats, VTC, livreur + métiers sans diplôme</div><div class="method-earn earn-green">Dès cette semaine — sans formation</div></div>
+        <div class="method-right"><div class="method-badge badge-green">RAPIDE ⚡</div><div class="method-arrow">›</div></div>
+      </a>
+
+      <div class="cat-label" style="color:var(--green)">⚡ DÉBUTANT — 0€ POUR COMMENCER</div>
+
+      <a href="moneyflow-parrainage.html" class="method-item">
+        <div class="method-emoji-wrap bg-green">🤝</div>
+        <div class="method-info"><div class="method-name">Parrainage d'apps</div><div class="method-desc">Partage tes codes, gagne à chaque inscription</div><div class="method-earn earn-green">10€ – 100€ par parrainage</div></div>
+        <div class="method-right"><div class="method-badge badge-green">FACILE</div><div class="method-arrow">›</div></div>
+      </a>
+      <a href="moneyflow-freelance.html" class="method-item">
+        <div class="method-emoji-wrap bg-blue">🎨</div>
+        <div class="method-info"><div class="method-name">Freelance & Créa</div><div class="method-desc">Montage, design, rédaction, IA — vends tes skills</div><div class="method-earn earn-blue">30€ – 100€/h sur Malt, Upwork</div></div>
+        <div class="method-right"><div class="method-badge badge-green">SCALABLE</div><div class="method-arrow">›</div></div>
+      </a>
+      <a href="moneyflow-contenu.html" class="method-item">
+        <div class="method-emoji-wrap bg-pink">📱</div>
+        <div class="method-info"><div class="method-name">Créateur de contenu</div><div class="method-desc">TikTok, YouTube, Insta — monétise ton audience</div><div class="method-earn earn-pink">Illimité — revenus passifs long terme</div></div>
+        <div class="method-right"><div class="method-badge badge-green">LONG TERME</div><div class="method-arrow">›</div></div>
+      </a>
+      <a href="moneyflow-affiliation.html" class="method-item">
+        <div class="method-emoji-wrap bg-yellow">🔗</div>
+        <div class="method-info"><div class="method-name">Affiliate Marketing</div><div class="method-desc">Blog, newsletter, TikTok → commissions Amazon</div><div class="method-earn earn-yellow">100€ → 2 000€/mois passif</div></div>
+        <div class="method-right"><div class="method-badge badge-green">PASSIF</div><div class="method-arrow">›</div></div>
+      </a>
+
+      <div class="cat-label" style="color:var(--blue)">🛒 E-COMMERCE — À PARTIR DE 100€</div>
+
+      <a href="moneyflow-revente.html" class="method-item">
+        <div class="method-emoji-wrap bg-blue">👟</div>
+        <div class="method-info"><div class="method-name">Achat-Revente (Reselling)</div><div class="method-desc">Sneakers, vintage, gaming sur Vinted, StockX</div><div class="method-earn earn-blue">Marges +50% à +300%</div></div>
+        <div class="method-right"><div class="method-badge badge-green">TENDANCE</div><div class="method-arrow">›</div></div>
+      </a>
+      <a href="moneyflow-dropshipping.html" class="method-item">
+        <div class="method-emoji-wrap bg-green">🛒</div>
+        <div class="method-info"><div class="method-name">Dropshipping / E-commerce</div><div class="method-desc">Shopify + pub Meta/TikTok — fort potentiel</div><div class="method-earn earn-green">1 000–10 000€/mois possible</div></div>
+        <div class="method-right"><div class="method-badge badge-grey">RISQUÉ</div><div class="method-arrow">›</div></div>
+      </a>
+      <a href="moneyflow-pod.html" class="method-item">
+        <div class="method-emoji-wrap bg-pink">👕</div>
+        <div class="method-info"><div class="method-name">Print on Demand (POD)</div><div class="method-desc">T-shirts, mugs via Printful + Etsy</div><div class="method-earn earn-pink">100€ → 2 000€/mois passif</div></div>
+        <div class="method-right"><div class="method-badge badge-green">PASSIF</div><div class="method-arrow">›</div></div>
+      </a>
+      <a href="moneyflow-numerique.html" class="method-item">
+        <div class="method-emoji-wrap bg-yellow">📦</div>
+        <div class="method-info"><div class="method-name">Produits Numériques</div><div class="method-desc">Ebook, templates Notion, cours en ligne</div><div class="method-earn earn-yellow">Vente infinie — scalable à l'infini</div></div>
+        <div class="method-right"><div class="method-badge badge-green">SCALABLE</div><div class="method-arrow">›</div></div>
+      </a>
+
+      <div class="cat-label" style="color:var(--yellow)">💼 SERVICE LOCAL — CASH RAPIDE</div>
+
+      <a href="moneyflow-local.html" class="method-item">
+        <div class="method-emoji-wrap bg-yellow">🏠</div>
+        <div class="method-info"><div class="method-name">Side Business Local</div><div class="method-desc">Jardinage, dog walking, cours, coach sportif</div><div class="method-earn earn-yellow">1 000€ → 8 000€/mois via Facebook</div></div>
+        <div class="method-right"><div class="method-badge badge-green">CASH RAPIDE</div><div class="method-arrow">›</div></div>
+      </a>
+      <a href="moneyflow-ia.html" class="method-item">
+        <div class="method-emoji-wrap bg-blue">🤖</div>
+        <div class="method-info"><div class="method-name">Micro-entreprise IA</div><div class="method-desc">Automatisation, consulting ChatGPT, LinkedIn</div><div class="method-earn earn-blue">500€ → 3 000€ — 50–150€/h</div></div>
+        <div class="method-right"><div class="method-badge badge-pink">HOT 🔥</div><div class="method-arrow">›</div></div>
+      </a>
+
+      <div class="cat-label" style="color:var(--purple)">📈 INVESTISSEMENT — +18 ANS ⚠️</div>
+
+      <a href="moneyflow-trading.html" class="method-item">
+        <div class="method-emoji-wrap bg-purple">📈</div>
+        <div class="method-info"><div class="method-name">Trading & ETF & Crypto</div><div class="method-desc">Livret A, ETF, actions, crypto — tous niveaux</div><div class="method-earn earn-purple">Risque réel de perte en capital</div></div>
+        <div class="method-right"><div class="method-badge badge-purple">+18 ANS</div><div class="method-arrow">›</div></div>
+      </a>
+      <a href="moneyflow-investissement-alt.html" class="method-item">
+        <div class="method-emoji-wrap bg-purple">🏗️</div>
+        <div class="method-info"><div class="method-name">Parking / Box / Immobilier</div><div class="method-desc">Parts de parking ou box — 4–8% net annuel</div><div class="method-earn earn-purple">5 000€ → très stable</div></div>
+        <div class="method-right"><div class="method-badge badge-purple">+18 ANS</div><div class="method-arrow">›</div></div>
+      </a>
+      <a href="moneyflow-investissement-alt.html" class="method-item" style="opacity:0.8">
+        <div class="method-emoji-wrap bg-pink">🚀</div>
+        <div class="method-info"><div class="method-name">Crowdfunding Startups</div><div class="method-desc">Sowefund, Anaxago — potentiel x10</div><div class="method-earn earn-pink">100€ → très risqué</div></div>
+        <div class="method-right"><div class="method-badge badge-pink">RISQUE ÉLEVÉ</div><div class="method-arrow">›</div></div>
+      </a>
+    </div>
+  </div>
+
+  <!-- COMMUNAUTÉ -->
+  <div id="rejoindre" class="reveal" style="margin-top:32px">
+    <div class="community-section">
+      <span class="community-emoji">🔥</span>
+      <div class="community-title">Rejoins la<br><span>communauté</span></div>
+      <p class="community-desc">Des milliers de jeunes qui s'entraident, partagent leurs gains et progressent ensemble.</p>
+      <div class="perks">
+        <div class="perk"><div class="perk-icon">📚</div>Guides exclusifs par méthode</div>
+        <div class="perk"><div class="perk-icon">💬</div>Partage de codes parrainage entre membres</div>
+        <div class="perk"><div class="perk-icon">🎯</div>Alertes drops & opportunités en temps réel</div>
+        <div class="perk"><div class="perk-icon">🏆</div>Classement mensuel des meilleurs gains</div>
+        <div class="perk"><div class="perk-icon">🚫</div>Zéro arnaque — modération stricte</div>
+      </div>
+      <a href="https://discord.gg/p5t4xSYQ" class="btn-discord-big"><span style="font-size:20px">💬</span> Rejoindre le Discord — Gratuit</a>
+      <a href="https://t.me/+zNb_zWH1geI2NDlk" class="btn-telegram-big"><span style="font-size:20px">✈️</span> Rejoindre le Telegram — Gratuit</a>
+    </div>
+    <div class="socials" style="margin-top:10px">
+      <a href="https://tiktok.com/@moneyflow2026" class="social-btn tiktok"><span style="font-size:20px">🎵</span> TikTok</a>
+      <a href="https://instagram.com/moneyflow2026" class="social-btn instagram"><span style="font-size:20px">📸</span> Instagram</a>
+    </div>
+  </div>
+
+  <!-- ANTI-SCAM -->
+  <div class="reveal" style="margin-top:20px">
+    <div class="antiscam">
+      <div class="antiscam-icon">🛡️</div>
+      <div>
+        <div class="antiscam-title">On ne te demandera jamais d'argent</div>
+        <div class="antiscam-text">Si quelqu'un te promet des <strong>gains garantis</strong> ou te demande de payer — c'est une arnaque. MONEYFLOW est <strong>100% gratuit</strong>.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer-mini">
+    © 2026 MONEYFLOW<br>
+    CONTENU ÉDUCATIF — TRADING RÉSERVÉ AUX +18 ANS · RISQUE DE PERTE EN CAPITAL<br><br>
+    <a href="moneyflow-mentions-legales.html">MENTIONS LÉGALES</a>
+    &nbsp;·&nbsp;<a href="moneyflow-blog.html">BLOG</a>
+    &nbsp;·&nbsp;<a href="moneyflow-quiz.html">QUIZ</a>
+  </div>
+</div>
+
+<!-- STICKY -->
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-inner">
+    <a href="https://discord.gg/p5t4xSYQ" class="btn-sticky-discord">💬 Discord</a>
+    <a href="https://t.me/+zNb_zWH1geI2NDlk" class="btn-sticky-telegram">✈️ Telegram</a>
+  </div>
+</div>
+
+<script>
+const io=new IntersectionObserver((e)=>{e.forEach((x,i)=>{if(x.isIntersecting)setTimeout(()=>x.target.classList.add('visible'),i*60)})},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const mainCta=document.getElementById('mainCta');
+const stickyCta=document.getElementById('stickyCta');
+new IntersectionObserver((e)=>{e.forEach(x=>stickyCta.classList.toggle('show',!x.isIntersecting))},{threshold:0.1}).observe(mainCta);
+</script>
+</body>
+</html>
