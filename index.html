@@ -1,0 +1,2274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050508">
+<meta property="og:title" content="MONEYFLOW — Gagne ta vie, à ta façon">
+<meta property="og:description" content="Les vraies méthodes pour générer tes premiers revenus. Rejoins la communauté.">
+<title>MONEYFLOW — Gagne ta vie, à ta façon</title>
+<!-- Preconnect pour accélérer le DNS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Google Fonts — chargement direct sans trick -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<style>
+:root{--bg:#060608;--green:#00ff87;--pink:#ff2d78;--blue:#2dfff0;--yellow:#ffe500;--purple:#b060ff;--white:#f2f0ff;--card:#0d0d18;--border:#18182e;--text-muted:#8a8a9e;--text-dim:#555566;--radius-card:18px;--font-body:Arial,'Inter',system-ui,sans-serif;--font-display:Arial,'Inter',system-ui,sans-serif;--font-mono:Arial,'Inter',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{overflow-x:hidden;scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{background:var(--bg);color:var(--white);font-family:Arial,'Inter',sans-serif;min-height:100vh;overflow-x:hidden;width:100%;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.5}
+.orb{position:fixed;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0}
+.orb1{width:280px;height:280px;background:rgba(0,255,135,0.09);top:-80px;right:-80px;animation:floatOrb 9s ease-in-out infinite}
+.orb2{width:220px;height:220px;background:rgba(255,45,120,0.06);bottom:35%;left:-80px;animation:floatOrb 12s ease-in-out infinite reverse}
+@keyframes floatOrb{0%,100%{transform:translate(0,0)}50%{transform:translate(12px,12px)}}
+.wrapper{position:relative;z-index:1;width:100%;max-width:480px;margin:0 auto;padding:0 18px 130px}
+
+/* ══ NAV ══ */
+.topnav{display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(6,6,8,0.95);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);z-index:50;margin:0 -16px;width:calc(100% + 32px)}
+.nav-logo{font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:16px;letter-spacing:-0.5px;text-decoration:none;color:var(--white);display:flex;align-items:center;gap:7px}
+.nav-logo-icon{width:26px;height:26px;background:var(--green);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0}
+.nav-logo span{color:var(--green)}
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-link{font-family:Arial,'Inter',sans-serif;font-size:9px;letter-spacing:1px;color:#444;text-decoration:none;padding:6px 8px;border-radius:6px}
+.nav-cta{background:var(--green);color:#000;font-family:Arial,'Inter',sans-serif;font-size:11px;font-weight:800;padding:7px 13px;border-radius:8px;text-decoration:none}
+
+/* ══ HERO ══ */
+.hero{padding:36px 0 28px;text-align:center}
+.live-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(0,255,135,0.08);border:1px solid rgba(0,255,135,0.2);border-radius:100px;padding:6px 16px;font-family:Arial,'Inter',sans-serif;font-size:9px;letter-spacing:2px;color:var(--green);margin-bottom:22px;animation:fadeUp .5s ease both}
+.live-dot{width:5px;height:5px;background:var(--green);border-radius:50%;animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(1.6)}}
+
+/* HERO TITLE — texte pur, pas d'image/icône */
+.hero-eyebrow{font-family:Arial,'Inter',sans-serif;font-size:9px;letter-spacing:3px;color:#333;margin-bottom:10px;animation:fadeUp .5s .05s ease both}
+.hero-title{font-family:Arial,'Inter',sans-serif;font-weight:800;line-height:1.05;letter-spacing:-1px;margin-bottom:14px;animation:fadeUp .5s .1s ease both}
+.hero-title .line1{display:block;font-size:13vw;color:var(--white)}
+.hero-title .line2{display:block;font-size:13vw;color:var(--green)}
+.hero-sub{font-size:15px;color:#888;line-height:1.65;margin-bottom:24px;animation:fadeUp .5s .15s ease both}
+.hero-sub strong{color:var(--white)}
+
+/* COUNT */
+.community-count{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:20px;animation:fadeUp .5s .2s ease both}
+.avatars{display:flex}
+.avatar{width:28px;height:28px;border-radius:50%;border:2px solid var(--bg);margin-left:-7px;font-size:13px;display:flex;align-items:center;justify-content:center;background:var(--card)}
+.avatar:first-child{margin-left:0}
+.count-text{font-size:13px;color:#555}
+.count-text strong{color:var(--white)}
+
+/* BUTTONS */
+.hero-ctas{display:flex;flex-direction:column;gap:9px;animation:fadeUp .5s .25s ease both;width:100%}
+.btn-discord-main{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;background:var(--green);color:#000;font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:15px;padding:16px;border-radius:14px;text-decoration:none;position:relative;overflow:hidden;box-shadow:0 0 35px rgba(0,255,135,0.3)}
+.btn-discord-main::before{content:'';position:absolute;top:0;left:-100%;width:50%;height:100%;background:rgba(255,255,255,0.2);transform:skewX(-20deg);animation:shimmer 3s infinite}
+@keyframes shimmer{0%{left:-100%}100%{left:200%}}
+.btn-telegram-main{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;background:rgba(45,255,240,0.07);border:1px solid rgba(45,255,240,0.25);color:var(--blue);font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:15px;padding:16px;border-radius:14px;text-decoration:none}
+.btn-row{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.btn-secondary{display:flex;align-items:center;justify-content:center;gap:6px;background:var(--card);border:1px solid var(--border);color:var(--white);font-family:Arial,'Inter',sans-serif;font-weight:700;font-size:13px;padding:13px;border-radius:12px;text-decoration:none}
+
+/* STATS */
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px;animation:fadeUp .5s .3s ease both}
+.stat-pill{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:13px 8px;text-align:center}
+.stat-num{font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:20px;letter-spacing:-1px}
+.stat-num .g{color:var(--green)}
+.stat-lbl{font-family:Arial,'Inter',sans-serif;font-size:8px;letter-spacing:2px;color:#333;margin-top:3px}
+
+/* ══ COMPTEUR LIVE ══ */
+.live-counter{background:linear-gradient(135deg,rgba(0,255,135,0.06),rgba(45,255,240,0.03));border:1px solid rgba(0,255,135,0.15);border-radius:20px;padding:20px 18px;margin-top:4px}
+.lc-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.lc-label{font-family:Arial,'Inter',sans-serif;font-size:9px;letter-spacing:2px;color:#444}
+.lc-live{display:flex;align-items:center;gap:5px;font-family:Arial,'Inter',sans-serif;font-size:9px;letter-spacing:1px;color:var(--green)}
+.lc-dot{width:5px;height:5px;background:var(--green);border-radius:50%;animation:pulse 1.5s infinite}
+.lc-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.lc-item{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:14px;padding:14px 12px;text-align:center}
+.lc-item.full{grid-column:1/-1}
+.lc-val{font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:26px;letter-spacing:-1.5px;line-height:1}
+.lc-val .g{color:var(--green)}
+.lc-val .b{color:var(--blue)}
+.lc-val .y{color:var(--yellow)}
+.lc-val .p{color:var(--pink)}
+.lc-desc{font-family:Arial,'Inter',sans-serif;font-size:8px;letter-spacing:1.5px;color:#333;margin-top:5px}
+.lc-feed{margin-top:14px;display:flex;flex-direction:column;gap:6px;max-height:120px;overflow:hidden;position:relative}
+.lc-feed::after{content:'';position:absolute;bottom:0;left:0;right:0;height:40px;background:linear-gradient(to top,rgba(6,6,8,0.9),transparent)}
+.lc-entry{display:flex;align-items:center;gap:8px;font-size:12px;color:#666;animation:feedIn .4s ease both}
+@keyframes feedIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.lc-entry-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.lc-entry strong{color:var(--white)}
+.lc-entry span{margin-left:auto;font-family:Arial,'Inter',sans-serif;font-size:9px;color:#333}
+
+/* ══ TÉMOIGNAGES CARROUSEL ══ */
+.testi-carousel{position:relative;overflow:hidden;border-radius:16px}
+.testi-track{display:flex;transition:transform .5s cubic-bezier(.4,0,.2,1)}
+.testi-card{min-width:100%;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;box-sizing:border-box}
+.testi-header{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.testi-avatar{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.testi-name{font-family:Arial,'Inter',sans-serif;font-weight:700;font-size:13px}
+.testi-tag{font-family:Arial,'Inter',sans-serif;font-size:9px;letter-spacing:1px;margin-top:2px}
+.testi-stars{margin-left:auto;color:var(--yellow);font-size:12px;letter-spacing:2px}
+.testi-text{font-size:13px;color:#777;line-height:1.75}
+.testi-text strong{color:var(--white)}
+.testi-gain{display:inline-flex;align-items:center;gap:6px;background:rgba(0,255,135,0.08);border:1px solid rgba(0,255,135,0.15);border-radius:8px;padding:6px 10px;font-family:Arial,'Inter',sans-serif;font-size:10px;color:var(--green);margin-top:12px}
+.testi-nav{display:flex;align-items:center;justify-content:space-between;margin-top:12px}
+.testi-dots{display:flex;gap:6px;align-items:center}
+.testi-dot{width:6px;height:6px;border-radius:50%;background:var(--border);transition:all .3s}
+.testi-dot.on{background:var(--green);width:18px;border-radius:3px}
+.testi-btns{display:flex;gap:6px}
+.testi-btn{width:30px;height:30px;border-radius:8px;background:#16162a;border:none;color:var(--white);font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+
+/* ══ ARTICLES ══ */
+.articles-scroll{display:flex;gap:12px;overflow-x:auto;padding:0 0 12px 0;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;cursor:grab}
+.articles-scroll::-webkit-scrollbar{display:none}
+.articles-scroll:active{cursor:grabbing}
+.article-card{flex:0 0 162px;scroll-snap-align:start;background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;text-decoration:none;color:var(--white);display:flex;flex-direction:column;transition:border-color .2s,transform .15s;-webkit-tap-highlight-color:transparent}
+.ac-thumb{height:86px;display:flex;align-items:center;justify-content:center;font-size:32px;position:relative;flex-shrink:0}
+.ac-badge{position:absolute;top:7px;left:7px;font-family:Arial,'Inter',sans-serif;font-size:7px;letter-spacing:1.5px;padding:3px 7px;border-radius:6px}
+.ac-new{position:absolute;top:7px;right:7px;background:var(--pink);color:#fff;font-family:Arial,'Inter',sans-serif;font-size:7px;letter-spacing:1px;padding:2px 6px;border-radius:5px}
+.ac-body{padding:11px 12px;flex:1}
+.ac-title{font-family:Arial,'Inter',sans-serif;font-weight:700;font-size:12px;line-height:1.35;margin-bottom:7px}
+.ac-footer{display:flex;align-items:center;justify-content:space-between}
+.ac-read{font-family:Arial,'Inter',sans-serif;font-size:8px;letter-spacing:1px;color:#333}
+.ac-arrow{color:#2a2a3e;font-size:14px}
+/* scroll hint dot indicator */
+.scroll-dots{display:flex;justify-content:center;gap:5px;margin-top:10px}
+.scroll-dot{width:4px;height:4px;border-radius:50%;background:var(--border)}
+.scroll-dot.active{background:var(--green);width:16px;border-radius:2px}
+.see-all{display:flex;align-items:center;justify-content:center;gap:6px;border:1px solid var(--border);color:#555;font-family:Arial,'Inter',sans-serif;font-weight:700;font-size:12px;letter-spacing:1px;padding:13px;border-radius:12px;text-decoration:none;margin-top:12px;transition:border-color .2s,color .2s}
+
+/* ══ METHODS ══ */
+
+/* CATEGORY LABELS — pill redesigné */
+.cat-label{display:inline-flex;align-items:center;gap:7px;font-family:Arial,'Inter',sans-serif;font-size:8px;letter-spacing:2px;padding:7px 14px;border-radius:100px;margin:16px 0 10px;border:1px solid currentColor;opacity:0.9}
+
+.method-list{display:flex;flex-direction:column;gap:9px}
+
+/* CARTE — base améliorée */
+.method-item{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:16px 16px 16px 16px;
+  display:flex;align-items:center;gap:14px;
+  text-decoration:none;color:var(--white);
+  position:relative;overflow:hidden;
+  transition:border-color .22s ease, box-shadow .22s ease, transform .15s ease;
+  -webkit-tap-highlight-color:transparent;
+}
+
+/* Ripple feedback tactile mobile */
+.method-item::after{
+  content:'';position:absolute;inset:0;
+  background:rgba(255,255,255,0);
+  transition:background .15s;
+}
+.method-item:active::after{background:rgba(255,255,255,0.04)}
+.method-item:active{transform:scale(0.985)}
+
+/* Hover desktop */
+@media(hover:hover){
+  .method-item:hover{border-color:rgba(255,255,255,0.12);box-shadow:0 4px 24px rgba(0,0,0,0.3)}
+  .method-item:hover .mi-arrow{transform:translateX(4px);color:var(--white)}
+}
+
+/* ICÔNE WRAP — plus grand, plus de présence */
+.me-wrap{
+  width:46px;height:46px;border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;flex-shrink:0;
+  transition:transform .2s ease;
+}
+.method-item:active .me-wrap{transform:scale(0.92)}
+
+.bg-green{background:rgba(0,255,135,0.12)}.bg-pink{background:rgba(255,45,120,0.12)}
+.bg-blue{background:rgba(45,255,240,0.12)}.bg-yellow{background:rgba(255,229,0,0.12)}
+.bg-purple{background:rgba(176,96,255,0.12)}.bg-grey{background:rgba(255,255,255,0.06)}
+
+.mi-info{flex:1;min-width:0}
+
+/* TITRE — légèrement plus grand */
+.mi-name{font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:14px;margin-bottom:3px;letter-spacing:-0.3px}
+
+/* DESCRIPTION — contraste corrigé WCAG AA */
+.mi-desc{font-size:12px;color:#666;line-height:1.45;margin-bottom:6px}
+
+/* GAIN — info HERO, mise en valeur */
+.mi-earn{
+  font-family:Arial,'Inter',sans-serif;font-weight:700;font-size:12px;
+  letter-spacing:-0.2px;
+}
+.earn-green{color:var(--green)}.earn-pink{color:var(--pink)}.earn-blue{color:var(--blue)}
+.earn-yellow{color:var(--yellow)}.earn-purple{color:var(--purple)}.earn-grey{color:#555}
+
+.mi-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px;flex-shrink:0}
+
+/* BADGE — plus lisible */
+.mi-badge{
+  font-family:Arial,'Inter',sans-serif;font-size:8px;letter-spacing:1px;
+  padding:4px 10px;border-radius:100px;white-space:nowrap;
+}
+.bg-badge-green{background:rgba(0,255,135,0.12);color:var(--green);border:1px solid rgba(0,255,135,0.25)}
+.bg-badge-pink{background:rgba(255,45,120,0.12);color:var(--pink);border:1px solid rgba(255,45,120,0.25)}
+.bg-badge-grey{background:rgba(255,255,255,0.05);color:#666;border:1px solid #1e1e32}
+.bg-badge-purple{background:rgba(176,96,255,0.12);color:var(--purple);border:1px solid rgba(176,96,255,0.25)}
+
+/* FLÈCHE — animée, visible */
+.mi-arrow{
+  color:#333;font-size:18px;
+  transition:transform .2s ease, color .2s ease;
+  line-height:1;
+}
+
+/* CARTE FEATURED — glow + border animée */
+.mf{
+  border-color:rgba(0,255,135,0.3);
+  box-shadow:inset 0 0 40px rgba(0,255,135,0.05), 0 0 0 0 rgba(0,255,135,0);
+}
+@media(hover:hover){
+  .mf:hover{box-shadow:inset 0 0 40px rgba(0,255,135,0.07), 0 0 20px rgba(0,255,135,0.08)}
+}
+
+/* CARTE HOT — border animée pulsante */
+.method-hot{
+  border-color:rgba(255,45,120,0.3);
+  animation:hotPulse 3s ease-in-out infinite;
+}
+@keyframes hotPulse{
+  0%,100%{box-shadow:inset 0 0 30px rgba(255,45,120,0.04)}
+  50%{box-shadow:inset 0 0 40px rgba(255,45,120,0.09),0 0 15px rgba(255,45,120,0.06)}
+}
+
+/* ══ COMMUNITY ══ */
+.community-box{background:linear-gradient(135deg,rgba(0,255,135,0.07),rgba(45,255,240,0.03));border:1px solid rgba(0,255,135,0.14);border-radius:20px;padding:26px 20px;text-align:center}
+.cb-emoji{font-size:40px;margin-bottom:12px;display:block}
+.cb-title{font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:24px;letter-spacing:-1px;margin-bottom:8px;line-height:1.1}
+.cb-title span{color:var(--green)}
+.cb-desc{font-size:13px;color:#888;line-height:1.7;margin-bottom:18px}
+.perks{display:flex;flex-direction:column;gap:8px;text-align:left;margin-bottom:20px}
+.perk{display:flex;align-items:center;gap:10px;font-size:13px;color:#777}
+.perk-icon{width:28px;height:28px;background:rgba(0,255,135,0.08);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
+.btn-dg{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;background:var(--green);color:#000;font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:15px;padding:15px;border-radius:13px;text-decoration:none;margin-bottom:9px}
+.btn-tg{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;background:rgba(45,255,240,0.07);border:1px solid rgba(45,255,240,0.22);color:var(--blue);font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:15px;padding:15px;border-radius:13px;text-decoration:none}
+
+/* SOCIALS */
+.socials{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:9px}
+.social-btn{display:flex;align-items:center;justify-content:center;gap:7px;background:var(--card);border:1px solid var(--border);border-radius:11px;padding:12px;text-decoration:none;font-size:13px;font-weight:600}
+.social-btn.tiktok{border-color:rgba(255,45,120,0.2);color:var(--white)}
+.social-btn.instagram{border-color:rgba(255,165,0,0.2);color:var(--white)}
+
+/* ANTISCAM */
+.antiscam{background:rgba(255,229,0,0.04);border:1px solid rgba(255,229,0,0.14);border-radius:14px;padding:16px;display:flex;gap:12px}
+.antiscam-title{font-family:Arial,'Inter',sans-serif;font-weight:700;font-size:13px;color:var(--yellow);margin-bottom:4px}
+.antiscam-text{font-size:11px;color:#555;line-height:1.6}
+.antiscam-text strong{color:#777}
+
+/* DIVIDER */
+.sep{display:flex;align-items:center;gap:10px;margin:30px 0 18px}
+.sep-line{flex:1;height:1px;background:var(--border)}
+.sep-text{font-family:Arial,'Inter',sans-serif;font-size:9px;letter-spacing:2.5px;color:#2a2a2a;white-space:nowrap}
+
+/* FOOTER */
+.footer{text-align:center;padding-top:24px;font-family:Arial,'Inter',sans-serif;font-size:9px;letter-spacing:1.5px;color:#1e1e1e;line-height:2.2}
+.footer a{color:#2a2a2a;text-decoration:none}
+
+/* STICKY */
+.sticky{position:fixed;bottom:0;left:0;right:0;padding:10px 16px 16px;background:linear-gradient(to top,rgba(6,6,8,.98) 50%,transparent);z-index:100;display:none}
+.sticky.show{display:block}
+.sticky-inner{max-width:480px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.s-disc{display:flex;align-items:center;justify-content:center;gap:6px;background:var(--green);color:#000;font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:13px;padding:14px;border-radius:12px;text-decoration:none}
+.s-tele{display:flex;align-items:center;justify-content:center;gap:6px;background:rgba(45,255,240,0.09);border:1px solid rgba(45,255,240,0.25);color:var(--blue);font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:13px;padding:14px;border-radius:12px;text-decoration:none}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:1;transform:none}
+.js-ready .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
+.js-ready .reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ═══════════════════════════════════════════
+   PREMIUM APP UPGRADE — Apple / Linear style
+═══════════════════════════════════════════ */
+
+/* GLASSMORPHISM base */
+.glass{
+  background:rgba(14,14,22,0.7);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,0.06);
+}
+
+/* BOTTOM TAB BAR — navigation app native */
+.tab-bar{
+  position:fixed;bottom:0;left:0;right:0;
+  height:68px;
+  background:rgba(8,8,12,0.92);
+  backdrop-filter:blur(24px);
+  -webkit-backdrop-filter:blur(24px);
+  border-top:1px solid rgba(255,255,255,0.06);
+  display:flex;align-items:center;justify-content:space-around;
+  z-index:200;
+  padding-bottom:env(safe-area-inset-bottom);
+}
+.tab-item{
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  text-decoration:none;
+  padding:8px 16px;
+  border-radius:12px;
+  transition:all .2s cubic-bezier(.4,0,.2,1);
+  -webkit-tap-highlight-color:transparent;
+  flex:1;
+}
+.tab-item:active{transform:scale(0.88);}
+.tab-icon{font-size:20px;line-height:1;transition:transform .2s ease;}
+.tab-label{font-family:Arial,'Inter',sans-serif;font-size:8px;letter-spacing:1px;color:#333;transition:color .2s;}
+.tab-item.active .tab-label{color:var(--green);}
+.tab-item.active .tab-icon{transform:translateY(-2px);}
+.tab-item.active .tab-dot{background:var(--green);}
+.tab-dot{width:4px;height:4px;border-radius:50%;background:transparent;margin-top:-2px;transition:background .2s;}
+
+/* WRAPPER padding bottom pour tab bar */
+.wrapper{padding-bottom:90px!important;}
+
+/* HIDE OLD STICKY CTA — remplacé par tab bar */
+.sticky{display:none!important;}
+
+/* ══ CARDS PREMIUM ══ */
+.method-item{
+  background:rgba(14,14,22,0.8)!important;
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,0.07)!important;
+  border-radius:18px!important;
+  padding:18px!important;
+  box-shadow:0 2px 12px rgba(0,0,0,0.3),inset 0 1px 0 rgba(255,255,255,0.04);
+  transition:transform .18s cubic-bezier(.4,0,.2,1),
+             box-shadow .18s cubic-bezier(.4,0,.2,1),
+             border-color .18s ease!important;
+}
+@media(hover:hover){
+  .method-item:hover{
+    transform:translateY(-2px)!important;
+    box-shadow:0 8px 32px rgba(0,0,0,0.4),inset 0 1px 0 rgba(255,255,255,0.06)!important;
+    border-color:rgba(255,255,255,0.12)!important;
+  }
+}
+.method-item:active{
+  transform:scale(0.97)!important;
+  box-shadow:0 1px 6px rgba(0,0,0,0.4)!important;
+}
+
+/* ICÔNES — plus grandes */
+.me-wrap{
+  width:52px!important;height:52px!important;
+  border-radius:15px!important;
+  font-size:24px!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+/* REVENUS — hero visuel */
+.mi-earn{
+  font-family:Arial,'Inter',sans-serif;
+  font-weight:800!important;
+  font-size:13px!important;
+  letter-spacing:-0.3px!important;
+}
+
+/* BADGES — glass premium */
+.mi-badge{
+  font-size:8px!important;
+  padding:5px 11px!important;
+  letter-spacing:1.5px!important;
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.08);
+}
+.bg-badge-green{background:rgba(0,255,135,0.15)!important;box-shadow:0 0 12px rgba(0,255,135,0.12),inset 0 1px 0 rgba(255,255,255,0.08)!important;}
+.bg-badge-pink{background:rgba(255,45,120,0.15)!important;box-shadow:0 0 12px rgba(255,45,120,0.12),inset 0 1px 0 rgba(255,255,255,0.08)!important;}
+.bg-badge-purple{background:rgba(176,96,255,0.15)!important;box-shadow:0 0 12px rgba(176,96,255,0.12),inset 0 1px 0 rgba(255,255,255,0.08)!important;}
+
+/* STAGGER ANIMATION au scroll */
+.method-item{opacity:1;transform:none;}
+.js-ready .method-item{opacity:0;transform:translateY(20px);}
+.js-ready .method-item.in{opacity:1;transform:translateY(0);transition:opacity .4s ease,transform .4s cubic-bezier(.2,.8,.2,1);}
+
+/* RIPPLE effect au tap */
+.ripple-container{position:relative;overflow:hidden;}
+@keyframes ripple{
+  0%{transform:scale(0);opacity:.3}
+  100%{transform:scale(4);opacity:0}
+}
+.ripple-wave{
+  position:absolute;border-radius:50%;
+  background:rgba(255,255,255,0.15);
+  pointer-events:none;
+  animation:ripple .5s ease-out forwards;
+  transform-origin:center;
+}
+
+/* CARD EXPAND — dépliable */
+.method-item{cursor:pointer;}
+.method-expand{
+  max-height:0;overflow:hidden;
+  transition:max-height .35s cubic-bezier(.4,0,.2,1),opacity .3s ease,padding .3s ease;
+  opacity:0;padding:0 0 0 66px;
+}
+.method-item.expanded .method-expand{
+  max-height:200px;opacity:1;padding:10px 0 4px 66px;
+}
+.method-item.expanded{
+  border-color:rgba(255,255,255,0.14)!important;
+}
+.method-item.expanded .mi-arrow{transform:rotate(90deg)!important;color:var(--white)!important;}
+.expand-content{font-size:12px;color:#666;line-height:1.7;}
+.expand-content strong{color:var(--white);}
+.expand-cta{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--green);color:#000;
+  font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:12px;
+  padding:9px 16px;border-radius:10px;
+  text-decoration:none;margin-top:10px;
+  transition:opacity .2s;
+}
+.expand-cta:active{opacity:.8;}
+
+/* FEATURED card — glow vert premium */
+.mf{
+  border-color:rgba(0,255,135,0.25)!important;
+  box-shadow:0 0 0 1px rgba(0,255,135,0.08),
+             0 4px 24px rgba(0,255,135,0.08),
+             inset 0 1px 0 rgba(0,255,135,0.1)!important;
+}
+
+/* HOT card — glow rose */
+.method-hot{
+  border-color:rgba(255,45,120,0.25)!important;
+  animation:hotPulse 3s ease-in-out infinite!important;
+}
+@keyframes hotPulse{
+  0%,100%{box-shadow:0 4px 16px rgba(255,45,120,0.06),inset 0 1px 0 rgba(255,255,255,0.04)}
+  50%{box-shadow:0 4px 28px rgba(255,45,120,0.14),inset 0 1px 0 rgba(255,255,255,0.04)}
+}
+
+/* SECTION DIVIDER amélioré */
+.sep-text{
+  font-family:Arial,'Inter',sans-serif;
+  font-weight:700!important;
+  font-size:10px!important;
+  letter-spacing:2px!important;
+  color:#444!important;
+}
+
+/* SCROLL PROGRESS BAR */
+.scroll-progress{
+  position:fixed;top:0;left:0;height:2px;
+  background:linear-gradient(90deg,var(--green),var(--blue));
+  z-index:999;width:0%;
+  transition:width .1s linear;
+  box-shadow:0 0 8px rgba(0,255,135,0.5);
+}
+
+
+/* ═══════════════════════════════════════
+   TYPOGRAPHY SYSTEM — Premium upgrade
+═══════════════════════════════════════ */
+
+/* GLOBAL body text — Plus Jakarta Sans */
+p, span, div, a, li{font-family:Arial,'Inter',sans-serif;}
+
+/* HERO */
+.hero-eyebrow{
+  font-family:Arial,'Inter',sans-serif;font-size:9px;
+  letter-spacing:2.5px;color:var(--text-dim);
+  margin-bottom:12px;
+}
+.hero-title .line1,.hero-title .line2{
+  font-family:Arial,'Inter',sans-serif;font-weight:800;
+  font-size:clamp(38px,14vw,56px);
+  letter-spacing:-2.5px;line-height:0.95;
+}
+.hero-sub{
+  font-family:Arial,'Inter',sans-serif;font-size:15px;
+  color:var(--text-muted);line-height:1.65;
+  font-weight:400;
+}
+.hero-sub strong{color:var(--white);font-weight:700;}
+
+/* COUNT */
+.count-text{font-family:Arial,'Inter',sans-serif;font-size:13px;color:var(--text-muted);}
+.count-text strong{color:var(--white);font-weight:700;}
+
+/* NAV */
+.nav-logo{font-family:Arial,'Inter',sans-serif!important;}
+.nav-link{font-family:Arial,'Inter',sans-serif!important;}
+
+/* LIVE BADGE */
+.live-badge{font-family:Arial,'Inter',sans-serif;font-size:9px;letter-spacing:2px;}
+
+/* SECTION DIVIDERS */
+.sep-text{
+  font-family:Arial,'Inter',sans-serif!important;font-weight:700!important;
+  font-size:11px!important;letter-spacing:1.5px!important;
+  color:#3a3a50!important;text-transform:uppercase;
+}
+
+/* CAT LABELS */
+.cat-label{
+  font-family:Arial,'Inter',sans-serif!important;font-weight:700!important;
+  font-size:10px!important;letter-spacing:1.5px!important;
+  text-transform:uppercase;
+}
+
+/* ══ METHOD CARDS — typographie premium ══ */
+.mi-name{
+  font-family:Arial,'Inter',sans-serif!important;
+  font-weight:800!important;font-size:15px!important;
+  letter-spacing:-0.4px!important;
+  line-height:1.2!important;
+  margin-bottom:4px!important;
+}
+.mi-desc{
+  font-family:Arial,'Inter',sans-serif!important;
+  font-size:12.5px!important;
+  color:var(--text-muted)!important;
+  line-height:1.55!important;
+  font-weight:400!important;
+  margin-bottom:7px!important;
+}
+/* REVENUS — info prioritaire */
+.mi-earn{
+  font-family:Arial,'Inter',sans-serif!important;
+  font-weight:800!important;
+  font-size:13px!important;
+  letter-spacing:-0.3px!important;
+  line-height:1!important;
+}
+
+/* BADGES — plus lisibles */
+.mi-badge{
+  font-family:Arial,'Inter',sans-serif!important;
+  font-weight:700!important;
+  font-size:9px!important;
+  letter-spacing:0.8px!important;
+  text-transform:uppercase;
+}
+
+/* EXPAND CONTENT */
+.expand-content{
+  font-family:Arial,'Inter',sans-serif!important;
+  font-size:13px!important;
+  color:var(--text-muted)!important;
+  line-height:1.7!important;
+}
+.expand-content strong{color:var(--white)!important;font-weight:600!important;}
+.expand-cta{font-family:Arial,'Inter',sans-serif!important;font-weight:800!important;}
+
+/* TÉMOIGNAGES */
+.testi-name{font-family:Arial,'Inter',sans-serif!important;font-weight:800!important;font-size:14px!important;}
+.testi-tag{font-family:Arial,'Inter',sans-serif!important;font-size:8px!important;letter-spacing:1.5px!important;}
+.testi-text{
+  font-family:Arial,'Inter',sans-serif!important;
+  font-size:13.5px!important;
+  color:var(--text-muted)!important;
+  line-height:1.75!important;
+  font-weight:400!important;
+}
+.testi-text strong{color:var(--white)!important;font-weight:600!important;}
+.testi-gain{font-family:Arial,'Inter',sans-serif!important;font-weight:700!important;font-size:11px!important;}
+
+/* STATS */
+.stat-num{font-family:Arial,'Inter',sans-serif!important;font-weight:800!important;}
+.stat-lbl{font-family:Arial,'Inter',sans-serif!important;font-size:8px!important;letter-spacing:2px!important;}
+
+/* LIVE COUNTER */
+.lc-label,.lc-live{font-family:Arial,'Inter',sans-serif!important;font-size:8px!important;letter-spacing:2px!important;}
+.lc-val{font-family:Arial,'Inter',sans-serif!important;font-weight:800!important;font-size:clamp(16px,5vw,22px)!important;letter-spacing:-1.5px!important;}
+.lc-desc{font-family:Arial,'Inter',sans-serif!important;font-size:8px!important;letter-spacing:1.5px!important;color:var(--text-dim)!important;}
+.lc-entry{font-family:Arial,'Inter',sans-serif!important;font-size:12.5px!important;}
+
+/* ARTICLES */
+.ac-title{font-family:Arial,'Inter',sans-serif!important;font-weight:800!important;font-size:13px!important;line-height:1.3!important;}
+.ac-read{font-family:Arial,'Inter',sans-serif!important;font-size:8px!important;letter-spacing:1px!important;}
+
+/* COMMUNITY BOX */
+.cb-title{font-family:Arial,'Inter',sans-serif!important;font-weight:800!important;}
+.cb-desc{font-family:Arial,'Inter',sans-serif!important;font-size:14px!important;color:var(--text-muted)!important;line-height:1.7!important;}
+.perk{font-family:Arial,'Inter',sans-serif!important;font-size:13.5px!important;color:#8a8a9e!important;}
+.btn-dg,.btn-tg,.btn-discord-main,.btn-telegram-main,.btn-secondary,.s-disc,.s-tele{
+  font-family:Arial,'Inter',sans-serif!important;font-weight:800!important;
+  letter-spacing:-0.3px!important;
+}
+.nav-cta{font-family:Arial,'Inter',sans-serif!important;font-weight:800!important;font-size:11px!important;letter-spacing:-0.2px!important;}
+
+/* TAB BAR */
+.tab-label{font-family:Arial,'Inter',sans-serif!important;font-size:7.5px!important;letter-spacing:0.8px!important;}
+
+/* ANTISCAM */
+.antiscam-title{font-family:Arial,'Inter',sans-serif!important;font-weight:800!important;font-size:14px!important;}
+.antiscam-text{font-family:Arial,'Inter',sans-serif!important;font-size:12px!important;color:var(--text-muted)!important;line-height:1.65!important;}
+
+/* FOOTER */
+.footer{font-family:Arial,'Inter',sans-serif!important;font-size:9px!important;letter-spacing:1.5px!important;color:var(--text-dim)!important;}
+
+/* PERKS */
+.perk-icon{font-size:14px!important;}
+
+/* SCROLL DOTS */
+.scroll-dot,.testi-dot{transition:all .3s cubic-bezier(.4,0,.2,1)!important;}
+
+/* BUTTON SECONDARY */
+.btn-secondary{font-size:13px!important;letter-spacing:-0.2px!important;}
+
+/* SEE ALL */
+.see-all{font-family:Arial,'Inter',sans-serif!important;font-weight:700!important;font-size:12px!important;letter-spacing:0.5px!important;color:#555566!important;}
+
+/* ANTI-SCAM */
+.antiscam-text strong{color:#8a8a9e!important;}
+
+
+/* ═══════════════════════════════════════
+   BIG CARD STYLE — FreeCash inspired
+   Gros texte, cartes immenses, aéré
+═══════════════════════════════════════ */
+
+/* RESET body font to Inter */
+body,p,span,div,a,li{font-family:'Inter',sans-serif!important;}
+
+/* ══ MÉTHODE CARDS — VERSION IMMENSE ══ */
+.method-list{gap:14px!important;}
+
+.method-item{
+  border-radius:22px!important;
+  padding:22px 20px!important;
+  gap:16px!important;
+  align-items:flex-start!important;
+  flex-direction:column!important;
+  border:1px solid rgba(255,255,255,0.08)!important;
+  background:rgba(16,16,26,0.9)!important;
+  box-shadow:0 4px 24px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.05)!important;
+  position:relative;overflow:hidden;
+}
+
+/* TOP ROW — icône + badge côte à côte */
+.method-top-row{
+  display:flex;align-items:center;
+  justify-content:space-between;
+  width:100%;
+  margin-bottom:4px;
+}
+
+/* ICÔNE — bien plus grande */
+.me-wrap{
+  width:58px!important;height:58px!important;
+  border-radius:17px!important;
+  font-size:clamp(16px,5vw,22px)!important;
+  flex-shrink:0;
+}
+
+/* TITRE — gros et clair */
+.mi-name{
+  font-family:Arial,'Inter',sans-serif;
+  font-weight:800!important;
+  font-size:20px!important;
+  letter-spacing:-0.5px!important;
+  line-height:1.15!important;
+  margin-bottom:8px!important;
+  color:#f2f0ff!important;
+}
+
+/* DESCRIPTION — lisible, bien espacée */
+.mi-desc{
+  font-family:'Inter',sans-serif!important;
+  font-size:13px!important;
+  color:#8a8a9e!important;
+  line-height:1.6!important;
+  font-weight:400!important;
+  margin-bottom:12px!important;
+}
+
+/* REVENUS — XXL comme FreeCash */
+.mi-earn-block{
+  width:100%;
+  padding:13px 15px;
+  background:rgba(255,255,255,0.04);
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.07);
+  margin-top:2px;
+  box-sizing:border-box;
+  overflow:hidden;
+}
+.mi-earn-label{
+  font-family:'Inter',sans-serif!important;
+  font-size:11px!important;
+  color:#555566!important;
+  font-weight:500!important;
+  letter-spacing:0.3px!important;
+  margin-bottom:4px!important;
+}
+.mi-earn{
+  font-family:Arial,'Inter',sans-serif;
+  font-weight:800!important;
+  font-size:clamp(16px,5vw,22px)!important;
+  letter-spacing:-0.5px!important;
+  line-height:1.15!important;
+  word-break:break-word!important;
+  overflow-wrap:break-word!important;
+}
+
+/* BADGE — bien lisible */
+.mi-right{display:none!important;}
+.mi-badge-top{
+  font-family:'Inter',sans-serif!important;
+  font-weight:700!important;
+  font-size:10px!important;
+  letter-spacing:0.5px!important;
+  padding:6px 12px!important;
+  border-radius:100px!important;
+  white-space:nowrap;
+}
+
+/* ARROW — bas droite de la carte */
+.mi-arrow-bottom{
+  position:absolute;bottom:20px;right:20px;
+  font-size:20px;color:#2a2a3e;
+  transition:transform .2s ease,color .2s;
+}
+.method-item.expanded .mi-arrow-bottom{
+  transform:rotate(90deg)!important;
+  color:var(--white)!important;
+}
+
+/* CTA "Voir le guide" dans la carte */
+.expand-cta{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--green);color:#000;
+  font-family:Arial,'Inter',sans-serif;
+  font-weight:800!important;font-size:13px!important;
+  padding:11px 18px;border-radius:12px;
+  text-decoration:none;margin-top:12px;
+  letter-spacing:-0.2px;
+}
+.expand-content{
+  font-family:'Inter',sans-serif!important;
+  font-size:13.5px!important;
+  color:#8a8a9e!important;
+  line-height:1.75!important;
+}
+.expand-content strong{color:#f2f0ff!important;font-weight:600!important;}
+
+/* CAT LABELS */
+.cat-label{
+  font-family:'Inter',sans-serif!important;
+  font-weight:700!important;
+  font-size:11px!important;
+  letter-spacing:1px!important;
+  padding:8px 16px!important;
+  margin:20px 0 10px!important;
+}
+
+/* HERO title */
+.hero-title .line1,.hero-title .line2{
+  font-size:clamp(44px,15vw,62px)!important;
+}
+.hero-sub{
+  font-family:'Inter',sans-serif!important;
+  font-size:16px!important;
+  line-height:1.7!important;
+  color:#8a8a9e!important;
+}
+.hero-sub strong{color:#f2f0ff!important;}
+
+/* BTN DISCORD / TELEGRAM */
+.btn-discord-main,.btn-telegram-main{
+  font-family:Arial,'Inter',sans-serif;
+  font-weight:800!important;
+  font-size:16px!important;
+  padding:18px 20px!important;
+  border-radius:16px!important;
+  letter-spacing:-0.3px!important;
+}
+
+/* TESTI */
+.testi-name{font-size:15px!important;}
+.testi-text{
+  font-family:'Inter',sans-serif!important;
+  font-size:14px!important;
+  line-height:1.8!important;
+  color:#8a8a9e!important;
+}
+
+/* LIVE COUNTER vals */
+.lc-val{font-size:32px!important;letter-spacing:-2px!important;}
+
+/* PERKS */
+.perk{font-family:'Inter',sans-serif!important;font-size:14px!important;color:#8a8a9e!important;}
+
+/* Community */
+.cb-title{font-size:26px!important;}
+.cb-desc{font-family:'Inter',sans-serif!important;font-size:15px!important;line-height:1.75!important;}
+.btn-dg,.btn-tg{
+  font-family:Arial,'Inter',sans-serif;
+  font-weight:800!important;
+  font-size:16px!important;
+  padding:17px!important;
+  letter-spacing:-0.3px!important;
+}
+
+
+/* ═══════════════════════════════════════
+   READABILITY FIX — Texte blanc lisible
+═══════════════════════════════════════ */
+
+/* 1. Blanc pur sur les titres — meilleur contraste */
+:root {
+  --white: #ffffff;
+  --white-soft: #e8e6f0;
+}
+
+/* 2. Titres cartes — espacement amélioré */
+.mi-name {
+  color: #ffffff !important;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.2px !important;
+  line-height: 1.25 !important;
+  margin-bottom: 8px !important;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.4);
+}
+
+/* 3. Titres hero */
+.hero-title .line1 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+}
+
+/* 4. Noms témoignages */
+.testi-name {
+  color: #ffffff !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.2px !important;
+}
+
+/* 5. Titres articles */
+.ac-title {
+  color: #ffffff !important;
+  font-size: 13.5px !important;
+  font-weight: 800 !important;
+  line-height: 1.35 !important;
+  letter-spacing: -0.1px !important;
+}
+
+/* 6. Titre community box */
+.cb-title {
+  color: #ffffff !important;
+  font-size: 26px !important;
+  letter-spacing: -0.8px !important;
+  line-height: 1.15 !important;
+}
+
+/* 7. Strong dans les textes — vraiment blanc pur */
+.testi-text strong,
+.expand-content strong,
+.hero-sub strong,
+.lc-entry strong,
+.antiscam-text strong {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* 8. Stats — plus lisibles */
+.stat-num {
+  color: #ffffff !important;
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  letter-spacing: -1px !important;
+}
+
+/* 9. Live counter vals */
+.lc-val {
+  color: #ffffff !important;
+}
+
+/* 10. Buttons secondaires */
+.btn-secondary {
+  color: #e0deee !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+/* 11. Nav logo */
+.nav-logo {
+  color: #ffffff !important;
+}
+
+/* 12. Perks text — légèrement plus lumineux */
+.perk {
+  color: #9a9aae !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+}
+
+/* 13. Mi-earn — montant bien visible */
+.mi-earn {
+  color: inherit !important;
+  font-size: clamp(16px,5vw,22px) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.5px !important;
+  line-height: 1.2 !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+}
+
+/* 14. Mi-earn-label — gris clair lisible */
+.mi-earn-label {
+  color: #666688 !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  margin-bottom: 5px !important;
+}
+
+/* 15. Count text fort */
+.count-text {
+  color: #9a9aae !important;
+  font-size: 13.5px !important;
+}
+.count-text strong {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* 16. Sep text lisible */
+.sep-text {
+  color: #444460 !important;
+  font-size: 10px !important;
+  letter-spacing: 2px !important;
+  font-weight: 700 !important;
+}
+
+/* 17. Hero sub lisible */
+.hero-sub {
+  color: #9090a8 !important;
+  font-size: 15.5px !important;
+  line-height: 1.7 !important;
+  font-weight: 400 !important;
+}
+
+/* 18. CB desc */
+.cb-desc {
+  color: #9090a8 !important;
+  font-size: 14.5px !important;
+  line-height: 1.75 !important;
+}
+
+/* 19. Antiscam text */
+.antiscam-text {
+  color: #9090a8 !important;
+  font-size: 12.5px !important;
+  line-height: 1.7 !important;
+}
+
+/* 20. Testi text */
+.testi-text {
+  color: #9090a8 !important;
+  font-size: 14px !important;
+  line-height: 1.8 !important;
+  font-weight: 400 !important;
+}
+
+
+/* ═══════════════════════════════
+   FONT LOADING — stabilité mobile
+═══════════════════════════════ */
+/* html font-size stable pour éviter les reflows */
+html { font-size: 16px; }
+
+
+/* ═══════════════════════════════════════
+   LISIBILITÉ PREMIUM — FreeCash / Stripe
+   Fond très sombre + texte blanc pur
+═══════════════════════════════════════ */
+
+/* FOND GLOBAL — noir bleuté profond comme FreeCash */
+:root {
+  --bg: #0a0b14 !important;
+  --card: #111320 !important;
+  --border: #1e2035 !important;
+}
+
+html, body {
+  background: #0a0b14 !important;
+}
+
+/* ORBS — plus subtils sur fond plus sombre */
+.orb1 { background: rgba(0,255,135,0.06) !important; }
+.orb2 { background: rgba(255,45,120,0.04) !important; }
+
+/* CARTES — fond plus sombre + glass */
+.method-item {
+  background: rgba(15,18,35,0.92) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  box-shadow:
+    0 4px 24px rgba(0,0,0,0.5),
+    inset 0 1px 0 rgba(255,255,255,0.06) !important;
+}
+
+/* TITRES CARTES — blanc pur + text-shadow */
+.mi-name {
+  color: #ffffff !important;
+  text-shadow: 0 1px 12px rgba(0,0,0,0.6) !important;
+}
+
+/* DESCRIPTION — blanc légèrement transparent */
+.mi-desc {
+  color: rgba(255,255,255,0.65) !important;
+}
+
+/* REVENUS — couleur vive + lisible */
+.earn-green  { color: #00ff87 !important; text-shadow: 0 0 20px rgba(0,255,135,0.3) !important; }
+.earn-blue   { color: #2dfff0 !important; text-shadow: 0 0 20px rgba(45,255,240,0.3) !important; }
+.earn-pink   { color: #ff2d78 !important; text-shadow: 0 0 20px rgba(255,45,120,0.3) !important; }
+.earn-yellow { color: #ffe500 !important; text-shadow: 0 0 20px rgba(255,229,0,0.3)  !important; }
+.earn-purple { color: #b060ff !important; text-shadow: 0 0 20px rgba(176,96,255,0.3) !important; }
+
+/* BLOC REVENUS — fond distinct */
+.mi-earn-block {
+  background: rgba(255,255,255,0.05) !important;
+  border: 1px solid rgba(255,255,255,0.09) !important;
+}
+
+.mi-earn-label {
+  color: rgba(255,255,255,0.4) !important;
+}
+
+/* ICÔNES WRAP — plus de contraste */
+.bg-green  { background: rgba(0,255,135,0.15) !important; }
+.bg-blue   { background: rgba(45,255,240,0.15) !important; }
+.bg-pink   { background: rgba(255,45,120,0.15) !important; }
+.bg-yellow { background: rgba(255,229,0,0.15)  !important; }
+.bg-purple { background: rgba(176,96,255,0.15) !important; }
+
+/* HERO TITLE — blanc pur */
+.hero-title .line1 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 30px rgba(0,0,0,0.7) !important;
+}
+.hero-title .line2 {
+  text-shadow: 0 0 40px rgba(0,255,135,0.4) !important;
+}
+
+/* HERO SUB — plus lisible */
+.hero-sub {
+  color: rgba(255,255,255,0.6) !important;
+}
+.hero-sub strong {
+  color: #ffffff !important;
+}
+
+/* TÉMOIGNAGES */
+.testi-card {
+  background: rgba(15,18,35,0.92) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+}
+.testi-name {
+  color: #ffffff !important;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.5) !important;
+}
+.testi-text {
+  color: rgba(255,255,255,0.62) !important;
+}
+.testi-text strong {
+  color: #ffffff !important;
+}
+
+/* COMMUNITY BOX */
+.community-box, .cb-title { color: #ffffff !important; }
+.cb-desc { color: rgba(255,255,255,0.6) !important; }
+.perk { color: rgba(255,255,255,0.62) !important; }
+
+/* STATS */
+.stat-pill {
+  background: rgba(15,18,35,0.92) !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+.stat-num { color: #ffffff !important; }
+.stat-lbl { color: rgba(255,255,255,0.35) !important; }
+
+/* LIVE COUNTER */
+.live-counter {
+  background: rgba(15,18,35,0.92) !important;
+  border-color: rgba(0,255,135,0.18) !important;
+}
+.lc-item {
+  background: rgba(255,255,255,0.04) !important;
+  border-color: rgba(255,255,255,0.07) !important;
+}
+.lc-val { color: #ffffff !important; }
+.lc-desc { color: rgba(255,255,255,0.35) !important; }
+
+/* ARTICLE CARDS */
+.article-card {
+  background: rgba(15,18,35,0.92) !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+.ac-title { color: #ffffff !important; }
+
+/* NAV */
+.topnav {
+  background: rgba(10,11,20,0.96) !important;
+  border-color: rgba(255,255,255,0.07) !important;
+}
+.nav-logo { color: #ffffff !important; }
+
+/* TAB BAR */
+.tab-bar {
+  background: rgba(8,9,18,0.96) !important;
+  border-color: rgba(255,255,255,0.07) !important;
+}
+
+/* ANTISCAM */
+.antiscam {
+  background: rgba(255,229,0,0.04) !important;
+}
+.antiscam-text {
+  color: rgba(255,255,255,0.58) !important;
+}
+
+/* FOOTER */
+.footer { color: rgba(255,255,255,0.2) !important; }
+.footer a { color: rgba(255,255,255,0.3) !important; }
+
+/* SECTION SEP */
+.sep-line { background: rgba(255,255,255,0.08) !important; }
+.sep-text { color: rgba(255,255,255,0.25) !important; }
+
+/* CAT LABELS */
+.cat-label { opacity: 1 !important; }
+
+/* PERKS ICON */
+.perk-icon {
+  background: rgba(0,255,135,0.1) !important;
+}
+
+
+/* ═══════════════════════════════════════
+   FIX FINAL ANDROID — Inter partout
+   Syne reste uniquement pour MONEYFLOW logo
+═══════════════════════════════════════ */
+
+/* Titres cartes — Inter 800 au lieu de Syne */
+.mi-name {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 17px !important;
+  letter-spacing: -0.3px !important;
+  line-height: 1.25 !important;
+  color: #ffffff !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+/* Montants revenus — Inter 800 */
+.mi-earn {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-weight: 800 !important;
+  font-size: clamp(15px, 4.5vw, 20px) !important;
+  letter-spacing: -0.3px !important;
+  line-height: 1.3 !important;
+  word-break: break-word !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+/* Descriptions — Inter 400 */
+.mi-desc {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+  color: rgba(255,255,255,0.65) !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+/* Titres hero — Inter 800 */
+.hero-title .line1,
+.hero-title .line2 {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-weight: 800 !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+/* Témoignages */
+.testi-name {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 15px !important;
+  color: #ffffff !important;
+}
+.testi-text {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-weight: 400 !important;
+  color: rgba(255,255,255,0.62) !important;
+  line-height: 1.75 !important;
+}
+
+/* Boutons CTA */
+.btn-discord-main,
+.btn-telegram-main,
+.btn-dg,
+.btn-tg,
+.expand-cta,
+.btn-secondary,
+.nav-cta {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-weight: 800 !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+/* Community */
+.cb-title {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+}
+.cb-desc, .perk {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-weight: 400 !important;
+  color: rgba(255,255,255,0.62) !important;
+}
+
+/* Stats */
+.stat-num {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+}
+
+/* Articles */
+.ac-title {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+}
+
+/* Live counter */
+.lc-val {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+}
+
+/* Syne UNIQUEMENT pour le logo MONEYFLOW */
+.nav-logo,
+.hero-title {
+  font-family:Arial,'Inter',sans-serif'Inter', system-ui, sans-serif !important;
+}
+
+
+/* ═══════════════════════════════════════
+   FIX TEXTE BLANC GRAS — Inter forcé
+═══════════════════════════════════════ */
+.mi-name,
+.mi-name * {
+  font-family: 'Inter', Arial, sans-serif !important;
+  font-weight: 800 !important;
+  font-style: normal !important;
+  -webkit-font-smoothing: antialiased !important;
+  text-rendering: optimizeLegibility !important;
+}
+
+</style>
+<style>
+/* Force Inter sur tout — priorité max */
+html, body, p, span, div, a, li, input, button, textarea {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+}
+h1, h2, h3, .mi-name, .cb-title, .hero-title, .nav-logo,
+.btn-discord-main, .btn-telegram-main, .btn-dg, .btn-tg,
+.expand-cta, .testi-name, .ac-title, .stat-num {
+  font-family:Arial,'Inter',sans-serif'Inter', system-ui, sans-serif !important;
+}
+.live-badge, .lc-label, .lc-desc, .lc-live, .nav-link,
+.mi-badge-top, .testi-tag, .ac-badge, .ac-read, .sep-text,
+.cat-label, .stat-lbl, .hero-eyebrow, .testi-gain {
+  font-family:Arial,'Inter',sans-serif'Courier New', monospace !important;
+}
+</style>
+<style>
+/* ══ RESET FINAL POLICE — Arial partout ══ */
+* {
+  font-family: Arial, 'Inter', sans-serif !important;
+  font-style: normal !important;
+}
+.mi-name, h1, h2, h3, .cb-title, .stat-num, .btn-discord-main,
+.btn-telegram-main, .btn-dg, .btn-tg, .nav-logo, .ac-title,
+.testi-name, .lc-val, .hero-title, .expand-cta {
+  font-family: Arial, 'Inter', sans-serif !important;
+  font-weight: 800 !important;
+  font-style: normal !important;
+  color: #ffffff !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+p, span, .mi-desc, .testi-text, .cb-desc, .perk, .hero-sub {
+  font-family: Arial, 'Inter', sans-serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+</style>
+</head>
+<body>
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="wrapper">
+
+<!-- NAV -->
+<nav class="topnav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">💸</div>
+    MONEY<span>FLOW</span>
+  </a>
+  <div class="nav-links">
+    <a href="moneyflow-blog.html" class="nav-link">BLOG</a>
+    <a href="moneyflow-quiz.html" class="nav-link">QUIZ</a>
+    <a href="https://discord.gg/p5t4xSYQ" class="nav-cta">DISCORD</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="live-badge"><div class="live-dot"></div>COMMUNAUTÉ ACTIVE — 2 847 MEMBRES</div>
+
+  <div class="hero-eyebrow">LA PLATEFORME N°1 POUR GÉNÉRER TES REVENUS</div>
+  <h1 class="hero-title">
+    <span class="line1">MONEY</span>
+    <span class="line2">FLOW</span>
+  </h1>
+  <p class="hero-sub"><strong>Arrête de scroller, commence à gagner.</strong><br>Les vraies méthodes. Zéro bullshit.</p>
+
+  <div class="community-count">
+    <div class="avatars">
+      <div class="avatar">🧑</div><div class="avatar">👩</div><div class="avatar">🧑‍🦱</div><div class="avatar">👦</div>
+      <div class="avatar" style="background:rgba(0,255,135,0.1);color:var(--green);font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:10px">+</div>
+    </div>
+    <div class="count-text"><strong>2 847 membres</strong> ont déjà rejoint</div>
+  </div>
+
+  <div class="hero-ctas">
+    <a href="https://discord.gg/p5t4xSYQ" class="btn-discord-main" id="mainCta">
+      Rejoindre le Discord <span style="margin-left:auto">→</span>
+    </a>
+    <a href="https://t.me/+zNb_zWH1geI2NDlk" class="btn-telegram-main">
+      Rejoindre le Telegram <span style="margin-left:auto">→</span>
+    </a>
+    <div class="btn-row">
+      <a href="moneyflow-quiz.html" class="btn-secondary">🧠 Mon quiz</a>
+      <a href="moneyflow-blog.html" class="btn-secondary">📝 Le blog</a>
+    </div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-pill"><div class="stat-num">0<span class="g">€</span></div><div class="stat-lbl">POUR DÉBUTER</div></div>
+    <div class="stat-pill"><div class="stat-num">14<span class="g">+</span></div><div class="stat-lbl">MÉTHODES</div></div>
+    <div class="stat-pill"><div class="stat-num">100<span class="g">%</span></div><div class="stat-lbl">GRATUIT</div></div>
+  </div>
+</div>
+
+<!-- MONETISATION STRIP -->
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px;animation:fadeUp .5s .35s ease both">
+  <a href="moneyflow-ebook.html" style="background:linear-gradient(135deg,rgba(255,229,0,0.1),rgba(255,229,0,0.04));border:1px solid rgba(255,229,0,0.2);border-radius:16px;padding:16px;text-decoration:none;display:flex;flex-direction:column;gap:6px">
+    <div style="font-size:24px">📘</div>
+    <div style="font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:13px;color:#fff;letter-spacing:-0.3px;line-height:1.2">Guide 0→500€<br>en 30 jours</div>
+    <div style="font-family:Arial,'Inter',sans-serif;font-size:10px;color:#ffe500">9€ →</div>
+  </a>
+  <a href="moneyflow-premium.html" style="background:linear-gradient(135deg,rgba(176,96,255,0.1),rgba(176,96,255,0.04));border:1px solid rgba(176,96,255,0.2);border-radius:16px;padding:16px;text-decoration:none;display:flex;flex-direction:column;gap:6px">
+    <div style="font-size:24px">👑</div>
+    <div style="font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:13px;color:#fff;letter-spacing:-0.3px;line-height:1.2">Discord<br>Premium</div>
+    <div style="font-family:Arial,'Inter',sans-serif;font-size:10px;color:#b060ff">7€/mois →</div>
+  </a>
+</div>
+
+<!-- COMPTEUR LIVE -->
+<div class="reveal">
+  <div class="sep"><div class="sep-line"></div><div class="sep-text">GAINS DE LA COMMUNAUTÉ</div><div class="sep-line"></div></div>
+  <div class="live-counter">
+    <div class="lc-top">
+      <div class="lc-label">CE MOIS — MARS 2026</div>
+      <div class="lc-live"><div class="lc-dot"></div>EN DIRECT</div>
+    </div>
+    <div class="lc-grid">
+      <div class="lc-item full">
+        <div class="lc-val" id="totalGains">0<span class="g">€</span></div>
+        <div class="lc-desc">GÉNÉRÉS PAR LA COMMUNAUTÉ CE MOIS</div>
+      </div>
+      <div class="lc-item">
+        <div class="lc-val" id="activeMembers">0<span class="b">+</span></div>
+        <div class="lc-desc">MEMBRES ACTIFS</div>
+      </div>
+      <div class="lc-item">
+        <div class="lc-val" id="gainsAujourdhui">0<span class="y">€</span></div>
+        <div class="lc-desc">AUJOURD&#8217;HUI</div>
+      </div>
+      <div class="lc-item">
+        <div class="lc-val" id="meilleurGain">0<span class="p">€</span></div>
+        <div class="lc-desc">MEILLEUR GAIN DU JOUR</div>
+      </div>
+      <div class="lc-item">
+        <div class="lc-val" id="parrainages">0<span class="g">+</span></div>
+        <div class="lc-desc">PARRAINAGES VALIDÉS</div>
+      </div>
+    </div>
+    <div class="lc-feed" id="lcFeed"></div>
+  </div>
+</div>
+
+<!-- TÉMOIGNAGES -->
+<div class="reveal">
+  <div class="sep"><div class="sep-line"></div><div class="sep-text">ILS L'ONT FAIT</div><div class="sep-line"></div></div>
+  <div class="testi-carousel" id="testiCarousel">
+    <div class="testi-track" id="testiTrack">
+
+      <div class="testi-card">
+        <div class="testi-header">
+          <div class="testi-avatar" style="background:rgba(0,255,135,0.1)">👦</div>
+          <div>
+            <div class="testi-name">Lucas, 19 ans</div>
+            <div class="testi-tag" style="color:var(--green)">PARRAINAGE</div>
+          </div>
+          <div class="testi-stars">★★★★★</div>
+        </div>
+        <div class="testi-text">J'ai suivi le guide parrainage sur MONEYFLOW. En <strong>3 semaines</strong> j'avais parrainé 14 personnes sur Revolut et Lydia. Simple et ultra efficace.</div>
+        <div class="testi-gain">💰 +340€ en 3 semaines</div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-header">
+          <div class="testi-avatar" style="background:rgba(255,45,120,0.1)">👩</div>
+          <div>
+            <div class="testi-name">Inès, 22 ans</div>
+            <div class="testi-tag" style="color:var(--pink)">CONTENU UGC</div>
+          </div>
+          <div class="testi-stars">★★★★★</div>
+        </div>
+        <div class="testi-text">J'avais <strong>0 abonnés</strong>. J'ai suivi le guide UGC, fait 3 vidéos fictives en portfolio et contacté des marques. Premier contrat en <strong>12 jours</strong>.</div>
+        <div class="testi-gain">💰 +280€ première mission</div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-header">
+          <div class="testi-avatar" style="background:rgba(255,229,0,0.1)">🧑</div>
+          <div>
+            <div class="testi-name">Karim, 17 ans</div>
+            <div class="testi-tag" style="color:var(--yellow)">REVENTE</div>
+          </div>
+          <div class="testi-stars">★★★★★</div>
+        </div>
+        <div class="testi-text">Je revendais des sneakers sans méthode. Depuis que j'applique le guide MONEYFLOW, j'ai <strong>triplé mes marges</strong> en achetant au bon moment.</div>
+        <div class="testi-gain">💰 +520€ en 1 mois</div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-header">
+          <div class="testi-avatar" style="background:rgba(45,255,240,0.1)">👦</div>
+          <div>
+            <div class="testi-name">Ryan, 20 ans</div>
+            <div class="testi-tag" style="color:var(--blue)">FREELANCE</div>
+          </div>
+          <div class="testi-stars">★★★★★</div>
+        </div>
+        <div class="testi-text">En suivant le plan 7 jours du guide freelance, j'ai décroché mon <strong>premier client en 5 jours</strong>. Montage vidéo pour un créateur TikTok à 80€ la vidéo.</div>
+        <div class="testi-gain">💰 +400€ premier mois</div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-header">
+          <div class="testi-avatar" style="background:rgba(176,96,255,0.1)">👩</div>
+          <div>
+            <div class="testi-name">Sofia, 18 ans</div>
+            <div class="testi-tag" style="color:var(--purple)">MINDSET</div>
+          </div>
+          <div class="testi-stars">★★★★★</div>
+        </div>
+        <div class="testi-text">J'avais essayé 5 méthodes sans résultat. Le quiz m'a orientée vers le parrainage. <strong>1 seule méthode, focus total</strong> — premier résultat en 4 jours.</div>
+        <div class="testi-gain">💰 +150€ première semaine</div>
+      </div>
+
+    </div><!-- /track -->
+  </div>
+  <div class="testi-nav">
+    <div class="testi-dots" id="testiDots">
+      <div class="testi-dot on"></div>
+      <div class="testi-dot"></div>
+      <div class="testi-dot"></div>
+      <div class="testi-dot"></div>
+      <div class="testi-dot"></div>
+    </div>
+    <div class="testi-btns">
+      <button class="testi-btn" id="testiPrev">‹</button>
+      <button class="testi-btn" id="testiNext">›</button>
+    </div>
+  </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ARTICLES -->
+<div class="reveal">
+  <div class="sep"><div class="sep-line"></div><div class="sep-text">DERNIERS ARTICLES</div><div class="sep-line"></div></div>
+
+  <div class="articles-scroll" id="artScroll">
+    <a href="moneyflow-article-parrainage.html" class="article-card">
+      <div class="ac-thumb" style="background:linear-gradient(135deg,rgba(0,255,135,0.13),rgba(0,255,135,0.04))">🤝
+        <div class="ac-badge" style="background:rgba(0,255,135,0.15);color:#00ff87;border:1px solid rgba(0,255,135,0.25)">PARRAINAGE</div>
+      </div>
+      <div class="ac-body"><div class="ac-title">500€/mois avec le parrainage</div><div class="ac-footer"><div class="ac-read">5 MIN</div><div class="ac-arrow">›</div></div></div>
+    </a>
+
+    <a href="moneyflow-article-crypto.html" class="article-card">
+      <div class="ac-thumb" style="background:linear-gradient(135deg,rgba(176,96,255,0.13),rgba(255,45,120,0.05))">₿
+        <div class="ac-badge" style="background:rgba(176,96,255,0.15);color:#b060ff;border:1px solid rgba(176,96,255,0.25)">CRYPTO</div>
+        <div class="ac-new">NEW</div>
+      </div>
+      <div class="ac-body"><div class="ac-title">Investir en crypto selon ton budget</div><div class="ac-footer"><div class="ac-read">8 MIN</div><div class="ac-arrow">›</div></div></div>
+    </a>
+
+    <a href="moneyflow-article-contenu.html" class="article-card">
+      <div class="ac-thumb" style="background:linear-gradient(135deg,rgba(255,45,120,0.13),rgba(255,45,120,0.04))">📱
+        <div class="ac-badge" style="background:rgba(255,45,120,0.15);color:#ff2d78;border:1px solid rgba(255,45,120,0.25)">CONTENU</div>
+      </div>
+      <div class="ac-body"><div class="ac-title">0 à 1000€/mois créateur de contenu</div><div class="ac-footer"><div class="ac-read">7 MIN</div><div class="ac-arrow">›</div></div></div>
+    </a>
+
+    <a href="moneyflow-article-2.html" class="article-card">
+      <div class="ac-thumb" style="background:linear-gradient(135deg,rgba(255,229,0,0.13),rgba(255,229,0,0.04))">👟
+        <div class="ac-badge" style="background:rgba(255,229,0,0.15);color:#ffe500;border:1px solid rgba(255,229,0,0.25)">REVENTE</div>
+      </div>
+      <div class="ac-body"><div class="ac-title">+500€ en revendant des sneakers</div><div class="ac-footer"><div class="ac-read">9 MIN</div><div class="ac-arrow">›</div></div></div>
+    </a>
+
+    <a href="moneyflow-article-9.html" class="article-card">
+      <div class="ac-thumb" style="background:linear-gradient(135deg,rgba(45,255,240,0.13),rgba(45,255,240,0.04))">💰
+        <div class="ac-badge" style="background:rgba(45,255,240,0.15);color:#2dfff0;border:1px solid rgba(45,255,240,0.25)">UGC</div>
+      </div>
+      <div class="ac-body"><div class="ac-title">300€ par vidéo sans audience</div><div class="ac-footer"><div class="ac-read">6 MIN</div><div class="ac-arrow">›</div></div></div>
+    </a>
+
+    <a href="moneyflow-article-5.html" class="article-card">
+      <div class="ac-thumb" style="background:linear-gradient(135deg,rgba(176,96,255,0.13),rgba(176,96,255,0.04))">🧠
+        <div class="ac-badge" style="background:rgba(176,96,255,0.15);color:#b060ff;border:1px solid rgba(176,96,255,0.25)">MINDSET</div>
+      </div>
+      <div class="ac-body"><div class="ac-title">Pourquoi 95% abandonnent trop tôt</div><div class="ac-footer"><div class="ac-read">5 MIN</div><div class="ac-arrow">›</div></div></div>
+    </a>
+
+    <a href="moneyflow-article-7.html" class="article-card">
+      <div class="ac-thumb" style="background:linear-gradient(135deg,rgba(0,255,135,0.13),rgba(0,255,135,0.04))">💳
+        <div class="ac-badge" style="background:rgba(0,255,135,0.15);color:#00ff87;border:1px solid rgba(0,255,135,0.25)">PARRAINAGE</div>
+      </div>
+      <div class="ac-body"><div class="ac-title">Top 10 apps les mieux payées 2026</div><div class="ac-footer"><div class="ac-read">4 MIN</div><div class="ac-arrow">›</div></div></div>
+    </a>
+  </div>
+
+  <!-- Scroll indicator dots -->
+  <div class="scroll-dots" id="scrollDots">
+    <div class="scroll-dot active"></div>
+    <div class="scroll-dot"></div>
+    <div class="scroll-dot"></div>
+    <div class="scroll-dot"></div>
+  </div>
+
+  <a href="moneyflow-blog.html" class="see-all">VOIR TOUS LES ARTICLES →</a>
+</div>
+
+<!-- MÉTHODES -->
+<div class="reveal">
+  <div class="sep"><div class="sep-line"></div><div class="sep-text">LES MÉTHODES</div><div class="sep-line"></div></div>
+  <div class="method-list">
+
+        <a href="moneyflow-jobs.html" class="method-item mf ripple-container">
+      <div class="method-top-row">
+        <div class="me-wrap bg-green">⚡</div>
+        <div class="mi-badge-top bg-badge-green" style="background:rgba(0,255,135,0.12);color:#00ff87;border:1px solid rgba(0,255,135,0.25)">RAPIDE ⚡</div>
+      </div>
+      <div class="mi-info" style="width:100%">
+        <div class="mi-name" style="font-family:Arial,Inter,sans-serif;font-weight:700;font-style:normal;color:#ffffff;font-size:17px;letter-spacing:-0.2px;line-height:1.25">Travail rapide & Métiers</div>
+        <div class="mi-desc">Uber Eats, VTC, livreur, baby-sitter, manutention — sans CV ni diplôme</div>
+        <div class="mi-earn-block">
+          <div class="mi-earn-label">Revenus estimés</div>
+          <div class="mi-earn earn-green">Dès cette semaine</div>
+        </div>
+      </div>
+      <div class="mi-arrow-bottom">›</div>
+      <div class="method-expand"><div class="expand-content">Commence <strong>cette semaine même</strong> sans CV ni diplôme. Uber Eats, Deliveroo, VTC... recrutent en permanence.</div><a href="moneyflow-jobs.html" class="expand-cta">Voir le guide →</a> <a href="https://revolut.com/referral/?referral-code=ryadhnih1!MAR1-26-VR-FR&geo-redirect" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:5px;background:rgba(45,255,240,0.08);border:1px solid rgba(45,255,240,0.2);color:#2dfff0;font-family:Arial,'Inter',sans-serif;font-weight:700;font-size:11px;padding:8px 13px;border-radius:10px;text-decoration:none;margin-left:6px">Revolut →</a></div>
+    </a>
+
+    <div class="cat-label" style="color:var(--green);background:rgba(0,255,135,0.06);border-color:rgba(0,255,135,0.2)">⚡ DÉBUTANT — 0€ POUR COMMENCER</div>
+
+        <a href="moneyflow-parrainage.html" class="method-item ripple-container">
+      <div class="method-top-row">
+        <div class="me-wrap bg-green">🤝</div>
+        <div class="mi-badge-top bg-badge-green" style="background:rgba(0,255,135,0.12);color:#00ff87;border:1px solid rgba(0,255,135,0.25)">FACILE</div>
+      </div>
+      <div class="mi-info" style="width:100%">
+        <div class="mi-name" style="font-family:Arial,Inter,sans-serif;font-weight:700;font-style:normal;color:#ffffff;font-size:17px;letter-spacing:-0.2px;line-height:1.25">Parrainage d'apps</div>
+        <div class="mi-desc">Partage tes codes Revolut, Lydia, N26 — touche jusqu'à 100€ par filleul</div>
+        <div class="mi-earn-block">
+          <div class="mi-earn-label">Revenus estimés</div>
+          <div class="mi-earn earn-green">10€ – 100€ par parrainage</div>
+        </div>
+      </div>
+      <div class="mi-arrow-bottom">›</div>
+      <div class="method-expand"><div class="expand-content">La méthode la plus <strong>simple pour débuter</strong>. Partage tes codes Revolut, Lydia, N26 — touche jusqu'à 100€ par filleul.</div><a href="moneyflow-parrainage.html" class="expand-cta">Voir le guide →</a> <a href="https://freecash.com/r/2HHVXY" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:5px;background:rgba(0,255,135,0.1);border:1px solid rgba(0,255,135,0.2);color:#00ff87;font-family:Arial,'Inter',sans-serif;font-weight:700;font-size:11px;padding:8px 13px;border-radius:10px;text-decoration:none;margin-left:6px">Freecash →</a></div>
+    </a>
+
+        <a href="moneyflow-freelance.html" class="method-item ripple-container">
+      <div class="method-top-row">
+        <div class="me-wrap bg-blue">🎨</div>
+        <div class="mi-badge-top bg-badge-green" style="background:rgba(0,255,135,0.12);color:#00ff87;border:1px solid rgba(0,255,135,0.25)">SCALABLE</div>
+      </div>
+      <div class="mi-info" style="width:100%">
+        <div class="mi-name" style="font-family:Arial,Inter,sans-serif;font-weight:700;font-style:normal;color:#ffffff;font-size:17px;letter-spacing:-0.2px;line-height:1.25">Freelance & Créa</div>
+        <div class="mi-desc">Montage vidéo, design, rédaction, IA — vends tes compétences en ligne</div>
+        <div class="mi-earn-block">
+          <div class="mi-earn-label">Revenus estimés</div>
+          <div class="mi-earn earn-blue">30€ – 100€ / heure</div>
+        </div>
+      </div>
+      <div class="mi-arrow-bottom">›</div>
+      <div class="method-expand"><div class="expand-content">Vends tes compétences en ligne. <strong>Premier client possible en 7 jours</strong> avec la bonne méthode.</div><a href="moneyflow-freelance.html" class="expand-cta">Voir le guide →</a></div>
+    </a>
+
+        <a href="moneyflow-contenu.html" class="method-item ripple-container">
+      <div class="method-top-row">
+        <div class="me-wrap bg-pink">📱</div>
+        <div class="mi-badge-top bg-badge-green" style="background:rgba(0,255,135,0.12);color:#00ff87;border:1px solid rgba(0,255,135,0.25)">LONG TERME</div>
+      </div>
+      <div class="mi-info" style="width:100%">
+        <div class="mi-name" style="font-family:Arial,Inter,sans-serif;font-weight:700;font-style:normal;color:#ffffff;font-size:17px;letter-spacing:-0.2px;line-height:1.25">Créateur de contenu</div>
+        <div class="mi-desc">TikTok, YouTube Shorts, Instagram — crée, poste, monétise ton audience</div>
+        <div class="mi-earn-block">
+          <div class="mi-earn-label">Revenus estimés</div>
+          <div class="mi-earn earn-pink">Revenus passifs illimités</div>
+        </div>
+      </div>
+      <div class="mi-arrow-bottom">›</div>
+      <div class="method-expand"><div class="expand-content">TikTok, YouTube Shorts, Instagram Reels. <strong>0 abonnés n'est pas un obstacle</strong> — l'algo pousse les bons contenus.</div><a href="moneyflow-contenu.html" class="expand-cta">Voir le guide →</a></div>
+    </a>
+
+        <a href="moneyflow-affiliation.html" class="method-item ripple-container">
+      <div class="method-top-row">
+        <div class="me-wrap bg-yellow">🔗</div>
+        <div class="mi-badge-top bg-badge-green" style="background:rgba(0,255,135,0.12);color:#00ff87;border:1px solid rgba(0,255,135,0.25)">PASSIF</div>
+      </div>
+      <div class="mi-info" style="width:100%">
+        <div class="mi-name" style="font-family:Arial,Inter,sans-serif;font-weight:700;font-style:normal;color:#ffffff;font-size:17px;letter-spacing:-0.2px;line-height:1.25">Affiliate Marketing</div>
+        <div class="mi-desc">Blog, newsletter, TikTok — place des liens Amazon et Awin, touche des commissions</div>
+        <div class="mi-earn-block">
+          <div class="mi-earn-label">Revenus estimés</div>
+          <div class="mi-earn earn-yellow">100€ → 2 000€ / mois</div>
+        </div>
+      </div>
+      <div class="mi-arrow-bottom">›</div>
+      <div class="method-expand"><div class="expand-content">Crée un blog, une newsletter ou des vidéos. Place des liens Amazon, Awin. <strong>Revenus 24h/24 même en dormant.</strong></div><a href="moneyflow-affiliation.html" class="expand-cta">Voir le guide →</a></div>
+    </a>
+
+    <div class="cat-label" style="color:var(--blue);background:rgba(45,255,240,0.06);border-color:rgba(45,255,240,0.2)">🛒 E-COMMERCE — À PARTIR DE 100€</div>
+
+        <a href="moneyflow-revente.html" class="method-item ripple-container">
+      <div class="method-top-row">
+        <div class="me-wrap bg-blue">👟</div>
+        <div class="mi-badge-top bg-badge-green" style="background:rgba(0,255,135,0.12);color:#00ff87;border:1px solid rgba(0,255,135,0.25)">TENDANCE</div>
+      </div>
+      <div class="mi-info" style="width:100%">
+        <div class="mi-name" style="font-family:Arial,Inter,sans-serif;font-weight:700;font-style:normal;color:#ffffff;font-size:17px;letter-spacing:-0.2px;line-height:1.25">Achat-Revente (Reselling)</div>
+        <div class="mi-desc">Sneakers, vintage, gaming sur Vinted, StockX, eBay — retourne les meilleures deals</div>
+        <div class="mi-earn-block">
+          <div class="mi-earn-label">Revenus estimés</div>
+          <div class="mi-earn earn-blue">Marges +50% à +300%</div>
+        </div>
+      </div>
+      <div class="mi-arrow-bottom">›</div>
+      <div class="method-expand"><div class="expand-content">Achète bas, revends haut. Sneakers, cartes Pokémon, électronique. <strong>Marges de 50% à 300%</strong> sur StockX et Vinted.</div><a href="moneyflow-revente.html" class="expand-cta">Voir le guide →</a></div>
+    </a>
+
+        <a href="moneyflow-dropshipping.html" class="method-item ripple-container">
+      <div class="method-top-row">
+        <div class="me-wrap bg-green">🛒</div>
+        <div class="mi-badge-top bg-badge-grey" style="background:rgba(255,255,255,0.05);color:#666;border:1px solid #1e1e32">RISQUÉ</div>
+      </div>
+      <div class="mi-info" style="width:100%">
+        <div class="mi-name" style="font-family:Arial,Inter,sans-serif;font-weight:700;font-style:normal;color:#ffffff;font-size:17px;letter-spacing:-0.2px;line-height:1.25">Dropshipping / E-commerce</div>
+        <div class="mi-desc">Shopify + pub Meta/TikTok — vends sans stock, fort potentiel de scale</div>
+        <div class="mi-earn-block">
+          <div class="mi-earn-label">Revenus estimés</div>
+          <div class="mi-earn earn-green">1 000 – 10 000€ / mois</div>
+        </div>
+      </div>
+      <div class="mi-arrow-bottom">›</div>
+      <div class="method-expand"><div class="expand-content">Shopify + pub Meta/TikTok — vends sans stock. Fort potentiel mais <strong>beaucoup échouent</strong> sans méthode.</div><a href="moneyflow-dropshipping.html" class="expand-cta">Voir le guide →</a></div>
+    </a>
+
+        <a href="moneyflow-pod.html" class="method-item ripple-container">
+      <div class="method-top-row">
+        <div class="me-wrap bg-pink">👕</div>
+        <div class="mi-badge-top bg-badge-green" style="background:rgba(0,255,135,0.12);color:#00ff87;border:1px solid rgba(0,255,135,0.25)">PASSIF</div>
+      </div>
+      <div class="mi-info" style="width:100%">
+        <div class="mi-name" style="font-family:Arial,Inter,sans-serif;font-weight:700;font-style:normal;color:#ffffff;font-size:17px;letter-spacing:-0.2px;line-height:1.25">Print on Demand (POD)</div>
+        <div class="mi-desc">Crée tes designs, vends via Printful + Etsy — production et envoi automatiques</div>
+        <div class="mi-earn-block">
+          <div class="mi-earn-label">Revenus estimés</div>
+          <div class="mi-earn earn-pink">100€ → 2 000€ / mois</div>
+        </div>
+      </div>
+      <div class="mi-arrow-bottom">›</div>
+    </a>
+        <a href="moneyflow-numerique.html" class="method-item ripple-container">
+      <div class="method-top-row">
+        <div class="me-wrap bg-yellow">📦</div>
+        <div class="mi-badge-top bg-badge-green" style="background:rgba(0,255,135,0.12);color:#00ff87;border:1px solid rgba(0,255,135,0.25)">SCALABLE</div>
+      </div>
+      <div class="mi-info" style="width:100%">
+        <div class="mi-name" style="font-family:Arial,Inter,sans-serif;font-weight:700;font-style:normal;color:#ffffff;font-size:17px;letter-spacing:-0.2px;line-height:1.25">Produits Numériques</div>
+        <div class="mi-desc">Ebook, templates Notion, presets, cours — crée une fois, vends à l'infini</div>
+        <div class="mi-earn-block">
+          <div class="mi-earn-label">Revenus estimés</div>
+          <div class="mi-earn earn-yellow">Vente infinie — scalable</div>
+        </div>
+      </div>
+      <div class="mi-arrow-bottom">›</div>
+    </a>
+
+    <div class="cat-label" style="color:var(--yellow);background:rgba(255,229,0,0.06);border-color:rgba(255,229,0,0.2)">💼 SERVICE LOCAL — CASH RAPIDE</div>
+
+        <a href="moneyflow-local.html" class="method-item ripple-container">
+      <div class="method-top-row">
+        <div class="me-wrap bg-yellow">🏠</div>
+        <div class="mi-badge-top bg-badge-green" style="background:rgba(0,255,135,0.12);color:#00ff87;border:1px solid rgba(0,255,135,0.25)">CASH RAPIDE</div>
+      </div>
+      <div class="mi-info" style="width:100%">
+        <div class="mi-name" style="font-family:Arial,Inter,sans-serif;font-weight:700;font-style:normal;color:#ffffff;font-size:17px;letter-spacing:-0.2px;line-height:1.25">Side Business Local</div>
+        <div class="mi-desc">Jardinage, dog walking, coach sportif, cours particuliers via Facebook local</div>
+        <div class="mi-earn-block">
+          <div class="mi-earn-label">Revenus estimés</div>
+          <div class="mi-earn earn-yellow">1 000€ → 8 000€ / mois</div>
+        </div>
+      </div>
+      <div class="mi-arrow-bottom">›</div>
+    </a>
+
+        <a href="moneyflow-ia.html" class="method-item method-hot ripple-container">
+      <div class="method-top-row">
+        <div class="me-wrap bg-blue">🤖</div>
+        <div class="mi-badge-top bg-badge-pink" style="background:rgba(255,45,120,0.12);color:#ff2d78;border:1px solid rgba(255,45,120,0.25)">HOT 🔥</div>
+      </div>
+      <div class="mi-info" style="width:100%">
+        <div class="mi-name" style="font-family:Arial,Inter,sans-serif;font-weight:700;font-style:normal;color:#ffffff;font-size:17px;letter-spacing:-0.2px;line-height:1.25">Micro-entreprise IA</div>
+        <div class="mi-desc">Automatisation Notion, consulting ChatGPT, gestion LinkedIn pour PME</div>
+        <div class="mi-earn-block">
+          <div class="mi-earn-label">Revenus estimés</div>
+          <div class="mi-earn earn-blue">50 – 150€ / heure</div>
+        </div>
+      </div>
+      <div class="mi-arrow-bottom">›</div>
+      <div class="method-expand"><div class="expand-content">Automatise les tâches des PME avec ChatGPT, Notion AI, Make. <strong>50 à 150€/h</strong> — la méthode la plus demandée en 2026.</div><a href="moneyflow-ia.html" class="expand-cta">Voir le guide →</a></div>
+    </a>
+
+    <div class="cat-label" style="color:var(--purple);background:rgba(176,96,255,0.06);border-color:rgba(176,96,255,0.2)">📈 INVESTISSEMENT — +18 ANS ⚠️</div>
+
+        <a href="moneyflow-trading.html" class="method-item ripple-container">
+      <div class="method-top-row">
+        <div class="me-wrap bg-purple">📈</div>
+        <div class="mi-badge-top bg-badge-purple" style="background:rgba(176,96,255,0.12);color:#b060ff;border:1px solid rgba(176,96,255,0.25)">+18 ANS</div>
+      </div>
+      <div class="mi-info" style="width:100%">
+        <div class="mi-name" style="font-family:Arial,Inter,sans-serif;font-weight:700;font-style:normal;color:#ffffff;font-size:17px;letter-spacing:-0.2px;line-height:1.25">Trading & ETF & Crypto</div>
+        <div class="mi-desc">Livret A, ETF world, actions, crypto — du plus sûr au plus risqué</div>
+        <div class="mi-earn-block">
+          <div class="mi-earn-label">Avertissement</div>
+          <div class="mi-earn earn-purple">Risque réel de perte</div>
+        </div>
+      </div>
+      <div class="mi-arrow-bottom">›</div>
+    </a>
+        <a href="moneyflow-investissement-alt.html" class="method-item ripple-container">
+      <div class="method-top-row">
+        <div class="me-wrap bg-purple">🏗️</div>
+        <div class="mi-badge-top bg-badge-purple" style="background:rgba(176,96,255,0.12);color:#b060ff;border:1px solid rgba(176,96,255,0.25)">+18 ANS</div>
+      </div>
+      <div class="mi-info" style="width:100%">
+        <div class="mi-name" style="font-family:Arial,Inter,sans-serif;font-weight:700;font-style:normal;color:#ffffff;font-size:17px;letter-spacing:-0.2px;line-height:1.25">Parking / Box / Immobilier</div>
+        <div class="mi-desc">Achat de parts de parking ou box en ville — 4 à 8% net annuel</div>
+        <div class="mi-earn-block">
+          <div class="mi-earn-label">Avertissement</div>
+          <div class="mi-earn earn-purple">5 000€ → très stable</div>
+        </div>
+      </div>
+      <div class="mi-arrow-bottom">›</div>
+    </a>
+        <a href="moneyflow-investissement-alt.html" class="method-item ripple-container">
+      <div class="method-top-row">
+        <div class="me-wrap bg-pink">🚀</div>
+        <div class="mi-badge-top bg-badge-pink" style="background:rgba(255,45,120,0.12);color:#ff2d78;border:1px solid rgba(255,45,120,0.25)">RISQUE ÉLEVÉ</div>
+      </div>
+      <div class="mi-info" style="width:100%">
+        <div class="mi-name" style="font-family:Arial,Inter,sans-serif;font-weight:700;font-style:normal;color:#ffffff;font-size:17px;letter-spacing:-0.2px;line-height:1.25">Crowdfunding Startups</div>
+        <div class="mi-desc">Sowefund, Anaxago — investis dans des startups, potentiel x10 mais risqué</div>
+        <div class="mi-earn-block">
+          <div class="mi-earn-label">Revenus estimés</div>
+          <div class="mi-earn earn-pink">100€ → très risqué</div>
+        </div>
+      </div>
+      <div class="mi-arrow-bottom">›</div>
+    </a>
+
+  </div>
+</div>
+
+<!-- COMMUNAUTÉ -->
+<div id="rejoindre" class="reveal" style="margin-top:30px">
+  <div class="community-box">
+    <span class="cb-emoji">🔥</span>
+    <div class="cb-title">Rejoins la<br><span>communauté</span></div>
+    <p class="cb-desc">Des milliers de jeunes qui s'entraident, partagent leurs gains et progressent ensemble.</p>
+    <div class="perks">
+      <div class="perk"><div class="perk-icon">📚</div>Guides exclusifs par méthode</div>
+      <div class="perk"><div class="perk-icon">💬</div>Partage de codes parrainage entre membres</div>
+      <div class="perk"><div class="perk-icon">🎯</div>Alertes drops & opportunités en temps réel</div>
+      <div class="perk"><div class="perk-icon">🏆</div>Classement mensuel des meilleurs gains</div>
+      <div class="perk"><div class="perk-icon">🚫</div>Zéro arnaque — modération stricte</div>
+    </div>
+    <a href="https://discord.gg/p5t4xSYQ" class="btn-dg">Rejoindre le Discord — Gratuit</a>
+    <a href="https://t.me/+zNb_zWH1geI2NDlk" class="btn-tg">Rejoindre le Telegram — Gratuit</a>
+  </div>
+  <div class="socials" style="margin-top:9px">
+    <a href="https://tiktok.com/@moneyflow2026" class="social-btn tiktok">TikTok</a>
+    <a href="https://instagram.com/moneyflow2026" class="social-btn instagram">Instagram</a>
+  </div>
+</div>
+
+
+
+<!-- PARTENAIRES AFFILIÉS -->
+<div class="reveal" style="margin-top:24px">
+  <div class="sep"><div class="sep-line"></div><div class="sep-text">NOS PARTENAIRES</div><div class="sep-line"></div></div>
+  <div style="display:flex;flex-direction:column;gap:10px">
+
+    <a href="https://freecash.com/r/2HHVXY" target="_blank" rel="noopener" style="background:rgba(0,255,135,0.06);border:1px solid rgba(0,255,135,0.18);border-radius:18px;padding:18px;text-decoration:none;display:flex;align-items:center;gap:14px">
+      <div style="width:46px;height:46px;background:rgba(0,255,135,0.12);border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0">🎮</div>
+      <div style="flex:1">
+        <div style="font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:15px;color:#fff;margin-bottom:3px">Freecash</div>
+        <div style="font-size:12px;color:#9090a8;line-height:1.5">Joue à des jeux et gagne jusqu'à <strong style="color:#00ff87">19€</strong> en 5 minutes</div>
+      </div>
+      <div style="font-family:Arial,'Inter',sans-serif;font-size:10px;color:#00ff87;flex-shrink:0">ESSAYER →</div>
+    </a>
+
+    <a href="https://revolut.com/referral/?referral-code=ryadhnih1!MAR1-26-VR-FR&geo-redirect" target="_blank" rel="noopener" style="background:rgba(45,255,240,0.05);border:1px solid rgba(45,255,240,0.15);border-radius:18px;padding:18px;text-decoration:none;display:flex;align-items:center;gap:14px">
+      <div style="width:46px;height:46px;background:rgba(45,255,240,0.1);border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0">💳</div>
+      <div style="flex:1">
+        <div style="font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:15px;color:#fff;margin-bottom:3px">Revolut</div>
+        <div style="font-size:12px;color:#9090a8;line-height:1.5">Ouvre ton compte et gagne jusqu'à <strong style="color:#2dfff0">50€</strong> de bonus</div>
+      </div>
+      <div style="font-family:Arial,'Inter',sans-serif;font-size:10px;color:#2dfff0;flex-shrink:0">ESSAYER →</div>
+    </a>
+
+    <a href="https://join.robinhood.com/eu_crypto/davinad-0cdc32/" target="_blank" rel="noopener" style="background:rgba(255,45,120,0.05);border:1px solid rgba(255,45,120,0.15);border-radius:18px;padding:18px;text-decoration:none;display:flex;align-items:center;gap:14px">
+      <div style="width:46px;height:46px;background:rgba(255,45,120,0.1);border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0">🐦</div>
+      <div style="flex:1">
+        <div style="font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:15px;color:#fff;margin-bottom:3px">Robinhood Crypto</div>
+        <div style="font-size:12px;color:#9090a8;line-height:1.5">Rejoins et commence à trader le crypto sans commission</div>
+      </div>
+      <div style="font-family:Arial,'Inter',sans-serif;font-size:10px;color:#ff2d78;flex-shrink:0">REJOINDRE →</div>
+    </a>
+
+    <a href="https://app.grass.io/register?referralCode=yMH5xrN0xhC7EbD" target="_blank" rel="noopener" style="background:rgba(0,255,135,0.05);border:1px solid rgba(0,255,135,0.12);border-radius:18px;padding:18px;text-decoration:none;display:flex;align-items:center;gap:14px">
+      <div style="width:46px;height:46px;background:rgba(0,255,135,0.08);border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0">🌿</div>
+      <div style="flex:1">
+        <div style="font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:15px;color:#fff;margin-bottom:3px">Grass.io</div>
+        <div style="font-size:12px;color:#9090a8;line-height:1.5">Gagne du <strong style="color:#00ff87">crypto passif</strong> juste avec ta connexion internet</div>
+      </div>
+      <div style="font-family:Arial,'Inter',sans-serif;font-size:10px;color:#00ff87;flex-shrink:0">ESSAYER →</div>
+    </a>
+
+    <a href="https://invite.mobyscreener.com/MpE21D9CJXb" target="_blank" rel="noopener" style="background:rgba(176,96,255,0.05);border:1px solid rgba(176,96,255,0.15);border-radius:18px;padding:18px;text-decoration:none;display:flex;align-items:center;gap:14px">
+      <div style="width:46px;height:46px;background:rgba(176,96,255,0.1);border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0">📊</div>
+      <div style="flex:1">
+        <div style="font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:15px;color:#fff;margin-bottom:3px">Moby Screener</div>
+        <div style="font-size:12px;color:#9090a8;line-height:1.5">Analyse les marchés et trouve les meilleures opportunités</div>
+      </div>
+      <div style="font-family:Arial,'Inter',sans-serif;font-size:10px;color:#b060ff;flex-shrink:0">ESSAYER →</div>
+    </a>
+
+  </div>
+  <p style="font-family:'Inter',sans-serif;font-size:10px;color:#333344;text-align:center;margin-top:12px;line-height:1.6">* Liens affiliés — MONEYFLOW touche une commission si tu t'inscris. Ça ne change pas le prix pour toi.</p>
+</div>
+
+<!-- EMAIL CAPTURE -->
+<div class="reveal" style="margin-top:24px">
+  <div style="background:linear-gradient(135deg,rgba(255,229,0,0.07),rgba(255,45,120,0.04));border:1px solid rgba(255,229,0,0.18);border-radius:22px;padding:26px 20px;text-align:center">
+    <div style="font-size:36px;margin-bottom:12px">📬</div>
+    <div style="font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:20px;letter-spacing:-0.5px;margin-bottom:8px;color:#fff">Les meilleures opportunités<br><span style="color:#ffe500">chaque semaine</span></div>
+    <p style="font-family:'Inter',sans-serif;font-size:14px;color:#9090a8;line-height:1.7;margin-bottom:20px">Codes parrainage actifs · Drops rentables · Méthodes tendance — directement dans ta boîte mail. Gratuit.</p>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <input type="email" id="emailInput" placeholder="ton@email.com"
+        style="width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:15px 16px;color:#fff;font-family:'Inter',sans-serif;font-size:15px;outline:none;-webkit-appearance:none"
+        onfocus="this.style.borderColor='rgba(255,229,0,0.4)'"
+        onblur="this.style.borderColor='rgba(255,255,255,0.12)'"
+      >
+      <button onclick="submitEmail()"
+        style="width:100%;background:#ffe500;color:#000;font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:15px;padding:16px;border-radius:12px;border:none;cursor:pointer;letter-spacing:-0.3px">
+        Recevoir les opportunités →
+      </button>
+    </div>
+    <p style="font-family:'Inter',sans-serif;font-size:11px;color:#444460;margin-top:12px;line-height:1.6">Déjà <strong style="color:#888">1 240 abonnés</strong> · Zéro spam · Désabonnement en 1 clic</p>
+  </div>
+</div>
+
+<!-- ANTI-SCAM -->
+<div class="reveal" style="margin-top:18px">
+  <div class="antiscam">
+    <div style="font-size:20px;flex-shrink:0">🛡️</div>
+    <div>
+      <div class="antiscam-title">On ne te demandera jamais d'argent</div>
+      <div class="antiscam-text">Si quelqu'un te promet des <strong>gains garantis</strong> ou te demande de payer — c'est une arnaque. MONEYFLOW est <strong>100% gratuit</strong>.</div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  © 2026 MONEYFLOW<br>
+  CONTENU ÉDUCATIF — TRADING RÉSERVÉ AUX +18 ANS · RISQUE DE PERTE EN CAPITAL<br><br>
+  <a href="moneyflow-mentions-legales.html">MENTIONS LÉGALES</a> · <a href="moneyflow-blog.html">BLOG</a> · <a href="moneyflow-quiz.html">QUIZ</a> · <a href="moneyflow-ebook.html">GUIDE</a> · <a href="moneyflow-premium.html">PREMIUM</a>
+</div>
+
+</div><!-- /wrapper -->
+
+<!-- STICKY -->
+<div class="sticky" id="stickyCta">
+  <div class="sticky-inner">
+    <a href="https://discord.gg/p5t4xSYQ" class="s-disc">Discord</a>
+    <a href="https://t.me/+zNb_zWH1geI2NDlk" class="s-tele">Telegram</a>
+  </div>
+</div>
+
+<script>
+// Reveal on scroll
+// Ajoute js-ready pour activer les animations reveal
+document.documentElement.classList.add('js-ready');
+
+// Observer reveal — threshold bas pour déclencher tôt
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e) => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      io.unobserve(e.target);
+    }
+  });
+}, {threshold: 0.01, rootMargin: '0px 0px -20px 0px'});
+
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// Fallback — forcer visible après 2s si observer ne se déclenche pas
+setTimeout(() => {
+  document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+    el.classList.add('visible');
+  });
+}, 2000);
+
+// Sticky CTA
+const mc=document.getElementById('mainCta'),sc=document.getElementById('stickyCta');
+new IntersectionObserver(e=>e.forEach(x=>sc.classList.toggle('show',!x.isIntersecting)),{threshold:0.1}).observe(mc);
+
+// Article scroll dots
+const artScroll=document.getElementById('artScroll');
+const artDots=document.querySelectorAll('.scroll-dot');
+if(artScroll&&artDots.length){
+  artScroll.addEventListener('scroll',()=>{
+    const idx=Math.round(artScroll.scrollLeft/(artScroll.scrollWidth/artDots.length));
+    artDots.forEach((d,i)=>d.classList.toggle('active',i===Math.min(idx,artDots.length-1)));
+  });
+}
+
+// ══ SCROLL PROGRESS BAR ══
+const prog = document.getElementById('scrollProgress');
+window.addEventListener('scroll', () => {
+  const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
+  if(prog) prog.style.width = Math.min(pct,100) + '%';
+}, {passive:true});
+
+// ══ STAGGER CARDS AU SCROLL ══
+const cardObserver = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if(e.isIntersecting){
+      setTimeout(() => e.target.classList.add('in'), i * 40);
+      cardObserver.unobserve(e.target);
+    }
+  });
+}, {threshold: 0.01, rootMargin: '0px 0px -10px 0px'});
+document.querySelectorAll('.method-item').forEach(el => cardObserver.observe(el));
+
+// Fallback cards
+setTimeout(() => {
+  document.querySelectorAll('.method-item:not(.in)').forEach(el => el.classList.add('in'));
+}, 2500);
+
+// ══ RIPPLE EFFECT au tap ══
+document.querySelectorAll('.method-item').forEach(card => {
+  card.addEventListener('touchstart', function(e) {
+    const rect = card.getBoundingClientRect();
+    const touch = e.touches[0];
+    const x = touch.clientX - rect.left;
+    const y = touch.clientY - rect.top;
+    const size = Math.max(rect.width, rect.height) * 0.6;
+    const ripple = document.createElement('div');
+    ripple.className = 'ripple-wave';
+    ripple.style.cssText = `width:${size}px;height:${size}px;left:${x-size/2}px;top:${y-size/2}px;`;
+    card.appendChild(ripple);
+    setTimeout(() => ripple.remove(), 600);
+  }, {passive:true});
+});
+
+// ══ CARDS EXPANDABLES ══
+document.querySelectorAll('.method-item').forEach(card => {
+  const expand = card.querySelector('.method-expand');
+  if(!expand) return;
+  card.addEventListener('click', function(e) {
+    // Si clic sur le CTA interne → laisser naviguer
+    if(e.target.closest('.expand-cta')) return;
+    e.preventDefault();
+    const isOpen = card.classList.contains('expanded');
+    // Fermer toutes les autres
+    document.querySelectorAll('.method-item.expanded').forEach(o => {
+      if(o !== card) o.classList.remove('expanded');
+    });
+    card.classList.toggle('expanded', !isOpen);
+    // Haptic feedback si dispo
+    if(navigator.vibrate) navigator.vibrate(8);
+  });
+});
+
+// ══ TAB BAR — active state ══
+const tabs = document.querySelectorAll('.tab-item');
+tabs.forEach(tab => {
+  tab.addEventListener('click', function() {
+    if(this.classList.contains('active')) return;
+    // animate tap
+    this.style.transform = 'scale(0.85)';
+    setTimeout(() => this.style.transform = '', 150);
+  });
+});
+
+// ══ COMPTEUR LIVE ══
+(function(){
+  // Valeurs de base réalistes
+  const BASE = {
+    total: 124680,
+    members: 2847,
+    today: 3420,
+    best: 520,
+    parrainages: 4391
+  };
+
+  // Micro-variations aléatoires toutes les quelques secondes
+  function rand(min,max){return Math.floor(Math.random()*(max-min+1))+min;}
+  function fmt(n){return n.toLocaleString('fr-FR');}
+
+  let state = {...BASE};
+
+  function updateCounters(){
+    state.total += rand(8,45);
+    state.today += rand(5,28);
+    state.best = Math.max(state.best, rand(200,650));
+    state.parrainages += rand(0,2);
+    if(Math.random()>0.5) state.members += rand(0,3);
+
+    animCount('totalGains', state.total, '€');
+    animCount('activeMembers', state.members, '+');
+    animCount('gainsAujourdhui', state.today, '€');
+    animCount('meilleurGain', state.best, '€');
+    animCount('parrainages', state.parrainages, '+');
+  }
+
+  function animCount(id, target, suffix){
+    const el = document.getElementById(id);
+    if(!el) return;
+    const color = {
+      totalGains:'g', activeMembers:'b', gainsAujourdhui:'y',
+      meilleurGain:'p', parrainages:'g'
+    }[id] || 'g';
+    el.innerHTML = fmt(target) + '<span class="'+color+'">'+suffix+'</span>';
+  }
+
+  // Démarrage avec animation depuis 0
+  function bootAnim(){
+    const steps = 40;
+    let step = 0;
+    const iv = setInterval(()=>{
+      step++;
+      const p = step/steps;
+      const ease = 1-Math.pow(1-p,3);
+      animCount('totalGains',   Math.floor(BASE.total*ease),       '€');
+      animCount('activeMembers',Math.floor(BASE.members*ease),     '+');
+      animCount('gainsAujourdhui',Math.floor(BASE.today*ease),     '€');
+      animCount('meilleurGain', Math.floor(BASE.best*ease),        '€');
+      animCount('parrainages',  Math.floor(BASE.parrainages*ease), '+');
+      if(step>=steps){ clearInterval(iv); setInterval(updateCounters, rand(2800,4200)); }
+    },40);
+  }
+
+  // Feed live — notifications qui arrivent
+  const feedEvents = [
+    {color:'#00ff87', text:'<strong>Lucas B.</strong> a gagné', gain:'+45€', method:'Parrainage Revolut'},
+    {color:'#ff2d78', text:'<strong>Inès M.</strong> a signé', gain:'+280€', method:'Mission UGC'},
+    {color:'#ffe500', text:'<strong>Karim D.</strong> a revendu', gain:'+120€', method:'Sneakers StockX'},
+    {color:'#2dfff0', text:'<strong>Ryan P.</strong> a facturé', gain:'+160€', method:'Montage vidéo'},
+    {color:'#b060ff', text:'<strong>Sofia L.</strong> a gagné', gain:'+60€', method:'Parrainage Lydia'},
+    {color:'#00ff87', text:'<strong>Théo K.</strong> a vendu', gain:'+85€', method:'Template Notion'},
+    {color:'#ff2d78', text:'<strong>Amira N.</strong> a décroché', gain:'+300€', method:'Client freelance'},
+    {color:'#ffe500', text:'<strong>Maxime R.</strong> a flippé', gain:'+200€', method:'Carte Pokémon'},
+    {color:'#2dfff0', text:'<strong>Jade T.</strong> a créé', gain:'+95€', method:'UGC Beauté'},
+    {color:'#00ff87', text:'<strong>Noah V.</strong> a parrainé', gain:'+35€', method:'Parrainage N26'},
+  ];
+  const sponsoredEvents = [
+    {link:'https://revolut.com/referral/?referral-code=ryadhnih1!MAR1-26-VR-FR&geo-redirect', text:'\uD83D\uDCB3 <strong style="color:#fff">Revolut</strong> \u2014 Ouvre ton compte, gagne <strong style="color:#00ff87">+50\u20ac</strong>', label:'AFFILI\u00c9'},
+    {link:'https://freecash.com/r/2HHVXY', text:'\uD83C\uDFAE <strong style="color:#fff">Freecash</strong> \u2014 Joue 5 min et gagne <strong style="color:#00ff87">+19\u20ac</strong>', label:'AFFILI\u00c9'},
+    {link:'https://join.robinhood.com/eu_crypto/davinad-0cdc32/', text:'\uD83D\uDCC8 <strong style="color:#fff">Robinhood Crypto</strong> \u2014 Trade sans commission', label:'AFFILI\u00c9'},
+    {link:'https://app.grass.io/register?referralCode=yMH5xrN0xhC7EbD', text:'\uD83C\uDF3F <strong style="color:#fff">Grass.io</strong> \u2014 Crypto passif avec ta connexion', label:'AFFILI\u00c9'},
+    {link:'moneyflow-ebook.html', text:'\uD83D\uDCDA <strong style="color:#fff">Guide MONEYFLOW</strong> \u2014 0 \u2192 500\u20ac en 30 jours \u2014 <strong style="color:#ffe500">9\u20ac</strong>', label:'EXCLU'},
+  ];
+  let sponsorIdx = 0;
+
+  let feedIdx = 0;
+  const feed = document.getElementById('lcFeed');
+
+  function addFeedEntry(){
+    if(!feed) return;
+    // Every 4 real entries, inject 1 sponsored
+    if(feedIdx > 0 && feedIdx % 4 === 0) {
+      const sp = sponsoredEvents[sponsorIdx % sponsoredEvents.length];
+      sponsorIdx++;
+      const div = document.createElement('div');
+      div.className = 'lc-entry lc-sponsored';
+      div.style.cssText = 'background:rgba(255,229,0,0.05);border:1px solid rgba(255,229,0,0.12);border-radius:10px;padding:8px 10px;display:flex;align-items:center;gap:8px;cursor:pointer;';
+      div.innerHTML = `<span style="font-family:Arial,'Inter',sans-serif;font-size:7px;letter-spacing:1px;color:#ffe500;background:rgba(255,229,0,0.12);padding:2px 6px;border-radius:4px;flex-shrink:0">${sp.label}</span>`
+        + `<span style="font-size:12px;flex:1">${sp.text}</span>`
+        + `<span style="color:#444;font-size:12px">›</span>`;
+      div.addEventListener('click', () => window.open(sp.link, '_blank'));
+      feed.insertBefore(div, feed.firstChild);
+    } else {
+      const e = feedEvents[feedIdx % feedEvents.length];
+      const ago = rand(1,12);
+      const div = document.createElement('div');
+      div.className = 'lc-entry';
+      div.innerHTML = `<div class="lc-entry-dot" style="background:${e.color}"></div>`
+        + `${e.text} <strong style="color:${e.color};margin:0 4px">${e.gain}</strong> · ${e.method}`
+        + `<span>il y a ${ago}min</span>`;
+      feed.insertBefore(div, feed.firstChild);
+    }
+    feedIdx++;
+    while(feed.children.length > 6) feed.removeChild(feed.lastChild);
+  }
+
+  // Observer pour démarrer quand visible
+  const lcEl = document.querySelector('.live-counter');
+  if(lcEl){
+    const lcObs = new IntersectionObserver(entries=>{
+      if(entries[0].isIntersecting){
+        lcObs.disconnect();
+        bootAnim();
+        addFeedEntry();
+        setInterval(addFeedEntry, rand(3500,6000));
+      }
+    },{threshold:0.2});
+    lcObs.observe(lcEl);
+  }
+})();
+
+// Testimonial carousel — auto-slide + manual nav
+(function(){
+  const track=document.getElementById('testiTrack');
+  if(!track)return;
+  const cards=track.querySelectorAll('.testi-card');
+  const dots=document.querySelectorAll('.testi-dot');
+  const total=cards.length;
+  let cur=0,timer;
+
+  function go(n){
+    cur=(n+total)%total;
+    track.style.transform='translateX(-'+cur*100+'%)';
+    dots.forEach((d,i)=>d.classList.toggle('on',i===cur));
+  }
+
+  function next(){go(cur+1);}
+  function prev(){go(cur-1);}
+
+  function startAuto(){timer=setInterval(next,3500);}
+  function stopAuto(){clearInterval(timer);}
+
+  startAuto();
+
+  document.getElementById('testiNext').addEventListener('click',()=>{stopAuto();next();startAuto();});
+  document.getElementById('testiPrev').addEventListener('click',()=>{stopAuto();prev();startAuto();});
+
+  // Touch swipe support
+  let tx=0;
+  track.addEventListener('touchstart',e=>{tx=e.touches[0].clientX;stopAuto();},{passive:true});
+  track.addEventListener('touchend',e=>{
+    const dx=e.changedTouches[0].clientX-tx;
+    if(Math.abs(dx)>40)dx<0?next():prev();
+    startAuto();
+  },{passive:true});
+})();
+
+// ══ EMAIL CAPTURE ══
+function submitEmail() {
+  const input = document.getElementById('emailInput');
+  if (!input) return;
+  const email = input.value.trim();
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!re.test(email)) {
+    input.style.borderColor = 'rgba(255,45,120,0.5)';
+    input.placeholder = 'Adresse email invalide';
+    setTimeout(() => {
+      input.style.borderColor = 'rgba(255,255,255,0.12)';
+      input.placeholder = 'ton@email.com';
+    }, 2000);
+    return;
+  }
+  // Send to Formspree (replace YOUR_ID with real ID)
+  fetch('https://formspree.io/f/YOUR_FORMSPREE_ID', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({email, source: 'moneyflow2026'})
+  }).catch(() => {}); // Silent fail — still show success
+  input.closest('div').innerHTML = '<div style="text-align:center;padding:20px 0"><div style="font-size:40px;margin-bottom:12px">✅</div><div style="font-family:Syne,sans-serif;font-weight:800;font-size:18px;color:#fff;margin-bottom:8px">Tu es inscrit !</div><p style="font-family:Inter,sans-serif;font-size:13px;color:#9090a8">Vérifie ta boîte mail pour confirmer.</p></div>';
+}
+
+</script>
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- BOTTOM TAB BAR -->
+<nav class="tab-bar">
+  <a href="index.html" class="tab-item active">
+    <div class="tab-icon">💸</div>
+    <div class="tab-label">ACCUEIL</div>
+    <div class="tab-dot"></div>
+  </a>
+  <a href="moneyflow-blog.html" class="tab-item">
+    <div class="tab-icon">📝</div>
+    <div class="tab-label">BLOG</div>
+    <div class="tab-dot"></div>
+  </a>
+  <a href="moneyflow-quiz.html" class="tab-item">
+    <div class="tab-icon">🧠</div>
+    <div class="tab-label">QUIZ</div>
+    <div class="tab-dot"></div>
+  </a>
+  <a href="https://discord.gg/p5t4xSYQ" class="tab-item">
+    <div class="tab-icon">💬</div>
+    <div class="tab-label">DISCORD</div>
+    <div class="tab-dot"></div>
+  </a>
+  <a href="moneyflow-premium.html" class="tab-item">
+    <div class="tab-icon">👑</div>
+    <div class="tab-label">PREMIUM</div>
+    <div class="tab-dot"></div>
+  </a>
+</nav>
+
+</body>
+</html>
