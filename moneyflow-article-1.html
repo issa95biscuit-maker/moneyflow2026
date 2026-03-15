@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Guide complet pour gagner tes 100 premiers euros grâce au parrainage d'applications en 2026. Apps, méthodes, scripts — tout ce qu'il faut pour commencer ce soir.">
@@ -8,12 +11,12 @@
 <meta property="og:title" content="100€ cette semaine grâce au parrainage d'apps — MONEYFLOW">
 <meta property="og:description" content="Le guide complet pour démarrer le parrainage dès ce soir. Résultats en 48h, zéro investissement.">
 <title>100€ cette semaine grâce au parrainage — MONEYFLOW</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@300;400;600;700&family=Syne+Mono&display=swap" rel="stylesheet">
+
 <style>
 :root{--bg:#060608;--green:#00ff87;--white:#f0ecff;--card:#0e0e16;--border:#16162a}
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--white);font-family:'Outfit',sans-serif;overflow-x:hidden;line-height:1.7}
+body{background:var(--bg);color:var(--white);font-family:Arial,'Inter',sans-serif;overflow-x:hidden;line-height:1.7}
 body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.5}
 .orb{position:fixed;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0}
 .orb1{width:400px;height:400px;background:rgba(0,255,135,0.06);top:-100px;right:-100px;animation:fo 10s ease-in-out infinite}
@@ -23,94 +26,122 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 
 /* NAV */
 nav{display:flex;align-items:center;justify-content:space-between;padding:24px 0}
-.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;letter-spacing:-1px;text-decoration:none;color:var(--white)}
+.logo{font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:20px;letter-spacing:-1px;text-decoration:none;color:var(--white)}
 .logo span{color:var(--green)}
 .nav-right{display:flex;gap:20px;align-items:center}
-.nav-link{font-family:'Syne Mono',monospace;font-size:11px;letter-spacing:2px;color:#444;text-decoration:none;transition:color 0.2s}
+.nav-link{font-family:Arial,'Inter',sans-serif;font-size:11px;letter-spacing:2px;color:#444;text-decoration:none;transition:color 0.2s}
 .nav-link:hover{color:var(--white)}
-.nav-cta{background:var(--green);color:#000;font-family:'Syne',sans-serif;font-weight:700;font-size:12px;padding:9px 20px;border-radius:100px;text-decoration:none}
+.nav-cta{background:var(--green);color:#000;font-family:Arial,'Inter',sans-serif;font-weight:700;font-size:12px;padding:9px 20px;border-radius:100px;text-decoration:none}
 
 /* PROGRESS BAR */
 .read-progress{position:fixed;top:0;left:0;height:3px;background:var(--green);z-index:10000;transition:width 0.1s linear;width:0%}
 
 /* ARTICLE HEADER */
 .article-header{padding:48px 0 40px}
-.breadcrumb{display:flex;align-items:center;gap:8px;font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:2px;color:#444;margin-bottom:24px}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-family:Arial,'Inter',sans-serif;font-size:10px;letter-spacing:2px;color:#444;margin-bottom:24px}
 .breadcrumb a{color:#444;text-decoration:none;transition:color 0.2s}
 .breadcrumb a:hover{color:var(--green)}
 .bc-sep{color:#2a2a2a}
 .bc-current{color:var(--green)}
-.art-category{display:inline-flex;align-items:center;gap:8px;background:rgba(0,255,135,0.08);border:1px solid rgba(0,255,135,0.2);border-radius:100px;padding:6px 16px;font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--green);margin-bottom:20px}
-h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(32px,5vw,52px);letter-spacing:-2px;line-height:1.05;margin-bottom:20px}
+.art-category{display:inline-flex;align-items:center;gap:8px;background:rgba(0,255,135,0.08);border:1px solid rgba(0,255,135,0.2);border-radius:100px;padding:6px 16px;font-family:Arial,'Inter',sans-serif;font-size:10px;letter-spacing:3px;color:var(--green);margin-bottom:20px}
+h1{font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:clamp(32px,5vw,52px);letter-spacing:-2px;line-height:1.05;margin-bottom:20px}
 h1 span{color:var(--green)}
 .article-meta{display:flex;gap:24px;align-items:center;padding:16px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:32px;flex-wrap:wrap}
-.meta-item{font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:2px;color:#444}
+.meta-item{font-family:Arial,'Inter',sans-serif;font-size:10px;letter-spacing:2px;color:#444}
 .meta-item span{color:var(--green)}
 .article-intro{font-size:18px;color:#888;line-height:1.7;font-weight:300;margin-bottom:40px;padding-left:20px;border-left:3px solid var(--green)}
 
 /* CONTENT */
 .article-content{}
-h2{font-family:'Syne',sans-serif;font-weight:800;font-size:26px;letter-spacing:-1px;margin:48px 0 16px;line-height:1.1}
-h3{font-family:'Syne',sans-serif;font-weight:700;font-size:20px;letter-spacing:-0.5px;margin:32px 0 12px;color:#ccc}
+h2{font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:26px;letter-spacing:-1px;margin:48px 0 16px;line-height:1.1}
+h3{font-family:Arial,'Inter',sans-serif;font-weight:700;font-size:20px;letter-spacing:-0.5px;margin:32px 0 12px;color:#ccc}
 p{font-size:15px;color:#888;line-height:1.8;margin-bottom:20px}
 strong{color:var(--white)}
 .highlight-box{background:rgba(0,255,135,0.05);border:1px solid rgba(0,255,135,0.15);border-radius:16px;padding:24px 28px;margin:32px 0}
-.highlight-box .hb-label{font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--green);margin-bottom:12px}
+.highlight-box .hb-label{font-family:Arial,'Inter',sans-serif;font-size:10px;letter-spacing:3px;color:var(--green);margin-bottom:12px}
 .highlight-box p{color:#777;margin:0}
 .warning-box{background:rgba(255,229,0,0.04);border:1px solid rgba(255,229,0,0.2);border-radius:16px;padding:20px 24px;margin:32px 0;display:flex;gap:14px}
 .warning-box .wb-icon{font-size:20px;flex-shrink:0}
 .warning-box p{color:#888;font-size:13px;margin:0;line-height:1.6}
 .warning-box strong{color:var(--yellow,#ffe500)}
 .step-block{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;margin:16px 0}
-.step-num-big{font-family:'Syne',sans-serif;font-weight:800;font-size:48px;color:rgba(0,255,135,0.15);line-height:1;margin-bottom:8px}
-.step-title-big{font-family:'Syne',sans-serif;font-weight:700;font-size:18px;margin-bottom:8px}
+.step-num-big{font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:48px;color:rgba(0,255,135,0.15);line-height:1;margin-bottom:8px}
+.step-title-big{font-family:Arial,'Inter',sans-serif;font-weight:700;font-size:18px;margin-bottom:8px}
 .step-desc{font-size:14px;color:#666;line-height:1.7}
-.tip-inline{display:inline-block;background:#0a0a12;border-left:3px solid var(--green);padding:8px 14px;font-family:'Syne Mono',monospace;font-size:11px;color:var(--green);margin:12px 0;border-radius:0 8px 8px 0}
+.tip-inline{display:inline-block;background:#0a0a12;border-left:3px solid var(--green);padding:8px 14px;font-family:Arial,'Inter',sans-serif;font-size:11px;color:var(--green);margin:12px 0;border-radius:0 8px 8px 0}
 .app-mini-list{display:flex;flex-direction:column;gap:10px;margin:20px 0}
 .app-mini{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 18px;display:flex;align-items:center;gap:14px}
 .app-mini-icon{font-size:24px}
 .app-mini-name{font-weight:700;font-size:14px}
-.app-mini-gain{font-family:'Syne',sans-serif;font-weight:800;font-size:16px;color:var(--green);margin-left:auto}
+.app-mini-gain{font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:16px;color:var(--green);margin-left:auto}
 
 /* TABLE */
 .data-table{width:100%;border-collapse:collapse;margin:24px 0;border-radius:12px;overflow:hidden}
-.data-table th{background:#0e0e16;font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:2px;color:#444;padding:14px 16px;text-align:left;border-bottom:1px solid var(--border)}
+.data-table th{background:#0e0e16;font-family:Arial,'Inter',sans-serif;font-size:10px;letter-spacing:2px;color:#444;padding:14px 16px;text-align:left;border-bottom:1px solid var(--border)}
 .data-table td{padding:14px 16px;font-size:13px;color:#777;border-bottom:1px solid #0a0a12}
 .data-table tr:last-child td{border-bottom:none}
-.data-table .gain-col{font-family:'Syne',sans-serif;font-weight:700;color:var(--green)}
+.data-table .gain-col{font-family:Arial,'Inter',sans-serif;font-weight:700;color:var(--green)}
 
 /* SHARE */
 .share-bar{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;margin:48px 0;flex-wrap:wrap;gap:14px}
-.share-text{font-family:'Syne',sans-serif;font-weight:700;font-size:16px}
+.share-text{font-family:Arial,'Inter',sans-serif;font-weight:700;font-size:16px}
 .share-btns{display:flex;gap:10px}
-.share-btn{background:#111;border:1px solid var(--border);color:#666;font-family:'Syne Mono',monospace;font-size:11px;letter-spacing:2px;padding:10px 16px;border-radius:10px;cursor:pointer;transition:all 0.2s;text-decoration:none}
+.share-btn{background:#111;border:1px solid var(--border);color:#666;font-family:Arial,'Inter',sans-serif;font-size:11px;letter-spacing:2px;padding:10px 16px;border-radius:10px;cursor:pointer;transition:all 0.2s;text-decoration:none}
 .share-btn:hover{border-color:var(--green);color:var(--green)}
 
 /* CTA ARTICLE */
 .article-cta{background:linear-gradient(135deg,rgba(0,255,135,0.08),rgba(45,255,240,0.04));border:1px solid rgba(0,255,135,0.2);border-radius:20px;padding:36px;text-align:center;margin:48px 0}
 .cta-emoji{font-size:40px;margin-bottom:16px;display:block}
-.cta-title{font-family:'Syne',sans-serif;font-weight:800;font-size:26px;letter-spacing:-1px;margin-bottom:10px}
+.cta-title{font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:26px;letter-spacing:-1px;margin-bottom:10px}
 .cta-title span{color:var(--green)}
 .cta-sub{font-size:14px;color:#666;line-height:1.6;margin-bottom:24px}
-.btn-cta{display:inline-flex;align-items:center;gap:10px;background:var(--green);color:#000;font-family:'Syne',sans-serif;font-weight:800;font-size:15px;padding:16px 32px;border-radius:100px;text-decoration:none;transition:all 0.2s;box-shadow:0 0 30px rgba(0,255,135,0.2)}
+.btn-cta{display:inline-flex;align-items:center;gap:10px;background:var(--green);color:#000;font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:15px;padding:16px 32px;border-radius:100px;text-decoration:none;transition:all 0.2s;box-shadow:0 0 30px rgba(0,255,135,0.2)}
 .btn-cta:hover{transform:scale(1.03)}
 
 /* RELATED */
 .related{margin-top:48px}
-.related-label{font-family:'Syne Mono',monospace;font-size:11px;letter-spacing:3px;color:#444;margin-bottom:20px}
+.related-label{font-family:Arial,'Inter',sans-serif;font-size:11px;letter-spacing:3px;color:#444;margin-bottom:20px}
 .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .related-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;text-decoration:none;color:var(--white);transition:all 0.2s}
 .related-card:hover{border-color:#2a2a3e;transform:translateY(-2px)}
-.related-cat{font-family:'Syne Mono',monospace;font-size:9px;letter-spacing:2px;color:var(--green);margin-bottom:8px}
-.related-title{font-family:'Syne',sans-serif;font-weight:700;font-size:14px;line-height:1.3}
+.related-cat{font-family:Arial,'Inter',sans-serif;font-size:9px;letter-spacing:2px;color:var(--green);margin-bottom:8px}
+.related-title{font-family:Arial,'Inter',sans-serif;font-weight:700;font-size:14px;line-height:1.3}
 
 @media(max-width:600px){
   .related-grid{grid-template-columns:1fr}
   .article-meta{gap:12px}
 }
 </style>
+<style>
+/* ══ RESET FINAL POLICE — Arial partout ══ */
+* { font-family: Arial, 'Inter', sans-serif !important; font-style: normal !important; }
+h1,h2,h3,h4,.hero-title,.card-title,.method-name,.article-title,
+.blog-title,.quiz-title,.section-title,strong,b,
+[class*="title"],[class*="name"],[class*="heading"],
+[class*="btn"],[class*="button"],[class*="cta"],
+.nav-logo { font-family: Arial,'Inter',sans-serif !important; font-weight: 800 !important; font-style: normal !important; color: #ffffff !important; -webkit-font-smoothing: antialiased !important; }
+p,span,li,a,label,input,textarea,
+[class*="desc"],[class*="text"],[class*="sub"],
+[class*="body"],[class*="content"],[class*="perk"] {
+  font-family: Arial,'Inter',sans-serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2547384326242565" crossorigin="anonymous"></script>
 </head>
 <body>
+
+<!-- Pub AdSense -->
+<ins class="adsbygoogle"
+     style="display:block;margin:20px 0;border-radius:12px;overflow:hidden"
+     data-ad-client="ca-pub-2547384326242565"
+     data-ad-slot="auto"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
 <div class="read-progress" id="readProgress"></div>
 <div class="orb orb1"></div>
 
@@ -122,6 +153,16 @@ strong{color:var(--white)}
       <a href="https://discord.gg/p5t4xSYQ" class="nav-cta">Rejoindre</a>
     </div>
   </nav>
+
+<!-- Pub AdSense -->
+<ins class="adsbygoogle"
+     style="display:block;margin:20px 0;border-radius:12px;overflow:hidden"
+     data-ad-client="ca-pub-2547384326242565"
+     data-ad-slot="auto"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
 
   <div class="article-header">
     <div class="breadcrumb">

@@ -1,39 +1,60 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mentions Légales — MONEYFLOW</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@300;400;600;700&family=Syne+Mono&display=swap" rel="stylesheet">
+
 <style>
 :root{--bg:#060608;--accent:#00ff87;--white:#f0ecff;--card:#0e0e16;--border:#16162a}
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-body{background:var(--bg);color:var(--white);font-family:'Outfit',sans-serif;overflow-x:hidden}
+body{background:var(--bg);color:var(--white);font-family:Arial,'Inter',sans-serif;overflow-x:hidden}
 body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.5}
 .orb{position:fixed;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0}
 .orb1{width:300px;height:300px;background:rgba(0,255,135,0.05);top:-80px;right:-80px}
 .wrapper{max-width:480px;margin:0 auto;padding:0 20px 80px;position:relative;z-index:1}
 nav{display:flex;align-items:center;justify-content:space-between;padding:24px 0}
-.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;letter-spacing:-1px;text-decoration:none;color:var(--white)}
+.logo{font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:20px;letter-spacing:-1px;text-decoration:none;color:var(--white)}
 .logo span{color:var(--accent)}
-.back{font-family:'Syne Mono',monospace;font-size:11px;letter-spacing:2px;color:#444;text-decoration:none}
+.back{font-family:Arial,'Inter',sans-serif;font-size:11px;letter-spacing:2px;color:#444;text-decoration:none}
 .page-header{padding:32px 0 28px}
-.page-title{font-family:'Syne',sans-serif;font-weight:800;font-size:32px;letter-spacing:-2px;line-height:1.05;margin-bottom:10px}
+.page-title{font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:32px;letter-spacing:-2px;line-height:1.05;margin-bottom:10px}
 .page-title span{color:var(--accent)}
-.page-date{font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:2px;color:#444}
+.page-date{font-family:Arial,'Inter',sans-serif;font-size:10px;letter-spacing:2px;color:#444}
 .section{margin:32px 0}
-.section-title{font-family:'Syne',sans-serif;font-weight:800;font-size:18px;letter-spacing:-0.5px;color:var(--accent);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.section-title{font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:18px;letter-spacing:-0.5px;color:var(--accent);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border)}
 p{font-size:14px;color:#777;line-height:1.9;margin-bottom:12px}
 strong{color:var(--white)}
 a{color:var(--accent);text-decoration:none}
 .info-block{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;margin:14px 0}
 .info-row{display:flex;justify-content:space-between;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--border);gap:16px}
 .info-row:last-child{border-bottom:none;padding-bottom:0}
-.info-label{font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:2px;color:#444;flex-shrink:0;padding-top:2px}
+.info-label{font-family:Arial,'Inter',sans-serif;font-size:10px;letter-spacing:2px;color:#444;flex-shrink:0;padding-top:2px}
 .info-val{font-size:13px;color:var(--white);text-align:right}
 .divider{height:1px;background:var(--border);margin:28px 0}
-.back-btn{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--card);border:1px solid var(--border);color:var(--white);font-family:'Syne',sans-serif;font-weight:700;font-size:14px;padding:14px;border-radius:14px;text-decoration:none;margin-top:40px}
+.back-btn{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--card);border:1px solid var(--border);color:var(--white);font-family:Arial,'Inter',sans-serif;font-weight:700;font-size:14px;padding:14px;border-radius:14px;text-decoration:none;margin-top:40px}
 </style>
+<style>
+/* ══ RESET FINAL POLICE — Arial partout ══ */
+* { font-family: Arial, 'Inter', sans-serif !important; font-style: normal !important; }
+h1,h2,h3,h4,.hero-title,.card-title,.method-name,.article-title,
+.blog-title,.quiz-title,.section-title,strong,b,
+[class*="title"],[class*="name"],[class*="heading"],
+[class*="btn"],[class*="button"],[class*="cta"],
+.nav-logo { font-family: Arial,'Inter',sans-serif !important; font-weight: 800 !important; font-style: normal !important; color: #ffffff !important; -webkit-font-smoothing: antialiased !important; }
+p,span,li,a,label,input,textarea,
+[class*="desc"],[class*="text"],[class*="sub"],
+[class*="body"],[class*="content"],[class*="perk"] {
+  font-family: Arial,'Inter',sans-serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2547384326242565" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="orb orb1"></div>
@@ -53,7 +74,7 @@ a{color:var(--accent);text-decoration:none}
       <div class="info-row"><div class="info-label">NOM DU SITE</div><div class="info-val">MONEYFLOW</div></div>
       <div class="info-row"><div class="info-label">URL</div><div class="info-val">moneyflow2026.com</div></div>
       <div class="info-row"><div class="info-label">NATURE</div><div class="info-val">Site éducatif — particulier</div></div>
-      <div class="info-row"><div class="info-label">CONTACT</div><div class="info-val">contact@moneyflow2026.com</div></div>
+      <div class="info-row"><div class="info-label">CONTACT</div><div class="info-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9dfef2f3e9fcfee9ddf0f2f3f8e4fbf1f2eaafadafabb3fef2f0">[email&#160;protected]</a></div></div>
     </div>
   </div>
 
@@ -67,7 +88,17 @@ a{color:var(--accent);text-decoration:none}
     </div>
   </div>
 
-  <div class="divider"></div>
+  
+<!-- Pub AdSense -->
+<ins class="adsbygoogle"
+     style="display:block;margin:20px 0;border-radius:12px;overflow:hidden"
+     data-ad-client="ca-pub-2547384326242565"
+     data-ad-slot="auto"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+<div class="divider"></div>
 
   <!-- PROPRIÉTÉ INTELLECTUELLE -->
   <div class="section">
@@ -96,7 +127,7 @@ a{color:var(--accent);text-decoration:none}
       <div class="info-row"><div class="info-label">TELEGRAM</div><div class="info-val"><a href="https://telegram.org/privacy">telegram.org/privacy</a></div></div>
       <div class="info-row"><div class="info-label">NETLIFY</div><div class="info-val"><a href="https://netlify.com/privacy">netlify.com/privacy</a></div></div>
     </div>
-    <p>Conformément au Règlement Général sur la Protection des Données (RGPD — UE 2016/679), vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour toute demande : <strong>contact@moneyflow2026.com</strong></p>
+    <p>Conformément au Règlement Général sur la Protection des Données (RGPD — UE 2016/679), vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour toute demande : <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ccafa3a2b8adafb88ca1a3a2a9b5aaa0a3bbfefcfefae2afa3a1">[email&#160;protected]</a></strong></p>
   </div>
 
   <!-- COOKIES -->
@@ -118,10 +149,4 @@ a{color:var(--accent);text-decoration:none}
   <!-- DROIT APPLICABLE -->
   <div class="section">
     <div class="section-title">8. Droit applicable</div>
-    <p>Les présentes mentions légales sont soumises au droit français. En cas de litige, et à défaut de résolution amiable, les tribunaux français seront seuls compétents.</p>
-  </div>
-
-  <a href="index.html" class="back-btn">← Retour à l'accueil</a>
-</div>
-</body>
-</html>
+    <p>Les présentes mention
