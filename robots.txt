@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://moneyflow2026.com/sitemap.xml
+
+# Bloquer les fichiers inutiles
+Disallow: /index_backup.html
