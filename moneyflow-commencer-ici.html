@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html style="background-color:#0a0b14" lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a0b14">
+<title>Commencer ici — Guide de Démarrage MONEYFLOW 2026</title>
+<meta name="description" content="Tu arrives sur MONEYFLOW pour la première fois ? Commence ici. Trouve ta méthode en 2 minutes et lance-toi aujourd'hui.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Commencer ici — MONEYFLOW">
+<meta property="og:description" content="Trouve ta méthode pour gagner de l'argent en 2 minutes. Guide de démarrage personnalisé.">
+<link rel="canonical" href="https://moneyflow2026.com/moneyflow-commencer-ici.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2547384326242565" crossorigin="anonymous"></script>
+<style>
+* { font-family: Arial, 'Inter', sans-serif !important; font-style: normal !important; margin: 0; padding: 0; box-sizing: border-box; }
+html { overflow-x: hidden; -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { background: #0a0b14; color: #fff; -webkit-font-smoothing: antialiased; }
+.orb { position: fixed; border-radius: 50%; filter: blur(80px); pointer-events: none; z-index: 0; }
+.orb1 { width: 280px; height: 280px; background: rgba(0,255,135,0.07); top: -80px; right: -80px; }
+.orb2 { width: 220px; height: 220px; background: rgba(176,96,255,0.05); bottom: 30%; left: -80px; }
+.wrapper { max-width: 480px; margin: 0 auto; padding: 0 18px 100px; position: relative; z-index: 1; }
+
+/* NAV */
+.topnav { display: flex; align-items: center; justify-content: space-between; padding: 14px 18px; border-bottom: 1px solid rgba(255,255,255,0.08); position: sticky; top: 0; background: rgba(10,11,20,0.96); backdrop-filter: blur(16px); z-index: 50; margin: 0 -18px; width: calc(100% + 36px); }
+.nav-logo { font-weight: 800; font-size: 16px; text-decoration: none; color: #fff; display: flex; align-items: center; gap: 7px; }
+.nav-logo-icon { width: 26px; height: 26px; background: #00ff87; border-radius: 7px; display: flex; align-items: center; justify-content: center; font-size: 12px; }
+.nav-logo span { color: #00ff87; }
+.nav-back { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.5); text-decoration: none; padding: 7px 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08); }
+
+/* HERO */
+.hero { text-align: center; padding: 36px 0 28px; }
+.hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(0,255,135,0.08); border: 1px solid rgba(0,255,135,0.2); border-radius: 100px; padding: 6px 16px; font-size: 9px; font-weight: 700; letter-spacing: 2px; color: #00ff87; margin-bottom: 20px; }
+.hero-emoji { font-size: 52px; margin-bottom: 16px; display: block; }
+.hero h1 { font-weight: 800; font-size: clamp(24px, 7vw, 30px); letter-spacing: -0.8px; line-height: 1.15; margin-bottom: 12px; color: #fff; }
+.hero h1 span { color: #00ff87; }
+.hero-sub { font-size: 15px; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 28px; }
+
+/* ÉTAPES ONBOARDING */
+.steps { display: flex; flex-direction: column; gap: 3px; margin-bottom: 32px; }
+.step-connector { width: 2px; height: 20px; background: rgba(255,255,255,0.08); margin-left: 23px; }
+.step-item { display: flex; align-items: flex-start; gap: 14px; background: rgba(15,18,35,0.92); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 18px; text-decoration: none; color: #fff; transition: border-color .2s; }
+.step-item:hover { border-color: rgba(0,255,135,0.2); }
+.step-num { width: 36px; height: 36px; border-radius: 50%; background: rgba(0,255,135,0.1); border: 2px solid rgba(0,255,135,0.3); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; color: #00ff87; flex-shrink: 0; }
+.step-content { flex: 1; }
+.step-title { font-weight: 800; font-size: 15px; color: #fff; margin-bottom: 4px; }
+.step-desc { font-size: 12px; color: rgba(255,255,255,0.55); line-height: 1.55; }
+.step-time { font-size: 9px; font-weight: 700; letter-spacing: 1.5px; color: #00ff87; margin-top: 5px; }
+.step-arrow { color: rgba(255,255,255,0.2); font-size: 18px; flex-shrink: 0; align-self: center; }
+
+/* PROFILS */
+.sep { display: flex; align-items: center; gap: 10px; margin: 28px 0 18px; }
+.sep-line { flex: 1; height: 1px; background: rgba(255,255,255,0.08); }
+.sep-text { font-size: 9px; font-weight: 700; letter-spacing: 2px; color: rgba(255,255,255,0.2); text-transform: uppercase; white-space: nowrap; }
+
+.profils { display: flex; flex-direction: column; gap: 10px; }
+.profil-card { background: rgba(15,18,35,0.92); border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; padding: 20px; }
+.profil-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.profil-emoji { font-size: 28px; width: 48px; height: 48px; background: rgba(255,255,255,0.05); border-radius: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.profil-title { font-weight: 800; font-size: 16px; color: #fff; margin-bottom: 3px; }
+.profil-sub { font-size: 12px; color: rgba(255,255,255,0.5); }
+.profil-methods { display: flex; flex-direction: column; gap: 8px; }
+.profil-method { display: flex; align-items: center; gap: 10px; padding: 11px 13px; background: rgba(255,255,255,0.04); border-radius: 12px; text-decoration: none; color: #fff; }
+.pm-icon { font-size: 18px; flex-shrink: 0; }
+.pm-name { font-weight: 700; font-size: 13px; flex: 1; }
+.pm-earn { font-size: 10px; font-weight: 700; }
+.pm-arrow { color: rgba(255,255,255,0.2); font-size: 14px; }
+
+/* RESSOURCES ESSENTIELLES */
+.ressources { display: flex; flex-direction: column; gap: 8px; }
+.ressource-card { display: flex; align-items: center; gap: 14px; background: rgba(15,18,35,0.92); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 15px 16px; text-decoration: none; color: #fff; }
+.rc-icon { font-size: 24px; flex-shrink: 0; width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+.rc-title { font-weight: 700; font-size: 14px; color: #fff; margin-bottom: 2px; }
+.rc-desc { font-size: 11px; color: rgba(255,255,255,0.5); }
+.rc-arrow { color: rgba(255,255,255,0.2); font-size: 16px; flex-shrink: 0; margin-left: auto; }
+
+/* CTA FINAL */
+.cta-final { background: linear-gradient(135deg, rgba(0,255,135,0.08), rgba(45,255,240,0.04)); border: 1px solid rgba(0,255,135,0.18); border-radius: 20px; padding: 26px 20px; text-align: center; margin-top: 28px; }
+.cta-final h3 { font-weight: 800; font-size: 20px; color: #fff; margin-bottom: 8px; letter-spacing: -0.3px; }
+.cta-final p { font-size: 13px; color: rgba(255,255,255,0.6); margin-bottom: 18px; line-height: 1.7; }
+.btn-g { display: flex; align-items: center; justify-content: center; width: 100%; background: #00ff87; color: #000; font-weight: 800; font-size: 15px; padding: 16px; border-radius: 13px; text-decoration: none; margin-bottom: 9px; }
+.btn-t { display: flex; align-items: center; justify-content: center; width: 100%; background: rgba(45,255,240,0.08); border: 1px solid rgba(45,255,240,0.25); color: #2dfff0; font-weight: 800; font-size: 15px; padding: 15px; border-radius: 13px; text-decoration: none; }
+
+.footer { text-align: center; padding-top: 24px; font-size: 9px; letter-spacing: 1px; color: rgba(255,255,255,0.2); line-height: 2.2; }
+.footer a { color: rgba(255,255,255,0.3); text-decoration: none; }
+
+/* ══════════════════════════════════════
+   BARRE DE PROGRESSION LECTURE
+══════════════════════════════════════ */
+.read-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #00ff87, #2dfff0);
+  z-index: 9999;
+  transition: width .1s linear;
+  box-shadow: 0 0 8px rgba(0,255,135,0.6);
+}
+
+/* ══════════════════════════════════════
+   COMPTEUR VISITEURS EN DIRECT
+══════════════════════════════════════ */
+.visitor-counter {
+  position: fixed;
+  bottom: 80px;
+  right: 14px;
+  background: rgba(13,13,24,0.95);
+  border: 1px solid rgba(0,255,135,0.2);
+  border-radius: 100px;
+  padding: 7px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 150;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  animation: slideIn .4s ease;
+  cursor: default;
+}
+@keyframes slideIn {
+  from { opacity:0; transform:translateX(20px); }
+  to   { opacity:1; transform:translateX(0); }
+}
+.vc-dot {
+  width: 6px; height: 6px;
+  background: #00ff87;
+  border-radius: 50%;
+  animation: vcPulse 1.5s infinite;
+  flex-shrink: 0;
+}
+@keyframes vcPulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.3;transform:scale(1.6)} }
+.vc-text {
+  font-family: Arial,'Inter',sans-serif !important;
+  font-size: 11px;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+}
+.vc-text span { color: #00ff87; }
+
+/* ══════════════════════════════════════
+   TOGGLE MODE SOMBRE / CLAIR
+══════════════════════════════════════ */
+.theme-toggle {
+  position: fixed;
+  bottom: 80px;
+  left: 14px;
+  width: 40px; height: 40px;
+  background: rgba(13,13,24,0.95);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 150;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  transition: all .2s;
+  -webkit-tap-highlight-color: transparent;
+}
+.theme-toggle:active { transform: scale(0.88); }
+
+
+/* ══════════════════════════════════════
+   MODE CLAIR — FIX COMPLET
+══════════════════════════════════════ */
+body.light-mode { background:#f0f2f5 !important; color:#0a0b14 !important; }
+
+/* NAV */
+body.light-mode .topnav { background:rgba(240,242,245,0.97) !important; border-color:rgba(0,0,0,0.1) !important; }
+body.light-mode .nav-logo { color:#0a0b14 !important; }
+body.light-mode .nav-link { color:#666 !important; }
+body.light-mode .nav-back { color:#666 !important; border-color:rgba(0,0,0,0.12) !important; }
+
+/* TEXTES PRINCIPAUX */
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode .mi-name,
+body.light-mode .testi-name,
+body.light-mode .ac-title,
+body.light-mode .step-title,
+body.light-mode .profil-title,
+body.light-mode .cb-title,
+body.light-mode .hero-title .line1,
+body.light-mode .lc-val,
+body.light-mode .stat-num,
+body.light-mode .plan-name,
+body.light-mode .plan-price { color:#0a0b14 !important; }
+
+/* TEXTES SECONDAIRES */
+body.light-mode .mi-desc,
+body.light-mode .testi-text,
+body.light-mode .hero-sub,
+body.light-mode .step-desc,
+body.light-mode .cb-desc,
+body.light-mode .perk,
+body.light-mode .lc-label,
+body.light-mode .lc-desc,
+body.light-mode .stat-lbl,
+body.light-mode .mi-earn-label,
+body.light-mode .ac-read,
+body.light-mode .sep-text,
+body.light-mode .count-text,
+body.light-mode .hero-eyebrow { color:#555 !important; }
+
+/* CARTES — fond blanc propre */
+body.light-mode .method-item,
+body.light-mode .testi-card,
+body.light-mode .stat-pill,
+body.light-mode .article-card,
+body.light-mode .lc-item,
+body.light-mode .live-counter,
+body.light-mode .offre-card,
+body.light-mode .step-item,
+body.light-mode .profil-card,
+body.light-mode .edition-preview,
+body.light-mode .form-box,
+body.light-mode .faq-item,
+body.light-mode .ressource-card,
+body.light-mode .community-box,
+body.light-mode .antiscam,
+body.light-mode .ep-item,
+body.light-mode .av-item,
+body.light-mode .edition-card,
+body.light-mode .plan,
+body.light-mode .chapter,
+body.light-mode .testi-mini,
+body.light-mode .price-block,
+body.light-mode .guarantee { background:#ffffff !important; border-color:rgba(0,0,0,0.08) !important; box-shadow:0 2px 12px rgba(0,0,0,0.07) !important; }
+
+/* BLOC EARN */
+body.light-mode .mi-earn-block { background:rgba(0,0,0,0.04) !important; border-color:rgba(0,0,0,0.08) !important; }
+
+/* LIVE COUNTER VALS — garder couleurs néon lisibles */
+body.light-mode .lc-val .g { color:#00b85a !important; }
+body.light-mode .lc-val .b { color:#0090b8 !important; }
+body.light-mode .lc-val .y { color:#b89000 !important; }
+body.light-mode .lc-val .p { color:#7a2ee0 !important; }
+
+/* EARN COLORS — assombries pour fond blanc */
+body.light-mode .earn-green { color:#00a050 !important; }
+body.light-mode .earn-blue  { color:#007aaa !important; }
+body.light-mode .earn-pink  { color:#cc1155 !important; }
+body.light-mode .earn-yellow{ color:#a07000 !important; }
+body.light-mode .earn-purple{ color:#6a20cc !important; }
+
+/* BADGES */
+body.light-mode .mi-badge-top,
+body.light-mode .bg-badge-green { background:rgba(0,160,80,0.1) !important; color:#00803a !important; border-color:rgba(0,160,80,0.25) !important; }
+body.light-mode .bg-badge-pink  { background:rgba(200,0,80,0.08) !important; color:#cc1155 !important; border-color:rgba(200,0,80,0.2) !important; }
+body.light-mode .bg-badge-grey  { background:rgba(0,0,0,0.05) !important; color:#666 !important; border-color:rgba(0,0,0,0.12) !important; }
+body.light-mode .bg-badge-purple{ background:rgba(100,30,200,0.08) !important; color:#6a20cc !important; border-color:rgba(100,30,200,0.2) !important; }
+
+/* ICÔNES WRAP */
+body.light-mode .bg-green  { background:rgba(0,180,90,0.12) !important; }
+body.light-mode .bg-blue   { background:rgba(0,150,200,0.12) !important; }
+body.light-mode .bg-pink   { background:rgba(220,0,100,0.1) !important; }
+body.light-mode .bg-yellow { background:rgba(180,140,0,0.1) !important; }
+body.light-mode .bg-purple { background:rgba(120,40,220,0.1) !important; }
+
+/* BOUTONS */
+body.light-mode .btn-secondary { background:#fff !important; border-color:rgba(0,0,0,0.12) !important; color:#0a0b14 !important; }
+body.light-mode .nav-cta { background:#00ff87 !important; color:#000 !important; }
+
+/* TÉMOIGNAGES */
+body.light-mode .testi-text { color:#444 !important; }
+body.light-mode .testi-text strong { color:#0a0b14 !important; }
+body.light-mode .testi-gain { background:rgba(0,160,80,0.08) !important; color:#00803a !important; border-color:rgba(0,160,80,0.2) !important; }
+body.light-mode .testi-stars { color:#cc9000 !important; }
+
+/* SÉPARATEURS */
+body.light-mode .sep-line { background:rgba(0,0,0,0.1) !important; }
+body.light-mode .sep-text { color:#999 !important; }
+body.light-mode .divider-line { background:rgba(0,0,0,0.1) !important; }
+
+/* HERO BADGE */
+body.light-mode .live-badge { background:rgba(0,160,80,0.08) !important; border-color:rgba(0,160,80,0.2) !important; color:#00803a !important; }
+body.light-mode .live-dot { background:#00803a !important; }
+body.light-mode .hero-title .line2 { color:#00a050 !important; }
+
+/* FOOTER */
+body.light-mode .footer, body.light-mode .footer-mini { color:#aaa !important; }
+body.light-mode .footer a, body.light-mode .footer-mini a { color:#888 !important; }
+
+/* TAB BAR */
+body.light-mode .tab-bar { background:rgba(240,242,245,0.98) !important; border-color:rgba(0,0,0,0.1) !important; }
+body.light-mode .tab-label { color:#aaa !important; }
+body.light-mode .tab-item.active .tab-label { color:#00a050 !important; }
+body.light-mode .tab-dot { background:transparent !important; }
+body.light-mode .tab-item.active .tab-dot { background:#00a050 !important; }
+
+/* VISITOR COUNTER */
+body.light-mode .visitor-counter { background:rgba(255,255,255,0.97) !important; border-color:rgba(0,160,80,0.25) !important; box-shadow:0 4px 16px rgba(0,0,0,0.12) !important; }
+body.light-mode .vc-text { color:#0a0b14 !important; }
+body.light-mode .vc-text span { color:#00a050 !important; }
+body.light-mode .vc-dot { background:#00a050 !important; }
+
+/* THEME TOGGLE */
+body.light-mode .theme-toggle { background:rgba(255,255,255,0.97) !important; border-color:rgba(0,0,0,0.12) !important; box-shadow:0 4px 16px rgba(0,0,0,0.12) !important; }
+
+/* CAT LABELS */
+body.light-mode .cat-label { opacity:0.85 !important; }
+
+/* PROGRESS BAR */
+body.light-mode .read-progress { background:linear-gradient(90deg,#00a050,#0090b8) !important; }
+
+/* ORBS — plus subtils */
+body.light-mode .orb1 { background:rgba(0,180,90,0.05) !important; }
+body.light-mode .orb2 { background:rgba(220,0,100,0.03) !important; }
+
+/* ANTISCAM */
+body.light-mode .antiscam-title { color:#a07000 !important; }
+body.light-mode .antiscam-text { color:#555 !important; }
+
+/* FEED LIVE */
+body.light-mode .lc-entry { color:#444 !important; }
+body.light-mode .lc-entry strong { color:#0a0b14 !important; }
+body.light-mode .lc-entry span { color:#999 !important; }
+body.light-mode .lc-live { color:#00a050 !important; }
+body.light-mode .lc-label { color:#888 !important; }
+
+/* SCROLL DOTS */
+body.light-mode .scroll-dot { background:rgba(0,0,0,0.15) !important; }
+body.light-mode .scroll-dot.active { background:#00a050 !important; }
+body.light-mode .testi-dot { background:rgba(0,0,0,0.15) !important; }
+body.light-mode .testi-dot.on { background:#00a050 !important; }
+
+/* TESTI BTNS */
+body.light-mode .testi-btn { background:rgba(0,0,0,0.06) !important; color:#0a0b14 !important; }
+
+
+
+/* ══ FORCER THÈME NOIR PAR DÉFAUT ══
+   Empêche Chrome/Safari de forcer le blanc
+   selon prefers-color-scheme du système */
+:root { color-scheme: dark; }
+html { background-color: #0a0b14 !important; }
+body { background-color: #0a0b14 !important; color: #ffffff !important; }
+
+/* Ne s'applique QUE si l'user active
+   le mode clair via le toggle */
+body.light-mode { color-scheme: light; }
+body.light-mode html { background-color: #f0f2f5 !important; }
+
+</style>
+<!-- Google Analytics GA4 -->
+<!-- Remplace G-XXXXXXXXXX par ton vrai ID sur analytics.google.com -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX', {
+    page_title: document.title,
+    page_location: window.location.href,
+  });
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Commencer ici — Guide débutant MONEYFLOW",
+  "description": "Tu arrives pour la première fois ? Suis ces 4 étapes et lance-toi.",
+  "url": "https://moneyflow2026.com/moneyflow-commencer-ici.html",
+  "inLanguage": "fr-FR",
+  "publisher": {
+    "@type": "Organization",
+    "name": "MONEYFLOW",
+    "url": "https://moneyflow2026.com"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://moneyflow2026.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Commencer ici — Guide débutant MONEYFLOW",
+      "item": "https://moneyflow2026.com/moneyflow-commencer-ici.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<script>
+// ══ THÈME PAR DÉFAUT — NOIR ══
+// Applique le thème sauvegardé OU noir par défaut
+(function(){
+  const saved = localStorage.getItem('mf_theme');
+  // Par défaut : dark. Light seulement si l'user l'a choisi
+  if(saved === 'light'){
+    document.documentElement.classList.add('light-mode');
+    document.body.classList.add('light-mode');
+  }
+  // S'assurer que le body est bien dark si pas de préférence
+  if(!saved || saved === 'dark'){
+    document.documentElement.style.backgroundColor = '#0a0b14';
+    document.body.style.backgroundColor = '#0a0b14';
+    document.body.style.color = '#ffffff';
+  }
+})();
+</script>
+
+<!-- BARRE PROGRESSION -->
+<div class="read-progress" id="readProgress"></div>
+
+<!-- COMPTEUR VISITEURS -->
+<div class="visitor-counter" id="visitorCounter">
+  <div class="vc-dot"></div>
+  <div class="vc-text"><span id="vcCount">--</span> en ligne</div>
+</div>
+
+<!-- TOGGLE THEME -->
+<button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Changer le thème">🌙</button>
+
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="wrapper">
+
+<nav class="topnav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">💸</div>
+    MONEY<span>FLOW</span>
+  </a>
+  <a href="index.html" class="nav-back">← Accueil</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">👋 BIENVENUE SUR MONEYFLOW</div>
+  <span class="hero-emoji">🗺️</span>
+  <h1>Par où <span>commencer</span> ?</h1>
+  <p class="hero-sub">Tu arrives pour la première fois ? Suis ces 4 étapes et tu auras ta première méthode active avant ce soir.</p>
+</div>
+
+<!-- AD -->
+<ins class="adsbygoogle" style="display:block;margin-bottom:24px;border-radius:12px;overflow:hidden" data-ad-client="ca-pub-2547384326242565" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+<!-- ÉTAPES -->
+<div class="sep"><div class="sep-line"></div><div class="sep-text">LES 4 ÉTAPES</div><div class="sep-line"></div></div>
+<div class="steps">
+
+  <a href="moneyflow-quiz.html" class="step-item">
+    <div class="step-num">1</div>
+    <div class="step-content">
+      <div class="step-title">Fais le quiz — trouve ta méthode</div>
+      <div class="step-desc">3 questions sur ton âge, ton budget et ton temps disponible. Le quiz te donne ta méthode idéale en 2 minutes.</div>
+      <div class="step-time">⏱ 2 MINUTES</div>
+    </div>
+    <div class="step-arrow">›</div>
+  </a>
+
+  <div class="step-connector"></div>
+
+  <a href="moneyflow-parrainage.html" class="step-item">
+    <div class="step-num">2</div>
+    <div class="step-content">
+      <div class="step-title">Lis le guide de ta méthode</div>
+      <div class="step-desc">Chaque méthode a une page dédiée avec le plan d'action complet, les outils et les résultats attendus.</div>
+      <div class="step-time">⏱ 10 MINUTES</div>
+    </div>
+    <div class="step-arrow">›</div>
+  </a>
+
+  <div class="step-connector"></div>
+
+  <a href="index.html#rejoindre" class="step-item">
+    <div class="step-num">3</div>
+    <div class="step-content">
+      <div class="step-title">Rejoins le Discord communautaire</div>
+      <div class="step-desc">2 847 membres qui s'entraident. Pose tes questions, partage tes premiers résultats, reçois les meilleures alertes.</div>
+      <div class="step-time">⏱ 3 MINUTES</div>
+    </div>
+    <div class="step-arrow">›</div>
+  </a>
+
+  <div class="step-connector"></div>
+
+  <a href="moneyflow-newsletter.html" class="step-item">
+    <div class="step-num">4</div>
+    <div class="step-content">
+      <div class="step-title">Inscris-toi à la newsletter</div>
+      <div class="step-desc">Reçois chaque lundi les meilleurs codes parrainage actifs, une méthode concrète et les drops rentables de la semaine.</div>
+      <div class="step-time">⏱ 1 MINUTE</div>
+    </div>
+    <div class="step-arrow">›</div>
+  </a>
+
+</div>
+
+<!-- PAR PROFIL -->
+<div class="sep"><div class="sep-line"></div><div class="sep-text">SELON TON PROFIL</div><div class="sep-line"></div></div>
+<div class="profils">
+
+  <div class="profil-card">
+    <div class="profil-header">
+      <div class="profil-emoji">⚡</div>
+      <div>
+        <div class="profil-title">Tu veux gagner cette semaine</div>
+        <div class="profil-sub">Zéro capital · Résultats en 3 à 7 jours</div>
+      </div>
+    </div>
+    <div class="profil-methods">
+      <a href="moneyflow-parrainage.html" class="profil-method">
+        <div class="pm-icon">🤝</div>
+        <div class="pm-name">Parrainage d'apps</div>
+        <div class="pm-earn" style="color:#00ff87">10-100€/parrainage</div>
+        <div class="pm-arrow">›</div>
+      </a>
+      <a href="moneyflow-jobs.html" class="profil-method">
+        <div class="pm-icon">⚡</div>
+        <div class="pm-name">Jobs rapides</div>
+        <div class="pm-earn" style="color:#00ff87">Dès aujourd'hui</div>
+        <div class="pm-arrow">›</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="profil-card">
+    <div class="profil-header">
+      <div class="profil-emoji">📱</div>
+      <div>
+        <div class="profil-title">Tu aimes les réseaux sociaux</div>
+        <div class="profil-sub">TikTok · Instagram · YouTube</div>
+      </div>
+    </div>
+    <div class="profil-methods">
+      <a href="moneyflow-contenu.html" class="profil-method">
+        <div class="pm-icon">📱</div>
+        <div class="pm-name">Créateur de contenu</div>
+        <div class="pm-earn" style="color:#ff2d78">Revenus passifs</div>
+        <div class="pm-arrow">›</div>
+      </a>
+      <a href="moneyflow-seo-ugc-creator-france.html" class="profil-method">
+        <div class="pm-icon">🎬</div>
+        <div class="pm-name">UGC Creator</div>
+        <div class="pm-earn" style="color:#ff2d78">100-500€/vidéo</div>
+        <div class="pm-arrow">›</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="profil-card">
+    <div class="profil-header">
+      <div class="profil-emoji">💻</div>
+      <div>
+        <div class="profil-title">Tu as des compétences digitales</div>
+        <div class="profil-sub">Design · Code · Rédaction · IA</div>
+      </div>
+    </div>
+    <div class="profil-methods">
+      <a href="moneyflow-freelance.html" class="profil-method">
+        <div class="pm-icon">🎨</div>
+        <div class="pm-name">Freelance</div>
+        <div class="pm-earn" style="color:#2dfff0">30-100€/h</div>
+        <div class="pm-arrow">›</div>
+      </a>
+      <a href="moneyflow-ia.html" class="profil-method">
+        <div class="pm-icon">🤖</div>
+        <div class="pm-name">Micro-entreprise IA</div>
+        <div class="pm-earn" style="color:#2dfff0">50-150€/h</div>
+        <div class="pm-arrow">›</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="profil-card">
+    <div class="profil-header">
+      <div class="profil-emoji">💰</div>
+      <div>
+        <div class="profil-title">Tu as un peu de capital</div>
+        <div class="profil-sub">100€ ou plus à investir</div>
+      </div>
+    </div>
+    <div class="profil-methods">
+      <a href="moneyflow-revente.html" class="profil-method">
+        <div class="pm-icon">👟</div>
+        <div class="pm-name">Achat-Revente</div>
+        <div class="pm-earn" style="color:#ffe500">+50 à +300%</div>
+        <div class="pm-arrow">›</div>
+      </a>
+      <a href="moneyflow-dropshipping.html" class="profil-method">
+        <div class="pm-icon">🛒</div>
+        <div class="pm-name">Dropshipping</div>
+        <div class="pm-earn" style="color:#ffe500">Fort potentiel</div>
+        <div class="pm-arrow">›</div>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<!-- AD -->
+<ins class="adsbygoogle" style="display:block;margin:24px 0;border-radius:12px;overflow:hidden" data-ad-client="ca-pub-2547384326242565" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+<!-- RESSOURCES ESSENTIELLES -->
+<div class="sep"><div class="sep-line"></div><div class="sep-text">RESSOURCES ESSENTIELLES</div><div class="sep-line"></div></div>
+<div class="ressources">
+  <a href="moneyflow-blog.html" class="ressource-card">
+    <div class="rc-icon" style="background:rgba(0,255,135,0.1)">📝</div>
+    <div><div class="rc-title">Blog — Tous les guides</div><div class="rc-desc">30+ articles pour maîtriser chaque méthode</div></div>
+    <div class="rc-arrow">›</div>
+  </a>
+  <a href="moneyflow-comparatif-parrainage.html" class="ressource-card">
+    <div class="rc-icon" style="background:rgba(255,229,0,0.1)">💳</div>
+    <div><div class="rc-title">Comparatif parrainage actif</div><div class="rc-desc">Toutes les offres actives classées par montant</div></div>
+    <div class="rc-arrow">›</div>
+  </a>
+  <a href="moneyflow-newsletter.html" class="ressource-card">
+    <div class="rc-icon" style="background:rgba(255,45,120,0.1)">📬</div>
+    <div><div class="rc-title">Newsletter — 1 opportunité/semaine</div><div class="rc-desc">Gratuit · 1 240 abonnés · Zéro spam</div></div>
+    <div class="rc-arrow">›</div>
+  </a>
+  <a href="moneyflow-quiz.html" class="ressource-card">
+    <div class="rc-icon" style="background:rgba(176,96,255,0.1)">🧠</div>
+    <div><div class="rc-title">Quiz — Trouve ta méthode</div><div class="rc-desc">Personnalisé selon ton profil en 2 minutes</div></div>
+    <div class="rc-arrow">›</div>
+  </a>
+</div>
+
+<!-- CTA FINAL -->
+<div class="cta-final">
+  <h3>Prêt à te lancer ?</h3>
+  <p>Rejoins 2 847 membres qui gagnent déjà de l'argent avec les méthodes MONEYFLOW.</p>
+  <a href="https://discord.gg/p5t4xSYQ" class="btn-g">Rejoindre le Discord — Gratuit</a>
+  <a href="https://t.me/+zNb_zWH1geI2NDlk" class="btn-t">Rejoindre Telegram</a>
+</div>
+
+<div class="footer">
+  © 2026 MONEYFLOW<br>
+  <a href="index.html">Accueil</a> · <a href="moneyflow-blog.html">Blog</a> · <a href="moneyflow-quiz.html">Quiz</a> · <a href="moneyflow-mentions-legales.html">Mentions légales</a>
+</div>
+
+</div>
+<script>
+// ══ BARRE DE PROGRESSION LECTURE ══
+(function(){
+  const bar = document.getElementById('readProgress');
+  if(!bar) return;
+  function updateBar(){
+    const st = window.scrollY;
+    const dh = document.body.scrollHeight - window.innerHeight;
+    if(dh <= 0){ bar.style.width='0%'; return; }
+    bar.style.width = Math.min(Math.round(st/dh*100), 100) + '%';
+  }
+  window.addEventListener('scroll', updateBar, {passive:true});
+  updateBar();
+})();
+
+// ══ COMPTEUR VISITEURS EN DIRECT ══
+(function(){
+  const el = document.getElementById('vcCount');
+  if(!el) return;
+
+  // Base réaliste selon la page
+  const bases = {
+    'index': [18,45],
+    'parrainage': [8,22],
+    'blog': [12,30],
+    'article': [5,18],
+    'quiz': [6,16],
+    'default': [4,14]
+  };
+
+  const path = window.location.pathname;
+  let range = bases.default;
+  for(const key in bases){
+    if(path.includes(key)){ range = bases[key]; break; }
+  }
+
+  function rand(a,b){ return Math.floor(Math.random()*(b-a+1))+a; }
+
+  let current = rand(range[0], range[1]);
+  el.textContent = current;
+
+  // Variation toutes les 8 à 15 secondes
+  function vary(){
+    const delta = rand(-2, 3);
+    current = Math.max(range[0], Math.min(range[1]+5, current + delta));
+    el.textContent = current;
+    setTimeout(vary, rand(8000, 15000));
+  }
+  setTimeout(vary, rand(5000, 10000));
+})();
+
+// ══ TOGGLE THÈME SOMBRE / CLAIR ══
+function toggleTheme(){
+  const body = document.body;
+  const btn = document.getElementById('themeToggle');
+  const isLight = body.classList.toggle('light-mode');
+  if(btn) btn.textContent = isLight ? '🌙' : '☀️';
+  localStorage.setItem('mf_theme', isLight ? 'light' : 'dark');
+  // Sync html element
+  document.documentElement.style.backgroundColor = isLight ? '#f0f2f5' : '#0a0b14';
+}
+
+// Restaurer le thème — NOIR par défaut
+(function(){
+  const saved = localStorage.getItem('mf_theme');
+  const btn = document.getElementById('themeToggle');
+  if(saved === 'light'){
+    document.body.classList.add('light-mode');
+    document.documentElement.style.backgroundColor = '#f0f2f5';
+    if(btn) btn.textContent = '🌙';
+  } else {
+    // Dark par défaut
+    document.body.classList.remove('light-mode');
+    document.documentElement.style.backgroundColor = '#0a0b14';
+    if(btn) btn.textContent = '☀️';
+  }
+})();
+
+</script>
+</body>
+</html>

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html style="background-color:#0a0b14" lang="fr">
 <head>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 <meta charset="UTF-8">
+<meta name="google-adsense-account" content="ca-pub-2547384326242565">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Les 10 hooks TikTok qui font exploser les vues en 2026. Les formules exactes des 3 premières secondes qui font la différence entre 200 et 2 millions de vues.">
 <meta name="keywords" content="hooks tiktok, formule hook tiktok, comment avoir des vues tiktok, tiktok algorithme 2026, accroches tiktok virales">
@@ -84,6 +85,19 @@ strong{color:var(--white)}
 .related-cat{font-family:Arial,'Inter',sans-serif;font-size:9px;letter-spacing:2px;color:var(--accent);margin-bottom:8px}
 .related-title{font-family:Arial,'Inter',sans-serif;font-weight:700;font-size:14px;line-height:1.3}
 @media(max-width:600px){.related-grid{grid-template-columns:1fr}}
+
+/* ══ FORCER THÈME NOIR PAR DÉFAUT ══
+   Empêche Chrome/Safari de forcer le blanc
+   selon prefers-color-scheme du système */
+:root { color-scheme: dark; }
+html { background-color: #0a0b14 !important; }
+body { background-color: #0a0b14 !important; color: #ffffff !important; }
+
+/* Ne s'applique QUE si l'user active
+   le mode clair via le toggle */
+body.light-mode { color-scheme: light; }
+body.light-mode html { background-color: #f0f2f5 !important; }
+
 </style>
 <style>
 /* ══ RESET FINAL POLICE — Arial partout ══ */
@@ -103,8 +117,79 @@ p,span,li,a,label,input,textarea,
 }
 </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2547384326242565" crossorigin="anonymous"></script>
+<!-- Google Analytics GA4 -->
+<!-- Remplace G-XXXXXXXXXX par ton vrai ID sur analytics.google.com -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX', {
+    page_title: document.title,
+    page_location: window.location.href,
+  });
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Article MONEYFLOW #4 — Guide revenus en ligne",
+  "description": "Guide pratique pour générer des revenus en ligne. Méthodes testées par la communauté MONEYFLOW.",
+  "url": "https://moneyflow2026.com/moneyflow-article-4.html",
+  "inLanguage": "fr-FR",
+  "publisher": {
+    "@type": "Organization",
+    "name": "MONEYFLOW",
+    "url": "https://moneyflow2026.com"
+  },
+  "datePublished": "2026-03-01",
+  "dateModified": "2026-03-23",
+  "author": {
+    "@type": "Organization",
+    "name": "MONEYFLOW"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://moneyflow2026.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Article MONEYFLOW #4 — Guide revenus en ligne",
+      "item": "https://moneyflow2026.com/moneyflow-article-4.html"
+    }
+  ]
+}
+</script>
 </head>
 <body>
+<script>
+// ══ THÈME PAR DÉFAUT — NOIR ══
+// Applique le thème sauvegardé OU noir par défaut
+(function(){
+  const saved = localStorage.getItem('mf_theme');
+  // Par défaut : dark. Light seulement si l'user l'a choisi
+  if(saved === 'light'){
+    document.documentElement.classList.add('light-mode');
+    document.body.classList.add('light-mode');
+  }
+  // S'assurer que le body est bien dark si pas de préférence
+  if(!saved || saved === 'dark'){
+    document.documentElement.style.backgroundColor = '#0a0b14';
+    document.body.style.backgroundColor = '#0a0b14';
+    document.body.style.color = '#ffffff';
+  }
+})();
+</script>
 <div class="read-progress" id="readProgress"></div>
 <div class="orb orb1"></div>
 <div class="wrapper">
