@@ -1887,8 +1887,9 @@ p, span, .mi-desc, .testi-text, .cb-desc, .perk, .hero-sub {
 <link rel="alternate" hreflang="en" href="https://moneyflow2026.com/en-index.html">
 <link rel="alternate" hreflang="es" href="https://moneyflow2026.com/es-index.html">
 <link rel="alternate" hreflang="x-default" href="https://moneyflow2026.com/index.html">
+<link rel="stylesheet" href="assets/mf.css">
 </head>
-<body>
+<body class="mf-home">
 <script>
 // ══ THÈME PAR DÉFAUT — NOIR ══
 // Applique le thème sauvegardé OU noir par défaut
@@ -1944,22 +1945,16 @@ p, span, .mi-desc, .testi-text, .cb-desc, .perk, .hero-sub {
 
 <!-- HERO -->
 <div class="hero">
-  <div class="live-badge"><div class="live-dot"></div>DISCORD OUVERT — REJOINS-NOUS</div>
+  <div class="live-badge">Guides gratuits · aucun gain promis</div>
 
-  <div class="hero-eyebrow">LA PLATEFORME N°1 POUR GÉNÉRER TES REVENUS</div>
+  <div class="hero-eyebrow">COMPRENDRE LES MÉTHODES, SANS BLUFF</div>
   <h1 class="hero-title">
     <span class="line1">MONEY</span>
     <span class="line2">FLOW</span>
   </h1>
-  <p class="hero-sub"><strong>Arrête de scroller, commence à gagner.</strong><br>Les vraies méthodes. Zéro bullshit.</p>
+  <p class="hero-sub"><strong>Des méthodes expliquées clairement.</strong><br>Pour comprendre comment gagner de l'argent. Zéro bullshit.</p>
 
-  <div class="community-count">
-    <div class="avatars">
-      <div class="avatar">🧑</div><div class="avatar">👩</div><div class="avatar">🧑‍🦱</div><div class="avatar">👦</div>
-      <div class="avatar" style="background:rgba(0,255,135,0.1);color:var(--green);font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:10px">+</div>
-    </div>
-    <div class="count-text">Rejoins le Discord pour poser tes questions</div>
-  </div>
+  <p class="count-text" style="margin:0 0 18px">Une question sur une méthode ? Le Discord est ouvert.</p>
 
   <div class="hero-ctas">
     <a href="https://discord.gg/p5t4xSYQ" class="btn-discord-main" id="mainCta">
@@ -1979,18 +1974,18 @@ p, span, .mi-desc, .testi-text, .cb-desc, .perk, .hero-sub {
   <div class="stats-row">
     <div class="stat-pill"><div class="stat-num">0<span class="g">€</span></div><div class="stat-lbl">POUR DÉBUTER</div></div>
     <div class="stat-pill"><div class="stat-num">14<span class="g">+</span></div><div class="stat-lbl">MÉTHODES</div></div>
-    <div class="stat-pill"><div class="stat-num">100<span class="g">%</span></div><div class="stat-lbl">GRATUIT</div></div>
+    <div class="stat-pill"><div class="stat-num" style="font-size:15px">Aucun</div><div class="stat-lbl">PROMIS</div></div>
   </div>
 </div>
 
 <!-- MONETISATION STRIP -->
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px;animation:fadeUp .5s .35s ease both">
-  <a href="moneyflow-ebook.html" style="background:linear-gradient(135deg,rgba(255,229,0,0.1),rgba(255,229,0,0.04));border:1px solid rgba(255,229,0,0.2);border-radius:16px;padding:16px;text-decoration:none;display:flex;flex-direction:column;gap:6px">
+  <a href="moneyflow-ebook.html" class="offer-card" style="background:linear-gradient(135deg,rgba(255,229,0,0.1),rgba(255,229,0,0.04));border:1px solid rgba(255,229,0,0.2);border-radius:16px;padding:16px;text-decoration:none;display:flex;flex-direction:column;gap:6px">
     <div style="font-size:24px">📘</div>
     <div style="font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:13px;color:#fff;letter-spacing:-0.3px;line-height:1.2">Guide 0→500€<br>en 30 jours</div>
     <div style="font-family:Arial,'Inter',sans-serif;font-size:10px;color:#ffe500">9€ →</div>
   </a>
-  <a href="moneyflow-premium.html" style="background:linear-gradient(135deg,rgba(176,96,255,0.1),rgba(176,96,255,0.04));border:1px solid rgba(176,96,255,0.2);border-radius:16px;padding:16px;text-decoration:none;display:flex;flex-direction:column;gap:6px">
+  <a href="moneyflow-premium.html" class="offer-card" style="background:linear-gradient(135deg,rgba(176,96,255,0.1),rgba(176,96,255,0.04));border:1px solid rgba(176,96,255,0.2);border-radius:16px;padding:16px;text-decoration:none;display:flex;flex-direction:column;gap:6px">
     <div style="font-size:24px">👑</div>
     <div style="font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:13px;color:#fff;letter-spacing:-0.3px;line-height:1.2">Discord<br>Premium</div>
     <div style="font-family:Arial,'Inter',sans-serif;font-size:10px;color:#b060ff">7€/mois →</div>
@@ -2010,7 +2005,9 @@ p, span, .mi-desc, .testi-text, .cb-desc, .perk, .hero-sub {
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
 <div class="sep"><div class="sep-line"></div><div class="sep-text">EN TOUTE TRANSPARENCE</div><div class="sep-line"></div></div>
-  <p style="font-family:Arial,'Inter',sans-serif;font-size:15px;line-height:1.55;color:#c8c8d8;margin:0 0 8px">Des guides gratuits pour comprendre les méthodes. Aucun gain promis : les résultats dépendent de ta situation, de ton temps et des risques pris.</p>
+  <div class="honesty">
+    <p>Des guides gratuits pour comprendre les méthodes. Aucun gain promis : les résultats dépendent de ta situation, de ton temps et des risques pris. Le guide PDF est à 9&nbsp;€, le Discord Premium à 7&nbsp;€/mois.</p>
+  </div>
 </div>
 
 <!-- ARTICLES -->
@@ -2354,7 +2351,7 @@ p, span, .mi-desc, .testi-text, .cb-desc, .perk, .hero-sub {
   <div class="sep"><div class="sep-line"></div><div class="sep-text">NOS PARTENAIRES</div><div class="sep-line"></div></div>
   <div style="display:flex;flex-direction:column;gap:10px">
 
-    <a href="https://freecash.com/r/2HHVXY" target="_blank" rel="noopener" style="background:rgba(0,255,135,0.06);border:1px solid rgba(0,255,135,0.18);border-radius:18px;padding:18px;text-decoration:none;display:flex;align-items:center;gap:14px">
+    <a href="https://freecash.com/r/2HHVXY" target="_blank" rel="noopener" class="partner-card" style="background:rgba(0,255,135,0.06);border:1px solid rgba(0,255,135,0.18);border-radius:18px;padding:18px;text-decoration:none;display:flex;align-items:center;gap:14px">
       <div style="width:46px;height:46px;background:rgba(0,255,135,0.12);border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0">🎮</div>
       <div style="flex:1">
         <div style="font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:15px;color:#fff;margin-bottom:3px">Freecash</div>
@@ -2363,7 +2360,7 @@ p, span, .mi-desc, .testi-text, .cb-desc, .perk, .hero-sub {
       <div style="font-family:Arial,'Inter',sans-serif;font-size:10px;color:#00ff87;flex-shrink:0">ESSAYER →</div>
     </a>
 
-    <a href="https://revolut.com/referral/?referral-code=ryadhnih1!MAR1-26-VR-FR&geo-redirect" target="_blank" rel="noopener" style="background:rgba(45,255,240,0.05);border:1px solid rgba(45,255,240,0.15);border-radius:18px;padding:18px;text-decoration:none;display:flex;align-items:center;gap:14px">
+    <a href="https://revolut.com/referral/?referral-code=ryadhnih1!MAR1-26-VR-FR&geo-redirect" target="_blank" rel="noopener" class="partner-card" style="background:rgba(45,255,240,0.05);border:1px solid rgba(45,255,240,0.15);border-radius:18px;padding:18px;text-decoration:none;display:flex;align-items:center;gap:14px">
       <div style="width:46px;height:46px;background:rgba(45,255,240,0.1);border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0">💳</div>
       <div style="flex:1">
         <div style="font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:15px;color:#fff;margin-bottom:3px">Revolut</div>
@@ -2372,7 +2369,7 @@ p, span, .mi-desc, .testi-text, .cb-desc, .perk, .hero-sub {
       <div style="font-family:Arial,'Inter',sans-serif;font-size:10px;color:#2dfff0;flex-shrink:0">ESSAYER →</div>
     </a>
 
-    <a href="https://join.robinhood.com/eu_crypto/davinad-0cdc32/" target="_blank" rel="noopener" style="background:rgba(255,45,120,0.05);border:1px solid rgba(255,45,120,0.15);border-radius:18px;padding:18px;text-decoration:none;display:flex;align-items:center;gap:14px">
+    <a href="https://join.robinhood.com/eu_crypto/davinad-0cdc32/" target="_blank" rel="noopener" class="partner-card" style="background:rgba(255,45,120,0.05);border:1px solid rgba(255,45,120,0.15);border-radius:18px;padding:18px;text-decoration:none;display:flex;align-items:center;gap:14px">
       <div style="width:46px;height:46px;background:rgba(255,45,120,0.1);border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0">🐦</div>
       <div style="flex:1">
         <div style="font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:15px;color:#fff;margin-bottom:3px">Robinhood Crypto</div>
@@ -2381,7 +2378,7 @@ p, span, .mi-desc, .testi-text, .cb-desc, .perk, .hero-sub {
       <div style="font-family:Arial,'Inter',sans-serif;font-size:10px;color:#ff2d78;flex-shrink:0">REJOINDRE →</div>
     </a>
 
-    <a href="https://app.grass.io/register?referralCode=yMH5xrN0xhC7EbD" target="_blank" rel="noopener" style="background:rgba(0,255,135,0.05);border:1px solid rgba(0,255,135,0.12);border-radius:18px;padding:18px;text-decoration:none;display:flex;align-items:center;gap:14px">
+    <a href="https://app.grass.io/register?referralCode=yMH5xrN0xhC7EbD" target="_blank" rel="noopener" class="partner-card" style="background:rgba(0,255,135,0.05);border:1px solid rgba(0,255,135,0.12);border-radius:18px;padding:18px;text-decoration:none;display:flex;align-items:center;gap:14px">
       <div style="width:46px;height:46px;background:rgba(0,255,135,0.08);border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0">🌿</div>
       <div style="flex:1">
         <div style="font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:15px;color:#fff;margin-bottom:3px">Grass.io</div>
@@ -2390,7 +2387,7 @@ p, span, .mi-desc, .testi-text, .cb-desc, .perk, .hero-sub {
       <div style="font-family:Arial,'Inter',sans-serif;font-size:10px;color:#00ff87;flex-shrink:0">ESSAYER →</div>
     </a>
 
-    <a href="https://invite.mobyscreener.com/MpE21D9CJXb" target="_blank" rel="noopener" style="background:rgba(176,96,255,0.05);border:1px solid rgba(176,96,255,0.15);border-radius:18px;padding:18px;text-decoration:none;display:flex;align-items:center;gap:14px">
+    <a href="https://invite.mobyscreener.com/MpE21D9CJXb" target="_blank" rel="noopener" class="partner-card" style="background:rgba(176,96,255,0.05);border:1px solid rgba(176,96,255,0.15);border-radius:18px;padding:18px;text-decoration:none;display:flex;align-items:center;gap:14px">
       <div style="width:46px;height:46px;background:rgba(176,96,255,0.1);border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0">📊</div>
       <div style="flex:1">
         <div style="font-family:Arial,'Inter',sans-serif;font-weight:800;font-size:15px;color:#fff;margin-bottom:3px">Moby Screener</div>
@@ -2420,7 +2417,7 @@ p, span, .mi-desc, .testi-text, .cb-desc, .perk, .hero-sub {
         Recevoir les opportunités →
       </button>
     </div>
-    <p style="font-family:'Inter',sans-serif;font-size:11px;color:#444460;margin-top:12px;line-height:1.6">Déjà <strong style="color:#888">1 240 abonnés</strong> · Zéro spam · Désabonnement en 1 clic</p>
+    <p style="font-family:'Inter',sans-serif;font-size:11px;color:#444460;margin-top:12px;line-height:1.6">Gratuit · Zéro spam · Désabonnement en 1 clic</p>
   </div>
 </div>
 
@@ -2429,8 +2426,8 @@ p, span, .mi-desc, .testi-text, .cb-desc, .perk, .hero-sub {
   <div class="antiscam">
     <div style="font-size:20px;flex-shrink:0">🛡️</div>
     <div>
-      <div class="antiscam-title">On ne te demandera jamais d'argent</div>
-      <div class="antiscam-text">Si quelqu'un te promet des <strong>gains garantis</strong> ou te demande de payer — c'est une arnaque. MONEYFLOW est <strong>100% gratuit</strong>.</div>
+      <div class="antiscam-title">Méfie-toi des promesses de gains</div>
+      <div class="antiscam-text">Si quelqu'un te promet des <strong>gains garantis</strong>, c'est une arnaque. Les guides du site sont gratuits. Le guide PDF est à <strong>9&nbsp;€</strong> et le Discord Premium à <strong>7&nbsp;€/mois</strong> — le prix est affiché avant paiement.</div>
     </div>
   </div>
 </div>
@@ -2595,8 +2592,6 @@ function submitEmail() {
 
 </script>
 
-</div>
-
   <!-- SIDEBAR PC — cachée sur mobile -->
   <aside class="pc-sidebar">
 
@@ -2641,7 +2636,7 @@ function submitEmail() {
     <div class="nl-sidebar">
       <span class="nl-s-emoji">📬</span>
       <div class="nl-s-title">Newsletter MONEYFLOW</div>
-      <p class="nl-s-sub">1 opportunité par semaine · Gratuit · 1 240 abonnés</p>
+      <p class="nl-s-sub">1 opportunité par semaine · Gratuit · désabonnement en 1 clic</p>
       <input type="email" class="nl-s-input" id="sidebarEmail" placeholder="ton@email.com">
       <button class="nl-s-btn" onclick="submitSidebarEmail()">S'inscrire →</button>
     </div>
@@ -2662,6 +2657,7 @@ function submitEmail() {
 
   </aside>
 
+</div>
 </div>
 
 <!-- SCROLL PROGRESS -->
@@ -2707,7 +2703,7 @@ function submitEmail() {
     <input type="email" class="exit-input" id="exitEmail" placeholder="ton@email.com">
     <button class="exit-btn" onclick="submitExitEmail()">Recevoir les codes gratuits →</button>
     <button class="exit-skip" onclick="closeExitPopup()">Non merci, je pars sans les codes</button>
-    <div class="exit-proof">📬 1 240 abonnés · Zéro spam · Désabonnement en 1 clic</div>
+    <div class="exit-proof">📬 Gratuit · Zéro spam · Désabonnement en 1 clic</div>
   </div>
 </div>
 
