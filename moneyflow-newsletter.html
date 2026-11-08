@@ -408,6 +408,7 @@ body.light-mode html { background-color: #f0f2f5 !important; }
   ]
 }
 </script>
+<link rel="stylesheet" href="assets/mf.css">
 </head>
 <body>
 <script>
@@ -432,12 +433,6 @@ body.light-mode html { background-color: #f0f2f5 !important; }
 <!-- BARRE PROGRESSION -->
 <div class="read-progress" id="readProgress"></div>
 
-<!-- COMPTEUR VISITEURS -->
-<div class="visitor-counter" id="visitorCounter">
-  <div class="vc-dot"></div>
-  <div class="vc-text"><span id="vcCount">--</span> en ligne</div>
-</div>
-
 <!-- TOGGLE THEME -->
 <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Changer le thème">🌙</button>
 
@@ -461,17 +456,7 @@ body.light-mode html { background-color: #f0f2f5 !important; }
   <p class="hero-sub">Chaque lundi matin : les meilleurs codes parrainage actifs, une méthode concrète et les drops les plus rentables du moment.</p>
 </div>
 
-<!-- SOCIAL PROOF -->
-<div class="proof-row">
-  <div class="proof-avatars">
-    <div class="proof-avatar">🧑</div>
-    <div class="proof-avatar">👩</div>
-    <div class="proof-avatar">🧑‍🦱</div>
-    <div class="proof-avatar">👦</div>
-    <div class="proof-avatar" style="background:rgba(255,229,0,0.1);color:#ffe500;font-weight:800;font-size:10px">+</div>
-  </div>
-  <div class="proof-text"><strong>1 240 abonnés</strong> reçoivent déjà la newsletter</div>
-</div>
+<p class="count-text" style="margin:0 0 22px">Une lettre par semaine. Aucun effectif annoncé.</p>
 
 <!-- APERÇU EDITION -->
 <div class="edition-preview">
@@ -695,41 +680,6 @@ document.addEventListener('keydown', function(e) {
   updateBar();
 })();
 
-// ══ COMPTEUR VISITEURS EN DIRECT ══
-(function(){
-  const el = document.getElementById('vcCount');
-  if(!el) return;
-
-  // Base réaliste selon la page
-  const bases = {
-    'index': [18,45],
-    'parrainage': [8,22],
-    'blog': [12,30],
-    'article': [5,18],
-    'quiz': [6,16],
-    'default': [4,14]
-  };
-
-  const path = window.location.pathname;
-  let range = bases.default;
-  for(const key in bases){
-    if(path.includes(key)){ range = bases[key]; break; }
-  }
-
-  function rand(a,b){ return Math.floor(Math.random()*(b-a+1))+a; }
-
-  let current = rand(range[0], range[1]);
-  el.textContent = current;
-
-  // Variation toutes les 8 à 15 secondes
-  function vary(){
-    const delta = rand(-2, 3);
-    current = Math.max(range[0], Math.min(range[1]+5, current + delta));
-    el.textContent = current;
-    setTimeout(vary, rand(8000, 15000));
-  }
-  setTimeout(vary, rand(5000, 10000));
-})();
 
 // ══ TOGGLE THÈME SOMBRE / CLAIR ══
 function toggleTheme(){

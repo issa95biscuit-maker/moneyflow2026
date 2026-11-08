@@ -426,6 +426,7 @@ p,span,li,a,label,input,textarea,
 }
 </script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2547384326242565" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="assets/mf.css">
 </head>
 <body>
 <script>
@@ -449,12 +450,6 @@ p,span,li,a,label,input,textarea,
 
 <!-- BARRE PROGRESSION -->
 <div class="read-progress" id="readProgress"></div>
-
-<!-- COMPTEUR VISITEURS -->
-<div class="visitor-counter" id="visitorCounter">
-  <div class="vc-dot"></div>
-  <div class="vc-text"><span id="vcCount">--</span> en ligne</div>
-</div>
 
 <!-- TOGGLE THEME -->
 <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Changer le thème">🌙</button>
@@ -482,10 +477,10 @@ p,span,li,a,label,input,textarea,
   </div>
 
   <h1 class="ebook-title">De 0 à <span>500€</span><br>en 30 jours</h1>
-  <p class="ebook-sub">Le plan semaine par semaine. Méthodes testées, résultats réels. Zéro bullshit.</p>
+  <p class="ebook-sub">Le plan semaine par semaine pour comprendre les méthodes. Aucun gain promis.</p>
 
   <div class="price-block">
-    <div class="price-old">Valeur réelle : 49€</div>
+    <div class="price-old">Prix unique, affiché avant paiement</div>
     <div class="price-new">9<span style="font-size:28px">€</span></div>
     <div class="price-label">Accès à vie · PDF + checklist · Mises à jour incluses</div>
     <div class="price-note">💳 Paiement sécurisé via Gumroad</div>
@@ -524,19 +519,10 @@ p,span,li,a,label,input,textarea,
   </div>
 </div>
 
-<!-- TÉMOIGNAGES -->
+<!-- RAPPEL HONNÊTE -->
 <div class="reveal">
-  <div class="sep"><div class="sep-line"></div><div class="sep-text">ILS L'ONT APPLIQUÉ</div><div class="sep-line"></div></div>
-  <div style="display:flex;flex-direction:column;gap:10px">
-    <div class="testi-mini">
-      <div class="testi-mini-text">J'ai suivi le plan à la lettre. Semaine 1 : setup parrainage. Semaine 2 : <strong>340€ encaissés</strong>. Le guide est direct, sans remplissage.</div>
-      <div class="testi-mini-footer"><div class="testi-mini-name">Lucas, 19 ans</div><div class="testi-mini-gain">+340€ sem. 2</div></div>
-    </div>
-    <div class="testi-mini">
-      <div class="testi-mini-text">La partie bonus sur les codes parrainage m'a <strong>rapporté 3x le prix du guide</strong> la première semaine. No brainer.</div>
-      <div class="testi-mini-footer"><div class="testi-mini-name">Sofia, 18 ans</div><div class="testi-mini-gain">+150€ sem. 1</div></div>
-    </div>
-  </div>
+  <div class="sep"><div class="sep-line"></div><div class="sep-text">EN TOUTE TRANSPARENCE</div><div class="sep-line"></div></div>
+  <div class="honesty"><p>Ce guide explique un plan sur 30 jours. Aucun gain n'est promis : les résultats dépendent de chacun. Prix : 9&nbsp;€.</p></div>
 </div>
 
 <!-- GARANTIE -->
@@ -579,41 +565,6 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   updateBar();
 })();
 
-// ══ COMPTEUR VISITEURS EN DIRECT ══
-(function(){
-  const el = document.getElementById('vcCount');
-  if(!el) return;
-
-  // Base réaliste selon la page
-  const bases = {
-    'index': [18,45],
-    'parrainage': [8,22],
-    'blog': [12,30],
-    'article': [5,18],
-    'quiz': [6,16],
-    'default': [4,14]
-  };
-
-  const path = window.location.pathname;
-  let range = bases.default;
-  for(const key in bases){
-    if(path.includes(key)){ range = bases[key]; break; }
-  }
-
-  function rand(a,b){ return Math.floor(Math.random()*(b-a+1))+a; }
-
-  let current = rand(range[0], range[1]);
-  el.textContent = current;
-
-  // Variation toutes les 8 à 15 secondes
-  function vary(){
-    const delta = rand(-2, 3);
-    current = Math.max(range[0], Math.min(range[1]+5, current + delta));
-    el.textContent = current;
-    setTimeout(vary, rand(8000, 15000));
-  }
-  setTimeout(vary, rand(5000, 10000));
-})();
 
 // ══ TOGGLE THÈME SOMBRE / CLAIR ══
 function toggleTheme(){

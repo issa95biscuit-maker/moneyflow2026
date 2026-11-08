@@ -393,6 +393,7 @@ body.light-mode html { background-color: #f0f2f5 !important; }
   ]
 }
 </script>
+<link rel="stylesheet" href="assets/mf.css">
 </head>
 <body>
 <script>
@@ -416,12 +417,6 @@ body.light-mode html { background-color: #f0f2f5 !important; }
 
 <!-- BARRE PROGRESSION -->
 <div class="read-progress" id="readProgress"></div>
-
-<!-- COMPTEUR VISITEURS -->
-<div class="visitor-counter" id="visitorCounter">
-  <div class="vc-dot"></div>
-  <div class="vc-text"><span id="vcCount">--</span> en ligne</div>
-</div>
 
 <!-- TOGGLE THEME -->
 <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Changer le thème">🌙</button>
@@ -470,7 +465,7 @@ body.light-mode html { background-color: #f0f2f5 !important; }
     <div class="step-num">2</div>
     <div class="step-content">
       <div class="step-title">Lis le guide de ta méthode</div>
-      <div class="step-desc">Chaque méthode a une page dédiée avec le plan d'action complet, les outils et les résultats attendus.</div>
+      <div class="step-desc">Chaque méthode a une page dédiée avec le plan d'action, les outils et les limites à connaître.</div>
       <div class="step-time">⏱ 10 MINUTES</div>
     </div>
     <div class="step-arrow">›</div>
@@ -482,7 +477,7 @@ body.light-mode html { background-color: #f0f2f5 !important; }
     <div class="step-num">3</div>
     <div class="step-content">
       <div class="step-title">Rejoins le Discord communautaire</div>
-      <div class="step-desc">2 847 membres qui s'entraident. Pose tes questions, partage tes premiers résultats, reçois les meilleures alertes.</div>
+      <div class="step-desc">Pose tes questions, partage tes premiers résultats, reçois les meilleures alertes.</div>
       <div class="step-time">⏱ 3 MINUTES</div>
     </div>
     <div class="step-arrow">›</div>
@@ -511,7 +506,7 @@ body.light-mode html { background-color: #f0f2f5 !important; }
       <div class="profil-emoji">⚡</div>
       <div>
         <div class="profil-title">Tu veux gagner cette semaine</div>
-        <div class="profil-sub">Zéro capital · Résultats en 3 à 7 jours</div>
+        <div class="profil-sub">Zéro capital · le délai dépend de toi, rien n'est promis</div>
       </div>
     </div>
     <div class="profil-methods">
@@ -623,7 +618,7 @@ body.light-mode html { background-color: #f0f2f5 !important; }
   </a>
   <a href="moneyflow-newsletter.html" class="ressource-card">
     <div class="rc-icon" style="background:rgba(255,45,120,0.1)">📬</div>
-    <div><div class="rc-title">Newsletter — 1 opportunité/semaine</div><div class="rc-desc">Gratuit · 1 240 abonnés · Zéro spam</div></div>
+    <div><div class="rc-title">Newsletter — 1 opportunité/semaine</div><div class="rc-desc">Gratuit · Zéro spam · désabonnement en 1 clic</div></div>
     <div class="rc-arrow">›</div>
   </a>
   <a href="moneyflow-quiz.html" class="ressource-card">
@@ -636,7 +631,7 @@ body.light-mode html { background-color: #f0f2f5 !important; }
 <!-- CTA FINAL -->
 <div class="cta-final">
   <h3>Prêt à te lancer ?</h3>
-  <p>Rejoins 2 847 membres qui gagnent déjà de l'argent avec les méthodes MONEYFLOW.</p>
+  <p>Rejoins le Discord pour poser tes questions sur les méthodes MONEYFLOW.</p>
   <a href="https://discord.gg/p5t4xSYQ" class="btn-g">Rejoindre le Discord — Gratuit</a>
   <a href="https://t.me/+zNb_zWH1geI2NDlk" class="btn-t">Rejoindre Telegram</a>
 </div>
@@ -662,41 +657,6 @@ body.light-mode html { background-color: #f0f2f5 !important; }
   updateBar();
 })();
 
-// ══ COMPTEUR VISITEURS EN DIRECT ══
-(function(){
-  const el = document.getElementById('vcCount');
-  if(!el) return;
-
-  // Base réaliste selon la page
-  const bases = {
-    'index': [18,45],
-    'parrainage': [8,22],
-    'blog': [12,30],
-    'article': [5,18],
-    'quiz': [6,16],
-    'default': [4,14]
-  };
-
-  const path = window.location.pathname;
-  let range = bases.default;
-  for(const key in bases){
-    if(path.includes(key)){ range = bases[key]; break; }
-  }
-
-  function rand(a,b){ return Math.floor(Math.random()*(b-a+1))+a; }
-
-  let current = rand(range[0], range[1]);
-  el.textContent = current;
-
-  // Variation toutes les 8 à 15 secondes
-  function vary(){
-    const delta = rand(-2, 3);
-    current = Math.max(range[0], Math.min(range[1]+5, current + delta));
-    el.textContent = current;
-    setTimeout(vary, rand(8000, 15000));
-  }
-  setTimeout(vary, rand(5000, 10000));
-})();
 
 // ══ TOGGLE THÈME SOMBRE / CLAIR ══
 function toggleTheme(){
