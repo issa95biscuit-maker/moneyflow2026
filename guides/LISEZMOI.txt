@@ -1,0 +1,14 @@
+Guide MONEYFLOW à 9 € — où est le fichier
+
+Le PDF complet n'est pas dans ce dépôt et n'est pas servi par le site (GitHub Pages).
+Aucune page ne doit pointer vers un téléchargement du guide entier.
+
+Le fichier vendu se dépose sur Gumroad, et c'est Gumroad qui l'envoie après paiement :
+  https://gumroad.com/l/moneyflow-guide
+
+Prix affiché : 9 €.
+
+Le site ne montre qu'un aperçu, l'ouverture du texte :
+  moneyflow-ebook-content.html
+
+Le bouton d'achat des pages du site reste le lien Gumroad ci-dessus.
