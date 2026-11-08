@@ -467,12 +467,6 @@ p,span,li,a,label,input,textarea,
 <!-- BARRE PROGRESSION -->
 <div class="read-progress" id="readProgress"></div>
 
-<!-- COMPTEUR VISITEURS -->
-<div class="visitor-counter" id="visitorCounter">
-  <div class="vc-dot"></div>
-  <div class="vc-text"><span id="vcCount">--</span> en ligne</div>
-</div>
-
 <!-- TOGGLE THEME -->
 <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Changer le thème">🌙</button>
 
@@ -577,41 +571,6 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   updateBar();
 })();
 
-// ══ COMPTEUR VISITEURS EN DIRECT ══
-(function(){
-  const el = document.getElementById('vcCount');
-  if(!el) return;
-
-  // Base réaliste selon la page
-  const bases = {
-    'index': [18,45],
-    'parrainage': [8,22],
-    'blog': [12,30],
-    'article': [5,18],
-    'quiz': [6,16],
-    'default': [4,14]
-  };
-
-  const path = window.location.pathname;
-  let range = bases.default;
-  for(const key in bases){
-    if(path.includes(key)){ range = bases[key]; break; }
-  }
-
-  function rand(a,b){ return Math.floor(Math.random()*(b-a+1))+a; }
-
-  let current = rand(range[0], range[1]);
-  el.textContent = current;
-
-  // Variation toutes les 8 à 15 secondes
-  function vary(){
-    const delta = rand(-2, 3);
-    current = Math.max(range[0], Math.min(range[1]+5, current + delta));
-    el.textContent = current;
-    setTimeout(vary, rand(8000, 15000));
-  }
-  setTimeout(vary, rand(5000, 10000));
-})();
 
 // ══ TOGGLE THÈME SOMBRE / CLAIR ══
 function toggleTheme(){
