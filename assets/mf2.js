@@ -1,0 +1,3 @@
+/* MONEYFLOW v2 — petits utilitaires partagés */
+function shareArticle(){var d={title:document.title,url:location.href};if(navigator.share){navigator.share(d).catch(function(){})}else if(navigator.clipboard){navigator.clipboard.writeText(location.href);alertless('Lien copié')}}
+function alertless(m){var t=document.createElement('div');t.textContent=m;t.style.cssText='position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--surface-2);color:var(--text);border:1px solid var(--border);padding:10px 16px;border-radius:8px;font-size:14px;z-index:99';document.body.appendChild(t);setTimeout(function(){t.remove()},2000)}
