@@ -69,19 +69,10 @@
 <div class="hero-badge">NEWSLETTER GRATUITE</div>
 <span class="hero-icon"></span>
 <h1 class="hero-title">1 opportunité par semaine<br/>pour <span>gagner plus</span></h1>
-<p class="hero-sub">Chaque lundi matin : les meilleurs codes parrainage actifs, une méthode concrète et les drops les plus rentables du moment.</p>
+<p class="hero-sub">Bientôt chaque lundi : les meilleurs codes parrainage actifs, une méthode concrète et les drops les plus rentables du moment.</p>
 </div>
 
-<div class="proof-row">
-<div class="proof-avatars">
-<div class="proof-avatar"></div>
-<div class="proof-avatar"></div>
-<div class="proof-avatar"></div>
-<div class="proof-avatar"></div>
-<div class="proof-avatar">+</div>
-</div>
-<div class="proof-text"><strong>la newsletter</strong> reçoivent déjà la newsletter</div>
-</div>
+
 
 <div class="edition-preview">
 <div class="ep-label">Aperçu — Édition du 10 mars 2026</div>
@@ -120,21 +111,12 @@
 </div>
 
 <div class="form-box" id="formBox">
-<div class="form-title">Rejoins la newsletter</div>
-<div class="form-sub">Gratuit · 1 email par semaine · Désabonnement en 1 clic</div>
+<div class="form-title">La newsletter arrive bientôt</div>
+<div class="form-sub">En attendant, les opportunités de la semaine sont partagées sur le canal Telegram. Gratuit, sans spam, tu peux quitter quand tu veux.</div>
 <div class="form-group">
-<input class="form-input" id="nlPrenom" placeholder="Ton prénom" type="text"/>
-<input class="form-input" id="nlEmail" placeholder="ton@email.com" type="email"/>
-<button class="btn-subscribe" onclick="subscribeNL()">Recevoir la newsletter gratuite 
-    </button>
+<a class="btn-subscribe" href="https://t.me/+zNb_zWH1geI2NDlk" target="_blank" rel="noopener">Rejoindre le Telegram</a>
+<a class="btn-t" href="https://discord.gg/p5t4xSYQ" target="_blank" rel="noopener">Rejoindre le Discord</a>
 </div>
-<p class="form-note">Tes données restent privées · Jamais de spam · Désabonnement en 1 clic</p>
-</div>
-
-<div class="success-box" id="successBox">
-<span class="success-emoji"></span>
-<div class="success-title">Tu es inscrit !</div>
-<p class="success-sub">Vérifie ta boîte mail pour confirmer ton inscription.<br/>Ta première newsletter arrive <strong>lundi prochain</strong>.</p>
 </div>
 
 <div class="ad-slot">
@@ -245,19 +227,6 @@ function subscribeNL() {
     }, 2000);
     return;
   }
-
-  // Envoyer à Formspree
-  // Remplace YOUR_FORMSPREE_ID par ton vrai ID sur formspree.io
-  fetch('https://formspree.io/f/YOUR_FORMSPREE_ID', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      prenom: prenom,
-      email: email,
-      source: 'moneyflow-newsletter',
-      date: new Date().toLocaleDateString('fr-FR')
-    })
-  }).catch(() => {});
 
   // Afficher le succès
   document.getElementById('formBox').style.display = 'none';
