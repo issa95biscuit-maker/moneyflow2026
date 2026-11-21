@@ -322,11 +322,11 @@ let currentScreen = 'intro';
 
 const profiles = {
   creator: {
-    emoji: '📱',
+    emoji: '',
     name: 'Le Créateur',
     tagline: 'Tu es fait pour générer de l\'audience et la monétiser. TikTok est ta mine d\'or.',
-    color: 'var(--pink)',
-    colorRgb: '255,45,120',
+    color: 'var(--accent)',
+    colorRgb: '61,220,151',
     method: 'Création de contenu + Partenariats',
     desc: 'Avec ton sens du contenu et ta présence naturelle en ligne, ta meilleure voie c\'est de construire une audience sur TikTok ou YouTube et de la monétiser via des partenariats, du merchandising ou tes propres produits.',
     steps: [
@@ -335,32 +335,32 @@ const profiles = {
       { num: '3', text: '<strong>Contacter des marques</strong> dès 1 000 abonnés — les nano-influenceurs sont recherchés.' },
       { num: '4', text: '<strong>Créer ton propre produit</strong> : guide PDF, merch, formation — quand t\'as l\'audience.' },
     ],
-    also: ['🤝 Parrainage d\'apps (pendant la montée en audience)', '📸 UGC payant pour des marques', '💬 Community manager freelance'],
+    also: ['Parrainage d\'apps (pendant la montée en audience)', 'UGC payant pour des marques', 'Community manager freelance'],
     scores: { creator: 92, referral: 65, resell: 40, freelance: 58, trading: 20 },
   },
   referrer: {
-    emoji: '🤝',
+    emoji: '',
     name: 'Le Connector',
     tagline: 'Ton réseau est ta richesse. Tu transformes chaque contact en revenu.',
-    color: 'var(--green)',
-    colorRgb: '0,255,135',
+    color: 'var(--accent)',
+    colorRgb: '61,220,151',
     method: 'Parrainage & Affiliation',
-    desc: 'Avec ton réseau et ta capacité à convaincre, le parrainage est ta méthode idéale. Pas d\'investissement, des résultats dès cette semaine. Tu peux commencer ce soir.',
+    desc: 'Avec ton réseau et ta capacité à convaincre, le parrainage est ta méthode idéale. Pas d\'investissement, et tu peux tester rapidement. Tu peux commencer ce soir.',
     steps: [
       { num: '1', text: '<strong>Inscris-toi sur 3–5 apps</strong> : Revolut, Lydia, Pumpkin, BlaBlaCar.' },
       { num: '2', text: '<strong>Crée une histoire courte</strong> expliquant pourquoi tu recommandes chaque app.' },
       { num: '3', text: '<strong>Partage sur WhatsApp, Discord, TikTok</strong> — cible des gens qui ont besoin de l\'app.' },
       { num: '4', text: '<strong>Réinvestis tes gains</strong> dans une méthode plus scalable (contenu, freelance).' },
     ],
-    also: ['📱 Créer du contenu TikTok autour de tes parrainages', '🛒 Affiliation Amazon / sites e-commerce', '💳 Cashback via iGraal ou Widilo'],
+    also: ['Créer du contenu TikTok autour de tes parrainages', 'Affiliation Amazon / sites e-commerce', 'Cashback via iGraal ou Widilo'],
     scores: { referral: 95, creator: 55, resell: 60, freelance: 45, trading: 25 },
   },
   reseller: {
-    emoji: '👟',
+    emoji: '',
     name: 'Le Trader de Rue',
     tagline: 'T\'as le sens du deal. Tu achètes au bon prix, tu vends au bon moment.',
-    color: 'var(--yellow)',
-    colorRgb: '255,229,0',
+    color: 'var(--accent)',
+    colorRgb: '61,220,151',
     method: 'Revente & Resell',
     desc: 'Ton instinct pour les bonnes affaires et les tendances fait de toi un revendeur naturel. Sneakers, cartes Pokémon, streetwear, gaming — le marché secondaire explose.',
     steps: [
@@ -369,15 +369,15 @@ const profiles = {
       { num: '3', text: '<strong>Commencer petit</strong> : 1 paire, 1 objet, valide le process avant de scaler.' },
       { num: '4', text: '<strong>Utiliser les bots & alerts</strong> pour être le premier sur les bonnes affaires.' },
     ],
-    also: ['🤝 Parrainage (sans investissement requis)', '🛒 Dropshipping (vendre sans stock)', '📱 Documenter tes flips sur TikTok'],
+    also: ['Parrainage (sans investissement requis)', 'Dropshipping (vendre sans stock)', 'Documenter tes flips sur TikTok'],
     scores: { resell: 94, referral: 60, creator: 50, freelance: 35, trading: 55 },
   },
   freelancer: {
-    emoji: '🎨',
+    emoji: '',
     name: 'Le Créatif Pro',
     tagline: 'Tes compétences valent de l\'argent. Quelqu\'un cherche exactement ce que tu sais faire.',
-    color: 'var(--blue)',
-    colorRgb: '45,255,240',
+    color: 'var(--accent)',
+    colorRgb: '61,220,151',
     method: 'Freelance & Prestations',
     desc: 'Avec tes compétences créatives ou techniques, le freelance est ta voie la plus rapide vers un revenu stable et croissant. Ton premier client peut venir dans la semaine.',
     steps: [
@@ -386,15 +386,15 @@ const profiles = {
       { num: '3', text: '<strong>Propose-toi à ton réseau</strong> : associations, petits commerces, créateurs locaux.' },
       { num: '4', text: '<strong>Augmente tes tarifs</strong> à chaque nouveau client — ne sous-estime jamais ton temps.' },
     ],
-    also: ['📸 UGC / Contenu pour marques', '📱 TikTok pour montrer ton travail', '🤖 Automatisation IA pour être plus productif'],
+    also: ['UGC / Contenu pour marques', 'TikTok pour montrer ton travail', 'Automatisation IA pour être plus productif'],
     scores: { freelance: 96, creator: 62, referral: 45, resell: 30, trading: 35 },
   },
   investor: {
-    emoji: '📊',
+    emoji: '',
     name: 'L\'Investisseur',
     tagline: 'Tu penses long terme. Tu veux faire travailler ton argent, pas l\'inverse.',
-    color: 'var(--purple)',
-    colorRgb: '176,96,255',
+    color: 'var(--accent)',
+    colorRgb: '61,220,151',
     method: 'ETF & Investissement long terme (+18 ans)',
     desc: 'Avec ton sens de l\'analyse et ton intérêt pour les marchés, l\'investissement est ta voie. Mais attention : commence par les ETF diversifiés avant tout — et uniquement si tu es majeur.',
     steps: [
@@ -403,7 +403,7 @@ const profiles = {
       { num: '3', text: '<strong>Investir régulièrement</strong> : 20–50€/mois, peu importe le marché (DCA).' },
       { num: '4', text: '<strong>Ne jamais investir</strong> ce que tu ne peux pas te permettre de perdre.' },
     ],
-    also: ['⚠️ Réservé aux +18 ans uniquement', '🤝 Parrainage (pour commencer sans risque)', '📚 Formation avant tout investissement en crypto'],
+    also: ['Réservé aux +18 ans uniquement', 'Parrainage (pour commencer sans risque)', 'Formation avant tout investissement en crypto'],
     scores: { trading: 90, resell: 55, referral: 50, freelance: 40, creator: 35 },
   },
 };
@@ -492,17 +492,17 @@ function showResult() {
     <div class="score-row">
       <div class="score-top">
         <div class="score-method">${methodLabels[k]}</div>
-        <div class="score-pct" style="color:${v > 80 ? 'var(--green)' : '#555'}">${v}%</div>
+        <div class="score-pct" style="color:${v > 80 ? 'var(--accent)' : 'var(--muted)'}">${v}%</div>
       </div>
       <div class="score-bg">
-        <div class="score-fill" style="width:0%;background:${v > 80 ? 'var(--green)' : v > 60 ? 'var(--blue)' : '#222'}" data-width="${v}%"></div>
+        <div class="score-fill" style="width:0%;background:${v > 80 ? 'var(--accent)' : 'var(--muted)'}" data-width="${v}%"></div>
       </div>
     </div>
   `).join('');
 
   const stepsHTML = p.steps.map(s => `
     <div class="result-step">
-      <div class="rs-num" style="background:${p.color}">${s.num}</div>
+      <div class="rs-num">${s.num}</div>
       <div class="rs-text">${s.text}</div>
     </div>
   `).join('');
@@ -517,37 +517,37 @@ function showResult() {
   const resultEl = document.getElementById('screen-result');
   resultEl.innerHTML = `
     <div class="result-header">
-      <div class="result-badge" style="background:rgba(${p.colorRgb},0.1);color:${p.color};border:1px solid rgba(${p.colorRgb},0.25)">
+      <div class="result-badge">
         TON PROFIL MONEYFLOW
       </div>
       <span class="result-emoji-big">${p.emoji}</span>
-      <div class="result-profile-name" style="color:${p.color}">${p.name}</div>
+      <div class="result-profile-name">${p.name}</div>
       <p class="result-tagline">${p.tagline}</p>
     </div>
 
-    <div class="result-card" style="background:rgba(${p.colorRgb},0.05);border:1px solid rgba(${p.colorRgb},0.2);">
-      <div class="result-card-label" style="color:${p.color}">// TA MÉTHODE PRINCIPALE</div>
+    <div class="result-card">
+      <div class="result-card-label">TA MÉTHODE PRINCIPALE</div>
       <div class="result-method-name">${p.method}</div>
       <div class="result-method-desc">${p.desc}</div>
       <div class="result-steps">${stepsHTML}</div>
     </div>
 
-    <div style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:24px;margin-bottom:16px;">
-      <div class="result-card-label" style="color:#444;margin-bottom:16px;">// COMPATIBILITÉ AVEC CHAQUE MÉTHODE</div>
+    <div class="result-card">
+      <div class="result-card-label">COMPATIBILITÉ AVEC CHAQUE MÉTHODE</div>
       <div class="score-bars">${scoreBarsHTML}</div>
     </div>
 
     <div class="result-also">
-      <div class="result-also-label">// MÉTHODES COMPLÉMENTAIRES POUR TOI</div>
+      <div class="result-also-label">MÉTHODES COMPLÉMENTAIRES POUR TOI</div>
       <div class="also-list">${alsoHTML}</div>
     </div>
 
-    <a href="https://discord.gg/p5t4xSYQ" class="btn-cta-result" style="background:${p.color}">
-      🔥 Rejoindre la communauté
+    <a href="https://discord.gg/p5t4xSYQ" class="btn-cta-result">
+      Rejoindre la communauté
     </a>
     <div class="share-row">
-      <button class="share-btn" onclick="shareResult('${p.name}')">📤 Partager</button>
-      <button class="share-btn btn-retry" onclick="retryQuiz()">🔄 Refaire le quiz</button>
+      <button class="share-btn" onclick="shareResult('${p.name}')">Partager</button>
+      <button class="share-btn btn-retry" onclick="retryQuiz()">Refaire le quiz</button>
     </div>
   `;
 
@@ -577,7 +577,7 @@ function shareResult(name) {
   if (navigator.share) {
     navigator.share({
       title: 'Mon profil MONEYFLOW',
-      text: `Je suis "${name}" sur MONEYFLOW 💸 Découvre ton profil !`,
+      text: `Je suis "${name}" sur MONEYFLOW Découvre ton profil !`,
       url: window.location.href
     });
   } else {
@@ -605,7 +605,7 @@ function toggleTheme(){
   const body = document.body;
   const btn = document.getElementById('themeToggle');
   const isLight = body.classList.toggle('light-mode');
-  if(btn) btn.textContent = isLight ? '🌙' : '☀️';
+  if(btn) btn.textContent = isLight ? '' : '';
   localStorage.setItem('mf_theme', isLight ? 'light' : 'dark');
   // Sync html element
   document.documentElement.style.backgroundColor = isLight ? '#f0f2f5' : '#0a0b14';
@@ -618,12 +618,12 @@ function toggleTheme(){
   if(saved === 'light'){
     document.body.classList.add('light-mode');
     document.documentElement.style.backgroundColor = '#f0f2f5';
-    if(btn) btn.textContent = '🌙';
+    if(btn) btn.textContent = '';
   } else {
     // Dark par défaut
     document.body.classList.remove('light-mode');
     document.documentElement.style.backgroundColor = '#0a0b14';
-    if(btn) btn.textContent = '☀️';
+    if(btn) btn.textContent = '';
   }
 })();
 

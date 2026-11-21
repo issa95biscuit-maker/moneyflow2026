@@ -302,3 +302,10 @@ ins.adsbygoogle{margin:32px 0!important;border-radius:12px}
 .budget-section{margin:32px 0}
 .double-cta{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:40px 0}
 .ad-slot{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+/* quiz : correctifs résultat */
+.result-header{display:block!important;margin-bottom:16px}
+.result-header .result-tagline{margin-top:8px}
+.score-row{display:block!important;margin:0 0 14px}
+.score-top{display:flex;justify-content:space-between;font-size:14px;margin-bottom:6px}
+.score-bg{margin-bottom:0}
+.result-also .also-item:first-child{border-top:0}
