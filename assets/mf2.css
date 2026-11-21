@@ -309,3 +309,5 @@ ins.adsbygoogle{margin:32px 0!important;border-radius:12px}
 .score-top{display:flex;justify-content:space-between;font-size:14px;margin-bottom:6px}
 .score-bg{margin-bottom:0}
 .result-also .also-item:first-child{border-top:0}
+/* illustrations SVG adaptées au mode clair */
+[data-theme="light"] .mf-cover img[src$=".svg"],[data-theme="light"] .art-thumb img[src$=".svg"],[data-theme="light"] .featured-img img[src$=".svg"]{filter:invert(1) hue-rotate(180deg)}
